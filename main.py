@@ -301,7 +301,7 @@ h1, h2, h3 {
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     padding: 1rem 2rem;
     display: flex;
-    justify-content: center; /* CHANGE: Centers the nav bar content */
+    justify-content: space-between; /* CHANGE: Resets the nav bar content to space-between */
     align-items: center;
 }
 
@@ -335,7 +335,7 @@ h1, h2, h3 {
 }
 
 .nav-left {
-    margin-right: 0.5rem
+    margin-right: auto; /* Pushes the nav links to the left */
 }
 
 .nav-links a {
@@ -346,6 +346,7 @@ h1, h2, h3 {
     position: relative;
     transition: color 0.3s ease;
 }
+... (rest of the code) ...
 
 .nav-links a::after {
     content: '';
