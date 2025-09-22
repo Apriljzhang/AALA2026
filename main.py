@@ -97,11 +97,11 @@ site_data = {
         ]
     },
     'registration': {
-        'page_title': 'Registration - AALA 2026',
+        'page_title': 'Registration and Payment - AALA 2026',
         'sections': [
             {
                 'id': 'registration',
-                'heading': 'Conference Registration',
+                'heading': 'Conference Registration and Payment',
                 'content': 'Conference registration is now open. The registration process includes easy online sign-up and secure payment. We offer different registration tiers for students and professionals. Click the link to register now!'
             }
         ]
