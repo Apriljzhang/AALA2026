@@ -29,7 +29,7 @@ h1, h2, h3 {
     color: var(--color-red);
 }
 
-/* Header & Navigation */
+
 .navbar {
     background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
@@ -41,21 +41,41 @@ h1, h2, h3 {
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     padding: 1rem 2rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* CHANGE: Centers the nav bar content */
     align-items: center;
 }
 
 .logo-container {
-    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
 }
 
-.logo-image {
-    height: 100%;
+.aala-logo {
+    height: 90px;
+    width: auto;
+}
+
+.uni-logo-1 {
+    height: 70px;
+    width: auto;
+}
+
+.uni-logo-2 {
+    height: 65px;
+    width: auto;
+}
+.uni-logo-3 {
+    height: 75px;
     width: auto;
 }
 
 .nav-links {
     text-align: center;
+}
+
+.nav-left {
+    margin-right: 0.5rem
 }
 
 .nav-links a {
@@ -89,7 +109,7 @@ h1, h2, h3 {
 
 /* Hero Section */
 .hero-section {
-    background: url('AALA2026 banner.png') no-repeat center center/cover;
+    background: url('Copilot_20250618_125349.jpg') no-repeat center center/cover;
     color: var(--color-white);
     height: 100vh;
     display: flex;
