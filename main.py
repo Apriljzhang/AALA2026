@@ -16,6 +16,14 @@ site_data = {
                 'id': 'aala2026-intro',
                 'heading': 'AALA 2026',
                 'content': """The Asian Association for Language Assessment (AALA) 2026 Conference will be held from September 18-20, 2026, at the City University of Macau. This year's theme is the <b>'Humanistic Approach to <span class="highlight-red">A</span>ssessment, <span class="highlight-red">S</span>tandards, <span class="highlight-red">I</span>nnovation, and <span class="highlight-red">A</span>ccountability'.</b> We invite you to contribute to this important conversation. You can find more information on our <a href='call-for-papers.html'>Call for Papers</a> page."""
+            """
+                            <h3>Why Attend?</h3>
+                <ul>
+                    <li>Learn from leading scholars in plenary sessions and workshops</li>
+                    <li>Exchange ideas with peers from across Asia and the world</li>
+                    <li>Explore Macau, a UNESCO World Heritage city with rich cultural heritage and world-class facilities</li>
+                </ul>
+                <br>"""
             },
             {
                 'id': 'about-aala',
@@ -82,13 +90,6 @@ site_data = {
                     <li><b>Abstracts:</b> max. 300 words (excluding references).</li>
                     <li>Indicate presentation type and select a relevant subtheme.</li>
                     <li>All submissions will undergo double-blind peer review.</li>
-                </ul>
-                <br>
-                <h3>Why Attend?</h3>
-                <ul>
-                    <li>Learn from leading scholars in plenary sessions and workshops</li>
-                    <li>Exchange ideas with peers from across Asia and the world</li>
-                    <li>Explore Macau, a UNESCO World Heritage city with rich cultural heritage and world-class facilities</li>
                 </ul>
                 <br>
                 <p>We look forward to welcoming you to Macau for AALA 2026!</p>
