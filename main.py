@@ -101,7 +101,7 @@ site_data = {
         'sections': [
             {
                 'id': 'registration',
-                'heading': 'Registration and Payment',
+                'heading': 'Registration & Payment',
                 'content': 'Conference registration is now open. The registration process includes easy online sign-up and secure payment. We offer different registration tiers for students and professionals. Click the link to register now!'
             }
         ]
