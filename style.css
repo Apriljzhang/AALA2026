@@ -1,0 +1,374 @@
+
+/* Color Palette */
+:root {
+    --color-green: #008264;
+    --color-red: #FA0202;
+    --color-dark-blue: #020266;
+    --color-yellow: #f2d72e;
+    --color-white: #ffffff;
+    --color-light-grey: #f8f9fa;
+}
+
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: var(--color-dark-blue);
+    background-color: var(--color-white);
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--color-green);
+}
+
+.highlight-red {
+    color: var(--color-red);
+}
+
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between; /* CHANGE: Resets the nav bar content to space-between */
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.aala-logo {
+    height: 90px;
+    width: auto;
+}
+
+.uni-logo-1 {
+    height: 70px;
+    width: auto;
+}
+
+.uni-logo-2 {
+    height: 65px;
+    width: auto;
+}
+.uni-logo-3 {
+    height: 75px;
+    width: auto;
+}
+
+.nav-links {
+    text-align: center;
+}
+
+.nav-left {
+    margin-right: auto; /* Pushes the nav links to the left */
+}
+
+.nav-links a {
+    color: var(--color-dark-blue);
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 1.5rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+... (rest of the code) ...
+
+.nav-links a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--color-red);
+    transition: width 0.3s ease;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.nav-links a:hover {
+    color: var(--color-green);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('Copilot_20250618_125349.jpg') no-repeat center center/cover;
+    color: var(--color-white);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding-top: 60px;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    z-index: 0;
+}
+
+.hero-content {
+    z-index: 1;
+    max-width: 900px;
+    padding: 0 2rem;
+}
+
+.heading-large {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-white);
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.theme {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    color: var(--color-yellow);
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: var(--color-white);
+}
+
+.university-logos {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.uni-logo {
+    height: 60px;
+    width: auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.cta-button {
+    background-color: var(--color-red);
+    color: var(--color-white);
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    background-color: #e30202;
+    transform: scale(1.05);
+}
+
+/* Content Sections */
+.content-section {
+    padding: 6rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.content-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.content-section h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--color-yellow);
+    margin: 10px auto 0;
+}
+
+.content-section p {
+    font-size: 1.1rem;
+    color: var(--color-dark-blue);
+    text-align: justify;
+    margin-bottom: 1.5rem;
+}
+
+/* New CSS to control the list alignment */
+.content-section ul {
+    text-align: left;
+    display: inline-block;
+    list-style-position: inside;
+}
+
+.hotel-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: left;
+    margin-top: 2rem;
+}
+
+.hotel-item {
+    background-color: var(--color-light-grey);
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.hotel-item h3 {
+    margin: 0;
+}
+
+.hotel-item p {
+    margin: 0.5rem 0;
+}
+
+/* New Sections for Homepage */
+.dates-contact-section {
+    padding: 4rem 2rem;
+    background-color: var(--color-light-grey);
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.dates-container, .contact-container {
+    flex: 1;
+    max-width: 450px;
+    padding: 2rem;
+    background-color: var(--color-white);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.dates-container h2, .contact-container h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--color-green);
+}
+
+.dates-container ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.dates-container li {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.contact-container p {
+  text-align: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contact-form button {
+    background-color: var(--color-green);
+    color: var(--color-white);
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+}
+
+.contact-form button:hover {
+    background-color: var(--color-dark-blue);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--color-green);
+    color: var(--color-white);
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .nav-links {
+        margin-top: 1rem;
+    }
+    .nav-links a {
+        margin: 0 0.8rem;
+    }
+    .hero-content .heading-large {
+        font-size: 2.5rem;
+    }
+    .hero-content .theme {
+        font-size: 1.2rem;
+    }
+    .info-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .dates-contact-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .dates-container, .contact-container {
+        width: 100%;
+        max-width: none;
+    }
+}
