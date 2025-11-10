@@ -101,7 +101,7 @@ site_data = {
         'sections': [
             {
                 'id': 'registration',
-                'heading': 'Registration & Payment',
+                'heading': 'Registration and Payment',
                 'content': 'Conference registration is now open. The registration process includes easy online sign-up and secure payment. We offer different registration tiers for students and professionals. Click the link to register now!'
             }
         ]
@@ -184,9 +184,6 @@ html_template = """
 <header class="navbar">
     <div class="logo-container">
         <img src="AALA2026 logo.png" alt="AALA 2026 Logo" class="aala-logo">
-        <img src="Logo CityU.jpg" alt="City University of Macau Logo" class="uni-logo-1">
-        <img src="Logo UM.png" alt="University of Macau Logo" class="uni-logo-2">
-        <img src="Logo PolyU.png" alt="Macao Polytechnic University Logo" class="uni-logo-3">
     </div>
     <nav class="nav-links nav-left">
         <a href="index.html">Home</a>
@@ -205,11 +202,6 @@ html_template = """
                 <div class="info-container">
                     <p class="date">{{ date }}</p>
                     <p class="location">{{ location }}</p>
-                </div>
-                <div class="university-logos">
-                    <img src="Logo CityU.jpg" alt="City University of Macau Logo" class="uni-logo">
-                    <img src="Logo UM.png" alt="University of Macau Logo" class="uni-logo">
-                    <img src="Logo PolyU.png" alt="Macao Polytechnic University Logo" class="uni-logo">
                 </div>
                 <a href="registration.html" class="cta-button">Register Now</a>
             </div>
@@ -676,9 +668,7 @@ try:
     print(" - style.css")
     print(" - AALA2026 banner.png")
     print(" - AALA2026 logo.png")
-    print(" - Logo CityU.jpg")
-    print(" - Logo UM.png")
-    print(" - Logo PolyU.png")
+
 
 except Exception as e:
     print(f"❌ An error occurred: {e}")
