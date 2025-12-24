@@ -183,7 +183,7 @@ html_template = """
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 <header class="navbar">
     <div class="logo-container">
-        <img src="AALA2026 logo.png" alt="AALA 2026 Logo" class="aala-logo">
+        <img src="AALA logo.png" alt="AALA 2026 Logo" class="aala-logo">
     </div>
     <nav class="nav-links nav-left">
         <a href="index.html">Home</a>
@@ -667,7 +667,7 @@ try:
     print(" - venue.html")
     print(" - style.css")
     print(" - AALA2026 banner.png")
-    print(" - AALA2026 logo.png")
+    print(" - AALA logo.png")
 
 
 except Exception as e:
