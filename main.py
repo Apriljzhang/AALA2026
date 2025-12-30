@@ -4,25 +4,29 @@ from jinja2 import Template
 # --- STEP 1: YOUR DATA ---
 site_data = {
     'home': {
+        'filename': 'index.html',
         'page_title': 'AALA 2026 Macao Conference',
-        'header_title': 'Asian Association for Language Assessment 2026',
-        'theme': 'Humanistic approach to Assessment, Standards, Innovation, and Accountability',
-        'date': 'September 18-20, 2026',
-        'location': 'City University of Macau',
-        'contact_email': 'aala2026@outlook.com',
+        'show_hero': True, # Keep this True if you want the banner image
         'sections': [
             {
-                'id': 'intro',
-                'heading': 'Welcome to AALA 2026',
-                # USES: aala-logo.png
+                'heading': 'AALA 2026',
                 'content': """
-                <div style="margin-bottom: 20px;">
-                    <img src="aala-logo.png" alt="AALA Logo" style="height: 80px; width: auto;">
-                </div>
-                <p>The Asian Association for Language Assessment (AALA) 2026 Conference will be held at the City University of Macau. This year's theme is the <b>'Humanistic Approach to Assessment, Standards, Innovation, and Accountability'.</b></p>"""
-            }
+                <p style="text-align: center; font-weight: bold; margin-bottom: 20px;">
+                    September 18-20, 2026 | City University of Macau
+                </p>
+
+                <p>The Asian Association for Language Assessment (AALA) 2026 Conference will be held from September 18-20, 2026, at the City University of Macau. This year's theme is the <b>'Humanistic Approach to <span class="highlight-red">A</span>ssessment, <span class="highlight-red">S</span>tandards, <span class="highlight-red">I</span>nnovation, and <span class="highlight-red">A</span>ccountability'.</b> We invite you to contribute to this important conversation.</p>
+                
+                <h3>Why Attend?</h3>
+                <ul>
+                    <li>Learn from leading scholars in plenary sessions and workshops</li>
+                    <li>Exchange ideas with peers from across Asia and the world</li>
+                    <li>Explore Macau, a UNESCO World Heritage city</li>
+                </ul>"""
+            },
         ]
     },
+}
     'call-for-papers': {'page_title': 'Call For Papers - AALA 2026', 'sections': []},
     'registration': {'page_title': 'Registration - AALA 2026', 'sections': []},
     'program': {'page_title': 'Program - AALA 2026', 'sections': []},
