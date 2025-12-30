@@ -377,3 +377,34 @@ h1, h2, h3 {
         max-width: none;
     }
 }
+/* Add this to your css_code variable */
+
+.parallel-container {
+    display: flex;             /* This aligns items horizontally */
+    gap: 20px;                 /* Space between the columns */
+    justify-content: space-between; 
+    margin-top: 20px;
+}
+
+.category-card {
+    flex: 1;                   /* Makes all columns equal width */
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border-top: 5px solid #008264; /* Adds a nice color accent at the top */
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.category-card h3 {
+    color: #008264;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+/* Mobile Responsive: Stack them on top of each other if the screen is small */
+@media (max-width: 768px) {
+    .parallel-container {
+        flex-direction: column;
+    }
+}
