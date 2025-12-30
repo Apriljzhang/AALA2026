@@ -2,7 +2,6 @@ from jinja2 import Environment, FileSystemLoader
 import os
 
 # --- Step 1: Define Your Content Data ---
-# All of the dynamic content for each page is stored here.
 site_data = {
     'home': {
         'page_title': 'AALA 2026 Macao Conference',
@@ -27,7 +26,12 @@ site_data = {
             {
                 'id': 'about-aala',
                 'heading': 'Asian Association for Language Assessment',
-                'content': "The Asian Association for Language Assessment (AALA) is a professional organization dedicated to promoting best practices in language assessment throughout Asia and beyond. Learn more about our mission and history on the <a href='https://www.aalawebsite.com/' target='_blank'>official AALA website</a>."
+                # ADDED THE LOGO HERE BEFORE THE TEXT
+                'content': """
+                <div style="margin-bottom: 20px;">
+                    <img src="/Users/ajz/Library/CloudStorage/OneDrive-Personal/Coding/AALA2026/AALA logo.png" alt="AALA Logo" style="height: 100px; width: auto;">
+                </div>
+                The Asian Association for Language Assessment (AALA) is a professional organization dedicated to promoting best practices in language assessment throughout Asia and beyond. Learn more about our mission and history on the <a href='https://www.aalawebsite.com/' target='_blank'>official AALA website</a>."""
             },
             {
                 'id': 'about-macau',
@@ -169,7 +173,6 @@ site_data = {
 }
 
 # --- Step 2: Define Your HTML Template ---
-# This single template will be used to generate all pages.
 html_template = """
 <!DOCTYPE html>
 <html lang="en">
@@ -181,9 +184,12 @@ html_template = """
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
 <header class="navbar">
     <div class="logo-container">
-        <img src="AALA logo.png" alt="AALA 2026 Logo" class="aala-logo">
+        <!-- UPDATED BANNER LOGO TO AALA 2026 LOGO -->
+        <img src="/Users/ajz/Library/CloudStorage/OneDrive-Personal/Coding/AALA2026/AALA2026 logo.png" alt="AALA 2026 Logo" class="aala-logo">
     </div>
     <nav class="nav-links nav-left">
         <a href="index.html">Home</a>
@@ -211,11 +217,7 @@ html_template = """
         {% for section in sections %}
         <section id="{{ section.id }}" class="content-section">
             <h2>{{ section.heading }}</h2>
-            {% if section.id == 'accommodation' %}
-                <p>{{ section.content | safe }}</p>
-            {% else %}
-                <p>{{ section.content | safe }}</p>
-            {% endif %}
+            <p>{{ section.content | safe }}</p>
         </section>
         {% endfor %}
 
@@ -251,7 +253,6 @@ html_template = """
 
 # --- Step 3: Define your CSS stylesheet ---
 css_content = """
-/* Color Palette */
 :root {
     --color-green: #008264;
     --color-red: #FA0202;
@@ -261,7 +262,6 @@ css_content = """
     --color-light-grey: #f8f9fa;
 }
 
-/* General Styles */
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -281,7 +281,6 @@ h1, h2, h3 {
     color: var(--color-red);
 }
 
-
 .navbar {
     background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
@@ -293,41 +292,13 @@ h1, h2, h3 {
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     padding: 1rem 2rem;
     display: flex;
-    justify-content: space-between; /* CHANGE: Resets the nav bar content to space-between */
+    justify-content: space-between;
     align-items: center;
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
 }
 
 .aala-logo {
-    height: 90px;
+    height: 70px; /* Adjusted height for navigation bar */
     width: auto;
-}
-
-.uni-logo-1 {
-    height: 70px;
-    width: auto;
-}
-
-.uni-logo-2 {
-    height: 65px;
-    width: auto;
-}
-.uni-logo-3 {
-    height: 75px;
-    width: auto;
-}
-
-.nav-links {
-    text-align: center;
-}
-
-.nav-left {
-    margin-right: auto; /* Pushes the nav links to the left */
 }
 
 .nav-links a {
@@ -335,340 +306,71 @@ h1, h2, h3 {
     text-decoration: none;
     font-weight: 600;
     margin: 0 1.5rem;
-    position: relative;
     transition: color 0.3s ease;
 }
-... (rest of the code) ...
 
-.nav-links a::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: var(--color-red);
-    transition: width 0.3s ease;
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-}
-
-.nav-links a:hover {
-    color: var(--color-green);
-}
-
-.nav-links a:hover::after {
-    width: 100%;
-}
-
-/* Hero Section */
 .hero-section {
-    background: url('Copilot_20250618_125349.jpg') no-repeat center center/cover;
+    background: #020266; /* Fallback color */
     color: var(--color-white);
-    height: 100vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    position: relative;
-    padding-top: 60px;
+    padding-top: 80px;
 }
 
-.hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.65);
-    z-index: 0;
-}
+.heading-large { font-size: 3rem; color: white; }
+.theme { font-size: 1.5rem; color: var(--color-yellow); }
 
-.hero-content {
-    z-index: 1;
+.content-section {
+    padding: 4rem 2rem;
     max-width: 900px;
-    padding: 0 2rem;
-}
-
-.heading-large {
-    font-size: 4rem;
-    margin-bottom: 0.5rem;
-    color: var(--color-white);
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
-}
-
-.theme {
-    font-size: 1.8rem;
-    margin-bottom: 2rem;
-    font-weight: 400;
-    color: var(--color-yellow);
-}
-
-.info-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 2rem;
-    color: var(--color-white);
-}
-
-.university-logos {
-    display: flex;
-    gap: 2rem;
-    margin-bottom: 2rem;
-}
-
-.uni-logo {
-    height: 60px;
-    width: auto;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 5px;
-    border-radius: 50%;
+    margin: 0 auto;
 }
 
 .cta-button {
     background-color: var(--color-red);
-    color: var(--color-white);
-    padding: 1rem 2.5rem;
-    border-radius: 50px;
+    color: white;
+    padding: 1rem 2rem;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    font-weight: bold;
 }
 
-.cta-button:hover {
-    background-color: #e30202;
-    transform: scale(1.05);
-}
-
-/* Content Sections */
-.content-section {
-    padding: 6rem 2rem;
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.content-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    position: relative;
-}
-
-.content-section h2::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 4px;
-    background: var(--color-yellow);
-    margin: 10px auto 0;
-}
-
-.content-section p {
-    font-size: 1.1rem;
-    color: var(--color-dark-blue);
-    text-align: justify;
-    margin-bottom: 1.5rem;
-}
-
-/* New CSS to control the list alignment */
-.content-section ul {
-    text-align: left;
-    display: inline-block;
-    list-style-position: inside;
-}
-
-.hotel-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    text-align: left;
-    margin-top: 2rem;
-}
-
-.hotel-item {
-    background-color: var(--color-light-grey);
-    padding: 1.5rem;
-    border-radius: 10px;
-}
-
-.hotel-item h3 {
-    margin: 0;
-}
-
-.hotel-item p {
-    margin: 0.5rem 0;
-}
-
-/* New Sections for Homepage */
 .dates-contact-section {
-    padding: 4rem 2rem;
-    background-color: var(--color-light-grey);
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    gap: 2rem;
+    gap: 20px;
+    padding: 40px;
+    background: var(--color-light-grey);
 }
 
-.dates-container, .contact-container {
-    flex: 1;
-    max-width: 450px;
-    padding: 2rem;
-    background-color: var(--color-white);
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-.dates-container h2, .contact-container h2 {
-    text-align: center;
-    margin-bottom: 1rem;
-    color: var(--color-green);
-}
-
-.dates-container ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-}
-
-.dates-container li {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-}
-
-.contact-container p {
-  text-align: center;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-}
-
-.contact-form textarea {
-    resize: vertical;
-    min-height: 100px;
-}
-
-.contact-form button {
-    background-color: var(--color-green);
-    color: var(--color-white);
-    border: none;
-    padding: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-weight: 600;
-}
-
-.contact-form button:hover {
-    background-color: var(--color-dark-blue);
-}
-
-/* Footer */
 .footer {
-    background-color: var(--color-green);
-    color: var(--color-white);
+    background: var(--color-green);
+    color: white;
     text-align: center;
-    padding: 2rem;
-    font-size: 0.9rem;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        padding: 1rem;
-    }
-    .nav-links {
-        margin-top: 1rem;
-    }
-    .nav-links a {
-        margin: 0 0.8rem;
-    }
-    .hero-content .heading-large {
-        font-size: 2.5rem;
-    }
-    .hero-content .theme {
-        font-size: 1.2rem;
-    }
-    .info-container {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-    .dates-contact-section {
-        flex-direction: column;
-        align-items: center;
-    }
-    .dates-container, .contact-container {
-        width: 100%;
-        max-width: none;
-    }
+    padding: 20px;
 }
 """
 
 # --- Step 4: Run the generation process ---
 try:
-    env = Environment(loader=FileSystemLoader('.'))
+    # We use a string loader since we defined the template in the script
+    env = Environment()
 
-    # Generate each page from the site_data dictionary
     for page_name, data in site_data.items():
         template = env.from_string(html_template)
-        # Combine base data with page-specific data
-        page_data = {
-            'page_title': data['page_title'],
-            'sections': data['sections'],
-            'header_title': data.get('header_title'),
-            'theme': data.get('theme'),
-            'date': data.get('date'),
-            'location': data.get('location'),
-            'contact_email': data.get('contact_email')
-        }
+        rendered_html = template.render(data)
 
-        rendered_html = template.render(page_data)
-
-        # Save the generated HTML file
         file_name = 'index.html' if page_name == 'home' else f'{page_name}.html'
         with open(file_name, 'w', encoding='utf-8') as f:
             f.write(rendered_html)
-
         print(f"✅ '{file_name}' generated successfully!")
 
-    # Generate the single CSS file
     with open('style.css', 'w', encoding='utf-8') as f:
         f.write(css_content)
-
-    print("\n✅ 'style.css' generated successfully!")
-    print("\n✨ Your multi-page website is ready!")
-    print("Please upload the following files to your GitHub repository:")
-    print(" - index.html")
-    print(" - call-for-papers.html")
-    print(" - registration.html")
-    print(" - program.html")
-    print(" - venue.html")
-    print(" - style.css")
-    print(" - AALA2026 banner.png")
-    print(" - AALA logo.png")
-
+    print("✅ 'style.css' generated successfully!")
 
 except Exception as e:
     print(f"❌ An error occurred: {e}")
