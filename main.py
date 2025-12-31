@@ -72,37 +72,63 @@ site_data = {
     },
     'registration': {'page_title': 'Registration - AALA 2026', 'sections': [{'id':'reg','heading':'Registration','content':'<p>Coming Soon.</p>'}]},
     'program': {'page_title': 'Program - AALA 2026', 'sections': [{'id':'prog','heading':'Program','content':'<p>Coming Soon.</p>'}]},
-    'venue': {
-        'page_title': 'Venue - AALA 2026',
+   'venue': {
+        'page_title': 'Venue & Transport - AALA 2026',
         'sections': [
             {
                 'id': 'overview',
                 'heading': 'Venue Overview',
-                'content': """
-                <p>The City University of Macau (CityU Macau), formerly known as the University of East Asia founded in 1981 and renamed in 2011, follows a strategic development outline of “Rename, Restructure, Transform, Upgrade” as it advances disciplines in digital humanities, arts, business, finance, emerging engineering, and social sciences to become a fully-fledged metropolitan university. As a leading education provider, the University shoulders the social responsibility of “Serving Macao, Integrating into Greater Bay Area” by nurturing high-caliber professionals aligned with its motto of “Virtue, Knowledge, Practice,” while sparing no effort to provide the intellectual and academic support necessary to promote local and regional development within the integrated Guangdong-Hong Kong-Macao Greater Bay Area.</p>
-                
-                <div class="video-grid">
-                    <div class="media-box">
-                        <p><b>YouTube Introduction</b></p>
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/yFXsRTb1Sbo" frameborder="0" allowfullscreen style="border-radius:8px;"></iframe>
-                    </div>
-                    <div class="media-box">
-                        <p><b>Bilibili (了解城市大學)</b></p>
-                        <iframe width="100%" height="315" src="https://player.bilibili.com/player.html?bvid=BV154qEBMERU&page=1&danmaku=0&autoplay=0" frameborder="0" allowfullscreen style="border-radius:8px;"></iframe>
-                    </div>
-                </div>
-
-                <div style="max-width: 800px; margin: 40px auto; text-align: center;">
-                    <h3>Campus Map</h3>
-                    <img src="campus-map.jpg" alt="Campus Map" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-                </div>"""
+                'content': """ ... (Your consolidated university text, videos, and map) ... """
             },
             {
-                'id': 'visas',
-                'heading': 'Entry Requirements & Visas',
+                'id': 'transport-international',
+                'heading': 'Transportation to Macau',
                 'content': """
-                <p>Most travelers are <b>exempted from a visa</b> for Macao. For official details, visit:</p>
-                <p>👉 <a href="https://www.gov.mo/en/services/ps-1474/ps-1474b/" target="_blank">Official Entry Requirements</a></p>"""
+                <h3>By Air ✈️</h3>
+                <p><b>Macau International Airport (MFM):</b> Direct flights from many Asian cities. 
+                <br><b>Hong Kong International Airport (HKG):</b> From HKG, use the "SkyPier Terminal" bus/ferry to Macau without clearing HK immigration.</p>
+
+                <h3>By Sea 🛥️</h3>
+                <p>Connected by high-speed ferries from Hong Kong and Shenzhen:</p>
+                <ul>
+                    <li><b>Outer Harbour Ferry Terminal:</b> 24/7 service.</li>
+                    <li><b>Taipa Ferry Terminal:</b> 24/7 service. <i>(Closest to CityU Macau)</i></li>
+                </ul>
+
+                <h3>By Land 🚗</h3>
+                <p><b>HZMB "Golden Bus":</b> Connects HK and Macau Port (40 mins).
+                <br><b>Border Checkpoints:</b> Border Gate (06:00-01:00), Hengqin Port (24h), and Qingmao Port (24h).</p>
+                """
+            },
+            {
+                'id': 'local-access',
+                'heading': 'Getting to CityU Macau (Taipa Campus)',
+                'content': """
+                <p>Address: <b>Avenida Padre Tomás Pereira, Taipa, Macau</b></p>
+                <table class="transport-table">
+                    <tr>
+                        <th>From Point</th>
+                        <th>Taxi (Fastest)</th>
+                        <th>Public Bus (MOP 6)</th>
+                    </tr>
+                    <tr>
+                        <td><b>Macau Airport (MFM)</b></td>
+                        <td>8 mins (~MOP 40)</td>
+                        <td>Bus <b>MT1</b> (Stop: <i>Esparteiro/Lou Lim Ieok</i>)</td>
+                    </tr>
+                    <tr>
+                        <td><b>Taipa Ferry Terminal</b></td>
+                        <td>5 mins (~MOP 50)</td>
+                        <td>Bus <b>MT1</b> (Stop: <i>Esparteiro/Lou Lim Ieok</i>)</td>
+                    </tr>
+                    <tr>
+                        <td><b>Border Gate</b></td>
+                        <td>12 mins (~MOP 70)</td>
+                        <td>Bus <b>25</b> or <b>25B</b> (Stop: <i>Esparteiro/Regency</i>)</td>
+                    </tr>
+                </table>
+                <p><i>Note: After the bus stop, walk up the slope to reach the university entrance.</i></p>
+                """
             }
         ]
     }
