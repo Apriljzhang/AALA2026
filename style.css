@@ -377,7 +377,6 @@ h1, h2, h3 {
         max-width: none;
     }
 }
-/* Add this to your css_code variable */
 
 .parallel-container {
     display: flex;             /* This aligns items horizontally */
@@ -407,4 +406,14 @@ h1, h2, h3 {
     .parallel-container {
         flex-direction: column;
     }
+}
+
+.category-card ul {
+    padding-left: 20px; /* Reduces the standard 40px indentation */
+    margin-left: 0;
+}
+
+.category-card ul ul {
+    padding-left: 15px; /* Makes nested sub-bullets even tighter */
+    margin-top: 5px;
 }
