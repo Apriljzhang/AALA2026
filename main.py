@@ -72,13 +72,30 @@ site_data = {
     },
     'registration': {'page_title': 'Registration - AALA 2026', 'sections': [{'id':'reg','heading':'Registration','content':'<p>Coming Soon.</p>'}]},
     'program': {'page_title': 'Program - AALA 2026', 'sections': [{'id':'prog','heading':'Program','content':'<p>Coming Soon.</p>'}]},
-   'venue': {
+    'venue': {
         'page_title': 'Venue & Transport - AALA 2026',
         'sections': [
             {
                 'id': 'overview',
                 'heading': 'Venue Overview',
-                'content': """ ... (Your consolidated university text, videos, and map) ... """
+                'content': """
+                <p>The City University of Macau (CityU Macau), formerly known as the University of East Asia founded in 1981 and renamed in 2011, follows a strategic development outline of “Rename, Restructure, Transform, Upgrade” as it advances disciplines in digital humanities, arts, business, finance, emerging engineering, and social sciences to become a fully-fledged metropolitan university. As a leading education provider, the University shoulders the social responsibility of “Serving Macao, Integrating into Greater Bay Area” by nurturing high-caliber professionals aligned with its motto of “Virtue, Knowledge, Practice,” while sparing no effort to provide the intellectual and academic support necessary to promote local and regional development within the integrated Guangdong-Hong Kong-Macao Greater Bay Area.</p>
+                
+                <div class="video-grid">
+                    <div class="media-box">
+                        <p><b>YouTube Introduction</b></p>
+                        <iframe width="100%" height="250" src="https://www.youtube.com/embed/yFXsRTb1Sbo" frameborder="0" allowfullscreen style="border-radius:8px;"></iframe>
+                    </div>
+                    <div class="media-box">
+                        <p><b>Bilibili (了解城市大學)</b></p>
+                        <iframe width="100%" height="250" src="https://player.bilibili.com/player.html?bvid=BV154qEBMERU&page=1&danmaku=0&autoplay=0" frameborder="0" allowfullscreen style="border-radius:8px;"></iframe>
+                    </div>
+                </div>
+
+                <div style="max-width: 800px; margin: 40px auto; text-align: center;">
+                    <h3>Campus Map</h3>
+                    <img src="campus-map.jpg" alt="Campus Map" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                </div>"""
             },
             {
                 'id': 'transport-international',
@@ -132,7 +149,7 @@ site_data = {
             }
         ]
     }
-}
+} # Closing bracket for site_data fixed here
 
 # --- STEP 2: THE TEMPLATE ---
 html_layout = """
@@ -183,20 +200,21 @@ body { font-family: 'Montserrat', sans-serif; margin: 0; line-height: 1.6; color
 .content-block h2 { color: #008264; border-bottom: 3px solid #008264; display: inline-block; }
 .highlight-red { color: #FA0202; font-weight: bold; }
 
-/* Parallel Layout */
 .parallel-container { display: flex; gap: 20px; margin-top: 20px; }
 .category-card { flex: 1; background: #f9f9f9; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-
-/* Video/Media Grid */
 .video-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px; }
 .media-box { text-align: center; }
-
-/* Tightened List Indentation */
 .tight-list { padding-left: 18px; margin-left: 0; }
 .tight-list li { margin-bottom: 5px; }
 
+/* Transport Table Styling */
+.transport-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+.transport-table th, .transport-table td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+.transport-table th { background-color: #008264; color: white; }
+.transport-table tr:nth-child(even) { background-color: #f2f2f2; }
+
 .footer { text-align: center; padding: 30px; background: #008264; color: white; margin-top: 50px; }
-@media (max-width: 768px) { .parallel-container, .video-grid { flex-direction: column; grid-template-columns: 1fr; } }
+@media (max-width: 768px) { .parallel-container, .video-grid { flex-direction: column; } }
 """
 
 def build_site():
