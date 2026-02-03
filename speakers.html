@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +6,66 @@
     <title>Speakers - AALA 2026</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* This internal CSS handles the speaker layout while keeping your style.css untouched */
+        .speaker-entry {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 60px;
+            align-items: flex-start;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 40px;
+        }
+        .speaker-photo {
+            width: 220px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            flex-shrink: 0;
+        }
+        .speaker-details h3 {
+            margin-top: 0;
+            color: #168e6a; /* Matches your green theme */
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+        }
+        .talk-info {
+            background-color: #f9f9f9;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 6px solid #168e6a;
+            margin-top: 20px;
+        }
+        .talk-title {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            color: #222;
+            line-height: 1.4;
+        }
+        .abstract-label {
+            font-weight: bold;
+            text-decoration: underline;
+            color: #168e6a;
+        }
+        .abstract-text {
+            color: #444;
+            margin-top: 10px;
+            line-height: 1.7;
+        }
+        /* Fix for mobile screens */
+        @media (max-width: 768px) {
+            .speaker-entry {
+                flex-direction: column;
+                align-items: center;
+            }
+            .speaker-photo {
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="navbar">
@@ -14,63 +73,72 @@
         <nav class="nav-links">
             <a href="index.html">Home</a>
             <a href="call-for-papers.html">Call For Papers</a>
-            <a href="program.html">Speakers and Program</a>
+            <a href="speakers.html">Speakers</a>
+            <a href="program.html">Program</a>
             <a href="registration.html">Registration</a>
             <a href="venue.html">Venue</a>
         </nav>
     </header>
-    <main>
-        
 
+    <main>
         <div class="container">
             <section id="speakers" class="content-block">
                 <h2>Plenary Speakers</h2>
                 <div class="speaker-container">
                     
+                    <!-- Speaker 1 -->
                     <div class="speaker-entry">
-                        <img src="Speaker_EJ.png" alt="Eunice Jang" class="speaker-photo">
+                        <img src="Speaker_EJ.png" alt="Prof. Eunice Jang" class="speaker-photo">
                         <div class="speaker-details">
                             <h3>Prof. Eunice Eunhee Jang</h3>
                             <p>Dr. Eunice Eunhee Jang is a Professor at the Ontario Institute for Studies in Education (OISE), University of Toronto. She believes that how we assess students shapes not only what they learn, but who they become. Her work reimagines assessment as a practice of recognition rather than gatekeeping, with a particular commitment to multilingual learners and historically underserved communities. She played a key role in developing Ontario’s Steps to English Proficiency framework and now leads projects such as BalanceAI and APLUS, exploring how AI-supported diagnostic and learning-oriented assessments can strengthen teachers’ and students’ agency.</p>
                             <div class="talk-info">
                                 <span class="talk-title">Empowering Learners and Educators: Critical AI Literacy for Learning-Oriented Language Assessment in the Age of Generative AI</span>
-                                <p><span class="abstract-label">Abstract:</span> When students can ask ChatGPT to help them write an essay or practice a conversation, what does it really mean to be a competent language user? This is not merely an academic integrity issue. It challenges us to rethink what language ability actually entails (Xi, 2025). If AI can produce fluent text, then competence may lie less in the final product itself and more in learners’ capacity to engage meaningfully with language tasks and use feedback to improve. This plenary argues that learning-oriented assessment (LoA) offers a constructive response to this challenge because it shifts the focus from measuring linguistic output to facilitating deeper cognitive and metacognitive competencies (Turner & Purpura, 2016).
-
-Drawing on two research projects, BalanceAI with school-age children and APLUS with university students, the talk examines how AI-supported LoA can provide timely feedback that strengthens learner agency and self-regulated learning through the metacognitive cycle of goal-setting, monitoring, and reflection that characterizes autonomous learners (Zimmerman, 2008). For teachers, such assessment systems can provide timely diagnostic information that supports responsive instruction. Yet, realizing this promise requires more than technical proficiency. Teachers need critical AI literacy to understand not only how to use these tools, but also how to question their limitations and blind spots. The reality is that AI systems often work less well for the students we serve. Research shows scoring differences for students from different linguistic backgrounds, and speech recognition systems may privilege native-speaker speech features (Hannah et al., 2022; Jang & Sawaki, 2025; Kim & Ockey, 2024; Wang & von Davier, 2014), Teachers therefore play a crucial role in interpreting results, challenging bias, and ensuring that AI serves all learners fairly.
-
-The talk concludes by charting future directions for the language assessment community, advocating for culturally responsive AI design, human-in-the-loop approaches (Bolender et al., 2023), regional validation studies, and collaborative frameworks that welcome Asian voices in shaping how these technologies are developed and deployed.</p>
+                                <div class="abstract-text">
+                                    <span class="abstract-label">Abstract:</span> When students can ask ChatGPT to help them write an essay or practice a conversation, what does it really mean to be a competent language user? This is not merely an academic integrity issue. It challenges us to rethink what language ability actually entails (Xi, 2025). If AI can produce fluent text, then competence may lie less in the final product itself and more in learners’ capacity to engage meaningfully with language tasks and use feedback to improve. This plenary argues that learning-oriented assessment (LoA) offers a constructive response to this challenge because it shifts the focus from measuring linguistic output to facilitating deeper cognitive and metacognitive competencies (Turner & Purpura, 2016).<br><br>
+                                    Drawing on two research projects, BalanceAI with school-age children and APLUS with university students, the talk examines how AI-supported LoA can provide timely feedback that strengthens learner agency and self-regulated learning through the metacognitive cycle of goal-setting, monitoring, and reflection that characterizes autonomous learners (Zimmerman, 2008). For teachers, such assessment systems can provide timely diagnostic information that supports responsive instruction. Yet, realizing this promise requires more than technical proficiency. Teachers need critical AI literacy to understand not only how to use these tools, but also how to question their limitations and blind spots. The reality is that AI systems often work less well for the students we serve. Research shows scoring differences for students from different linguistic backgrounds, and speech recognition systems may privilege native-speaker speech features (Hannah et al., 2022; Jang & Sawaki, 2025; Kim & Ockey, 2024; Wang & von Davier, 2014), Teachers therefore play a crucial role in interpreting results, challenging bias, and ensuring that AI serves all learners fairly.<br><br>
+                                    The talk concludes by charting future directions for the language assessment community, advocating for culturally responsive AI design, human-in-the-loop approaches (Bolender et al., 2023), regional validation studies, and collaborative frameworks that welcome Asian voices in shaping how these technologies are developed and deployed.
+                                </div>
                             </div>
                         </div>
                     </div>
 
+                    <!-- Speaker 2 -->
                     <div class="speaker-entry">
-                        <img src="Speaker_YZ.jpeg" alt="Ying Zheng" class="speaker-photo">
+                        <img src="Speaker_YZ.jpeg" alt="Prof. Ying Zheng" class="speaker-photo">
                         <div class="speaker-details">
                             <h3>Prof. Ying Zheng</h3>
                             <p>Ying Zheng is a Professor in the Department of Languages, Cultures and Linguistics at the University of Southampton, UK. She holds a PhD in Cognitive Studies from Queen’s University, Canada, specialising in second language testing and assessment. Before joining Southampton in 2013, she worked as a psychometrician and later director of research in the language testing division at Pearson London. Her research focuses on psychometrics, large-scale test validation, scale alignment, Mandarin exams in the UK school system and AI-enabled language assessment.</p>
                             <div class="talk-info">
                                 <span class="talk-title">Researching Mandarin Chinese Education Beyond Asia: Evidence, Challenges, and Synergies</span>
-                                <p><span class="abstract-label">Abstract:</span> As Mandarin Chinese continues to play an important role in education, particularly amid growing interest in multilingualism and global engagement, understanding the interplay between teaching, learning, and assessment of this Asian language in a non-Asian context remains essential. This presentation draws on a series of empirical studies, offering insights into key aspects of Mandarin Chinese education, including learner motivation, teacher development, and exam evaluation.
-
-I will present findings from studies conducted in recent years by the Southampton team, exploring factors that shape learner motivation across educational stages, from primary school to university, and Mandarin teachers’ professional development, including the experiences of language teachers across borders and the ways transnational trajectories influence classroom practice. I will also present research findings on the alignment of A-Level Mandarin exams with the CEFR and the challenges teachers encounter in translating exam requirements into classroom practice.
-
-To conclude, I will propose a reflective synergy approach that encourages teachers to engage as researchers, bridging the gap between research and practice to enhance Mandarin teaching and assessment. The presentation will highlight the wider relevance of this work for strengthening Mandarin Chinese as a foreign language education globally, where learner profiles, exposure patterns, and institutional expectations differ, supporting more equitable, context-sensitive, and sustainable approaches to teaching and assessment.</p>
+                                <div class="abstract-text">
+                                    <span class="abstract-label">Abstract:</span> As Mandarin Chinese continues to play an important role in education, particularly amid growing interest in multilingualism and global engagement, understanding the interplay between teaching, learning, and assessment of this Asian language in a non-Asian context remains essential. This presentation draws on a series of empirical studies, offering insights into key aspects of Mandarin Chinese education, including learner motivation, teacher development, and exam evaluation.<br><br>
+                                    I will present findings from studies conducted in recent years by the Southampton team, exploring factors that shape learner motivation across educational stages, from primary school to university, and Mandarin teachers’ professional development, including the experiences of language teachers across borders and the ways transnational trajectories influence classroom practice. I will also present research findings on the alignment of A-Level Mandarin exams with the CEFR and the challenges teachers encounter in translating exam requirements into classroom practice.<br><br>
+                                    To conclude, I will propose a reflective synergy approach that encourages teachers to engage as researchers, bridging the gap between research and practice to enhance Mandarin teaching and assessment. The presentation will highlight the wider relevance of this work for strengthening Mandarin Chinese as a foreign language education globally, where learner profiles, exposure patterns, and institutional expectations differ, supporting more equitable, context-sensitive, and sustainable approaches to teaching and assessment.
+                                </div>
                             </div>
                         </div>
                     </div>
 
+                    <!-- Speaker 3 -->
                     <div class="speaker-entry">
-                        <img src="Speaker_XY.jpg" alt="Xun Yan" class="speaker-photo">
+                        <img src="Speaker_XY.jpg" alt="Prof. Xun Yan" class="speaker-photo">
                         <div class="speaker-details">
                             <h3>Prof. Xun Yan</h3>
                             <p>Xun Yan is a professor of Linguistics, Second Language Acquisition and Teacher Education, and Educational Psychology at the University of Illinois Urbana-Champaign. His research interests include speaking and writing assessment, psycholinguistic and computational approaches to language testing, and language assessment literacy. His work can be found in Applied Linguistics, Assessing Writing, Journal of Second Language Writing, Language Assessment Quarterly, Language Learning, Language Testing, Studies in Second Language Acquisition, TESOL Quarterly, among others. He is a co-editor for Language Testing. Xun was the recipient of the ETS TOEFL Essentials New Scholar award in 2022 and the ILTA/Sage Best Book Award in 2024.</p>
                             <div class="talk-info">
                                 <span class="talk-title">Innovating the assessment of argumentation: The story behind the evolution of a local writing assessment</span>
-                                <p><span class="abstract-label">Abstract:</span> Assessing the construct of argumentation in second language writing is a perennial concern for both language testing and second language writing specialists. While scholarship in L2 writing has substantially deepened the theoretical construct of argumentation, language testing research must constrain its operationalization to ensure reliability, validity, and practicality. In large-scale assessments, argumentation is often captured indirectly, folded into broader categories such as organization or task completion. Local assessments, however, can serve as productive sites to explore more direct and fine-grained approaches to assessment argumentation. This talk traces the evolution of a local writing placement test designed to measure argumentation more directly and serve a complex network of stakeholders associated with the local writing program. Largely through a community of practice approach, this collaborative work has involved developing a shared construct definition among stakeholders, revising writing tasks to elicit argumentation, validating new rating scales, and exploring technological tools to automate selected processes. Ultimately, these innovations can strengthen alignment between assessment and instruction, enhancing the instructional effectiveness of L2 writing instructors and the learning experience of L2 writers.</p>
+                                <div class="abstract-text">
+                                    <span class="abstract-label">Abstract:</span> Assessing the construct of argumentation in second language writing is a perennial concern for both language testing and second language writing specialists. While scholarship in L2 writing has substantially deepened the theoretical construct of argumentation, language testing research must constrain its operationalization to ensure reliability, validity, and practicality. In large-scale assessments, argumentation is often captured indirectly, folded into broader categories such as organization or task completion. Local assessments, however, can serve as productive sites to explore more direct and fine-grained approaches to assessment argumentation. This talk traces the evolution of a local writing placement test designed to measure argumentation more directly and serve a complex network of stakeholders associated with the local writing program. Largely through a community of practice approach, this collaborative work has involved developing a shared construct definition among stakeholders, revising writing tasks to elicit argumentation, validating new rating scales, and exploring technological tools to automate selected processes. Ultimately, these innovations can strengthen alignment between assessment and instruction, enhancing the instructional effectiveness of L2 writing instructors and the learning experience of L2 writers.
+                                </div>
                             </div>
                         </div>
                     </div>
 
                 </div>
             </section>
-"""
+        </div>
+    </main>
+    <footer class="footer"><p>&copy; AALA 2026 Conference. All Rights Reserved.</p></footer>
+</body>
+</html>
