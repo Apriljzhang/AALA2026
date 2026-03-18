@@ -167,16 +167,16 @@ img { max-width: 100%; height: auto; }
 }
 
 .table-scroll > table {
-    min-width: 860px;
+    min-width: 1200px;
 }
 
 .fees-table th,
 .fees-table td {
     vertical-align: middle;
+    white-space: nowrap;
 }
 
 .fees-table th {
-    white-space: normal;
     line-height: 1.25;
 }
 
@@ -257,7 +257,7 @@ img { max-width: 100%; height: auto; }
         flex-direction: column;
     }
     .table-scroll > table {
-        min-width: 720px;
+        min-width: 1200px;
     }
     .organiser-list {
         grid-template-columns: 1fr;
