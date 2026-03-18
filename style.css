@@ -167,16 +167,21 @@ img { max-width: 100%; height: auto; }
 }
 
 .table-scroll > table {
-    min-width: 1200px;
+    min-width: 0;
+    width: 100%;
+}
+
+.fees-table {
+    table-layout: fixed;
 }
 
 .fees-table thead th {
     background-color: #1b8564;
     color: white;
     font-weight: bold;
-    text-align: center;
+    text-align: left;
     vertical-align: middle;
-    white-space: nowrap;
+    white-space: normal;
     line-height: 1.3;
     padding: 10px 8px;
 }
@@ -185,20 +190,12 @@ img { max-width: 100%; height: auto; }
 .fees-table td {
     border: 1px solid #e0e0e0;
     vertical-align: middle;
+    padding: 10px 8px;
 }
 
 .fees-table td {
-    white-space: nowrap;
-}
-
-.fees-table td:nth-child(n+3) {
-    text-align: center;
-    font-variant-numeric: tabular-nums;
-}
-
-.fees-table td:first-child,
-.fees-table td:nth-child(2) {
     text-align: left;
+    font-variant-numeric: tabular-nums;
 }
 
 .fees-table tbody tr.row-presenter {
@@ -286,8 +283,10 @@ img { max-width: 100%; height: auto; }
     .parallel-container {
         flex-direction: column;
     }
-    .table-scroll > table {
-        min-width: 1200px;
+    .fees-table thead th,
+    .fees-table td {
+        padding: 8px 5px;
+        font-size: 0.85rem;
     }
     .organiser-list {
         grid-template-columns: 1fr;
