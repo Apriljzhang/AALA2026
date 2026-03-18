@@ -160,6 +160,36 @@ img { max-width: 100%; height: auto; }
 
 .transport-table th { background-color: #168e6a; color: white; }
 
+.table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+}
+
+.table-scroll > table {
+    min-width: 860px;
+}
+
+.fees-table th,
+.fees-table td {
+    vertical-align: middle;
+}
+
+.fees-table th {
+    white-space: normal;
+    line-height: 1.25;
+}
+
+.fees-table td:nth-child(n+3) {
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+}
+
+.fees-table td:first-child,
+.fees-table td:nth-child(2) {
+    text-align: left;
+}
+
 .footer { 
     text-align: center; 
     padding: 30px; 
@@ -226,10 +256,8 @@ img { max-width: 100%; height: auto; }
     .parallel-container {
         flex-direction: column;
     }
-    .transport-table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
+    .table-scroll > table {
+        min-width: 720px;
     }
     .organiser-list {
         grid-template-columns: 1fr;
