@@ -10,11 +10,15 @@
         /* This internal CSS handles the speaker layout while keeping your style.css untouched */
         .speaker-entry {
             display: flex;
-            gap: 30px;
-            margin-bottom: 60px;
+            gap: 28px;
+            margin-bottom: 48px;
             align-items: flex-start;
             border-bottom: 1px solid #eee;
-            padding-bottom: 40px;
+            padding-bottom: 36px;
+        }
+        .speaker-details {
+            flex: 1;
+            min-width: 0;
         }
         .speaker-photo {
             width: 220px;
@@ -31,10 +35,10 @@
         }
         .talk-info {
             background-color: #f9f9f9;
-            padding: 25px;
+            padding: 20px 22px;
             border-radius: 8px;
             border-left: 6px solid #168e6a;
-            margin-top: 20px;
+            margin-top: 16px;
         }
         .talk-title {
             font-weight: bold;
@@ -89,7 +93,7 @@ function toggleMenu() {
     </header>    
 
     <main>
-        <div class="container">
+        <div class="container container-wide">
             <section id="speakers" class="content-block">
                 <h2>Plenary Speakers</h2>
                 <div class="speaker-container">

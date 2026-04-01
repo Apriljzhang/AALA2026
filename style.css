@@ -51,6 +51,11 @@ img { max-width: 100%; height: auto; }
 
 .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; width: 100%; }
 
+/* Wider reading column for long-form speaker/workshop pages */
+.container.container-wide {
+    max-width: 1280px;
+}
+
 .content-block { width: 100%; }
 
 .text-body { overflow-wrap: anywhere; }
