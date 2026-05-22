@@ -249,6 +249,10 @@ function toggleMenu() {
                                     <label for="fullName">Full Name</label><br>
                                     <input type="text" id="fullName" name="fullName" required>
                                 </p>
+                                <p style="margin-top: 10px;">
+                                    <label for="affiliation">Affiliation</label><br>
+                                    <input type="text" id="affiliation" name="affiliation" required>
+                                </p>
                                 <p id="submissionIdWrapper" style="display: none; margin-top: 10px;">
                                     <label for="submissionId">Submission ID</label><br>
                                     <input type="text" id="submissionId" name="submissionId" placeholder="Enter your submission ID" value="AALA2026">
@@ -285,6 +289,10 @@ function toggleMenu() {
                                         <span id="addonBanquetLabel">Banquet</span>
                                     </label>
                                 </div>
+                                <p id="dietaryRequirementsWrapper" style="display: none; margin-top: 12px;">
+                                    <label for="dietaryRequirements">Dietary Requirements (required for banquet/bundle)</label><br>
+                                    <input type="text" id="dietaryRequirements" name="dietaryRequirements" placeholder="Please list food allergies or dietary restrictions">
+                                </p>
 
                                 <h3 style="margin-top: 14px;">6 Payment Method</h3>
                                 <div id="paymentMethodSelection">
@@ -375,6 +383,8 @@ function toggleMenu() {
         var addonWorkshop3Label = document.getElementById("addonWorkshop3Label");
         var addonBanquetLabel = document.getElementById("addonBanquetLabel");
         var amountInput = document.getElementById("amount");
+        var dietaryRequirementsWrapper = document.getElementById("dietaryRequirementsWrapper");
+        var dietaryRequirementsInput = document.getElementById("dietaryRequirements");
         var submissionIdWrapper = document.getElementById("submissionIdWrapper");
         var submissionIdInput = document.getElementById("submissionId");
         var qrReminderText = document.getElementById("qrReminderText");
@@ -514,6 +524,22 @@ function toggleMenu() {
                     tile.style.opacity = "1";
                 }
             });
+
+            updateBanquetDependentUi();
+        }
+
+        function updateBanquetDependentUi() {
+            var bundleSelected = Boolean(baseSelection && baseSelection.rateKey === "bundle");
+            var banquetAddonSelected = Boolean(addonBanquet.checked && !addonBanquet.disabled);
+            var needsDietary = bundleSelected || banquetAddonSelected;
+
+            if (dietaryRequirementsWrapper && dietaryRequirementsInput) {
+                dietaryRequirementsWrapper.style.display = needsDietary ? "block" : "none";
+                dietaryRequirementsInput.required = needsDietary;
+                if (!needsDietary) {
+                    dietaryRequirementsInput.value = "";
+                }
+            }
         }
 
         function renderBaseRateCards() {
@@ -688,7 +714,9 @@ function toggleMenu() {
             if (isQrPayment) {
                 event.preventDefault();
                 var fullNameInput = document.getElementById("fullName");
+                var affiliationInput = document.getElementById("affiliation");
                 var attendeeName = fullNameInput && fullNameInput.value ? fullNameInput.value : "Attendee";
+                var attendeeAffiliation = affiliationInput && affiliationInput.value ? affiliationInput.value : "N/A";
                 var currency = getSelectedCurrency();
                 var addOnNames = [];
                 addonOptions.forEach(function (addonCheckbox) {
@@ -719,8 +747,10 @@ function toggleMenu() {
                     "Dear AALA 2026 Organizing Team,",
                     "",
                     "Name: " + attendeeName,
+                    "Affiliation: " + attendeeAffiliation,
                     "Submission ID: " + (submissionIdText || "N/A"),
                     "Payment amount: " + currency + " " + amountInput.value,
+                    "Dietary requirements: " + (dietaryRequirementsInput && dietaryRequirementsInput.value ? dietaryRequirementsInput.value : "N/A"),
                     "",
                     "Please attach payment proof as an email attachment.",
                     "Please also attach Macau local ID proof as an email attachment.",
