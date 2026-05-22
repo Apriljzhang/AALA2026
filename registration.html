@@ -269,8 +269,16 @@ function toggleMenu() {
                                 <h3 style="margin-top: 14px;">5 Optional Add-ons</h3>
                                 <div id="addonCards" class="fee-tile-grid">
                                     <label class="fee-tile">
-                                        <input type="checkbox" class="addon-option" id="addonWorkshop" data-addon-key="workshop">
-                                        <span id="addonWorkshopLabel">Pre-con Workshop</span>
+                                        <input type="checkbox" class="addon-option workshop-option" id="addonWorkshop1" data-addon-key="workshop" data-workshop-title="Assessing English language students with Specific Learning Difficulties">
+                                        <span id="addonWorkshop1Label">Workshop 1</span>
+                                    </label>
+                                    <label class="fee-tile">
+                                        <input type="checkbox" class="addon-option workshop-option" id="addonWorkshop2" data-addon-key="workshop" data-workshop-title="Validity and validation in language assessment: Concepts, evidence, and argument-based approaches">
+                                        <span id="addonWorkshop2Label">Workshop 2</span>
+                                    </label>
+                                    <label class="fee-tile">
+                                        <input type="checkbox" class="addon-option workshop-option" id="addonWorkshop3" data-addon-key="workshop" data-workshop-title="Unpacking deep learning and neural networks: Fundamentals and hands-on application in language assessment research">
+                                        <span id="addonWorkshop3Label">Workshop 3</span>
                                     </label>
                                     <label class="fee-tile">
                                         <input type="checkbox" class="addon-option" id="addonBanquet" data-addon-key="banquet">
@@ -360,9 +368,11 @@ function toggleMenu() {
         var qrPaymentSection = document.getElementById("qrPaymentSection");
         var baseRateCards = document.getElementById("baseRateCards");
         var addonOptions = form.querySelectorAll(".addon-option");
-        var addonWorkshop = document.getElementById("addonWorkshop");
+        var workshopOptions = form.querySelectorAll(".workshop-option");
         var addonBanquet = document.getElementById("addonBanquet");
-        var addonWorkshopLabel = document.getElementById("addonWorkshopLabel");
+        var addonWorkshop1Label = document.getElementById("addonWorkshop1Label");
+        var addonWorkshop2Label = document.getElementById("addonWorkshop2Label");
+        var addonWorkshop3Label = document.getElementById("addonWorkshop3Label");
         var addonBanquetLabel = document.getElementById("addonBanquetLabel");
         var amountInput = document.getElementById("amount");
         var submissionIdWrapper = document.getElementById("submissionIdWrapper");
@@ -426,7 +436,9 @@ function toggleMenu() {
         function updateAddOnLabels() {
             var currency = getSelectedCurrency();
             var addOnCurrency = addOnFees[currency];
-            addonWorkshopLabel.textContent = "Pre-con Workshop: " + currency + " " + addOnCurrency.workshop;
+            addonWorkshop1Label.textContent = "Workshop 1 - Assessing English language students with Specific Learning Difficulties: " + currency + " " + addOnCurrency.workshop;
+            addonWorkshop2Label.textContent = "Workshop 2 - Validity and validation in language assessment: Concepts, evidence, and argument-based approaches: " + currency + " " + addOnCurrency.workshop;
+            addonWorkshop3Label.textContent = "Workshop 3 - Unpacking deep learning and neural networks: Fundamentals and hands-on application in language assessment research: " + currency + " " + addOnCurrency.workshop;
             addonBanquetLabel.textContent = "Banquet: " + currency + " " + addOnCurrency.banquet;
         }
 
@@ -462,7 +474,11 @@ function toggleMenu() {
                 if (addonCheckbox.checked && !addonCheckbox.disabled) {
                     var addOnKey = addonCheckbox.getAttribute("data-addon-key");
                     addOnTotal += addOnCurrency[addOnKey];
-                    addOnLabels.push(addOnKey === "workshop" ? "Workshop" : "Banquet");
+                    if (addOnKey === "workshop") {
+                        addOnLabels.push("Workshop: " + addonCheckbox.getAttribute("data-workshop-title"));
+                    } else {
+                        addOnLabels.push("Banquet");
+                    }
                 }
             });
 
@@ -613,6 +629,14 @@ function toggleMenu() {
 
         addonOptions.forEach(function (addonCheckbox) {
             addonCheckbox.addEventListener("change", function () {
+                if (addonCheckbox.classList.contains("workshop-option") && addonCheckbox.checked) {
+                    workshopOptions.forEach(function (otherWorkshopCheckbox) {
+                        if (otherWorkshopCheckbox !== addonCheckbox) {
+                            otherWorkshopCheckbox.checked = false;
+                            otherWorkshopCheckbox.closest(".fee-tile").classList.remove("selected");
+                        }
+                    });
+                }
                 updateAddOnAvailability();
                 updateSelectedAmountPreview();
             });
@@ -669,7 +693,11 @@ function toggleMenu() {
                 var addOnNames = [];
                 addonOptions.forEach(function (addonCheckbox) {
                     if (addonCheckbox.checked && !addonCheckbox.disabled) {
-                        addOnNames.push(addonCheckbox.getAttribute("data-addon-key") === "workshop" ? "Workshop" : "Banquet");
+                        if (addonCheckbox.getAttribute("data-addon-key") === "workshop") {
+                            addOnNames.push("Workshop: " + addonCheckbox.getAttribute("data-workshop-title"));
+                        } else {
+                            addOnNames.push("Banquet");
+                        }
                     }
                 });
 
