@@ -257,9 +257,8 @@ function toggleMenu() {
                                 <p style="margin-top: 10px;">
                                     <label>
                                         <input type="checkbox" id="isMacauLocal" name="isMacauLocal">
-                                        I am Macau local (Macau resident / studying in Macau / Macau blue card holder)
+                                        I am Macau local (Macau resident / studying in Macau / Macau blue card holder) <strong>Evidence needed</strong>.
                                     </label>
-                                    <br><strong>Evidence needed: please attach Macau local identity evidence in your email.</strong>
                                 </p>
                             </div>
 
@@ -285,7 +284,7 @@ function toggleMenu() {
                         <input type="hidden" id="amount" name="amount" required>
                         <input type="hidden" id="selectedCurrency" name="selectedCurrency" value="USD">
 
-                        <h3>Payment Method</h3>
+                        <h3>6 Payment Method</h3>
                         <div id="paymentMethodSelection">
                             <label>
                                 <input type="radio" name="paymentMethod" value="credit-card" checked>
@@ -674,42 +673,40 @@ function toggleMenu() {
                     }
                 });
 
-                var draftedSubject = [
-                    attendeeName,
-                    roleText + " / " + localText + " / " + baseSelection.label.split(" - ").slice(2).join(" - "),
-                    currency,
-                    amountInput.value
-                ].join(" - ");
+                var paymentTypeParts = [roleText];
+                if (isMacauLocal()) {
+                    paymentTypeParts.push("Macau Local");
+                }
+                paymentTypeParts.push(baseSelection.rateKey === "regular" ? "Regular" : "Early Bird");
+                if (baseSelection.rateKey === "bundle") {
+                    paymentTypeParts.push("Bundle");
+                }
+                if (addOnNames.length > 0) {
+                    paymentTypeParts.push("Add-ons: " + addOnNames.join(" + "));
+                }
+                var paymentTypeText = paymentTypeParts.join(" / ");
+                var draftedSubject = (submissionIdText || "AALA2026") + " - " + paymentTypeText;
 
                 var draftedMessageLines = [
                     "Dear AALA 2026 Organizing Team,",
                     "",
-                    "Please find my QR payment receipt for verification.",
-                    "IMPORTANT: Please attach my payment receipt screenshot before sending this email.",
-                    "",
                     "Name: " + attendeeName,
-                    "Role: " + roleText,
-                    "Local status: " + localText,
                     "Submission ID: " + (submissionIdText || "N/A"),
-                    "Selected rate: " + baseSelection.label,
                     "Payment amount: " + currency + " " + amountInput.value,
-                    "System date check (China time): " + getCurrentChinaDateString(),
-                    "Add-ons: " + (addOnNames.length ? addOnNames.join(" + ") : "None"),
+                    "",
+                    "Please attach payment proof as an email attachment.",
+                    "Please also attach Macau local ID proof as an email attachment.",
                     "",
                     "Best regards,",
                     attendeeName
                 ];
-
-                if (role === "participant" && isMacauLocal()) {
-                    draftedMessageLines.push("", "IMPORTANT: As a Macau local participant, please also attach your Macau local identity evidence.");
-                }
 
                 var mailtoLink = "mailto:aala2026@outlook.com"
                     + "?subject=" + encodeURIComponent(draftedSubject)
                     + "&body=" + encodeURIComponent(draftedMessageLines.join("\n"));
 
                 var reminderAlert = "Before proceeding, please make sure you have taken a clear payment proof screenshot.";
-                if (role === "participant" && isMacauLocal()) {
+                if (isMacauLocal()) {
                     reminderAlert += " Also prepare your Macau local identity evidence to attach in the email.";
                 }
                 window.alert(reminderAlert + " Your email app will open next.");
