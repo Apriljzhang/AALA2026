@@ -277,42 +277,42 @@ function toggleMenu() {
                                         <span id="addonBanquetLabel">Banquet</span>
                                     </label>
                                 </div>
+
+                                <h3 style="margin-top: 14px;">6 Payment Method</h3>
+                                <div id="paymentMethodSelection">
+                                    <label>
+                                        <input type="radio" name="paymentMethod" value="credit-card" checked>
+                                        Credit Card (Visa / MasterCard)
+                                    </label><br>
+                                    <label>
+                                        <input type="radio" name="paymentMethod" value="qr-code">
+                                        Other Mobile Payments (QR Code)
+                                    </label>
+                                </div>
+
+                                <div id="creditCardNotice" style="margin-top: 12px;">
+                                    <p>You will be redirected securely to Luso International Bank to complete your Visa payment.</p>
+                                </div>
+
+                                <div id="qrPaymentSection" style="display: none; margin-top: 12px;">
+                                    <div class="qr-payment-row">
+                                        <div class="qr-payment-left">
+                                            <img src="payment-qrcode.png" alt="Payment QR code" style="width: 100%; max-width: 220px; height: auto;">
+                                        </div>
+                                        <div class="qr-payment-right">
+                                            <img src="payment-methods.png" alt="Supported mobile payment channels" style="width: 100%; max-width: 360px; height: auto;">
+                                        </div>
+                                    </div>
+                                    <p style="margin-top: 12px;">
+                                        <strong>Reminder:</strong> <span id="qrReminderText">Please complete the QR payment and take a clear payment proof screenshot before continuing to email. Attach the payment proof in your email.</span>
+                                    </p>
+                                </div>
                             </div>
                         </div>
 
                         <p id="selectedAmountPreview" style="margin-top: 10px;">Selected amount: None</p>
                         <input type="hidden" id="amount" name="amount" required>
                         <input type="hidden" id="selectedCurrency" name="selectedCurrency" value="USD">
-
-                        <h3>6 Payment Method</h3>
-                        <div id="paymentMethodSelection">
-                            <label>
-                                <input type="radio" name="paymentMethod" value="credit-card" checked>
-                                Credit Card (Visa / MasterCard)
-                            </label><br>
-                            <label>
-                                <input type="radio" name="paymentMethod" value="qr-code">
-                                Other Mobile Payments (QR Code)
-                            </label>
-                        </div>
-
-                        <div id="creditCardNotice" style="margin-top: 12px;">
-                            <p>You will be redirected securely to Luso International Bank to complete your Visa payment.</p>
-                        </div>
-
-                        <div id="qrPaymentSection" style="display: none; margin-top: 12px;">
-                            <div class="qr-payment-row">
-                                <div class="qr-payment-left">
-                                    <img src="payment-qrcode.png" alt="Payment QR code" style="width: 100%; max-width: 220px; height: auto;">
-                                </div>
-                                <div class="qr-payment-right">
-                                    <img src="payment-methods.png" alt="Supported mobile payment channels" style="width: 100%; max-width: 360px; height: auto;">
-                                </div>
-                            </div>
-                            <p style="margin-top: 12px;">
-                                <strong>Reminder:</strong> <span id="qrReminderText">Please complete the QR payment and take a clear payment proof screenshot before continuing to email. Attach the payment proof in your email.</span>
-                            </p>
-                        </div>
 
                         <p style="margin-top: 16px;">
                             <button type="submit">Proceed to Payment</button>
