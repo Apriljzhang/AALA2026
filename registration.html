@@ -719,12 +719,15 @@ function toggleMenu() {
                 var attendeeAffiliation = affiliationInput && affiliationInput.value ? affiliationInput.value : "N/A";
                 var currency = getSelectedCurrency();
                 var addOnNames = [];
+                var addOnSubjectNames = [];
                 addonOptions.forEach(function (addonCheckbox) {
                     if (addonCheckbox.checked && !addonCheckbox.disabled) {
                         if (addonCheckbox.getAttribute("data-addon-key") === "workshop") {
                             addOnNames.push("Workshop: " + addonCheckbox.getAttribute("data-workshop-title"));
+                            addOnSubjectNames.push("Add-on Workshop");
                         } else {
                             addOnNames.push("Banquet");
+                            addOnSubjectNames.push("Add-on Banquet");
                         }
                     }
                 });
@@ -737,8 +740,8 @@ function toggleMenu() {
                 if (baseSelection.rateKey === "bundle") {
                     paymentTypeParts.push("Bundle");
                 }
-                if (addOnNames.length > 0) {
-                    paymentTypeParts.push("Add-ons: " + addOnNames.join(" + "));
+                if (addOnSubjectNames.length > 0) {
+                    paymentTypeParts.push("Add-ons: " + addOnSubjectNames.join(" + "));
                 }
                 var paymentTypeText = paymentTypeParts.join(" / ");
                 var draftedSubject = (submissionIdText || "AALA2026") + " - " + paymentTypeText;
