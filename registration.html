@@ -225,7 +225,7 @@ function toggleMenu() {
                     <form id="conferenceRegistrationForm" action="#" method="post" enctype="multipart/form-data">
                         <div id="feeChooserLayout">
                             <div id="currencyPanel">
-                                <h3>1) Select Currency</h3>
+                                <h3>1 Select Currency</h3>
                                 <div id="currencySelection">
                                     <label>
                                         <input type="radio" name="registrationCurrency" value="USD" checked>
@@ -237,21 +237,21 @@ function toggleMenu() {
                                     </label>
                                 </div>
 
-                                <h3 style="margin-top: 14px;">2) Select Role</h3>
+                                <h3 style="margin-top: 14px;">2 Select Role</h3>
                                 <div id="roleSelection">
                                     <label><input type="radio" name="participantRole" value="presenter"> Presenter</label><br>
                                     <label><input type="radio" name="participantRole" value="student"> Student Presenter</label><br>
                                     <label><input type="radio" name="participantRole" value="participant"> Participant (not presenting)</label>
                                 </div>
 
-                                <h3 style="margin-top: 14px;">3) Personal Information</h3>
+                                <h3 style="margin-top: 14px;">3 Personal Information</h3>
                                 <p style="margin-top: 10px;">
                                     <label for="fullName">Full Name</label><br>
                                     <input type="text" id="fullName" name="fullName" required>
                                 </p>
                                 <p id="submissionIdWrapper" style="display: none; margin-top: 10px;">
                                     <label for="submissionId">Submission ID (required for presenters and student presenters)</label><br>
-                                    <input type="text" id="submissionId" name="submissionId" placeholder="Enter your submission ID">
+                                    <input type="text" id="submissionId" name="submissionId" placeholder="Enter your submission ID" value="AALA2026">
                                 </p>
 
                                 <p style="margin-top: 10px;">
@@ -259,17 +259,15 @@ function toggleMenu() {
                                         <input type="checkbox" id="isMacauLocal" name="isMacauLocal">
                                         I am Macau local (Macau resident / studying in Macau / Macau blue card holder)
                                     </label>
+                                    <br><strong>Evidence needed: please attach Macau local identity evidence in your email.</strong>
                                 </p>
                             </div>
 
                             <div id="amountTilesPanel">
-                                <h3>4) Choose Registration Rate (Tick One Card)</h3>
-                                <p id="rateRuleNote" style="margin: 6px 0 10px 0;">
-                                    Select role first. Rates are shown automatically by your current system date, checked in China time.
-                                </p>
+                                <h3>4 Choose Registration Rate</h3>
                                 <div id="baseRateCards" class="fee-tile-grid"></div>
 
-                                <h3 style="margin-top: 14px;">5) Optional Add-ons</h3>
+                                <h3 style="margin-top: 14px;">5 Optional Add-ons</h3>
                                 <div id="addonCards" class="fee-tile-grid">
                                     <label class="fee-tile">
                                         <input type="checkbox" class="addon-option" id="addonWorkshop" data-addon-key="workshop">
@@ -362,7 +360,6 @@ function toggleMenu() {
         var creditCardNotice = document.getElementById("creditCardNotice");
         var qrPaymentSection = document.getElementById("qrPaymentSection");
         var baseRateCards = document.getElementById("baseRateCards");
-        var rateRuleNote = document.getElementById("rateRuleNote");
         var addonOptions = form.querySelectorAll(".addon-option");
         var addonWorkshop = document.getElementById("addonWorkshop");
         var addonBanquet = document.getElementById("addonBanquet");
@@ -420,7 +417,9 @@ function toggleMenu() {
             var needsSubmissionId = role === "presenter" || role === "student";
             submissionIdWrapper.style.display = needsSubmissionId ? "block" : "none";
             submissionIdInput.required = needsSubmissionId;
-            if (!needsSubmissionId) {
+            if (needsSubmissionId && !submissionIdInput.value) {
+                submissionIdInput.value = "AALA2026";
+            } else if (!needsSubmissionId) {
                 submissionIdInput.value = "";
             }
         }
@@ -514,7 +513,6 @@ function toggleMenu() {
             updateQrReminder();
 
             if (!role) {
-                rateRuleNote.textContent = "Select role to show available rate cards.";
                 updateSelectedAmountPreview();
                 updateAddOnAvailability();
                 return;
@@ -530,10 +528,6 @@ function toggleMenu() {
 
             var roleText = roleLabelMap[role];
             var localText = isMacauLocal() ? "Macau Local" : "Non-Macau Local";
-            var deadlineText = role === "participant" ? "15 July 2026 (China time)" : "30 June 2026 (China time)";
-
-            rateRuleNote.textContent = "Role: " + roleText + " | Scope: " + localText + ". System date in China time decides available cards. Deadline: " + deadlineText + ".";
-
             rateCards.forEach(function (rateCard) {
                 var tile = document.createElement("label");
                 tile.className = "fee-tile";
