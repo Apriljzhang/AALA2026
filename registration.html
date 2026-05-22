@@ -351,8 +351,7 @@ function toggleMenu() {
                                 <img src="payment-qrcode.png" alt="Payment QR code" style="max-width: 320px; width: 100%; height: auto;">
                             </div>
                             <p style="margin-top: 12px;">
-                                <label for="receiptUpload">Upload Payment Receipt</label><br>
-                                <input type="file" id="receiptUpload" name="receiptUpload" accept="image/*">
+                                <strong>Reminder:</strong> Please complete the QR payment and take a clear payment proof screenshot before continuing to email.
                             </p>
                         </div>
 
@@ -376,7 +375,6 @@ function toggleMenu() {
         var feeOptionCheckboxes = form.querySelectorAll(".fee-option");
         var creditCardNotice = document.getElementById("creditCardNotice");
         var qrPaymentSection = document.getElementById("qrPaymentSection");
-        var receiptUpload = document.getElementById("receiptUpload");
         var amountInput = document.getElementById("amount");
         var selectedCurrencyInput = document.getElementById("selectedCurrency");
         var feeOptionsUsd = document.getElementById("feeOptionsUsd");
@@ -389,9 +387,6 @@ function toggleMenu() {
 
             creditCardNotice.style.display = isQrPayment ? "none" : "block";
             qrPaymentSection.style.display = isQrPayment ? "block" : "none";
-            if (receiptUpload) {
-                receiptUpload.required = isQrPayment;
-            }
         }
 
         function buildOrderId() {
@@ -493,8 +488,6 @@ function toggleMenu() {
                 var attendeeEmail = emailInput && emailInput.value ? emailInput.value : "";
                 var paymentTypeText = getSelectedPaymentType();
                 var selectedAmountText = selectedCurrencyInput.value + " " + amountInput.value;
-                var receiptFile = receiptUpload && receiptUpload.files && receiptUpload.files.length ? receiptUpload.files[0] : null;
-                var receiptFileName = receiptFile ? receiptFile.name : "No file selected";
                 var draftedSubject = [
                     attendeeName,
                     paymentTypeText,
@@ -511,7 +504,6 @@ function toggleMenu() {
                     "Email: " + attendeeEmail,
                     "Payment type: " + paymentTypeText,
                     "Payment amount: " + selectedAmountText,
-                    "Receipt file: " + receiptFileName,
                     "",
                     "Best regards,",
                     attendeeName
@@ -520,6 +512,7 @@ function toggleMenu() {
                     + "?subject=" + encodeURIComponent(draftedSubject)
                     + "&body=" + encodeURIComponent(draftedMessage);
 
+                window.alert("Before proceeding, please make sure you have taken a clear payment proof screenshot. Your email app will open next.");
                 window.location.href = mailtoLink;
                 window.alert("Your email app is opening with a drafted message. Please attach your receipt screenshot file manually before sending.");
                 return;
