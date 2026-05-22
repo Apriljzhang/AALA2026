@@ -223,14 +223,6 @@ function toggleMenu() {
                 <h2>Registration Form</h2>
                 <div class="text-body">
                     <form id="conferenceRegistrationForm" action="#" method="post" enctype="multipart/form-data">
-                        <p>
-                            <label for="fullName">Full Name</label><br>
-                            <input type="text" id="fullName" name="fullName" required>
-                        </p>
-                        <p>
-                            <label for="email">Email Address</label><br>
-                            <input type="email" id="email" name="email" required>
-                        </p>
                         <div id="feeChooserLayout">
                             <div id="currencyPanel">
                                 <h3>1) Select Currency</h3>
@@ -252,6 +244,11 @@ function toggleMenu() {
                                     <label><input type="radio" name="participantRole" value="participant"> Participant (not presenting)</label>
                                 </div>
 
+                                <h3 style="margin-top: 14px;">3) Personal Information</h3>
+                                <p style="margin-top: 10px;">
+                                    <label for="fullName">Full Name</label><br>
+                                    <input type="text" id="fullName" name="fullName" required>
+                                </p>
                                 <p id="submissionIdWrapper" style="display: none; margin-top: 10px;">
                                     <label for="submissionId">Submission ID (required for presenters and student presenters)</label><br>
                                     <input type="text" id="submissionId" name="submissionId" placeholder="Enter your submission ID">
@@ -263,21 +260,16 @@ function toggleMenu() {
                                         I am Macau local (Macau resident / studying in Macau / Macau blue card holder)
                                     </label>
                                 </p>
-                                <p style="margin-top: 10px;">
-                                    <label for="paymentDate">3) Payment Date (checked against China time)</label><br>
-                                    <input type="date" id="paymentDate" name="paymentDate" required>
-                                </p>
                             </div>
 
                             <div id="amountTilesPanel">
                                 <h3>4) Choose Registration Rate (Tick One Card)</h3>
                                 <p id="rateRuleNote" style="margin: 6px 0 10px 0;">
-                                    Select role and payment date first. Early-bird follows China time deadlines (Presenter/Student: 30 June 2026; Participant: 15 July 2026).
+                                    Select role first. Rates are shown automatically by your current system date, checked in China time.
                                 </p>
                                 <div id="baseRateCards" class="fee-tile-grid"></div>
 
                                 <h3 style="margin-top: 14px;">5) Optional Add-ons</h3>
-                                <p style="margin: 6px 0 10px 0;">You can add both workshop and banquet when not selecting bundle. If bundle is selected, banquet add-on is disabled.</p>
                                 <div id="addonCards" class="fee-tile-grid">
                                     <label class="fee-tile">
                                         <input type="checkbox" class="addon-option" id="addonWorkshop" data-addon-key="workshop">
@@ -377,7 +369,6 @@ function toggleMenu() {
         var addonWorkshopLabel = document.getElementById("addonWorkshopLabel");
         var addonBanquetLabel = document.getElementById("addonBanquetLabel");
         var amountInput = document.getElementById("amount");
-        var paymentDateInput = document.getElementById("paymentDate");
         var submissionIdWrapper = document.getElementById("submissionIdWrapper");
         var submissionIdInput = document.getElementById("submissionId");
         var qrReminderText = document.getElementById("qrReminderText");
@@ -405,25 +396,21 @@ function toggleMenu() {
             return Boolean(isMacauLocalCheckbox && isMacauLocalCheckbox.checked);
         }
 
-        function formatChinaDateFromInput(dateString) {
-            if (!dateString) {
-                return "";
-            }
-            var localNoon = new Date(dateString + "T12:00:00");
+        function getCurrentChinaDateString() {
             var formatter = new Intl.DateTimeFormat("en-CA", {
                 timeZone: "Asia/Shanghai",
                 year: "numeric",
                 month: "2-digit",
                 day: "2-digit"
             });
-            return formatter.format(localNoon);
+            return formatter.format(new Date());
         }
 
-        function isEarlyBirdAllowedForRole(role, dateString) {
-            if (!role || !dateString) {
+        function isEarlyBirdAllowedForRole(role) {
+            if (!role) {
                 return true;
             }
-            var chinaDate = formatChinaDateFromInput(dateString);
+            var chinaDate = getCurrentChinaDateString();
             var deadline = role === "participant" ? "2026-07-15" : "2026-06-30";
             return chinaDate <= deadline;
         }
@@ -521,8 +508,7 @@ function toggleMenu() {
             var role = getSelectedRole();
             var currency = getSelectedCurrency();
             var localKey = isMacauLocal() ? "local" : "nonLocal";
-            var dateString = paymentDateInput.value;
-            var earlyAllowed = isEarlyBirdAllowedForRole(role, dateString);
+            var earlyAllowed = isEarlyBirdAllowedForRole(role);
 
             updateAddOnLabels();
             updateQrReminder();
@@ -535,17 +521,18 @@ function toggleMenu() {
             }
 
             var roleRates = feeTable[currency][role][localKey];
-            var rateCards = [
-                { key: "early", label: "Early Bird", amount: roleRates.early },
-                { key: "regular", label: "Regular", amount: roleRates.regular },
-                { key: "bundle", label: "Early Bird Bundle (Registration + Banquet)", amount: roleRates.bundle }
-            ];
+            var conferenceLabel = earlyAllowed ? "Conference (Early Bird)" : "Conference (Regular)";
+            var conferenceAmount = earlyAllowed ? roleRates.early : roleRates.regular;
+            var rateCards = [{ key: earlyAllowed ? "early" : "regular", label: conferenceLabel, amount: conferenceAmount }];
+            if (earlyAllowed) {
+                rateCards.push({ key: "bundle", label: "Bundle (Registration + Banquet)", amount: roleRates.bundle });
+            }
 
             var roleText = roleLabelMap[role];
             var localText = isMacauLocal() ? "Macau Local" : "Non-Macau Local";
             var deadlineText = role === "participant" ? "15 July 2026 (China time)" : "30 June 2026 (China time)";
 
-            rateRuleNote.textContent = "Role: " + roleText + " | Scope: " + localText + ". Early-bird and bundle follow deadline " + deadlineText + ".";
+            rateRuleNote.textContent = "Role: " + roleText + " | Scope: " + localText + ". System date in China time decides available cards. Deadline: " + deadlineText + ".";
 
             rateCards.forEach(function (rateCard) {
                 var tile = document.createElement("label");
@@ -556,13 +543,6 @@ function toggleMenu() {
                 checkbox.className = "base-rate-option";
                 checkbox.setAttribute("data-rate-key", rateCard.key);
                 checkbox.setAttribute("data-amount", String(rateCard.amount));
-
-                var isEarlyBased = rateCard.key === "early" || rateCard.key === "bundle";
-                if (isEarlyBased && !earlyAllowed) {
-                    checkbox.disabled = true;
-                    tile.style.opacity = "0.6";
-                    tile.title = "Not available after deadline in China time.";
-                }
 
                 checkbox.addEventListener("change", function (event) {
                     var allBaseCards = baseRateCards.querySelectorAll(".base-rate-option");
@@ -610,7 +590,7 @@ function toggleMenu() {
                 return true;
             }
             var role = getSelectedRole();
-            return isEarlyBirdAllowedForRole(role, paymentDateInput.value);
+            return isEarlyBirdAllowedForRole(role);
         }
 
         function updatePaymentUi() {
@@ -649,10 +629,6 @@ function toggleMenu() {
             renderBaseRateCards();
         });
 
-        paymentDateInput.addEventListener("change", function () {
-            renderBaseRateCards();
-        });
-
         updatePaymentUi();
         updateSubmissionIdUi();
         selectedCurrencyInput.value = getSelectedCurrency();
@@ -678,12 +654,6 @@ function toggleMenu() {
                 return;
             }
 
-            if (!paymentDateInput.value) {
-                event.preventDefault();
-                window.alert("Please choose a payment date before proceeding.");
-                return;
-            }
-
             if (!baseSelection || !amountInput.value) {
                 event.preventDefault();
                 window.alert("Please choose one registration rate card before proceeding.");
@@ -701,9 +671,7 @@ function toggleMenu() {
             if (isQrPayment) {
                 event.preventDefault();
                 var fullNameInput = document.getElementById("fullName");
-                var emailInput = document.getElementById("email");
                 var attendeeName = fullNameInput && fullNameInput.value ? fullNameInput.value : "Attendee";
-                var attendeeEmail = emailInput && emailInput.value ? emailInput.value : "";
                 var currency = getSelectedCurrency();
                 var addOnNames = [];
                 addonOptions.forEach(function (addonCheckbox) {
@@ -726,13 +694,12 @@ function toggleMenu() {
                     "IMPORTANT: Please attach my payment receipt screenshot before sending this email.",
                     "",
                     "Name: " + attendeeName,
-                    "Email: " + attendeeEmail,
                     "Role: " + roleText,
                     "Local status: " + localText,
                     "Submission ID: " + (submissionIdText || "N/A"),
                     "Selected rate: " + baseSelection.label,
                     "Payment amount: " + currency + " " + amountInput.value,
-                    "Payment date: " + paymentDateInput.value + " (submitted date, checked in China time)",
+                    "System date check (China time): " + getCurrentChinaDateString(),
                     "Add-ons: " + (addOnNames.length ? addOnNames.join(" + ") : "None"),
                     "",
                     "Best regards,",
