@@ -452,6 +452,16 @@ function toggleMenu() {
             }
         }
 
+        function getSelectedPaymentType() {
+            var checkedBox = form.querySelector(".fee-option:checked");
+            if (!checkedBox || !checkedBox.parentElement) {
+                return "Payment Type Not Specified";
+            }
+
+            var optionText = checkedBox.parentElement.textContent.trim();
+            return optionText.split(":")[0].trim();
+        }
+
         paymentMethodRadios.forEach(function (radio) {
             radio.addEventListener("change", updatePaymentUi);
         });
@@ -481,9 +491,16 @@ function toggleMenu() {
                 var emailInput = document.getElementById("email");
                 var attendeeName = fullNameInput && fullNameInput.value ? fullNameInput.value : "Attendee";
                 var attendeeEmail = emailInput && emailInput.value ? emailInput.value : "";
+                var paymentTypeText = getSelectedPaymentType();
                 var selectedAmountText = selectedCurrencyInput.value + " " + amountInput.value;
                 var receiptFile = receiptUpload && receiptUpload.files && receiptUpload.files.length ? receiptUpload.files[0] : null;
                 var receiptFileName = receiptFile ? receiptFile.name : "No file selected";
+                var draftedSubject = [
+                    attendeeName,
+                    paymentTypeText,
+                    selectedCurrencyInput.value,
+                    amountInput.value
+                ].join(" - ");
                 var draftedMessage = [
                     "Dear AALA 2026 Organizing Team,",
                     "",
@@ -492,6 +509,7 @@ function toggleMenu() {
                     "",
                     "Name: " + attendeeName,
                     "Email: " + attendeeEmail,
+                    "Payment type: " + paymentTypeText,
                     "Payment amount: " + selectedAmountText,
                     "Receipt file: " + receiptFileName,
                     "",
@@ -499,7 +517,7 @@ function toggleMenu() {
                     attendeeName
                 ].join("\n");
                 var mailtoLink = "mailto:aala2026@outlook.com"
-                    + "?subject=" + encodeURIComponent(attendeeName + " - " + selectedAmountText)
+                    + "?subject=" + encodeURIComponent(draftedSubject)
                     + "&body=" + encodeURIComponent(draftedMessage);
 
                 window.location.href = mailtoLink;
