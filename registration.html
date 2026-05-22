@@ -6,6 +6,56 @@
     <title>Registration - AALA 2026</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        #feeChooserLayout {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+        #currencyPanel {
+            flex: 1 1 260px;
+            min-width: 240px;
+        }
+        #amountTilesPanel {
+            flex: 2 1 520px;
+            min-width: 300px;
+        }
+        .fee-group {
+            margin-bottom: 10px;
+        }
+        .fee-group-title {
+            margin: 6px 0;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+        .fee-tile-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 6px;
+        }
+        .fee-tile {
+            border: 1px solid #d9d9d9;
+            border-radius: 8px;
+            padding: 6px 8px;
+            display: block;
+            background: #ffffff;
+            cursor: pointer;
+            font-size: 0.9rem;
+            line-height: 1.25;
+        }
+        .fee-tile:hover {
+            border-color: #0b6fa4;
+            background: #f2f9ff;
+        }
+        .fee-tile.selected {
+            border-color: #0b6fa4;
+            background: #eaf6ff;
+        }
+        .fee-tile input {
+            margin-right: 5px;
+        }
+    </style>
 </head>
 <script>
 function toggleMenu() {
@@ -168,10 +218,114 @@ function toggleMenu() {
                             <label for="email">Email Address</label><br>
                             <input type="email" id="email" name="email" required>
                         </p>
-                        <p>
-                            <label for="amount">Registration Amount (USD)</label><br>
-                            <input type="number" id="amount" name="amount" min="1" step="0.01" value="185" required>
-                        </p>
+                        <div id="feeChooserLayout">
+                            <div id="currencyPanel">
+                                <h3>Registration Currency</h3>
+                                <div id="currencySelection">
+                                    <label>
+                                        <input type="radio" name="registrationCurrency" value="USD" checked>
+                                        US Dollars
+                                    </label><br>
+                                    <label>
+                                        <input type="radio" name="registrationCurrency" value="MOP/HKD/CNY">
+                                        MOP, Hong Kong Dollars, and Chinese Yuan
+                                    </label>
+                                </div>
+                            </div>
+                            <div id="amountTilesPanel">
+                                <h3>Registration Amount (Tick One)</h3>
+                                <div id="feeOptionsByCurrency" style="margin-top: 6px;">
+                                    <div id="feeOptionsUsd">
+                                        <div class="fee-group">
+                                            <div class="fee-group-title">Presenter</div>
+                                            <div class="fee-tile-grid">
+                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="185"> Non-Macau Local - Early Bird: USD 185</label>
+                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="200"> Non-Macau Local - Regular: USD 200</label>
+                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="250"> Non-Macau Local - Early Bird Bundle: USD 250</label>
+                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="135"> Macau Local - Early Bird: USD 135</label>
+                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="150"> Macau Local - Regular: USD 150</label>
+                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="200"> Macau Local - Early Bird Bundle: USD 200</label>
+                                            </div>
+                                        </div>
+                                        <div class="fee-group">
+                                            <div class="fee-group-title">Student</div>
+                                            <div class="fee-tile-grid">
+                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="90"> Non-Macau Local - Early Bird: USD 90</label>
+                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="110"> Non-Macau Local - Regular: USD 110</label>
+                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="155"> Non-Macau Local - Early Bird Bundle: USD 155</label>
+                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="65"> Macau Local - Early Bird: USD 65</label>
+                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="85"> Macau Local - Regular: USD 85</label>
+                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="130"> Macau Local - Early Bird Bundle: USD 130</label>
+                                            </div>
+                                        </div>
+                                        <div class="fee-group">
+                                            <div class="fee-group-title">Participant</div>
+                                            <div class="fee-tile-grid">
+                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="65"> Non-Macau Local - Early Bird: USD 65</label>
+                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="85"> Non-Macau Local - Regular: USD 85</label>
+                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="130"> Non-Macau Local - Early Bird Bundle: USD 130</label>
+                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="65"> Macau Local - Early Bird: USD 65</label>
+                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="85"> Macau Local - Regular: USD 85</label>
+                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="130"> Macau Local - Early Bird Bundle: USD 130</label>
+                                            </div>
+                                        </div>
+                                        <div class="fee-group">
+                                            <div class="fee-group-title">Add-ons</div>
+                                            <div class="fee-tile-grid">
+                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="75"> Pre-con Workshop: USD 75</label>
+                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="75"> Banquet: USD 75</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="feeOptionsLocal" style="display: none;">
+                                        <div class="fee-group">
+                                            <div class="fee-group-title">Presenter</div>
+                                            <div class="fee-tile-grid">
+                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="1480"> Non-Macau Local - Early Bird: 1480</label>
+                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="1600"> Non-Macau Local - Regular: 1600</label>
+                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="2000"> Non-Macau Local - Early Bird Bundle: 2000</label>
+                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="1080"> Macau Local - Early Bird: 1080</label>
+                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="1200"> Macau Local - Regular: 1200</label>
+                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="1600"> Macau Local - Early Bird Bundle: 1600</label>
+                                            </div>
+                                        </div>
+                                        <div class="fee-group">
+                                            <div class="fee-group-title">Student</div>
+                                            <div class="fee-tile-grid">
+                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="720"> Non-Macau Local - Early Bird: 720</label>
+                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="880"> Non-Macau Local - Regular: 880</label>
+                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="1240"> Non-Macau Local - Early Bird Bundle: 1240</label>
+                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="520"> Macau Local - Early Bird: 520</label>
+                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="680"> Macau Local - Regular: 680</label>
+                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="1040"> Macau Local - Early Bird Bundle: 1040</label>
+                                            </div>
+                                        </div>
+                                        <div class="fee-group">
+                                            <div class="fee-group-title">Participant</div>
+                                            <div class="fee-tile-grid">
+                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="520"> Non-Macau Local - Early Bird: 520</label>
+                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="680"> Non-Macau Local - Regular: 680</label>
+                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="1040"> Non-Macau Local - Early Bird Bundle: 1040</label>
+                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="520"> Macau Local - Early Bird: 520</label>
+                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="680"> Macau Local - Regular: 680</label>
+                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="1040"> Macau Local - Early Bird Bundle: 1040</label>
+                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="680"> Onsite (MOP cash): 680</label>
+                                            </div>
+                                        </div>
+                                        <div class="fee-group">
+                                            <div class="fee-group-title">Add-ons</div>
+                                            <div class="fee-tile-grid">
+                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="600"> Pre-con Workshop: 600</label>
+                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="600"> Banquet: 600</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p id="selectedAmountPreview" style="margin-top: 10px;">Selected amount: None</p>
+                        <input type="hidden" id="amount" name="amount" required>
+                        <input type="hidden" id="selectedCurrency" name="selectedCurrency" value="USD">
 
                         <h3>Payment Method</h3>
                         <div id="paymentMethodSelection">
@@ -218,10 +372,16 @@ function toggleMenu() {
         }
 
         var paymentMethodRadios = form.querySelectorAll('input[name="paymentMethod"]');
+        var currencyRadios = form.querySelectorAll('input[name="registrationCurrency"]');
+        var feeOptionCheckboxes = form.querySelectorAll(".fee-option");
         var creditCardNotice = document.getElementById("creditCardNotice");
         var qrPaymentSection = document.getElementById("qrPaymentSection");
         var receiptUpload = document.getElementById("receiptUpload");
         var amountInput = document.getElementById("amount");
+        var selectedCurrencyInput = document.getElementById("selectedCurrency");
+        var feeOptionsUsd = document.getElementById("feeOptionsUsd");
+        var feeOptionsLocal = document.getElementById("feeOptionsLocal");
+        var selectedAmountPreview = document.getElementById("selectedAmountPreview");
 
         function updatePaymentUi() {
             var selected = form.querySelector('input[name="paymentMethod"]:checked');
@@ -238,15 +398,82 @@ function toggleMenu() {
             return "AALA2026-" + Date.now() + "-" + Math.floor(Math.random() * 100000);
         }
 
+        function clearFeeSelection() {
+            feeOptionCheckboxes.forEach(function (checkbox) {
+                checkbox.checked = false;
+                var tile = checkbox.closest(".fee-tile");
+                if (tile) {
+                    tile.classList.remove("selected");
+                }
+            });
+            amountInput.value = "";
+            if (selectedAmountPreview) {
+                selectedAmountPreview.textContent = "Selected amount: None";
+            }
+        }
+
+        function updateCurrencyUi() {
+            var selectedCurrency = form.querySelector('input[name="registrationCurrency"]:checked');
+            var currencyValue = selectedCurrency ? selectedCurrency.value : "USD";
+
+            selectedCurrencyInput.value = currencyValue;
+            feeOptionsUsd.style.display = currencyValue === "USD" ? "block" : "none";
+            feeOptionsLocal.style.display = currencyValue === "USD" ? "none" : "block";
+            clearFeeSelection();
+        }
+
+        function handleFeeOptionChange(event) {
+            var checkedBox = event.target;
+            if (!checkedBox.checked) {
+                amountInput.value = "";
+                if (selectedAmountPreview) {
+                    selectedAmountPreview.textContent = "Selected amount: None";
+                }
+                return;
+            }
+
+            feeOptionCheckboxes.forEach(function (checkbox) {
+                if (checkbox !== checkedBox) {
+                    checkbox.checked = false;
+                    var uncheckedTile = checkbox.closest(".fee-tile");
+                    if (uncheckedTile) {
+                        uncheckedTile.classList.remove("selected");
+                    }
+                }
+            });
+
+            amountInput.value = checkedBox.getAttribute("data-amount");
+            var selectedTile = checkedBox.closest(".fee-tile");
+            if (selectedTile) {
+                selectedTile.classList.add("selected");
+            }
+            if (selectedAmountPreview) {
+                selectedAmountPreview.textContent = "Selected amount: " + selectedCurrencyInput.value + " " + amountInput.value;
+            }
+        }
+
         paymentMethodRadios.forEach(function (radio) {
             radio.addEventListener("change", updatePaymentUi);
         });
+        currencyRadios.forEach(function (radio) {
+            radio.addEventListener("change", updateCurrencyUi);
+        });
+        feeOptionCheckboxes.forEach(function (checkbox) {
+            checkbox.addEventListener("change", handleFeeOptionChange);
+        });
 
         updatePaymentUi();
+        updateCurrencyUi();
 
         form.addEventListener("submit", function (event) {
             var selected = form.querySelector('input[name="paymentMethod"]:checked');
             var isQrPayment = selected && selected.value === "qr-code";
+
+            if (!amountInput.value) {
+                event.preventDefault();
+                window.alert("Please select one registration amount before proceeding.");
+                return;
+            }
 
             if (isQrPayment) {
                 event.preventDefault();
@@ -264,8 +491,8 @@ function toggleMenu() {
 
             var payload = {
                 merchantId: "AALA2026_MERCHANT_ID",
-                amount: amountInput && amountInput.value ? amountInput.value : "185",
-                currency: "USD",
+                amount: amountInput.value,
+                currency: selectedCurrencyInput.value,
                 orderId: buildOrderId(),
                 returnUrl: window.location.origin + "/registration-success.html",
                 cancelUrl: window.location.origin + "/registration-cancelled.html"
