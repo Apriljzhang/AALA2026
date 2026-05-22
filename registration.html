@@ -233,7 +233,7 @@ function toggleMenu() {
                         </p>
                         <div id="feeChooserLayout">
                             <div id="currencyPanel">
-                                <h3>Registration Currency</h3>
+                                <h3>1) Select Currency</h3>
                                 <div id="currencySelection">
                                     <label>
                                         <input type="radio" name="registrationCurrency" value="USD" checked>
@@ -244,107 +244,54 @@ function toggleMenu() {
                                         MOP/HKD/CNY
                                     </label>
                                 </div>
+
+                                <h3 style="margin-top: 14px;">2) Select Role</h3>
+                                <div id="roleSelection">
+                                    <label><input type="radio" name="participantRole" value="presenter"> Presenter</label><br>
+                                    <label><input type="radio" name="participantRole" value="student"> Student Presenter</label><br>
+                                    <label><input type="radio" name="participantRole" value="participant"> Participant (not presenting)</label>
+                                </div>
+
+                                <p id="submissionIdWrapper" style="display: none; margin-top: 10px;">
+                                    <label for="submissionId">Submission ID (required for presenters and student presenters)</label><br>
+                                    <input type="text" id="submissionId" name="submissionId" placeholder="Enter your submission ID">
+                                </p>
+
+                                <p style="margin-top: 10px;">
+                                    <label>
+                                        <input type="checkbox" id="isMacauLocal" name="isMacauLocal">
+                                        I am Macau local (Macau resident / studying in Macau / Macau blue card holder)
+                                    </label>
+                                </p>
+                                <p style="margin-top: 10px;">
+                                    <label for="paymentDate">3) Payment Date (checked against China time)</label><br>
+                                    <input type="date" id="paymentDate" name="paymentDate" required>
+                                </p>
                             </div>
+
                             <div id="amountTilesPanel">
-                                <h3>Registration Amount (Tick One)</h3>
-                                <div id="feeOptionsByCurrency" style="margin-top: 6px;">
-                                    <div id="feeOptionsUsd">
-                                        <div class="fee-group">
-                                            <div class="fee-group-title">Presenter</div>
-                                            <div class="fee-tile-grid">
-                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="185"> Non-Macau Local - Early Bird: USD 185</label>
-                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="200"> Non-Macau Local - Regular: USD 200</label>
-                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="250"> Non-Macau Local - Early Bird Bundle: USD 250</label>
-                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="135"> Macau Local - Early Bird: USD 135</label>
-                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="150"> Macau Local - Regular: USD 150</label>
-                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="200"> Macau Local - Early Bird Bundle: USD 200</label>
-                                            </div>
-                                        </div>
-                                        <div class="fee-group">
-                                            <div class="fee-group-title">Student</div>
-                                            <div class="fee-tile-grid">
-                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="90"> Non-Macau Local - Early Bird: USD 90</label>
-                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="110"> Non-Macau Local - Regular: USD 110</label>
-                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="155"> Non-Macau Local - Early Bird Bundle: USD 155</label>
-                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="65"> Macau Local - Early Bird: USD 65</label>
-                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="85"> Macau Local - Regular: USD 85</label>
-                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="130"> Macau Local - Early Bird Bundle: USD 130</label>
-                                            </div>
-                                        </div>
-                                        <div class="fee-group">
-                                            <div class="fee-group-title">Participant</div>
-                                            <div class="fee-tile-grid">
-                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="65"> Non-Macau Local - Early Bird: USD 65</label>
-                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="85"> Non-Macau Local - Regular: USD 85</label>
-                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="130"> Non-Macau Local - Early Bird Bundle: USD 130</label>
-                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="65"> Macau Local - Early Bird: USD 65</label>
-                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="85"> Macau Local - Regular: USD 85</label>
-                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="130"> Macau Local - Early Bird Bundle: USD 130</label>
-                                            </div>
-                                        </div>
-                                        <div class="fee-group">
-                                            <div class="fee-group-title">Add-ons</div>
-                                            <div class="fee-tile-grid">
-                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="75"> Pre-con Workshop: USD 75</label>
-                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="75"> Banquet: USD 75</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="feeOptionsLocal" style="display: none;">
-                                        <div class="fee-group">
-                                            <div class="fee-group-title">Presenter</div>
-                                            <div class="fee-tile-grid">
-                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="1480"> Non-Macau Local - Early Bird: 1480</label>
-                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="1600"> Non-Macau Local - Regular: 1600</label>
-                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="2000"> Non-Macau Local - Early Bird Bundle: 2000</label>
-                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="1080"> Macau Local - Early Bird: 1080</label>
-                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="1200"> Macau Local - Regular: 1200</label>
-                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="1600"> Macau Local - Early Bird Bundle: 1600</label>
-                                            </div>
-                                        </div>
-                                        <div class="fee-group">
-                                            <div class="fee-group-title">Student</div>
-                                            <div class="fee-tile-grid">
-                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="720"> Non-Macau Local - Early Bird: 720</label>
-                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="880"> Non-Macau Local - Regular: 880</label>
-                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="1240"> Non-Macau Local - Early Bird Bundle: 1240</label>
-                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="520"> Macau Local - Early Bird: 520</label>
-                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="680"> Macau Local - Regular: 680</label>
-                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="1040"> Macau Local - Early Bird Bundle: 1040</label>
-                                            </div>
-                                        </div>
-                                        <div class="fee-group">
-                                            <div class="fee-group-title">Participant</div>
-                                            <div class="fee-tile-grid">
-                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="520"> Non-Macau Local - Early Bird: 520</label>
-                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="680"> Non-Macau Local - Regular: 680</label>
-                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="1040"> Non-Macau Local - Early Bird Bundle: 1040</label>
-                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="520"> Macau Local - Early Bird: 520</label>
-                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="680"> Macau Local - Regular: 680</label>
-                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="1040"> Macau Local - Early Bird Bundle: 1040</label>
-                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="680"> Onsite (MOP cash): 680</label>
-                                            </div>
-                                        </div>
-                                        <div class="fee-group">
-                                            <div class="fee-group-title">Add-ons</div>
-                                            <div class="fee-tile-grid">
-                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="600"> Pre-con Workshop: 600</label>
-                                                <label class="fee-tile"><input type="checkbox" class="fee-option" data-amount="600"> Banquet: 600</label>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <h3>4) Choose Registration Rate (Tick One Card)</h3>
+                                <p id="rateRuleNote" style="margin: 6px 0 10px 0;">
+                                    Select role and payment date first. Early-bird follows China time deadlines (Presenter/Student: 30 June 2026; Participant: 15 July 2026).
+                                </p>
+                                <div id="baseRateCards" class="fee-tile-grid"></div>
+
+                                <h3 style="margin-top: 14px;">5) Optional Add-ons</h3>
+                                <p style="margin: 6px 0 10px 0;">You can add both workshop and banquet when not selecting bundle. If bundle is selected, banquet add-on is disabled.</p>
+                                <div id="addonCards" class="fee-tile-grid">
+                                    <label class="fee-tile">
+                                        <input type="checkbox" class="addon-option" id="addonWorkshop" data-addon-key="workshop">
+                                        <span id="addonWorkshopLabel">Pre-con Workshop</span>
+                                    </label>
+                                    <label class="fee-tile">
+                                        <input type="checkbox" class="addon-option" id="addonBanquet" data-addon-key="banquet">
+                                        <span id="addonBanquetLabel">Banquet</span>
+                                    </label>
                                 </div>
                             </div>
                         </div>
+
                         <p id="selectedAmountPreview" style="margin-top: 10px;">Selected amount: None</p>
-                        <p id="submissionIdWrapper" style="display: none; margin-top: 10px;">
-                            <label for="submissionId">Submission ID (required for participants)</label><br>
-                            <input type="text" id="submissionId" name="submissionId" placeholder="Enter your submission ID">
-                        </p>
-                        <p style="margin-top: 10px;">
-                            <label for="paymentDate">Payment Date</label><br>
-                            <input type="date" id="paymentDate" name="paymentDate" required>
-                        </p>
                         <input type="hidden" id="amount" name="amount" required>
                         <input type="hidden" id="selectedCurrency" name="selectedCurrency" value="USD">
 
@@ -393,210 +340,361 @@ function toggleMenu() {
             return;
         }
 
+        var feeTable = {
+            "USD": {
+                presenter: { nonLocal: { early: 185, regular: 200, bundle: 250 }, local: { early: 135, regular: 150, bundle: 200 } },
+                student: { nonLocal: { early: 90, regular: 110, bundle: 155 }, local: { early: 65, regular: 85, bundle: 130 } },
+                participant: { nonLocal: { early: 65, regular: 85, bundle: 130 }, local: { early: 65, regular: 85, bundle: 130 } }
+            },
+            "MOP/HKD/CNY": {
+                presenter: { nonLocal: { early: 1480, regular: 1600, bundle: 2000 }, local: { early: 1080, regular: 1200, bundle: 1600 } },
+                student: { nonLocal: { early: 720, regular: 880, bundle: 1240 }, local: { early: 520, regular: 680, bundle: 1040 } },
+                participant: { nonLocal: { early: 520, regular: 680, bundle: 1040 }, local: { early: 520, regular: 680, bundle: 1040 } }
+            }
+        };
+
+        var addOnFees = {
+            "USD": { workshop: 75, banquet: 75 },
+            "MOP/HKD/CNY": { workshop: 600, banquet: 600 }
+        };
+
+        var roleLabelMap = {
+            presenter: "Presenter",
+            student: "Student Presenter",
+            participant: "Participant (not presenting)"
+        };
+
         var paymentMethodRadios = form.querySelectorAll('input[name="paymentMethod"]');
         var currencyRadios = form.querySelectorAll('input[name="registrationCurrency"]');
-        var feeOptionCheckboxes = form.querySelectorAll(".fee-option");
+        var roleRadios = form.querySelectorAll('input[name="participantRole"]');
         var creditCardNotice = document.getElementById("creditCardNotice");
         var qrPaymentSection = document.getElementById("qrPaymentSection");
+        var baseRateCards = document.getElementById("baseRateCards");
+        var rateRuleNote = document.getElementById("rateRuleNote");
+        var addonOptions = form.querySelectorAll(".addon-option");
+        var addonWorkshop = document.getElementById("addonWorkshop");
+        var addonBanquet = document.getElementById("addonBanquet");
+        var addonWorkshopLabel = document.getElementById("addonWorkshopLabel");
+        var addonBanquetLabel = document.getElementById("addonBanquetLabel");
         var amountInput = document.getElementById("amount");
         var paymentDateInput = document.getElementById("paymentDate");
         var submissionIdWrapper = document.getElementById("submissionIdWrapper");
         var submissionIdInput = document.getElementById("submissionId");
         var qrReminderText = document.getElementById("qrReminderText");
+        var isMacauLocalCheckbox = document.getElementById("isMacauLocal");
         var selectedCurrencyInput = document.getElementById("selectedCurrency");
-        var feeOptionsUsd = document.getElementById("feeOptionsUsd");
-        var feeOptionsLocal = document.getElementById("feeOptionsLocal");
         var selectedAmountPreview = document.getElementById("selectedAmountPreview");
-        var presenterEarlyBirdDeadline = new Date("2026-06-30T23:59:59");
-        var participantEarlyBirdDeadline = new Date("2026-07-15T23:59:59");
 
-        function updatePaymentUi() {
-            var selected = form.querySelector('input[name="paymentMethod"]:checked');
-            var isQrPayment = selected && selected.value === "qr-code";
-
-            creditCardNotice.style.display = isQrPayment ? "none" : "block";
-            qrPaymentSection.style.display = isQrPayment ? "block" : "none";
-        }
+        var baseSelection = null;
 
         function buildOrderId() {
             return "AALA2026-" + Date.now() + "-" + Math.floor(Math.random() * 100000);
         }
 
-        function clearFeeSelection() {
-            feeOptionCheckboxes.forEach(function (checkbox) {
-                checkbox.checked = false;
-                var tile = checkbox.closest(".fee-tile");
-                if (tile) {
-                    tile.classList.remove("selected");
-                }
-            });
-            amountInput.value = "";
-            if (selectedAmountPreview) {
-                selectedAmountPreview.textContent = "Selected amount: None";
+        function getSelectedCurrency() {
+            var selected = form.querySelector('input[name="registrationCurrency"]:checked');
+            return selected ? selected.value : "USD";
+        }
+
+        function getSelectedRole() {
+            var selected = form.querySelector('input[name="participantRole"]:checked');
+            return selected ? selected.value : "";
+        }
+
+        function isMacauLocal() {
+            return Boolean(isMacauLocalCheckbox && isMacauLocalCheckbox.checked);
+        }
+
+        function formatChinaDateFromInput(dateString) {
+            if (!dateString) {
+                return "";
             }
-            if (submissionIdInput) {
+            var localNoon = new Date(dateString + "T12:00:00");
+            var formatter = new Intl.DateTimeFormat("en-CA", {
+                timeZone: "Asia/Shanghai",
+                year: "numeric",
+                month: "2-digit",
+                day: "2-digit"
+            });
+            return formatter.format(localNoon);
+        }
+
+        function isEarlyBirdAllowedForRole(role, dateString) {
+            if (!role || !dateString) {
+                return true;
+            }
+            var chinaDate = formatChinaDateFromInput(dateString);
+            var deadline = role === "participant" ? "2026-07-15" : "2026-06-30";
+            return chinaDate <= deadline;
+        }
+
+        function updateSubmissionIdUi() {
+            var role = getSelectedRole();
+            var needsSubmissionId = role === "presenter" || role === "student";
+            submissionIdWrapper.style.display = needsSubmissionId ? "block" : "none";
+            submissionIdInput.required = needsSubmissionId;
+            if (!needsSubmissionId) {
                 submissionIdInput.value = "";
             }
         }
 
-        function updateCurrencyUi() {
-            var selectedCurrency = form.querySelector('input[name="registrationCurrency"]:checked');
-            var currencyValue = selectedCurrency ? selectedCurrency.value : "USD";
-
-            selectedCurrencyInput.value = currencyValue;
-            feeOptionsUsd.style.display = currencyValue === "USD" ? "block" : "none";
-            feeOptionsLocal.style.display = currencyValue === "USD" ? "none" : "block";
-            clearFeeSelection();
-            updateSelectionDependentUi();
+        function updateAddOnLabels() {
+            var currency = getSelectedCurrency();
+            var addOnCurrency = addOnFees[currency];
+            addonWorkshopLabel.textContent = "Pre-con Workshop: " + currency + " " + addOnCurrency.workshop;
+            addonBanquetLabel.textContent = "Banquet: " + currency + " " + addOnCurrency.banquet;
         }
 
-        function handleFeeOptionChange(event) {
-            var checkedBox = event.target;
-            if (!checkedBox.checked) {
+        function clearBaseSelection() {
+            baseSelection = null;
+            amountInput.value = "";
+            baseRateCards.innerHTML = "";
+        }
+
+        function updateQrReminder() {
+            var role = getSelectedRole();
+            var local = isMacauLocal();
+            var reminder = "Please complete the QR payment and take a clear payment proof screenshot before continuing to email. Attach the payment proof in your email.";
+            if (role === "participant" && local) {
+                reminder += " Also attach your Macau local identity evidence in the same email.";
+            }
+            qrReminderText.textContent = reminder;
+        }
+
+        function updateSelectedAmountPreview() {
+            if (!baseSelection) {
+                selectedAmountPreview.textContent = "Selected amount: None";
                 amountInput.value = "";
-                if (selectedAmountPreview) {
-                    selectedAmountPreview.textContent = "Selected amount: None";
-                }
-                updateSelectionDependentUi();
                 return;
             }
 
-            feeOptionCheckboxes.forEach(function (checkbox) {
-                if (checkbox !== checkedBox) {
-                    checkbox.checked = false;
-                    var uncheckedTile = checkbox.closest(".fee-tile");
-                    if (uncheckedTile) {
-                        uncheckedTile.classList.remove("selected");
-                    }
+            var currency = getSelectedCurrency();
+            var addOnCurrency = addOnFees[currency];
+            var addOnTotal = 0;
+            var addOnLabels = [];
+
+            addonOptions.forEach(function (addonCheckbox) {
+                if (addonCheckbox.checked && !addonCheckbox.disabled) {
+                    var addOnKey = addonCheckbox.getAttribute("data-addon-key");
+                    addOnTotal += addOnCurrency[addOnKey];
+                    addOnLabels.push(addOnKey === "workshop" ? "Workshop" : "Banquet");
                 }
             });
 
-            amountInput.value = checkedBox.getAttribute("data-amount");
-            var selectedTile = checkedBox.closest(".fee-tile");
-            if (selectedTile) {
-                selectedTile.classList.add("selected");
+            var total = baseSelection.amount + addOnTotal;
+            amountInput.value = String(total);
+
+            var breakdown = "Base: " + baseSelection.label;
+            if (addOnLabels.length > 0) {
+                breakdown += "; Add-ons: " + addOnLabels.join(" + ");
             }
-            if (selectedAmountPreview) {
-                selectedAmountPreview.textContent = "Selected amount: " + selectedCurrencyInput.value + " " + amountInput.value;
-            }
-            updateSelectionDependentUi();
+            selectedAmountPreview.textContent = "Selected amount: " + currency + " " + total + " (" + breakdown + ")";
         }
 
-        function getSelectedFeeContext() {
-            var checkedBox = form.querySelector(".fee-option:checked");
-            if (!checkedBox || !checkedBox.parentElement) {
-                return null;
+        function updateAddOnAvailability() {
+            var bundleSelected = Boolean(baseSelection && baseSelection.rateKey === "bundle");
+
+            addonBanquet.disabled = bundleSelected;
+            if (bundleSelected) {
+                addonBanquet.checked = false;
+                addonBanquet.closest(".fee-tile").classList.remove("selected");
             }
 
-            var tileLabel = checkedBox.parentElement;
-            var optionText = tileLabel.textContent.trim();
-            var paymentType = optionText.split(":")[0].trim();
-            var feeGroup = tileLabel.closest(".fee-group");
-            var feeGroupTitle = feeGroup ? feeGroup.querySelector(".fee-group-title") : null;
-            var feeCategory = feeGroupTitle ? feeGroupTitle.textContent.trim() : "";
-
-            return {
-                paymentType: paymentType,
-                fullOptionText: optionText,
-                feeCategory: feeCategory
-            };
-        }
-
-        function parsePaymentDate() {
-            if (!paymentDateInput || !paymentDateInput.value) {
-                return null;
-            }
-            return new Date(paymentDateInput.value + "T23:59:59");
-        }
-
-        function isEarlyBirdOption(optionText) {
-            return optionText.indexOf("Early Bird") !== -1;
-        }
-
-        function applyEarlyBirdRules() {
-            var paymentDate = parsePaymentDate();
-
-            feeOptionCheckboxes.forEach(function (checkbox) {
-                var tileLabel = checkbox.parentElement;
-                var optionText = tileLabel ? tileLabel.textContent.trim() : "";
-                var feeGroup = tileLabel ? tileLabel.closest(".fee-group") : null;
-                var feeGroupTitle = feeGroup ? feeGroup.querySelector(".fee-group-title") : null;
-                var feeCategory = feeGroupTitle ? feeGroupTitle.textContent.trim() : "";
-                var hasDeadline = feeCategory === "Presenter" || feeCategory === "Student" || feeCategory === "Participant";
-                var deadline = feeCategory === "Participant" ? participantEarlyBirdDeadline : presenterEarlyBirdDeadline;
-                var isDisallowed = Boolean(paymentDate && hasDeadline && isEarlyBirdOption(optionText) && paymentDate > deadline);
-
-                checkbox.disabled = isDisallowed;
-                if (isDisallowed) {
-                    checkbox.title = "Early-bird is closed for the selected payment date.";
-                    if (checkbox.checked) {
-                        checkbox.checked = false;
-                        var tile = checkbox.closest(".fee-tile");
-                        if (tile) {
-                            tile.classList.remove("selected");
-                        }
-                    }
+            addonOptions.forEach(function (addonCheckbox) {
+                var tile = addonCheckbox.closest(".fee-tile");
+                if (addonCheckbox.checked) {
+                    tile.classList.add("selected");
                 } else {
-                    checkbox.title = "";
+                    tile.classList.remove("selected");
+                }
+                if (addonCheckbox.disabled) {
+                    tile.style.opacity = "0.6";
+                } else {
+                    tile.style.opacity = "1";
                 }
             });
-
-            if (!form.querySelector(".fee-option:checked")) {
-                amountInput.value = "";
-                if (selectedAmountPreview) {
-                    selectedAmountPreview.textContent = "Selected amount: None";
-                }
-            }
-            updateSelectionDependentUi();
         }
 
-        function updateSelectionDependentUi() {
-            var context = getSelectedFeeContext();
-            var isParticipant = Boolean(context && context.feeCategory === "Participant");
-            var isParticipantMacauLocal = Boolean(isParticipant && context.paymentType.indexOf("Macau Local") !== -1);
+        function renderBaseRateCards() {
+            clearBaseSelection();
 
-            if (submissionIdWrapper && submissionIdInput) {
-                submissionIdWrapper.style.display = isParticipant ? "block" : "none";
-                submissionIdInput.required = isParticipant;
-                if (!isParticipant) {
-                    submissionIdInput.value = "";
-                }
+            var role = getSelectedRole();
+            var currency = getSelectedCurrency();
+            var localKey = isMacauLocal() ? "local" : "nonLocal";
+            var dateString = paymentDateInput.value;
+            var earlyAllowed = isEarlyBirdAllowedForRole(role, dateString);
+
+            updateAddOnLabels();
+            updateQrReminder();
+
+            if (!role) {
+                rateRuleNote.textContent = "Select role to show available rate cards.";
+                updateSelectedAmountPreview();
+                updateAddOnAvailability();
+                return;
             }
 
-            if (qrReminderText) {
-                var reminder = "Please complete the QR payment and take a clear payment proof screenshot before continuing to email. Attach the payment proof in your email.";
-                if (isParticipantMacauLocal) {
-                    reminder += " As a participant under Macau local option, also attach your Macau local identity evidence in the same email.";
+            var roleRates = feeTable[currency][role][localKey];
+            var rateCards = [
+                { key: "early", label: "Early Bird", amount: roleRates.early },
+                { key: "regular", label: "Regular", amount: roleRates.regular },
+                { key: "bundle", label: "Early Bird Bundle (Registration + Banquet)", amount: roleRates.bundle }
+            ];
+
+            var roleText = roleLabelMap[role];
+            var localText = isMacauLocal() ? "Macau Local" : "Non-Macau Local";
+            var deadlineText = role === "participant" ? "15 July 2026 (China time)" : "30 June 2026 (China time)";
+
+            rateRuleNote.textContent = "Role: " + roleText + " | Scope: " + localText + ". Early-bird and bundle follow deadline " + deadlineText + ".";
+
+            rateCards.forEach(function (rateCard) {
+                var tile = document.createElement("label");
+                tile.className = "fee-tile";
+
+                var checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
+                checkbox.className = "base-rate-option";
+                checkbox.setAttribute("data-rate-key", rateCard.key);
+                checkbox.setAttribute("data-amount", String(rateCard.amount));
+
+                var isEarlyBased = rateCard.key === "early" || rateCard.key === "bundle";
+                if (isEarlyBased && !earlyAllowed) {
+                    checkbox.disabled = true;
+                    tile.style.opacity = "0.6";
+                    tile.title = "Not available after deadline in China time.";
                 }
-                qrReminderText.textContent = reminder;
+
+                checkbox.addEventListener("change", function (event) {
+                    var allBaseCards = baseRateCards.querySelectorAll(".base-rate-option");
+                    if (!event.target.checked) {
+                        baseSelection = null;
+                        tile.classList.remove("selected");
+                        updateAddOnAvailability();
+                        updateSelectedAmountPreview();
+                        return;
+                    }
+
+                    allBaseCards.forEach(function (other) {
+                        if (other !== event.target) {
+                            other.checked = false;
+                            other.closest(".fee-tile").classList.remove("selected");
+                        }
+                    });
+
+                    baseSelection = {
+                        rateKey: rateCard.key,
+                        label: roleText + " - " + localText + " - " + rateCard.label,
+                        amount: rateCard.amount
+                    };
+                    tile.classList.add("selected");
+                    updateAddOnAvailability();
+                    updateSelectedAmountPreview();
+                });
+
+                var text = document.createTextNode(" " + rateCard.label + ": " + currency + " " + rateCard.amount);
+                tile.appendChild(checkbox);
+                tile.appendChild(text);
+                baseRateCards.appendChild(tile);
+            });
+
+            updateAddOnAvailability();
+            updateSelectedAmountPreview();
+        }
+
+        function validateEarlyBirdBeforeSubmit() {
+            if (!baseSelection) {
+                return true;
             }
+            var isEarlyBased = baseSelection.rateKey === "early" || baseSelection.rateKey === "bundle";
+            if (!isEarlyBased) {
+                return true;
+            }
+            var role = getSelectedRole();
+            return isEarlyBirdAllowedForRole(role, paymentDateInput.value);
+        }
+
+        function updatePaymentUi() {
+            var selected = form.querySelector('input[name="paymentMethod"]:checked');
+            var isQrPayment = selected && selected.value === "qr-code";
+            creditCardNotice.style.display = isQrPayment ? "none" : "block";
+            qrPaymentSection.style.display = isQrPayment ? "block" : "none";
         }
 
         paymentMethodRadios.forEach(function (radio) {
             radio.addEventListener("change", updatePaymentUi);
         });
+
         currencyRadios.forEach(function (radio) {
-            radio.addEventListener("change", updateCurrencyUi);
+            radio.addEventListener("change", function () {
+                selectedCurrencyInput.value = getSelectedCurrency();
+                renderBaseRateCards();
+            });
         });
-        feeOptionCheckboxes.forEach(function (checkbox) {
-            checkbox.addEventListener("change", handleFeeOptionChange);
+
+        roleRadios.forEach(function (radio) {
+            radio.addEventListener("change", function () {
+                updateSubmissionIdUi();
+                renderBaseRateCards();
+            });
         });
-        if (paymentDateInput) {
-            paymentDateInput.addEventListener("change", applyEarlyBirdRules);
-        }
+
+        addonOptions.forEach(function (addonCheckbox) {
+            addonCheckbox.addEventListener("change", function () {
+                updateAddOnAvailability();
+                updateSelectedAmountPreview();
+            });
+        });
+
+        isMacauLocalCheckbox.addEventListener("change", function () {
+            renderBaseRateCards();
+        });
+
+        paymentDateInput.addEventListener("change", function () {
+            renderBaseRateCards();
+        });
 
         updatePaymentUi();
-        updateCurrencyUi();
-        applyEarlyBirdRules();
-        updateSelectionDependentUi();
+        updateSubmissionIdUi();
+        selectedCurrencyInput.value = getSelectedCurrency();
+        renderBaseRateCards();
 
         form.addEventListener("submit", function (event) {
-            var selected = form.querySelector('input[name="paymentMethod"]:checked');
-            var isQrPayment = selected && selected.value === "qr-code";
+            var selectedPaymentMethod = form.querySelector('input[name="paymentMethod"]:checked');
+            var isQrPayment = selectedPaymentMethod && selectedPaymentMethod.value === "qr-code";
+            var role = getSelectedRole();
+            var roleText = roleLabelMap[role] || "Role Not Selected";
+            var localText = isMacauLocal() ? "Macau Local" : "Non-Macau Local";
+            var submissionIdText = submissionIdInput.value.trim();
 
-            if (!amountInput.value) {
+            if (!role) {
                 event.preventDefault();
-                window.alert("Please select one registration amount before proceeding.");
+                window.alert("Please select your participating role before proceeding.");
+                return;
+            }
+
+            if ((role === "presenter" || role === "student") && !submissionIdText) {
+                event.preventDefault();
+                window.alert("Submission ID is required for presenters and student presenters.");
+                return;
+            }
+
+            if (!paymentDateInput.value) {
+                event.preventDefault();
+                window.alert("Please choose a payment date before proceeding.");
+                return;
+            }
+
+            if (!baseSelection || !amountInput.value) {
+                event.preventDefault();
+                window.alert("Please choose one registration rate card before proceeding.");
+                return;
+            }
+
+            if (!validateEarlyBirdBeforeSubmit()) {
+                event.preventDefault();
+                var deadlineLabel = role === "participant" ? "15 July 2026" : "30 June 2026";
+                window.alert("Early-bird options are closed for the selected payment date. Please choose a regular card. Deadline: " + deadlineLabel + " (China time).");
+                renderBaseRateCards();
                 return;
             }
 
@@ -606,20 +704,22 @@ function toggleMenu() {
                 var emailInput = document.getElementById("email");
                 var attendeeName = fullNameInput && fullNameInput.value ? fullNameInput.value : "Attendee";
                 var attendeeEmail = emailInput && emailInput.value ? emailInput.value : "";
-                var selectedContext = getSelectedFeeContext();
-                var paymentTypeText = selectedContext ? selectedContext.paymentType : "Payment Type Not Specified";
-                var feeCategoryText = selectedContext ? selectedContext.feeCategory : "";
-                var isParticipantMacauLocal = Boolean(selectedContext && selectedContext.feeCategory === "Participant" && selectedContext.paymentType.indexOf("Macau Local") !== -1);
-                var selectedAmountText = selectedCurrencyInput.value + " " + amountInput.value;
-                var submissionIdText = submissionIdInput && submissionIdInput.value ? submissionIdInput.value.trim() : "";
-                var paymentDateText = paymentDateInput && paymentDateInput.value ? paymentDateInput.value : "Not Provided";
+                var currency = getSelectedCurrency();
+                var addOnNames = [];
+                addonOptions.forEach(function (addonCheckbox) {
+                    if (addonCheckbox.checked && !addonCheckbox.disabled) {
+                        addOnNames.push(addonCheckbox.getAttribute("data-addon-key") === "workshop" ? "Workshop" : "Banquet");
+                    }
+                });
+
                 var draftedSubject = [
                     attendeeName,
-                    feeCategoryText ? (feeCategoryText + " / " + paymentTypeText) : paymentTypeText,
-                    selectedCurrencyInput.value,
+                    roleText + " / " + localText + " / " + baseSelection.label.split(" - ").slice(2).join(" - "),
+                    currency,
                     amountInput.value
                 ].join(" - ");
-                var draftedMessage = [
+
+                var draftedMessageLines = [
                     "Dear AALA 2026 Organizing Team,",
                     "",
                     "Please find my QR payment receipt for verification.",
@@ -627,47 +727,37 @@ function toggleMenu() {
                     "",
                     "Name: " + attendeeName,
                     "Email: " + attendeeEmail,
-                    "Payment type: " + paymentTypeText,
-                    "Category: " + (feeCategoryText || "Not Specified"),
-                    "Payment amount: " + selectedAmountText,
-                    "Payment date: " + paymentDateText,
+                    "Role: " + roleText,
+                    "Local status: " + localText,
                     "Submission ID: " + (submissionIdText || "N/A"),
+                    "Selected rate: " + baseSelection.label,
+                    "Payment amount: " + currency + " " + amountInput.value,
+                    "Payment date: " + paymentDateInput.value + " (submitted date, checked in China time)",
+                    "Add-ons: " + (addOnNames.length ? addOnNames.join(" + ") : "None"),
                     "",
                     "Best regards,",
                     attendeeName
-                ].join("\n");
+                ];
 
-                if (isParticipantMacauLocal) {
-                    draftedMessage += "\n\nIMPORTANT: As a participant using Macau local option, please also attach your Macau local identity evidence.";
+                if (role === "participant" && isMacauLocal()) {
+                    draftedMessageLines.push("", "IMPORTANT: As a Macau local participant, please also attach your Macau local identity evidence.");
                 }
+
                 var mailtoLink = "mailto:aala2026@outlook.com"
                     + "?subject=" + encodeURIComponent(draftedSubject)
-                    + "&body=" + encodeURIComponent(draftedMessage);
+                    + "&body=" + encodeURIComponent(draftedMessageLines.join("\n"));
 
                 var reminderAlert = "Before proceeding, please make sure you have taken a clear payment proof screenshot.";
-                if (isParticipantMacauLocal) {
+                if (role === "participant" && isMacauLocal()) {
                     reminderAlert += " Also prepare your Macau local identity evidence to attach in the email.";
                 }
                 window.alert(reminderAlert + " Your email app will open next.");
                 window.location.href = mailtoLink;
-                window.alert("Your email app is opening with a drafted message. Please attach your receipt screenshot file manually before sending.");
+                window.alert("Your email app is opening with a drafted message. Please attach required files before sending.");
                 return;
             }
 
-            var selectedContextForRules = getSelectedFeeContext();
-            var paymentDateForRules = parsePaymentDate();
-            if (selectedContextForRules && paymentDateForRules && isEarlyBirdOption(selectedContextForRules.fullOptionText)) {
-                var deadline = selectedContextForRules.feeCategory === "Participant" ? participantEarlyBirdDeadline : presenterEarlyBirdDeadline;
-                var deadlineLabel = selectedContextForRules.feeCategory === "Participant" ? "15 July 2026" : "30 June 2026";
-                if (paymentDateForRules > deadline) {
-                    event.preventDefault();
-                    window.alert("Early-bird option is no longer available for the selected payment date. Please choose a regular option. Deadline: " + deadlineLabel + ".");
-                    return;
-                }
-            }
-
             event.preventDefault();
-
             var gatewayUrl = "https://secure.lusoibank.com/payment-gateway";
             var hiddenPostForm = document.createElement("form");
             hiddenPostForm.method = "POST";
@@ -677,7 +767,7 @@ function toggleMenu() {
             var payload = {
                 merchantId: "AALA2026_MERCHANT_ID",
                 amount: amountInput.value,
-                currency: selectedCurrencyInput.value,
+                currency: getSelectedCurrency(),
                 orderId: buildOrderId(),
                 returnUrl: window.location.origin + "/registration-success.html",
                 cancelUrl: window.location.origin + "/registration-cancelled.html"
