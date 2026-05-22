@@ -156,8 +156,134 @@ function toggleMenu() {
                 </div>
                 </div>
             </section>
+            <section id="registration-form" class="content-block">
+                <h2>Registration Form</h2>
+                <div class="text-body">
+                    <form id="conferenceRegistrationForm" action="#" method="post" enctype="multipart/form-data">
+                        <p>
+                            <label for="fullName">Full Name</label><br>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </p>
+                        <p>
+                            <label for="email">Email Address</label><br>
+                            <input type="email" id="email" name="email" required>
+                        </p>
+                        <p>
+                            <label for="amount">Registration Amount (USD)</label><br>
+                            <input type="number" id="amount" name="amount" min="1" step="0.01" value="185" required>
+                        </p>
+
+                        <h3>Payment Method</h3>
+                        <div id="paymentMethodSelection">
+                            <label>
+                                <input type="radio" name="paymentMethod" value="credit-card" checked>
+                                Credit Card (Visa / MasterCard)
+                            </label><br>
+                            <label>
+                                <input type="radio" name="paymentMethod" value="qr-code">
+                                Other Mobile Payments (QR Code)
+                            </label>
+                        </div>
+
+                        <div id="creditCardNotice" style="margin-top: 12px;">
+                            <p>You will be redirected securely to Luso International Bank to complete your Visa payment.</p>
+                        </div>
+
+                        <div id="qrPaymentSection" style="display: none; margin-top: 12px;">
+                            <div class="table-scroll">
+                                <img src="payment-methods.png" alt="Supported mobile payment channels" style="max-width: 100%; height: auto;">
+                            </div>
+                            <div style="margin-top: 12px;">
+                                <img src="payment-qrcode.png" alt="Payment QR code" style="max-width: 320px; width: 100%; height: auto;">
+                            </div>
+                            <p style="margin-top: 12px;">
+                                <label for="receiptUpload">Upload Payment Receipt</label><br>
+                                <input type="file" id="receiptUpload" name="receiptUpload" accept="image/*">
+                            </p>
+                        </div>
+
+                        <p style="margin-top: 16px;">
+                            <button type="submit">Proceed to Payment</button>
+                        </p>
+                    </form>
+                </div>
+            </section>
         </div>
     </main>
+    <script>
+    (function () {
+        var form = document.getElementById("conferenceRegistrationForm");
+        if (!form) {
+            return;
+        }
+
+        var paymentMethodRadios = form.querySelectorAll('input[name="paymentMethod"]');
+        var creditCardNotice = document.getElementById("creditCardNotice");
+        var qrPaymentSection = document.getElementById("qrPaymentSection");
+        var receiptUpload = document.getElementById("receiptUpload");
+        var amountInput = document.getElementById("amount");
+
+        function updatePaymentUi() {
+            var selected = form.querySelector('input[name="paymentMethod"]:checked');
+            var isQrPayment = selected && selected.value === "qr-code";
+
+            creditCardNotice.style.display = isQrPayment ? "none" : "block";
+            qrPaymentSection.style.display = isQrPayment ? "block" : "none";
+            if (receiptUpload) {
+                receiptUpload.required = isQrPayment;
+            }
+        }
+
+        function buildOrderId() {
+            return "AALA2026-" + Date.now() + "-" + Math.floor(Math.random() * 100000);
+        }
+
+        paymentMethodRadios.forEach(function (radio) {
+            radio.addEventListener("change", updatePaymentUi);
+        });
+
+        updatePaymentUi();
+
+        form.addEventListener("submit", function (event) {
+            var selected = form.querySelector('input[name="paymentMethod"]:checked');
+            var isQrPayment = selected && selected.value === "qr-code";
+
+            if (isQrPayment) {
+                event.preventDefault();
+                window.alert("Thank you. Your payment receipt upload will be manually verified by the AALA 2026 organizing team.");
+                return;
+            }
+
+            event.preventDefault();
+
+            var gatewayUrl = "https://secure.lusoibank.com/payment-gateway";
+            var hiddenPostForm = document.createElement("form");
+            hiddenPostForm.method = "POST";
+            hiddenPostForm.action = gatewayUrl;
+            hiddenPostForm.style.display = "none";
+
+            var payload = {
+                merchantId: "AALA2026_MERCHANT_ID",
+                amount: amountInput && amountInput.value ? amountInput.value : "185",
+                currency: "USD",
+                orderId: buildOrderId(),
+                returnUrl: window.location.origin + "/registration-success.html",
+                cancelUrl: window.location.origin + "/registration-cancelled.html"
+            };
+
+            Object.keys(payload).forEach(function (key) {
+                var input = document.createElement("input");
+                input.type = "hidden";
+                input.name = key;
+                input.value = payload[key];
+                hiddenPostForm.appendChild(input);
+            });
+
+            document.body.appendChild(hiddenPostForm);
+            hiddenPostForm.submit();
+        });
+    })();
+    </script>
     <footer class="footer"><p>&copy; AALA 2026 Conference. All Rights Reserved.</p></footer>
 </body>
 </html>
