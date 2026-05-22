@@ -55,6 +55,19 @@
         .fee-tile input {
             margin-right: 5px;
         }
+        .qr-payment-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .qr-payment-left {
+            flex: 0 1 220px;
+        }
+        .qr-payment-right {
+            flex: 1 1 320px;
+            min-width: 220px;
+        }
     </style>
 </head>
 <script>
@@ -344,11 +357,13 @@ function toggleMenu() {
                         </div>
 
                         <div id="qrPaymentSection" style="display: none; margin-top: 12px;">
-                            <div class="table-scroll">
-                                <img src="payment-methods.png" alt="Supported mobile payment channels" style="max-width: 100%; height: auto;">
-                            </div>
-                            <div style="margin-top: 12px;">
-                                <img src="payment-qrcode.png" alt="Payment QR code" style="max-width: 320px; width: 100%; height: auto;">
+                            <div class="qr-payment-row">
+                                <div class="qr-payment-left">
+                                    <img src="payment-qrcode.png" alt="Payment QR code" style="width: 100%; max-width: 220px; height: auto;">
+                                </div>
+                                <div class="qr-payment-right">
+                                    <img src="payment-methods.png" alt="Supported mobile payment channels" style="width: 100%; max-width: 360px; height: auto;">
+                                </div>
                             </div>
                             <p style="margin-top: 12px;">
                                 <strong>Reminder:</strong> Please complete the QR payment and take a clear payment proof screenshot before continuing to email.
