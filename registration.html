@@ -337,6 +337,14 @@ function toggleMenu() {
                             </div>
                         </div>
                         <p id="selectedAmountPreview" style="margin-top: 10px;">Selected amount: None</p>
+                        <p id="submissionIdWrapper" style="display: none; margin-top: 10px;">
+                            <label for="submissionId">Submission ID (required for participants)</label><br>
+                            <input type="text" id="submissionId" name="submissionId" placeholder="Enter your submission ID">
+                        </p>
+                        <p style="margin-top: 10px;">
+                            <label for="paymentDate">Payment Date</label><br>
+                            <input type="date" id="paymentDate" name="paymentDate" required>
+                        </p>
                         <input type="hidden" id="amount" name="amount" required>
                         <input type="hidden" id="selectedCurrency" name="selectedCurrency" value="USD">
 
@@ -366,7 +374,7 @@ function toggleMenu() {
                                 </div>
                             </div>
                             <p style="margin-top: 12px;">
-                                <strong>Reminder:</strong> Please complete the QR payment and take a clear payment proof screenshot before continuing to email.
+                                <strong>Reminder:</strong> <span id="qrReminderText">Please complete the QR payment and take a clear payment proof screenshot before continuing to email. Attach the payment proof in your email.</span>
                             </p>
                         </div>
 
@@ -391,10 +399,16 @@ function toggleMenu() {
         var creditCardNotice = document.getElementById("creditCardNotice");
         var qrPaymentSection = document.getElementById("qrPaymentSection");
         var amountInput = document.getElementById("amount");
+        var paymentDateInput = document.getElementById("paymentDate");
+        var submissionIdWrapper = document.getElementById("submissionIdWrapper");
+        var submissionIdInput = document.getElementById("submissionId");
+        var qrReminderText = document.getElementById("qrReminderText");
         var selectedCurrencyInput = document.getElementById("selectedCurrency");
         var feeOptionsUsd = document.getElementById("feeOptionsUsd");
         var feeOptionsLocal = document.getElementById("feeOptionsLocal");
         var selectedAmountPreview = document.getElementById("selectedAmountPreview");
+        var presenterEarlyBirdDeadline = new Date("2026-06-30T23:59:59");
+        var participantEarlyBirdDeadline = new Date("2026-07-15T23:59:59");
 
         function updatePaymentUi() {
             var selected = form.querySelector('input[name="paymentMethod"]:checked');
@@ -420,6 +434,9 @@ function toggleMenu() {
             if (selectedAmountPreview) {
                 selectedAmountPreview.textContent = "Selected amount: None";
             }
+            if (submissionIdInput) {
+                submissionIdInput.value = "";
+            }
         }
 
         function updateCurrencyUi() {
@@ -430,6 +447,7 @@ function toggleMenu() {
             feeOptionsUsd.style.display = currencyValue === "USD" ? "block" : "none";
             feeOptionsLocal.style.display = currencyValue === "USD" ? "none" : "block";
             clearFeeSelection();
+            updateSelectionDependentUi();
         }
 
         function handleFeeOptionChange(event) {
@@ -439,6 +457,7 @@ function toggleMenu() {
                 if (selectedAmountPreview) {
                     selectedAmountPreview.textContent = "Selected amount: None";
                 }
+                updateSelectionDependentUi();
                 return;
             }
 
@@ -460,16 +479,97 @@ function toggleMenu() {
             if (selectedAmountPreview) {
                 selectedAmountPreview.textContent = "Selected amount: " + selectedCurrencyInput.value + " " + amountInput.value;
             }
+            updateSelectionDependentUi();
         }
 
-        function getSelectedPaymentType() {
+        function getSelectedFeeContext() {
             var checkedBox = form.querySelector(".fee-option:checked");
             if (!checkedBox || !checkedBox.parentElement) {
-                return "Payment Type Not Specified";
+                return null;
             }
 
-            var optionText = checkedBox.parentElement.textContent.trim();
-            return optionText.split(":")[0].trim();
+            var tileLabel = checkedBox.parentElement;
+            var optionText = tileLabel.textContent.trim();
+            var paymentType = optionText.split(":")[0].trim();
+            var feeGroup = tileLabel.closest(".fee-group");
+            var feeGroupTitle = feeGroup ? feeGroup.querySelector(".fee-group-title") : null;
+            var feeCategory = feeGroupTitle ? feeGroupTitle.textContent.trim() : "";
+
+            return {
+                paymentType: paymentType,
+                fullOptionText: optionText,
+                feeCategory: feeCategory
+            };
+        }
+
+        function parsePaymentDate() {
+            if (!paymentDateInput || !paymentDateInput.value) {
+                return null;
+            }
+            return new Date(paymentDateInput.value + "T23:59:59");
+        }
+
+        function isEarlyBirdOption(optionText) {
+            return optionText.indexOf("Early Bird") !== -1;
+        }
+
+        function applyEarlyBirdRules() {
+            var paymentDate = parsePaymentDate();
+
+            feeOptionCheckboxes.forEach(function (checkbox) {
+                var tileLabel = checkbox.parentElement;
+                var optionText = tileLabel ? tileLabel.textContent.trim() : "";
+                var feeGroup = tileLabel ? tileLabel.closest(".fee-group") : null;
+                var feeGroupTitle = feeGroup ? feeGroup.querySelector(".fee-group-title") : null;
+                var feeCategory = feeGroupTitle ? feeGroupTitle.textContent.trim() : "";
+                var hasDeadline = feeCategory === "Presenter" || feeCategory === "Student" || feeCategory === "Participant";
+                var deadline = feeCategory === "Participant" ? participantEarlyBirdDeadline : presenterEarlyBirdDeadline;
+                var isDisallowed = Boolean(paymentDate && hasDeadline && isEarlyBirdOption(optionText) && paymentDate > deadline);
+
+                checkbox.disabled = isDisallowed;
+                if (isDisallowed) {
+                    checkbox.title = "Early-bird is closed for the selected payment date.";
+                    if (checkbox.checked) {
+                        checkbox.checked = false;
+                        var tile = checkbox.closest(".fee-tile");
+                        if (tile) {
+                            tile.classList.remove("selected");
+                        }
+                    }
+                } else {
+                    checkbox.title = "";
+                }
+            });
+
+            if (!form.querySelector(".fee-option:checked")) {
+                amountInput.value = "";
+                if (selectedAmountPreview) {
+                    selectedAmountPreview.textContent = "Selected amount: None";
+                }
+            }
+            updateSelectionDependentUi();
+        }
+
+        function updateSelectionDependentUi() {
+            var context = getSelectedFeeContext();
+            var isParticipant = Boolean(context && context.feeCategory === "Participant");
+            var isParticipantMacauLocal = Boolean(isParticipant && context.paymentType.indexOf("Macau Local") !== -1);
+
+            if (submissionIdWrapper && submissionIdInput) {
+                submissionIdWrapper.style.display = isParticipant ? "block" : "none";
+                submissionIdInput.required = isParticipant;
+                if (!isParticipant) {
+                    submissionIdInput.value = "";
+                }
+            }
+
+            if (qrReminderText) {
+                var reminder = "Please complete the QR payment and take a clear payment proof screenshot before continuing to email. Attach the payment proof in your email.";
+                if (isParticipantMacauLocal) {
+                    reminder += " As a participant under Macau local option, also attach your Macau local identity evidence in the same email.";
+                }
+                qrReminderText.textContent = reminder;
+            }
         }
 
         paymentMethodRadios.forEach(function (radio) {
@@ -481,9 +581,14 @@ function toggleMenu() {
         feeOptionCheckboxes.forEach(function (checkbox) {
             checkbox.addEventListener("change", handleFeeOptionChange);
         });
+        if (paymentDateInput) {
+            paymentDateInput.addEventListener("change", applyEarlyBirdRules);
+        }
 
         updatePaymentUi();
         updateCurrencyUi();
+        applyEarlyBirdRules();
+        updateSelectionDependentUi();
 
         form.addEventListener("submit", function (event) {
             var selected = form.querySelector('input[name="paymentMethod"]:checked');
@@ -501,11 +606,16 @@ function toggleMenu() {
                 var emailInput = document.getElementById("email");
                 var attendeeName = fullNameInput && fullNameInput.value ? fullNameInput.value : "Attendee";
                 var attendeeEmail = emailInput && emailInput.value ? emailInput.value : "";
-                var paymentTypeText = getSelectedPaymentType();
+                var selectedContext = getSelectedFeeContext();
+                var paymentTypeText = selectedContext ? selectedContext.paymentType : "Payment Type Not Specified";
+                var feeCategoryText = selectedContext ? selectedContext.feeCategory : "";
+                var isParticipantMacauLocal = Boolean(selectedContext && selectedContext.feeCategory === "Participant" && selectedContext.paymentType.indexOf("Macau Local") !== -1);
                 var selectedAmountText = selectedCurrencyInput.value + " " + amountInput.value;
+                var submissionIdText = submissionIdInput && submissionIdInput.value ? submissionIdInput.value.trim() : "";
+                var paymentDateText = paymentDateInput && paymentDateInput.value ? paymentDateInput.value : "Not Provided";
                 var draftedSubject = [
                     attendeeName,
-                    paymentTypeText,
+                    feeCategoryText ? (feeCategoryText + " / " + paymentTypeText) : paymentTypeText,
                     selectedCurrencyInput.value,
                     amountInput.value
                 ].join(" - ");
@@ -513,24 +623,47 @@ function toggleMenu() {
                     "Dear AALA 2026 Organizing Team,",
                     "",
                     "Please find my QR payment receipt for verification.",
-                    "<b><span style=\"color:red;\">IMPORTANT: Please upload and attach my payment receipt screenshot before sending this email.</span></b>",
+                    "IMPORTANT: Please attach my payment receipt screenshot before sending this email.",
                     "",
                     "Name: " + attendeeName,
                     "Email: " + attendeeEmail,
                     "Payment type: " + paymentTypeText,
+                    "Category: " + (feeCategoryText || "Not Specified"),
                     "Payment amount: " + selectedAmountText,
+                    "Payment date: " + paymentDateText,
+                    "Submission ID: " + (submissionIdText || "N/A"),
                     "",
                     "Best regards,",
                     attendeeName
                 ].join("\n");
+
+                if (isParticipantMacauLocal) {
+                    draftedMessage += "\n\nIMPORTANT: As a participant using Macau local option, please also attach your Macau local identity evidence.";
+                }
                 var mailtoLink = "mailto:aala2026@outlook.com"
                     + "?subject=" + encodeURIComponent(draftedSubject)
                     + "&body=" + encodeURIComponent(draftedMessage);
 
-                window.alert("Before proceeding, please make sure you have taken a clear payment proof screenshot. Your email app will open next.");
+                var reminderAlert = "Before proceeding, please make sure you have taken a clear payment proof screenshot.";
+                if (isParticipantMacauLocal) {
+                    reminderAlert += " Also prepare your Macau local identity evidence to attach in the email.";
+                }
+                window.alert(reminderAlert + " Your email app will open next.");
                 window.location.href = mailtoLink;
                 window.alert("Your email app is opening with a drafted message. Please attach your receipt screenshot file manually before sending.");
                 return;
+            }
+
+            var selectedContextForRules = getSelectedFeeContext();
+            var paymentDateForRules = parsePaymentDate();
+            if (selectedContextForRules && paymentDateForRules && isEarlyBirdOption(selectedContextForRules.fullOptionText)) {
+                var deadline = selectedContextForRules.feeCategory === "Participant" ? participantEarlyBirdDeadline : presenterEarlyBirdDeadline;
+                var deadlineLabel = selectedContextForRules.feeCategory === "Participant" ? "15 July 2026" : "30 June 2026";
+                if (paymentDateForRules > deadline) {
+                    event.preventDefault();
+                    window.alert("Early-bird option is no longer available for the selected payment date. Please choose a regular option. Deadline: " + deadlineLabel + ".");
+                    return;
+                }
             }
 
             event.preventDefault();
