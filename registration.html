@@ -477,7 +477,32 @@ function toggleMenu() {
 
             if (isQrPayment) {
                 event.preventDefault();
-                window.alert("Thank you. Your payment receipt upload will be manually verified by the AALA 2026 organizing team.");
+                var fullNameInput = document.getElementById("fullName");
+                var emailInput = document.getElementById("email");
+                var attendeeName = fullNameInput && fullNameInput.value ? fullNameInput.value : "Attendee";
+                var attendeeEmail = emailInput && emailInput.value ? emailInput.value : "";
+                var selectedAmountText = selectedCurrencyInput.value + " " + amountInput.value;
+                var receiptFile = receiptUpload && receiptUpload.files && receiptUpload.files.length ? receiptUpload.files[0] : null;
+                var receiptFileName = receiptFile ? receiptFile.name : "No file selected";
+                var draftedMessage = [
+                    "Dear AALA 2026 Organizing Team,",
+                    "",
+                    "Please find my QR payment receipt for verification.",
+                    "",
+                    "Name: " + attendeeName,
+                    "Email: " + attendeeEmail,
+                    "Payment amount: " + selectedAmountText,
+                    "Receipt file: " + receiptFileName,
+                    "",
+                    "Best regards,",
+                    attendeeName
+                ].join("\n");
+                var mailtoLink = "mailto:aala2026@outlook.com"
+                    + "?subject=" + encodeURIComponent(attendeeName + " - " + selectedAmountText)
+                    + "&body=" + encodeURIComponent(draftedMessage);
+
+                window.location.href = mailtoLink;
+                window.alert("Your email app is opening with a drafted message. Please attach your receipt screenshot file manually before sending.");
                 return;
             }
 
