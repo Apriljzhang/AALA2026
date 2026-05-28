@@ -94,6 +94,16 @@
             color: #168e6a;
             font-size: 0.92rem;
         }
+        .form-reminder {
+            margin-top: 6px;
+            padding: 6px 8px;
+            font-size: 0.86rem;
+            color: #2f5f52;
+            background: #eef8f3;
+            border-left: 3px solid #8bcfb4;
+            border-radius: 4px;
+            line-height: 1.35;
+        }
     </style>
 </head>
 <script>
@@ -276,23 +286,32 @@ function toggleMenu() {
                                     <label for="fullName">Full Name</label><br>
                                     <input type="text" id="fullName" name="fullName" required>
                                 </p>
-                                <p style="margin-top: 8px; font-size: 0.9rem;">
-                                    <strong>Important:</strong> Please use exactly the same name for registration and payment, and avoid non-alphabet characters.
+                                <p class="form-reminder">
+                                    Please use exactly the same name for registration and payment, and avoid non-alphabet characters.
                                 </p>
                                 <p style="margin-top: 10px;">
                                     <label for="affiliation">Affiliation</label><br>
                                     <input type="text" id="affiliation" name="affiliation" required>
                                 </p>
+                                <p class="form-reminder">
+                                    Please provide only your institution; faculty or department information is not required.
+                                </p>
                                 <p id="submissionIdWrapper" style="display: none; margin-top: 10px;">
                                     <label for="submissionId">Submission ID</label><br>
                                     <input type="text" id="submissionId" name="submissionId" placeholder="Enter your submission ID" value="AALA2026">
+                                    <span class="form-reminder" style="display:block;">
+                                        Please append three or four digits to the provided AALA2026 prefix.
+                                    </span>
                                 </p>
 
                                 <p style="margin-top: 10px;">
                                     <label>
                                         <input type="checkbox" id="isMacauLocal" name="isMacauLocal">
-                                        I qualify as Macau local (Macau resident / student studying in Macau / Macau blue card holder). Supporting ID evidence is required, such as a Macau ID, student card, or staff card in Macau with a clear valid date.
+                                        I qualify as Macau local (Macau resident / student studying in Macau / Macau blue card holder).
                                     </label>
+                                </p>
+                                <p class="form-reminder">
+                                    Please provide valid documentation, such as a Macau ID, student card, or staff card, clearly displaying its expiration date.
                                 </p>
                             </div>
 
