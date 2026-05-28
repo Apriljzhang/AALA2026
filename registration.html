@@ -138,7 +138,7 @@ function toggleMenu() {
                         <td rowspan="2">NA</td>
                     </tr>
                     <tr class="row-presenter">
-                        <td>MOP/HKD/CNY</td>
+                        <td>MOP</td>
                         <td>1480</td>
                         <td>1600</td>
                         <td>2000</td>
@@ -158,7 +158,7 @@ function toggleMenu() {
                         <td rowspan="2">NA</td>
                     </tr>
                     <tr class="row-student">
-                        <td>MOP/HKD/CNY</td>
+                        <td>MOP</td>
                         <td>720</td>
                         <td>880</td>
                         <td>1240</td>
@@ -178,7 +178,7 @@ function toggleMenu() {
                         <td></td>
                     </tr>
                     <tr class="row-participant">
-                        <td>MOP/HKD/CNY</td>
+                        <td>MOP</td>
                         <td>520</td>
                         <td>680</td>
                         <td>1040</td>
@@ -203,7 +203,7 @@ function toggleMenu() {
                 <table class="transport-table">
                     <tr>
                         <th></th>
-                        <th>MOP/HKD/CNY</th>
+                        <th>MOP</th>
                         <th>USD</th>
                     </tr>
                     <tr>
@@ -229,12 +229,12 @@ function toggleMenu() {
                                 <h3>1 Select Currency</h3>
                                 <div id="currencySelection">
                                     <label>
-                                        <input type="radio" name="registrationCurrency" value="USD" checked>
-                                        US Dollars
+                                        <input type="radio" name="registrationCurrency" value="MOP" checked>
+                                        MOP
                                     </label><br>
                                     <label>
-                                        <input type="radio" name="registrationCurrency" value="MOP/HKD/CNY">
-                                        MOP/HKD/CNY
+                                        <input type="radio" name="registrationCurrency" value="USD">
+                                        US Dollars
                                     </label>
                                 </div>
 
@@ -355,7 +355,7 @@ function toggleMenu() {
                 student: { nonLocal: { early: 90, regular: 110, bundle: 155 }, local: { early: 65, regular: 85, bundle: 130 } },
                 participant: { nonLocal: { early: 65, regular: 85, bundle: 130 }, local: { early: 65, regular: 85, bundle: 130 } }
             },
-            "MOP/HKD/CNY": {
+            "MOP": {
                 presenter: { nonLocal: { early: 1480, regular: 1600, bundle: 2000 }, local: { early: 1080, regular: 1200, bundle: 1600 } },
                 student: { nonLocal: { early: 720, regular: 880, bundle: 1240 }, local: { early: 520, regular: 680, bundle: 1040 } },
                 participant: { nonLocal: { early: 520, regular: 680, bundle: 1040 }, local: { early: 520, regular: 680, bundle: 1040 } }
@@ -364,7 +364,7 @@ function toggleMenu() {
 
         var addOnFees = {
             "USD": { workshop: 75, "post-workshop": 0, banquet: 75 },
-            "MOP/HKD/CNY": { workshop: 600, "post-workshop": 0, banquet: 600 }
+            "MOP": { workshop: 600, "post-workshop": 0, banquet: 600 }
         };
 
         var roleLabelMap = {
