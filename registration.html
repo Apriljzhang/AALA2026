@@ -68,6 +68,32 @@
             flex: 1 1 320px;
             min-width: 220px;
         }
+        .registration-submit-row {
+            margin-top: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 12px;
+        }
+        .registration-submit-button {
+            background: linear-gradient(135deg, #168e6a, #1fa37b);
+            color: #ffffff;
+            border: none;
+            border-radius: 999px;
+            padding: 10px 20px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(22, 142, 106, 0.25);
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+        .registration-submit-button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 14px rgba(22, 142, 106, 0.3);
+        }
+        .registration-submit-note {
+            color: #168e6a;
+            font-size: 0.92rem;
+        }
     </style>
 </head>
 <script>
@@ -334,8 +360,9 @@ function toggleMenu() {
                         <input type="hidden" id="amount" name="amount" required>
                         <input type="hidden" id="selectedCurrency" name="selectedCurrency" value="USD">
 
-                        <p style="margin-top: 16px;">
-                            <button type="submit">Proceed to Payment</button>
+                        <p class="registration-submit-row">
+                            <button type="submit" class="registration-submit-button">Send Registration Proof via Email</button>
+                            <span class="registration-submit-note">Your email receipt will be generated automatically once you finalize your selections above.</span>
                         </p>
                     </form>
                 </div>
