@@ -318,7 +318,8 @@ function toggleMenu() {
                                     <label for="submissionId">Submission ID</label><br>
                                     <input type="text" id="submissionId" name="submissionId" placeholder="Enter your submission ID" value="AALA2026">
                                     <span class="form-reminder" style="display:block;">
-                                        Please append three or four digits to the provided AALA2026 prefix.
+                                        Please append three or four digits to the provided AALA2026 prefix.<br>
+                                        For multiple submissions, please include all submission IDs in this field and complete one single payment.
                                     </span>
                                 </p>
 
@@ -564,9 +565,9 @@ function toggleMenu() {
                     var addOnKey = addonCheckbox.getAttribute("data-addon-key");
                     addOnTotal += addOnCurrency[addOnKey];
                     if (addOnKey === "workshop") {
-                        addOnLabels.push("Workshop: " + addonCheckbox.getAttribute("data-workshop-title"));
+                        addOnLabels.push("Workshop " + addonCheckbox.id.replace("addonWorkshop", ""));
                     } else if (addOnKey === "post-workshop") {
-                        addOnLabels.push("Workshop: Post-Conference Workshop (Free)");
+                        addOnLabels.push("Workshop 4");
                     } else {
                         addOnLabels.push("Banquet");
                     }
@@ -807,9 +808,9 @@ function toggleMenu() {
                 addonOptions.forEach(function (addonCheckbox) {
                     if (addonCheckbox.checked && !addonCheckbox.disabled) {
                         if (addonCheckbox.getAttribute("data-addon-key") === "workshop") {
-                            addOnNames.push("Workshop: " + addonCheckbox.getAttribute("data-workshop-title"));
+                            addOnNames.push("Workshop " + addonCheckbox.id.replace("addonWorkshop", ""));
                         } else if (addonCheckbox.getAttribute("data-addon-key") === "post-workshop") {
-                            addOnNames.push("Workshop: Post-Conference Workshop (Free)");
+                            addOnNames.push("Workshop 4");
                         } else {
                             addOnNames.push("Banquet");
                         }
@@ -827,8 +828,10 @@ function toggleMenu() {
                 if (addOnNames.length > 0) {
                     paymentTypeParts.push("Add-ons: " + addOnNames.join(" + "));
                 }
-                var paymentTypeText = paymentTypeParts.join(" / ");
-                var draftedSubject = submissionIdText || "AALA2026";
+                var draftedSubject = "Registration" + (submissionIdText ? " - " + submissionIdText : "");
+                var paymentTypeLines = paymentTypeParts.map(function (item) {
+                    return "- " + item;
+                });
 
                 var draftedMessageLines = [
                     "Dear AALA 2026 Organizing Team,",
@@ -836,7 +839,8 @@ function toggleMenu() {
                     "Name: " + attendeeName,
                     "Affiliation: " + attendeeAffiliation,
                     "Submission ID: " + (submissionIdText || "N/A"),
-                    "Payment type: " + paymentTypeText,
+                    "Payment type:",
+                    paymentTypeLines.join("\n"),
                     "Payment amount: " + currency + " " + amountInput.value,
                     "Dietary requirements: " + (dietaryRequirementsInput && dietaryRequirementsInput.value ? dietaryRequirementsInput.value : "N/A"),
                     "",
