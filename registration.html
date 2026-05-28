@@ -249,6 +249,9 @@ function toggleMenu() {
                                     <label for="fullName">Full Name</label><br>
                                     <input type="text" id="fullName" name="fullName" required>
                                 </p>
+                                <p style="margin-top: 8px; font-size: 0.9rem;">
+                                    <strong>Important:</strong> Please use exactly the same name for registration and payment, and avoid non-alphabet characters.
+                                </p>
                                 <p style="margin-top: 10px;">
                                     <label for="affiliation">Affiliation</label><br>
                                     <input type="text" id="affiliation" name="affiliation" required>
@@ -285,6 +288,10 @@ function toggleMenu() {
                                         <span id="addonWorkshop3Label">Workshop 3</span>
                                     </label>
                                     <label class="fee-tile">
+                                        <input type="checkbox" class="addon-option" id="addonWorkshop4" data-addon-key="post-workshop">
+                                        <span id="addonWorkshop4Label">Workshop 4 - Post-Conference Workshop (Sept 21): Free</span>
+                                    </label>
+                                    <label class="fee-tile">
                                         <input type="checkbox" class="addon-option" id="addonBanquet" data-addon-key="banquet">
                                         <span id="addonBanquetLabel">Banquet</span>
                                     </label>
@@ -297,17 +304,13 @@ function toggleMenu() {
                                 <h3 style="margin-top: 14px;">6 Payment Method</h3>
                                 <div id="paymentMethodSelection">
                                     <label>
-                                        <input type="radio" name="paymentMethod" value="credit-card" checked>
-                                        Credit Card (Visa / MasterCard)
+                                        <input type="radio" name="paymentMethod" value="qr-code" checked>
+                                        Online Payment (QR Code)
                                     </label><br>
                                     <label>
-                                        <input type="radio" name="paymentMethod" value="qr-code">
-                                        Other Mobile Payments (QR Code)
+                                        <input type="radio" name="paymentMethod" value="credit-card">
+                                        Credit Card (Visa / MasterCard)
                                     </label>
-                                </div>
-
-                                <div id="creditCardNotice" style="margin-top: 12px;">
-                                    <p>You will be redirected securely to Luso International Bank to complete your Visa payment.</p>
                                 </div>
 
                                 <div id="qrPaymentSection" style="display: none; margin-top: 12px;">
@@ -359,8 +362,8 @@ function toggleMenu() {
         };
 
         var addOnFees = {
-            "USD": { workshop: 75, banquet: 75 },
-            "MOP/HKD/CNY": { workshop: 600, banquet: 600 }
+            "USD": { workshop: 75, "post-workshop": 0, banquet: 75 },
+            "MOP/HKD/CNY": { workshop: 600, "post-workshop": 0, banquet: 600 }
         };
 
         var roleLabelMap = {
@@ -372,7 +375,6 @@ function toggleMenu() {
         var paymentMethodRadios = form.querySelectorAll('input[name="paymentMethod"]');
         var currencyRadios = form.querySelectorAll('input[name="registrationCurrency"]');
         var roleRadios = form.querySelectorAll('input[name="participantRole"]');
-        var creditCardNotice = document.getElementById("creditCardNotice");
         var qrPaymentSection = document.getElementById("qrPaymentSection");
         var baseRateCards = document.getElementById("baseRateCards");
         var addonOptions = form.querySelectorAll(".addon-option");
@@ -381,6 +383,7 @@ function toggleMenu() {
         var addonWorkshop1Label = document.getElementById("addonWorkshop1Label");
         var addonWorkshop2Label = document.getElementById("addonWorkshop2Label");
         var addonWorkshop3Label = document.getElementById("addonWorkshop3Label");
+        var addonWorkshop4Label = document.getElementById("addonWorkshop4Label");
         var addonBanquetLabel = document.getElementById("addonBanquetLabel");
         var amountInput = document.getElementById("amount");
         var dietaryRequirementsWrapper = document.getElementById("dietaryRequirementsWrapper");
@@ -449,6 +452,7 @@ function toggleMenu() {
             addonWorkshop1Label.textContent = "Workshop 1 - Assessing English language students with Specific Learning Difficulties: " + currency + " " + addOnCurrency.workshop;
             addonWorkshop2Label.textContent = "Workshop 2 - Validity and validation in language assessment: Concepts, evidence, and argument-based approaches: " + currency + " " + addOnCurrency.workshop;
             addonWorkshop3Label.textContent = "Workshop 3 - Unpacking deep learning and neural networks: Fundamentals and hands-on application in language assessment research: " + currency + " " + addOnCurrency.workshop;
+            addonWorkshop4Label.textContent = "Workshop 4 - Post-Conference Workshop (Sept 21): Free";
             addonBanquetLabel.textContent = "Banquet: " + currency + " " + addOnCurrency.banquet;
         }
 
@@ -486,6 +490,8 @@ function toggleMenu() {
                     addOnTotal += addOnCurrency[addOnKey];
                     if (addOnKey === "workshop") {
                         addOnLabels.push("Workshop: " + addonCheckbox.getAttribute("data-workshop-title"));
+                    } else if (addOnKey === "post-workshop") {
+                        addOnLabels.push("Workshop: Post-Conference Workshop (Free)");
                     } else {
                         addOnLabels.push("Banquet");
                     }
@@ -631,7 +637,6 @@ function toggleMenu() {
         function updatePaymentUi(showCreditCardComingSoonPopup) {
             var selected = form.querySelector('input[name="paymentMethod"]:checked');
             var isQrPayment = selected && selected.value === "qr-code";
-            creditCardNotice.style.display = isQrPayment ? "none" : "block";
             qrPaymentSection.style.display = isQrPayment ? "block" : "none";
             if (showCreditCardComingSoonPopup && !isQrPayment) {
                 window.alert("Credit card payment method is coming soon.");
@@ -728,6 +733,8 @@ function toggleMenu() {
                     if (addonCheckbox.checked && !addonCheckbox.disabled) {
                         if (addonCheckbox.getAttribute("data-addon-key") === "workshop") {
                             addOnNames.push("Workshop: " + addonCheckbox.getAttribute("data-workshop-title"));
+                        } else if (addonCheckbox.getAttribute("data-addon-key") === "post-workshop") {
+                            addOnNames.push("Workshop: Post-Conference Workshop (Free)");
                         } else {
                             addOnNames.push("Banquet");
                         }
