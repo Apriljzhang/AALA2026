@@ -628,15 +628,20 @@ function toggleMenu() {
             return isEarlyBirdAllowedForRole(role);
         }
 
-        function updatePaymentUi() {
+        function updatePaymentUi(showCreditCardComingSoonPopup) {
             var selected = form.querySelector('input[name="paymentMethod"]:checked');
             var isQrPayment = selected && selected.value === "qr-code";
             creditCardNotice.style.display = isQrPayment ? "none" : "block";
             qrPaymentSection.style.display = isQrPayment ? "block" : "none";
+            if (showCreditCardComingSoonPopup && !isQrPayment) {
+                window.alert("Credit card payment method is coming soon.");
+            }
         }
 
         paymentMethodRadios.forEach(function (radio) {
-            radio.addEventListener("change", updatePaymentUi);
+            radio.addEventListener("change", function () {
+                updatePaymentUi(true);
+            });
         });
 
         currencyRadios.forEach(function (radio) {
@@ -672,7 +677,7 @@ function toggleMenu() {
             renderBaseRateCards();
         });
 
-        updatePaymentUi();
+        updatePaymentUi(false);
         updateSubmissionIdUi();
         selectedCurrencyInput.value = getSelectedCurrency();
         renderBaseRateCards();
