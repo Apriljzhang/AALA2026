@@ -104,6 +104,24 @@
             border-radius: 4px;
             line-height: 1.35;
         }
+        .qr-reminder-list {
+            margin: 12px 0 0;
+        }
+        .qr-reminder-list ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+        #selectedAmountPreview {
+            margin-top: 10px;
+            padding: 8px 10px;
+            background: #f3faf6;
+            border-left: 4px solid #22a06b;
+            border-radius: 6px;
+        }
+        .selected-amount-value {
+            color: #1b7f5f;
+            font-weight: 700;
+        }
     </style>
 </head>
 <script>
@@ -368,14 +386,17 @@ function toggleMenu() {
                                             <img src="payment-methods.png" alt="Supported mobile payment channels" style="width: 100%; max-width: 360px; height: auto;">
                                         </div>
                                     </div>
-                                    <p style="margin-top: 12px;">
-                                        <strong>Reminder:</strong> <span id="qrReminderText">Please complete the QR payment and take a clear payment proof screenshot before continuing to email. Attach the payment proof in your email.</span>
-                                    </p>
+                                    <div class="form-reminder qr-reminder-list">
+                                        <ul id="qrReminderList">
+                                            <li>Please complete the QR payment and take a clear payment proof screenshot before continuing to email.</li>
+                                            <li>Attach the payment proof in your email.</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <p id="selectedAmountPreview" style="margin-top: 10px;">Selected amount: None</p>
+                        <p id="selectedAmountPreview">Selected amount: None</p>
                         <input type="hidden" id="amount" name="amount" required>
                         <input type="hidden" id="selectedCurrency" name="selectedCurrency" value="USD">
 
@@ -437,7 +458,7 @@ function toggleMenu() {
         var dietaryRequirementsInput = document.getElementById("dietaryRequirements");
         var submissionIdWrapper = document.getElementById("submissionIdWrapper");
         var submissionIdInput = document.getElementById("submissionId");
-        var qrReminderText = document.getElementById("qrReminderText");
+        var qrReminderList = document.getElementById("qrReminderList");
         var isMacauLocalCheckbox = document.getElementById("isMacauLocal");
         var selectedCurrencyInput = document.getElementById("selectedCurrency");
         var selectedAmountPreview = document.getElementById("selectedAmountPreview");
@@ -510,13 +531,20 @@ function toggleMenu() {
         }
 
         function updateQrReminder() {
-            var role = getSelectedRole();
             var local = isMacauLocal();
-            var reminder = "Please complete the QR payment and take a clear payment proof screenshot before continuing to email. Attach the payment proof in your email.";
-            if (role === "participant" && local) {
-                reminder += " Also attach your Macau local identity evidence in the same email.";
+            var reminders = [
+                "Please complete the QR payment and take a clear payment proof screenshot before continuing to email.",
+                "Attach the payment proof in your email."
+            ];
+            if (local) {
+                reminders.push("Attach the valid ID documentation in your email.");
             }
-            qrReminderText.textContent = reminder;
+            qrReminderList.innerHTML = "";
+            reminders.forEach(function (message) {
+                var li = document.createElement("li");
+                li.textContent = message;
+                qrReminderList.appendChild(li);
+            });
         }
 
         function updateSelectedAmountPreview() {
@@ -552,7 +580,7 @@ function toggleMenu() {
             if (addOnLabels.length > 0) {
                 breakdown += "; Add-ons: " + addOnLabels.join(" + ");
             }
-            selectedAmountPreview.textContent = "Selected amount: " + currency + " " + total + " (" + breakdown + ")";
+            selectedAmountPreview.innerHTML = "Selected amount: <span class=\"selected-amount-value\">" + currency + " " + total + "</span> (" + breakdown + ")";
         }
 
         function updateAddOnAvailability() {
