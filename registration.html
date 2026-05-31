@@ -94,87 +94,6 @@
             color: #168e6a;
             font-size: 0.92rem;
         }
-        .email-composer {
-            margin-top: 14px;
-            border: 1px solid #d8ece3;
-            border-radius: 8px;
-            padding: 12px;
-            background: #fbfffd;
-        }
-        .email-composer h4 {
-            margin: 0 0 8px;
-            color: #168e6a;
-        }
-        .email-composer label {
-            display: block;
-            margin-top: 10px;
-            font-weight: 600;
-        }
-        .email-composer input[type="email"],
-        .email-composer input[type="text"],
-        .email-composer textarea {
-            width: 100%;
-            box-sizing: border-box;
-            margin-top: 6px;
-            padding: 8px 10px;
-            border: 1px solid #c8dcd3;
-            border-radius: 6px;
-            font-family: inherit;
-            font-size: 0.95rem;
-        }
-        .email-composer textarea {
-            min-height: 150px;
-            resize: vertical;
-        }
-        .email-composer textarea[readonly],
-        .email-composer input[readonly] {
-            background: #f2f7f4;
-            color: #33584d;
-        }
-        .attachment-grid {
-            margin-top: 10px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 10px;
-        }
-        .attachment-field {
-            border: 1px dashed #b7d5c8;
-            border-radius: 6px;
-            padding: 8px;
-            background: #f8fcfa;
-        }
-        .attachment-field label {
-            margin-top: 0;
-            font-weight: 600;
-        }
-        .attachment-field input[type="file"] {
-            width: 100%;
-            margin-top: 6px;
-        }
-        .attachment-field input[type="file"]::file-selector-button {
-            margin-right: 10px;
-            border: none;
-            border-radius: 18px;
-            padding: 6px 12px;
-            background: #168e6a;
-            color: #fff;
-            cursor: pointer;
-            font-weight: 600;
-        }
-        .send-status {
-            margin-top: 10px;
-            display: none;
-        }
-        .send-status.error {
-            background: #fff2f2;
-            border-left-color: #d44747;
-            color: #8d2d2d;
-        }
-        .send-status.success {
-            background: #ecfaf2;
-            border-left-color: #22945f;
-            color: #1e6f49;
-        }
         .form-reminder {
             margin-top: 6px;
             padding: 6px 8px;
@@ -485,36 +404,15 @@ function toggleMenu() {
                         <input type="hidden" id="amount" name="amount" required>
                         <input type="hidden" id="selectedCurrency" name="selectedCurrency" value="MOP">
 
-                        <div class="email-composer">
-                            <h4>7 Registration Email</h4>
-                            <label for="participantEmail">Your Email Address</label>
-                            <input type="email" id="participantEmail" name="participantEmail" placeholder="your-email@example.com" required>
-
-                            <label for="generatedSubject">Email Subject (Auto-generated)</label>
-                            <input type="text" id="generatedSubject" name="generatedSubject" readonly>
-
-                            <label for="generatedContent">Email Content (Auto-generated)</label>
-                            <textarea id="generatedContent" name="generatedContent" readonly></textarea>
-
-                            <div class="attachment-grid">
-                                <div class="attachment-field">
-                                    <label for="paymentProofFile">Payment Proof Screenshot *</label>
-                                    <input type="file" id="paymentProofFile" name="paymentProofFile" accept=".png,.jpg,.jpeg,.webp,.pdf" required>
-                                    <span class="form-reminder" style="display:block;">Attach a screenshot or PDF of your payment proof.</span>
-                                </div>
-                                <div class="attachment-field" id="idDocumentationField" style="display:none;">
-                                    <label for="idDocumentationFile">Student/Macau ID Documentation *</label>
-                                    <input type="file" id="idDocumentationFile" name="idDocumentationFile" accept=".png,.jpg,.jpeg,.webp,.pdf">
-                                    <span class="form-reminder" style="display:block;">Required if you select Student Presenter or Macau local.</span>
-                                </div>
-                            </div>
-
-                            <div id="sendStatusMessage" class="form-reminder send-status"></div>
+                        <div class="form-reminder">
+                            Click the button below to open your email app with an auto-generated registration message.
+                            Please attach your payment proof manually before sending.
+                            If you selected Student Presenter or Macau local, also attach valid ID documentation.
                         </div>
 
                         <p class="registration-submit-row">
-                            <button type="submit" class="registration-submit-button" id="sendRegistrationButton">Send Registration Email</button>
-                            <span class="registration-submit-note">Your email receipt will be generated automatically once you finalize your selections above.</span>
+                            <button type="submit" class="registration-submit-button" id="sendRegistrationButton">Send Registration Proof via Email</button>
+                            <span class="registration-submit-note">Your subject and message will be generated automatically when your email app opens.</span>
                         </p>
                     </form>
                 </div>
@@ -576,22 +474,9 @@ function toggleMenu() {
         var selectedAmountPreview = document.getElementById("selectedAmountPreview");
         var fullNameInput = document.getElementById("fullName");
         var affiliationInput = document.getElementById("affiliation");
-        var participantEmailInput = document.getElementById("participantEmail");
-        var generatedSubjectInput = document.getElementById("generatedSubject");
-        var generatedContentInput = document.getElementById("generatedContent");
-        var paymentProofFileInput = document.getElementById("paymentProofFile");
-        var idDocumentationField = document.getElementById("idDocumentationField");
-        var idDocumentationFileInput = document.getElementById("idDocumentationFile");
-        var sendStatusMessage = document.getElementById("sendStatusMessage");
         var sendRegistrationButton = document.getElementById("sendRegistrationButton");
 
         var baseSelection = null;
-        var MAX_ATTACHMENT_BYTES = 8 * 1024 * 1024;
-        var allowedAttachmentExtensions = [".png", ".jpg", ".jpeg", ".webp", ".pdf"];
-
-        function buildOrderId() {
-            return "AALA2026-" + Date.now() + "-" + Math.floor(Math.random() * 100000);
-        }
 
         function getSelectedCurrency() {
             var selected = form.querySelector('input[name="registrationCurrency"]:checked');
@@ -605,6 +490,10 @@ function toggleMenu() {
 
         function isMacauLocal() {
             return Boolean(isMacauLocalCheckbox && isMacauLocalCheckbox.checked);
+        }
+
+        function requiresIdDocumentation() {
+            return getSelectedRole() === "student" || isMacauLocal();
         }
 
         function getCurrentChinaDateString() {
@@ -636,8 +525,6 @@ function toggleMenu() {
             } else if (!needsSubmissionId) {
                 submissionIdInput.value = "";
             }
-            updateIdDocumentationRequirement();
-            updateDraftEmailFields();
         }
 
         function updateAddOnLabels() {
@@ -677,7 +564,6 @@ function toggleMenu() {
             if (!baseSelection) {
                 selectedAmountPreview.textContent = "Selected amount: None";
                 amountInput.value = "";
-                updateDraftEmailFields();
                 return;
             }
 
@@ -701,7 +587,6 @@ function toggleMenu() {
                 breakdown += "; Add-ons: " + addOnLabels.join(" + ");
             }
             selectedAmountPreview.innerHTML = "Selected amount: <span class=\"selected-amount-value\">" + currency + " " + total + "</span> (" + breakdown + ")";
-            updateDraftEmailFields();
         }
 
         function getSelectedAddOnNames() {
@@ -756,6 +641,12 @@ function toggleMenu() {
             var paymentTypeLines = getPaymentTypeParts().map(function (item) {
                 return "- " + item;
             });
+            var attachmentLines = [
+                "Please attach payment proof as an email attachment."
+            ];
+            if (requiresIdDocumentation()) {
+                attachmentLines.push("Please also attach student/Macau ID documentation as an email attachment.");
+            }
 
             return [
                 "Dear AALA 2026 Organizing Team,",
@@ -768,76 +659,11 @@ function toggleMenu() {
                 "Payment amount: " + currency + " " + amountValue,
                 "Dietary requirements: " + dietaryText,
                 "",
-                "Please attach payment proof as an email attachment.",
-                "Please also attach Macau local ID proof as an email attachment.",
+                attachmentLines.join("\n"),
                 "",
                 "Best regards,",
                 (attendeeName || "Attendee")
             ].join("\n");
-        }
-
-        function updateDraftEmailFields() {
-            if (!generatedSubjectInput || !generatedContentInput) {
-                return;
-            }
-            var submissionIdText = submissionIdInput.value.trim();
-            generatedSubjectInput.value = buildDraftSubject(submissionIdText);
-            generatedContentInput.value = buildDraftContent();
-        }
-
-        function isIdDocumentationRequired() {
-            return getSelectedRole() === "student" || isMacauLocal();
-        }
-
-        function updateIdDocumentationRequirement() {
-            var required = isIdDocumentationRequired();
-            idDocumentationField.style.display = required ? "block" : "none";
-            idDocumentationFileInput.required = required;
-            if (!required) {
-                idDocumentationFileInput.value = "";
-            }
-        }
-
-        function validateAttachmentFile(file, labelText) {
-            if (!file) {
-                return null;
-            }
-            var lowerName = file.name.toLowerCase();
-            var hasAllowedExtension = allowedAttachmentExtensions.some(function (ext) {
-                return lowerName.endsWith(ext);
-            });
-            if (!hasAllowedExtension) {
-                return labelText + " must be PNG, JPG, WEBP, or PDF.";
-            }
-            if (file.size > MAX_ATTACHMENT_BYTES) {
-                return labelText + " must be 8MB or smaller.";
-            }
-            return null;
-        }
-
-        function showSendStatus(message, statusType) {
-            if (!sendStatusMessage) {
-                return;
-            }
-            sendStatusMessage.textContent = message;
-            sendStatusMessage.className = "form-reminder send-status";
-            if (statusType) {
-                sendStatusMessage.classList.add(statusType);
-            }
-            sendStatusMessage.style.display = "block";
-        }
-
-        function getEmailApiEndpoint() {
-            if (window.REGISTRATION_EMAIL_API_ENDPOINT && typeof window.REGISTRATION_EMAIL_API_ENDPOINT === "string") {
-                var configured = window.REGISTRATION_EMAIL_API_ENDPOINT.trim();
-                if (configured) {
-                    return configured;
-                }
-            }
-            if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
-                return "http://127.0.0.1:8787/api/send-registration-email";
-            }
-            return "/api/send-registration-email";
         }
 
         function updateAddOnAvailability() {
@@ -998,7 +824,6 @@ function toggleMenu() {
                     selectPaymentMethod("credit-card", true);
                 }
                 renderBaseRateCards();
-                updateDraftEmailFields();
             });
         });
 
@@ -1025,50 +850,14 @@ function toggleMenu() {
         });
 
         isMacauLocalCheckbox.addEventListener("change", function () {
-            updateIdDocumentationRequirement();
             renderBaseRateCards();
-            updateDraftEmailFields();
         });
-
-        if (fullNameInput) {
-            fullNameInput.addEventListener("input", updateDraftEmailFields);
-        }
-        if (affiliationInput) {
-            affiliationInput.addEventListener("input", updateDraftEmailFields);
-        }
-        if (submissionIdInput) {
-            submissionIdInput.addEventListener("input", updateDraftEmailFields);
-        }
-        if (dietaryRequirementsInput) {
-            dietaryRequirementsInput.addEventListener("input", updateDraftEmailFields);
-        }
-        if (paymentProofFileInput) {
-            paymentProofFileInput.addEventListener("change", function () {
-                var validationError = validateAttachmentFile(paymentProofFileInput.files[0], "Payment proof");
-                if (validationError) {
-                    window.alert(validationError);
-                    paymentProofFileInput.value = "";
-                }
-            });
-        }
-        if (idDocumentationFileInput) {
-            idDocumentationFileInput.addEventListener("change", function () {
-                var validationError = validateAttachmentFile(idDocumentationFileInput.files[0], "ID documentation");
-                if (validationError) {
-                    window.alert(validationError);
-                    idDocumentationFileInput.value = "";
-                }
-            });
-        }
 
         updatePaymentUi(false);
         updateSubmissionIdUi();
-        updateIdDocumentationRequirement();
         selectedCurrencyInput.value = getSelectedCurrency();
         renderBaseRateCards();
-        updateDraftEmailFields();
-
-        form.addEventListener("submit", async function (event) {
+        form.addEventListener("submit", function (event) {
             var selectedPaymentMethod = form.querySelector('input[name="paymentMethod"]:checked');
             var isQrPayment = selectedPaymentMethod && selectedPaymentMethod.value === "qr-code";
             var role = getSelectedRole();
@@ -1107,108 +896,27 @@ function toggleMenu() {
             }
 
             event.preventDefault();
-            updateDraftEmailFields();
 
             if (!isQrPayment) {
                 window.alert("Credit card payment method is coming soon. Please switch to Online Payment (QR Code) to send registration email.");
                 return;
             }
 
-            var participantEmail = participantEmailInput.value.trim();
-            if (!participantEmail) {
-                window.alert("Please enter your email address.");
-                participantEmailInput.focus();
-                return;
-            }
+            var subject = buildDraftSubject(submissionIdText);
+            var body = buildDraftContent();
+            var mailtoUrl = "mailto:aala2026@outlook.com"
+                + "?subject=" + encodeURIComponent(subject)
+                + "&body=" + encodeURIComponent(body);
 
-            var paymentProofError = validateAttachmentFile(paymentProofFileInput.files[0], "Payment proof");
-            if (paymentProofError) {
-                window.alert(paymentProofError);
-                return;
+            if (sendRegistrationButton) {
+                sendRegistrationButton.disabled = true;
             }
-
-            if (!paymentProofFileInput.files[0]) {
-                window.alert("Please attach your payment proof screenshot.");
-                return;
-            }
-
-            if (isIdDocumentationRequired()) {
-                var idDocError = validateAttachmentFile(idDocumentationFileInput.files[0], "ID documentation");
-                if (idDocError) {
-                    window.alert(idDocError);
-                    return;
+            window.location.href = mailtoUrl;
+            window.setTimeout(function () {
+                if (sendRegistrationButton) {
+                    sendRegistrationButton.disabled = false;
                 }
-                if (!idDocumentationFileInput.files[0]) {
-                    window.alert("Please attach your student/Macau ID documentation.");
-                    return;
-                }
-            }
-
-            var attendeeName = fullNameInput && fullNameInput.value ? fullNameInput.value.trim() : "Attendee";
-            var attendeeAffiliation = affiliationInput && affiliationInput.value ? affiliationInput.value.trim() : "N/A";
-
-            var formData = new FormData();
-            formData.append("participantEmail", participantEmail);
-            formData.append("subject", generatedSubjectInput.value);
-            formData.append("content", generatedContentInput.value);
-            formData.append("participantName", attendeeName);
-            formData.append("submissionId", submissionIdText || "");
-            formData.append("currency", getSelectedCurrency());
-            formData.append("amount", amountInput.value);
-            formData.append("role", role);
-            formData.append("isMacauLocal", String(isMacauLocal()));
-            formData.append("affiliation", attendeeAffiliation);
-            formData.append("paymentProofFile", paymentProofFileInput.files[0]);
-            if (isIdDocumentationRequired() && idDocumentationFileInput.files[0]) {
-                formData.append("idDocumentationFile", idDocumentationFileInput.files[0]);
-            }
-
-            sendRegistrationButton.disabled = true;
-            showSendStatus("Sending registration email...", null);
-
-            try {
-                var endpoint = getEmailApiEndpoint();
-                var response = await fetch(endpoint, {
-                    method: "POST",
-                    body: formData
-                });
-
-                var result = {};
-                var responseContentType = response.headers.get("content-type") || "";
-                var responseText = "";
-                if (responseContentType.toLowerCase().indexOf("application/json") !== -1) {
-                    try {
-                        result = await response.json();
-                    } catch (_unusedJsonParse) {
-                        result = {};
-                    }
-                } else {
-                    try {
-                        responseText = (await response.text()).trim();
-                    } catch (_unusedTextRead) {
-                        responseText = "";
-                    }
-                }
-                if (!response.ok) {
-                    var fallbackMessage = "Failed to send email (HTTP " + response.status + ").";
-                    if (responseText && responseText[0] === "<") {
-                        fallbackMessage = "Email API returned HTML instead of JSON (HTTP " + response.status + "). Check that endpoint " + endpoint + " is correctly deployed.";
-                    } else if (responseText) {
-                        fallbackMessage = responseText;
-                    }
-                    throw new Error(result.error || fallbackMessage);
-                }
-
-                showSendStatus("Registration email sent successfully.", "success");
-            } catch (error) {
-                var errorMessage = error && error.message ? error.message : "Unknown error";
-                if (errorMessage === "Failed to fetch") {
-                    errorMessage = "Cannot reach the email server. Please ensure the backend API is running and accessible.";
-                }
-                showSendStatus("Unable to send email: " + errorMessage, "error");
-            } finally {
-                sendRegistrationButton.disabled = false;
-            }
+            }, 800);
         });
     })();
     </script>
