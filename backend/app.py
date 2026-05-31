@@ -9,6 +9,7 @@ from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 app.config["MAX_CONTENT_LENGTH"] = 20 * 1024 * 1024
+ALLOWED_ORIGIN = os.getenv("ALLOWED_ORIGIN", "*")
 
 ALLOWED_EXTENSIONS = {".png", ".jpg", ".jpeg", ".webp", ".pdf"}
 MAX_FILE_BYTES = 8 * 1024 * 1024
@@ -54,8 +55,19 @@ def handle_file_too_large(_error):
     return jsonify({"error": "Total upload size exceeds 20MB."}), 413
 
 
-@app.post("/api/send-registration-email")
+@app.after_request
+def add_cors_headers(response):
+    response.headers["Access-Control-Allow-Origin"] = ALLOWED_ORIGIN
+    response.headers["Access-Control-Allow-Headers"] = "Content-Type, Authorization"
+    response.headers["Access-Control-Allow-Methods"] = "POST, OPTIONS"
+    return response
+
+
+@app.route("/api/send-registration-email", methods=["POST", "OPTIONS"])
 def send_registration_email():
+    if request.method == "OPTIONS":
+        return ("", 204)
+
     participant_email = request.form.get("participantEmail", "").strip()
     subject = request.form.get("subject", "").strip()
     content = request.form.get("content", "").strip()
@@ -128,6 +140,11 @@ def send_registration_email():
     except Exception:
         return jsonify({"error": "Failed to send registration email. Please try again later."}), 502
 
+    return jsonify({"ok": True})
+
+
+@app.get("/api/health")
+def health():
     return jsonify({"ok": True})
 
 
