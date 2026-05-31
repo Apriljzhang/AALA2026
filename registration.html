@@ -827,6 +827,19 @@ function toggleMenu() {
             sendStatusMessage.style.display = "block";
         }
 
+        function getEmailApiEndpoint() {
+            if (window.REGISTRATION_EMAIL_API_ENDPOINT && typeof window.REGISTRATION_EMAIL_API_ENDPOINT === "string") {
+                var configured = window.REGISTRATION_EMAIL_API_ENDPOINT.trim();
+                if (configured) {
+                    return configured;
+                }
+            }
+            if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
+                return "http://127.0.0.1:8787/api/send-registration-email";
+            }
+            return "/api/send-registration-email";
+        }
+
         function updateAddOnAvailability() {
             var bundleSelected = Boolean(baseSelection && baseSelection.rateKey === "bundle");
 
@@ -1154,19 +1167,28 @@ function toggleMenu() {
             showSendStatus("Sending registration email...", null);
 
             try {
-                var response = await fetch("/api/send-registration-email", {
+                var response = await fetch(getEmailApiEndpoint(), {
                     method: "POST",
                     body: formData
                 });
 
-                var result = await response.json();
+                var result = {};
+                try {
+                    result = await response.json();
+                } catch (_unused) {
+                    result = {};
+                }
                 if (!response.ok) {
                     throw new Error(result.error || "Failed to send email.");
                 }
 
                 showSendStatus("Registration email sent successfully.", "success");
             } catch (error) {
-                showSendStatus("Unable to send email: " + error.message, "error");
+                var errorMessage = error && error.message ? error.message : "Unknown error";
+                if (errorMessage === "Failed to fetch") {
+                    errorMessage = "Cannot reach the email server. Please ensure the backend API is running and accessible.";
+                }
+                showSendStatus("Unable to send email: " + errorMessage, "error");
             } finally {
                 sendRegistrationButton.disabled = false;
             }
