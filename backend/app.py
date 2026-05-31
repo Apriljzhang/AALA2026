@@ -1,5 +1,6 @@
 import os
 import smtplib
+import socket
 from email.message import EmailMessage
 from pathlib import Path
 
@@ -134,9 +135,35 @@ def send_registration_email():
 
     try:
         with smtplib.SMTP(SMTP_HOST, SMTP_PORT, timeout=20) as smtp:
+            smtp.ehlo()
             smtp.starttls()
+            smtp.ehlo()
             smtp.login(SMTP_USERNAME, SMTP_PASSWORD)
             smtp.send_message(message)
+    except smtplib.SMTPAuthenticationError:
+        return jsonify({
+            "error": "SMTP authentication failed. Check SMTP_USERNAME/SMTP_PASSWORD and use an Outlook app password if required."
+        }), 502
+    except smtplib.SMTPConnectError:
+        return jsonify({
+            "error": f"Cannot connect to SMTP server at {SMTP_HOST}:{SMTP_PORT}."
+        }), 502
+    except smtplib.SMTPServerDisconnected:
+        return jsonify({
+            "error": "SMTP server disconnected unexpectedly. Please try again."
+        }), 502
+    except socket.timeout:
+        return jsonify({
+            "error": f"SMTP connection timed out for {SMTP_HOST}:{SMTP_PORT}."
+        }), 502
+    except OSError as exc:
+        return jsonify({
+            "error": f"Network error while contacting SMTP server: {exc.__class__.__name__}."
+        }), 502
+    except smtplib.SMTPException as exc:
+        return jsonify({
+            "error": f"SMTP error while sending email: {exc.__class__.__name__}."
+        }), 502
     except Exception:
         return jsonify({"error": "Failed to send registration email. Please try again later."}), 502
 
