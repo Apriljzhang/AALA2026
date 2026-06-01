@@ -4,40 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Venue, Transportation &amp; Accommodation - AALA 2026</title>
+    <title>Venue, Visa, Transportation &amp; Accommodation - AALA 2026</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
         #venue h3,
-        #transportation-accommodation h3 {
+        #transportation h3 {
             color: #168e6a;
             margin-top: 1.75rem;
             margin-bottom: 0.75rem;
             font-size: 1.25rem;
         }
-        #transportation-accommodation hr {
-            border: 0;
-            border-top: 1px solid #ddd;
-            margin: 2rem 0;
+        #venue h3:first-of-type {
+            margin-top: 0;
         }
-        #transportation-accommodation ul ul {
+        #transportation ul ul {
             margin-top: 0.5rem;
             margin-bottom: 0.5rem;
         }
-        #transportation-accommodation table.cityu-routes {
+        #transportation table.cityu-routes {
             font-size: 0.88rem;
         }
-        #transportation-accommodation table.cityu-routes th,
-        #transportation-accommodation table.cityu-routes td {
+        #transportation table.cityu-routes th,
+        #transportation table.cityu-routes td {
             white-space: nowrap;
         }
-        #transportation-accommodation table.accommodation-table a {
+        #accommodation table.accommodation-table a {
             color: #168e6a;
             font-weight: 600;
         }
         @media screen and (max-width: 768px) {
-            #transportation-accommodation table.cityu-routes th,
-            #transportation-accommodation table.cityu-routes td {
+            #transportation table.cityu-routes th,
+            #transportation table.cityu-routes td {
                 white-space: normal;
             }
         }
@@ -95,7 +93,12 @@ function toggleMenu() {
                     </p>
                 </div>
 
-                <h3>Entry Requirements &amp; Visas</h3>
+                </div>
+            </section>
+
+            <section id="visa" class="content-block">
+                <h2>Visa</h2>
+                <div class="text-body">
                 <p>Most international travelers and participants are <b>exempted from a visa or entry permit</b> for Macao for a stay ranging from 7 to 90 days, depending on their nationality.</p>
                 <p>To confirm if your country is on the visa-free list or to find details on how to apply for an entry permit upon arrival, please consult the official <b>Macao SAR Government Service Portal</b>:</p>
                 <p style="margin: 20px 0;">👉 <a href="https://www.gov.mo/en/services/ps-1474/ps-1474b/" target="_blank" style="color: #168e6a; font-weight: bold; text-decoration: underline;">Official Visa-Free Nationalities &amp; Entry Requirements</a></p>
@@ -103,8 +106,8 @@ function toggleMenu() {
                 </div>
             </section>
             
-            <section id="transportation-accommodation" class="content-block">
-                <h2>Transportation and Accommodation</h2>
+            <section id="transportation" class="content-block">
+                <h2>Transportation</h2>
                 <div class="text-body">
 
                 <h3>By Air ✈️ (International Arrivals)</h3>
@@ -189,16 +192,12 @@ function toggleMenu() {
                 </table>
                 </div>
 
-                <hr>
+                </div>
+            </section>
 
-                <p><b>💡 Important Notes for Guests:</b></p>
-                <ul>
-                    <li><b>Currency &amp; Payment:</b> In Macau, <b>MOP, CNY, and HKD</b> are widely accepted at a <b>1:1:1 ratio</b> for most local transactions and transportation. Please note that change is usually given in MOP.</li>
-                    <li><b>Navigation:</b> After alighting from your bus or taxi, follow campus signage and walk up the slope to the main university entrance.</li>
-                    <li><b>Local Rail:</b> The <a href="https://www.mlm.com.mo/en/index.html" target="_blank" rel="noopener noreferrer">Macau Light Rapid Transit (LRT)</a> has stations at the <b>Airport</b> and <b>Taipa Ferry Terminal</b>, providing a scenic and modern way to travel around the Taipa/Cotai area.</li>
-                </ul>
-
-                <h3>Accommodation Options</h3>
+            <section id="accommodation" class="content-block">
+                <h2>Accommodation</h2>
+                <div class="text-body">
                 <p>The following hotels are within walking distance of City University of Macau. Walking times are approximate.</p>
                 <div class="table-scroll">
                 <table class="transport-table accommodation-table">
@@ -234,7 +233,17 @@ function toggleMenu() {
                     </tr>
                 </table>
                 </div>
+                </div>
+            </section>
 
+            <section id="guest-notes" class="content-block">
+                <h2>💡 Important Notes for Guests</h2>
+                <div class="text-body">
+                <ul>
+                    <li><b>Currency &amp; Payment:</b> In Macau, <b>MOP, CNY, and HKD</b> are widely accepted at a <b>1:1:1 ratio</b> for most local transactions and transportation. Please note that change is usually given in MOP.</li>
+                    <li><b>Navigation:</b> After alighting from your bus or taxi, follow campus signage and walk up the slope to the main university entrance.</li>
+                    <li><b>Local Rail:</b> The <a href="https://www.mlm.com.mo/en/index.html" target="_blank" rel="noopener noreferrer">Macau Light Rapid Transit (LRT)</a> has stations at the <b>Airport</b> and <b>Taipa Ferry Terminal</b>, providing a scenic and modern way to travel around the Taipa/Cotai area.</li>
+                </ul>
                 </div>
             </section>
             
