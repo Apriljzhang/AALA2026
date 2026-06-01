@@ -159,12 +159,18 @@ img { max-width: 100%; height: auto; }
 }
 
 .sponsor-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 20px;
+}
+
+.sponsor-row {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px 32px;
     align-items: center;
     justify-items: center;
-    margin-top: 20px;
 }
 
 .sponsor-item {
@@ -328,6 +334,13 @@ img { max-width: 100%; height: auto; }
     }
     .organiser-list {
         grid-template-columns: 1fr;
+    }
+    .sponsor-grid {
+        gap: 24px;
+    }
+    .sponsor-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
     .sponsor-item img {
         max-height: 60px;
