@@ -33,10 +33,66 @@
             color: #168e6a;
             font-weight: 600;
         }
+        .venue-page-title {
+            color: #168e6a;
+            margin: 0 0 18px;
+            border-bottom: 3px solid #168e6a;
+            display: inline-block;
+            padding-bottom: 6px;
+        }
+        .venue-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 240px;
+            gap: 24px;
+            align-items: start;
+        }
+        .venue-main {
+            min-width: 0;
+        }
+        .venue-side {
+            position: sticky;
+            top: 90px;
+        }
+        .venue-side-card {
+            border: 1px solid #d9e9e4;
+            border-radius: 10px;
+            padding: 14px;
+            background: #f8fcfa;
+        }
+        .venue-side-card h3 {
+            margin: 0 0 10px;
+            color: #168e6a;
+            font-size: 1rem;
+        }
+        .venue-side-card a {
+            display: block;
+            color: #2d3135;
+            text-decoration: none;
+            padding: 6px 0;
+            font-weight: 600;
+        }
+        .venue-side-card a:hover {
+            color: #168e6a;
+            text-decoration: underline;
+        }
+        #venue,
+        #visa,
+        #transportation,
+        #accommodation {
+            scroll-margin-top: 90px;
+        }
         @media screen and (max-width: 768px) {
             #transportation table.cityu-routes th,
             #transportation table.cityu-routes td {
                 white-space: normal;
+            }
+        }
+        @media screen and (max-width: 1024px) {
+            .venue-layout {
+                grid-template-columns: 1fr;
+            }
+            .venue-side {
+                position: static;
             }
         }
     </style>
@@ -65,7 +121,9 @@ function toggleMenu() {
         
 
         <div class="container">
-            
+            <h1 class="venue-page-title">Venue, Visa, Transportation, Accommodation</h1>
+            <div class="venue-layout">
+            <div class="venue-main">
             <section id="venue" class="content-block">
                 <h2>Venue</h2>
                 <div class="text-body">
@@ -218,7 +276,7 @@ function toggleMenu() {
                     </tr>
                     <tr>
                         <td>Inn Hotel Macau</td>
-                        <td><a href="https://www.innhotel.com/index.php" target="_blank" rel="noopener noreferrer">https://www.innhotel.com</a></td>
+                        <td><a href="https://www.innhotelmacau.com/" target="_blank" rel="noopener noreferrer">https://www.innhotelmacau.com/</a></td>
                         <td>18 mins</td>
                     </tr>
                     <tr>
@@ -246,7 +304,17 @@ function toggleMenu() {
                 </ul>
                 </div>
             </section>
-            
+            </div>
+            <aside class="venue-side" aria-label="Venue page navigation">
+                <div class="venue-side-card">
+                    <h3>On This Page</h3>
+                    <a href="#venue">Venue</a>
+                    <a href="#visa">Visa</a>
+                    <a href="#transportation">Transportation</a>
+                    <a href="#accommodation">Accommodation</a>
+                </div>
+            </aside>
+            </div>
         </div>
     </main>
     <footer class="footer"><p>&copy; AALA 2026 Conference. All Rights Reserved.</p></footer>
