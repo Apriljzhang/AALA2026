@@ -191,6 +191,10 @@ img { max-width: 100%; height: auto; }
     max-height: 96px;
 }
 
+.sponsor-item--fltrp img {
+    max-height: 96px;
+}
+
 .video-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px; }
 .media-box { text-align: center; }
 .transport-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
@@ -348,6 +352,9 @@ img { max-width: 100%; height: auto; }
         max-height: 56px;
     }
     .sponsor-item--british-council img {
+        max-height: 72px;
+    }
+    .sponsor-item--fltrp img {
         max-height: 72px;
     }
 }
