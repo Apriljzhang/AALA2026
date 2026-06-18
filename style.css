@@ -191,6 +191,10 @@ img { max-width: 100%; height: auto; }
     max-height: 96px;
 }
 
+.sponsor-item--duolingo img {
+    max-height: 130px;
+}
+
 .sponsor-item--fltrp img {
     max-height: 150px;
 }
@@ -353,6 +357,9 @@ img { max-width: 100%; height: auto; }
     }
     .sponsor-item--british-council img {
         max-height: 72px;
+    }
+    .sponsor-item--duolingo img {
+        max-height: 100px;
     }
     .sponsor-item--fltrp img {
         max-height: 110px;
