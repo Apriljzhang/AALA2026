@@ -142,6 +142,7 @@
         }
         .registration-pricing-table {
             width: 100%;
+            min-width: 100%;
         }
         .registration-table-block {
             width: 100%;
@@ -149,14 +150,8 @@
         .registration-table-block .table-scroll {
             width: 100%;
         }
-        .addons-table-compact th:first-child,
-        .addons-table-compact td:first-child {
-            width: 82%;
-            text-align: left;
-        }
-        .addons-table-compact th:last-child,
-        .addons-table-compact td:last-child {
-            width: 18%;
+        .addons-table-compact .addons-spacer {
+            padding: 10px 8px;
         }
         .fee-header-sub {
             display: block;
@@ -274,17 +269,31 @@ function toggleMenu() {
                 <div class="text-body">
                 <p>Participants may also register for the following optional events:</p>
                 <div class="table-scroll registration-table-block">
-                <table class="transport-table fees-table fees-table-compact addons-table-compact registration-pricing-table">
+                <table class="transport-table fees-table fees-table-compact registration-pricing-table addons-table-compact">
+                    <colgroup>
+                        <col>
+                        <col>
+                        <col style="background-color:#e0f2f1;">
+                        <col style="background-color:#e0f2f1;">
+                        <col style="background-color:#e0f2f1;">
+                        <col style="background-color:#fff3e0;">
+                        <col style="background-color:#fff3e0;">
+                        <col style="background-color:#fff3e0;">
+                        <col style="background-color:#ffebee;">
+                    </colgroup>
                     <tr>
-                        <th></th>
+                        <th>Optional Add-on</th>
+                        <th colspan="6" class="addons-spacer"></th>
                         <th>MOP</th>
                     </tr>
                     <tr>
-                        <td>Each pre-con workshop (18th)</td>
+                        <td><b>Each pre-con workshop (18th)</b></td>
+                        <td colspan="6" class="addons-spacer"></td>
                         <td><span class="fee-price-mop">600</span><span class="fee-price-usd">≈USD 75</span></td>
                     </tr>
                     <tr>
-                        <td>Banquet (19th Sep evening)</td>
+                        <td><b>Banquet (19th Sep evening)</b></td>
+                        <td colspan="6" class="addons-spacer"></td>
                         <td><span class="fee-price-mop">600</span><span class="fee-price-usd">≈USD 75</span></td>
                     </tr>
                 </table>
