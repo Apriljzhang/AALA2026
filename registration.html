@@ -8,18 +8,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
         #feeChooserLayout {
-            display: flex;
-            gap: 14px;
-            align-items: flex-start;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: minmax(280px, 1fr) minmax(320px, 1.4fr);
+            gap: 20px;
+            align-items: start;
+            width: 100%;
         }
         #currencyPanel {
-            flex: 1 1 260px;
-            min-width: 240px;
+            min-width: 0;
         }
         #amountTilesPanel {
-            flex: 2 1 520px;
-            min-width: 300px;
+            min-width: 0;
+        }
+        #conferenceRegistrationForm {
+            width: 100%;
+            max-width: 100%;
+        }
+        #conferenceRegistrationForm input[type="text"] {
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+        .registration-standard-width {
+            width: 100%;
+            max-width: 100%;
         }
         .fee-group {
             margin-bottom: 10px;
@@ -150,9 +162,13 @@
         .registration-table-block .table-scroll {
             width: 100%;
         }
-        .addons-table-compact th:last-child,
-        .addons-table-compact td:last-child {
-            width: 12%;
+        .addons-table-compact .addons-spacer {
+            padding: 10px 8px;
+        }
+        @media (max-width: 768px) {
+            #feeChooserLayout {
+                grid-template-columns: 1fr;
+            }
         }
         .fee-header-sub {
             display: block;
@@ -200,7 +216,7 @@ function toggleMenu() {
                 <p><strong>Presenter registration and payment deadline:</strong> 30 June 2026<br>
                 <strong>Early-bird registration deadline:</strong> 15 July 2026</p>
                 <h3>Fee Categories</h3>
-                <div class="table-scroll registration-table-block">
+                <div class="table-scroll registration-table-block registration-standard-width">
                 <table class="transport-table fees-table fees-table-compact registration-pricing-table">
                     <colgroup>
                         <col>
@@ -269,18 +285,32 @@ function toggleMenu() {
                 <h2>Optional Add-ons</h2>
                 <div class="text-body">
                 <p>Participants may also register for the following optional events:</p>
-                <div class="table-scroll registration-table-block">
+                <div class="table-scroll registration-table-block registration-standard-width">
                 <table class="transport-table fees-table fees-table-compact registration-pricing-table addons-table-compact">
+                    <colgroup>
+                        <col>
+                        <col>
+                        <col style="background-color:#e0f2f1;">
+                        <col style="background-color:#e0f2f1;">
+                        <col style="background-color:#e0f2f1;">
+                        <col style="background-color:#fff3e0;">
+                        <col style="background-color:#fff3e0;">
+                        <col style="background-color:#fff3e0;">
+                        <col style="background-color:#ffebee;">
+                    </colgroup>
                     <tr>
                         <th>Optional Add-on</th>
+                        <th colspan="6" class="addons-spacer"></th>
                         <th>MOP</th>
                     </tr>
                     <tr>
                         <td><b>Each pre-con workshop (18th)</b></td>
+                        <td colspan="6" class="addons-spacer"></td>
                         <td><span class="fee-price-mop">600</span><span class="fee-price-usd">≈USD 75</span></td>
                     </tr>
                     <tr>
                         <td><b>Banquet (19th Sep evening)</b></td>
+                        <td colspan="6" class="addons-spacer"></td>
                         <td><span class="fee-price-mop">600</span><span class="fee-price-usd">≈USD 75</span></td>
                     </tr>
                 </table>
@@ -290,7 +320,7 @@ function toggleMenu() {
             <section id="registration-form" class="content-block">
                 <h2>Registration Form</h2>
                 <div class="text-body">
-                    <form id="conferenceRegistrationForm" action="#" method="post" enctype="multipart/form-data">
+                    <form id="conferenceRegistrationForm" class="registration-standard-width" action="#" method="post" enctype="multipart/form-data">
                         <div id="feeChooserLayout">
                             <div id="currencyPanel">
                                 <h3>1 Select Role</h3>
