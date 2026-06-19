@@ -167,7 +167,6 @@ function toggleMenu() {
                     </colgroup>
                     <tr>
                         <th rowspan="2">Registration Price*</th>
-                        <th rowspan="2">Currency</th>
                         <th colspan="3">Non-Macau Local</th>
                         <th colspan="3">Macau Local**</th>
                         <th rowspan="2">Onsite (MOP cash)</th>
@@ -181,70 +180,39 @@ function toggleMenu() {
                         <th>Early Bird Bundle Price (Registration + Banquet)</th>
                     </tr>
                     <tr class="row-presenter">
-                        <td rowspan="2"><b>Presenter</b></td>
-                        <td>USD</td>
-                        <td>185</td>
-                        <td>200</td>
-                        <td>250</td>
-                        <td>135</td>
-                        <td>150</td>
-                        <td>200</td>
-                        <td rowspan="2">NA</td>
-                    </tr>
-                    <tr class="row-presenter">
-                        <td>MOP</td>
-                        <td>1480</td>
-                        <td>1600</td>
-                        <td>2000</td>
-                        <td>1080</td>
-                        <td>1200</td>
-                        <td>1600</td>
+                        <td><b>Presenter</b></td>
+                        <td>1480 (≈USD 185)</td>
+                        <td>1600 (≈USD 200)</td>
+                        <td>2000 (≈USD 250)</td>
+                        <td>1080 (≈USD 135)</td>
+                        <td>1200 (≈USD 150)</td>
+                        <td>1600 (≈USD 200)</td>
+                        <td>NA</td>
                     </tr>
                     <tr class="row-student">
-                        <td rowspan="2"><b>Student Presenter</b></td>
-                        <td>USD</td>
-                        <td>90</td>
-                        <td>110</td>
-                        <td>155</td>
-                        <td>65</td>
-                        <td>85</td>
-                        <td>130</td>
-                        <td rowspan="2">NA</td>
-                    </tr>
-                    <tr class="row-student">
-                        <td>MOP</td>
-                        <td>720</td>
-                        <td>880</td>
-                        <td>1240</td>
-                        <td>520</td>
-                        <td>680</td>
-                        <td>1040</td>
+                        <td><b>Student Presenter</b></td>
+                        <td>720 (≈USD 90)</td>
+                        <td>880 (≈USD 110)</td>
+                        <td>1240 (≈USD 155)</td>
+                        <td>520 (≈USD 65)</td>
+                        <td>680 (≈USD 85)</td>
+                        <td>1040 (≈USD 130)</td>
+                        <td>NA</td>
                     </tr>
                     <tr class="row-participant">
-                        <td rowspan="2"><b>Participant (not presenting)</b></td>
-                        <td>USD</td>
-                        <td>65</td>
-                        <td>85</td>
-                        <td>130</td>
-                        <td>65</td>
-                        <td>85</td>
-                        <td>130</td>
-                        <td></td>
-                    </tr>
-                    <tr class="row-participant">
-                        <td>MOP</td>
-                        <td>520</td>
-                        <td>680</td>
-                        <td>1040</td>
-                        <td>520</td>
-                        <td>680</td>
-                        <td>1040</td>
+                        <td><b>Participant (not presenting)</b></td>
+                        <td>520 (≈USD 65)</td>
+                        <td>680 (≈USD 85)</td>
+                        <td>1040 (≈USD 130)</td>
+                        <td>520 (≈USD 65)</td>
+                        <td>680 (≈USD 85)</td>
+                        <td>1040 (≈USD 130)</td>
                         <td>680</td>
                     </tr>
                 </table>
                 </div>
                 <p class="fees-table-footnote">
-                    * Fees include the conference programme, conference bags, reception gathering, tea breaks, and lunches during the two-day conference.<br>
+                    * Fees include the conference programme, conference bags, reception gathering, tea breaks, and lunches during the two-day conference. All prices are in MOP; approximate USD equivalents are shown for reference.<br>
                     ** Local rates apply to Macau residents, students studying in Macau, and Macau blue card holders.
                 </p>
                 </div>
@@ -257,18 +225,15 @@ function toggleMenu() {
                 <table class="transport-table">
                     <tr>
                         <th></th>
-                        <th>MOP</th>
-                        <th>USD</th>
+                        <th>MOP (approx. USD)</th>
                     </tr>
                     <tr>
                         <td>Each pre-con workshop (18th)</td>
-                        <td>600</td>
-                        <td>75</td>
+                        <td>600 (≈USD 75)</td>
                     </tr>
                     <tr>
                         <td>Banquet (19th Sep evening)</td>
-                        <td>600</td>
-                        <td>75</td>
+                        <td>600 (≈USD 75)</td>
                     </tr>
                 </table>
                 </div>
@@ -280,26 +245,14 @@ function toggleMenu() {
                     <form id="conferenceRegistrationForm" action="#" method="post" enctype="multipart/form-data">
                         <div id="feeChooserLayout">
                             <div id="currencyPanel">
-                                <h3>1 Select Currency</h3>
-                                <div id="currencySelection">
-                                    <label>
-                                        <input type="radio" name="registrationCurrency" value="MOP" checked>
-                                        MOP
-                                    </label><br>
-                                    <label>
-                                        <input type="radio" name="registrationCurrency" value="USD">
-                                        USD
-                                    </label>
-                                </div>
-
-                                <h3 style="margin-top: 14px;">2 Select Role</h3>
+                                <h3>1 Select Role</h3>
                                 <div id="roleSelection">
                                     <label><input type="radio" name="participantRole" value="presenter"> Presenter</label><br>
                                     <label><input type="radio" name="participantRole" value="student"> Student Presenter</label><br>
                                     <label><input type="radio" name="participantRole" value="participant"> Participant (not presenting)</label>
                                 </div>
 
-                                <h3 style="margin-top: 14px;">3 Personal Information</h3>
+                                <h3 style="margin-top: 14px;">2 Personal Information</h3>
                                 <p style="margin-top: 10px;">
                                     <label for="fullName">Full Name</label><br>
                                     <input type="text" id="fullName" name="fullName" required>
@@ -335,10 +288,10 @@ function toggleMenu() {
                             </div>
 
                             <div id="amountTilesPanel">
-                                <h3>4 Choose Registration Rate</h3>
+                                <h3>3 Choose Registration Rate</h3>
                                 <div id="baseRateCards" class="fee-tile-grid"></div>
 
-                                <h3 style="margin-top: 14px;">5 Optional Add-ons</h3>
+                                <h3 style="margin-top: 14px;">4 Optional Add-ons</h3>
                                 <div id="addonCards" class="fee-tile-grid">
                                     <label class="fee-tile">
                                         <input type="checkbox" class="addon-option workshop-option" id="addonWorkshop1" data-addon-key="workshop" data-workshop-title="Assessing English language students with Specific Learning Difficulties">
@@ -369,7 +322,7 @@ function toggleMenu() {
                                     </span>
                                 </p>
 
-                                <h3 style="margin-top: 14px;">6 Payment Method</h3>
+                                <h3 style="margin-top: 14px;">5 Payment Method</h3>
                                 <div id="paymentMethodSelection">
                                     <label>
                                         <input type="radio" name="paymentMethod" value="qr-code" checked>
@@ -421,21 +374,24 @@ function toggleMenu() {
         }
 
         var feeTable = {
-            "USD": {
-                presenter: { nonLocal: { early: 185, regular: 200, bundle: 250 }, local: { early: 135, regular: 150, bundle: 200 } },
-                student: { nonLocal: { early: 90, regular: 110, bundle: 155 }, local: { early: 65, regular: 85, bundle: 130 } },
-                participant: { nonLocal: { early: 65, regular: 85, bundle: 130 }, local: { early: 65, regular: 85, bundle: 130 } }
+            presenter: {
+                nonLocal: { early: { mop: 1480, usd: 185 }, regular: { mop: 1600, usd: 200 }, bundle: { mop: 2000, usd: 250 } },
+                local: { early: { mop: 1080, usd: 135 }, regular: { mop: 1200, usd: 150 }, bundle: { mop: 1600, usd: 200 } }
             },
-            "MOP": {
-                presenter: { nonLocal: { early: 1480, regular: 1600, bundle: 2000 }, local: { early: 1080, regular: 1200, bundle: 1600 } },
-                student: { nonLocal: { early: 720, regular: 880, bundle: 1240 }, local: { early: 520, regular: 680, bundle: 1040 } },
-                participant: { nonLocal: { early: 520, regular: 680, bundle: 1040 }, local: { early: 520, regular: 680, bundle: 1040 } }
+            student: {
+                nonLocal: { early: { mop: 720, usd: 90 }, regular: { mop: 880, usd: 110 }, bundle: { mop: 1240, usd: 155 } },
+                local: { early: { mop: 520, usd: 65 }, regular: { mop: 680, usd: 85 }, bundle: { mop: 1040, usd: 130 } }
+            },
+            participant: {
+                nonLocal: { early: { mop: 520, usd: 65 }, regular: { mop: 680, usd: 85 }, bundle: { mop: 1040, usd: 130 } },
+                local: { early: { mop: 520, usd: 65 }, regular: { mop: 680, usd: 85 }, bundle: { mop: 1040, usd: 130 } }
             }
         };
 
         var addOnFees = {
-            "USD": { workshop: 75, "post-workshop": 0, banquet: 75 },
-            "MOP": { workshop: 600, "post-workshop": 0, banquet: 600 }
+            workshop: { mop: 600, usd: 75 },
+            "post-workshop": { mop: 0, usd: 0 },
+            banquet: { mop: 600, usd: 75 }
         };
 
         var roleLabelMap = {
@@ -445,7 +401,6 @@ function toggleMenu() {
         };
 
         var paymentMethodRadios = form.querySelectorAll('input[name="paymentMethod"]');
-        var currencyRadios = form.querySelectorAll('input[name="registrationCurrency"]');
         var roleRadios = form.querySelectorAll('input[name="participantRole"]');
         var qrPaymentSection = document.getElementById("qrPaymentSection");
         var baseRateCards = document.getElementById("baseRateCards");
@@ -472,9 +427,15 @@ function toggleMenu() {
 
         var baseSelection = null;
 
+        function formatMopWithUsdApprox(mop, usd) {
+            if (!usd) {
+                return "MOP " + mop;
+            }
+            return "MOP " + mop + " (≈USD " + usd + ")";
+        }
+
         function getSelectedCurrency() {
-            var selected = form.querySelector('input[name="registrationCurrency"]:checked');
-            return selected ? selected.value : "USD";
+            return "MOP";
         }
 
         function getSelectedRole() {
@@ -522,13 +483,11 @@ function toggleMenu() {
         }
 
         function updateAddOnLabels() {
-            var currency = getSelectedCurrency();
-            var addOnCurrency = addOnFees[currency];
-            addonWorkshop1Label.textContent = "Workshop 1 - Assessing English language students with Specific Learning Difficulties: " + currency + " " + addOnCurrency.workshop;
-            addonWorkshop2Label.textContent = "Workshop 2 - Validity and validation in language assessment: Concepts, evidence, and argument-based approaches: " + currency + " " + addOnCurrency.workshop;
-            addonWorkshop3Label.textContent = "Workshop 3 - Unpacking deep learning and neural networks: Fundamentals and hands-on application in language assessment research: " + currency + " " + addOnCurrency.workshop;
+            addonWorkshop1Label.textContent = "Workshop 1 - Assessing English language students with Specific Learning Difficulties: " + formatMopWithUsdApprox(addOnFees.workshop.mop, addOnFees.workshop.usd);
+            addonWorkshop2Label.textContent = "Workshop 2 - Validity and validation in language assessment: Concepts, evidence, and argument-based approaches: " + formatMopWithUsdApprox(addOnFees.workshop.mop, addOnFees.workshop.usd);
+            addonWorkshop3Label.textContent = "Workshop 3 - Unpacking deep learning and neural networks: Fundamentals and hands-on application in language assessment research: " + formatMopWithUsdApprox(addOnFees.workshop.mop, addOnFees.workshop.usd);
             addonWorkshop4Label.textContent = "Workshop 4 - Item Analysis and Test Equating in the Age of AI (Post-Conference, Sept 21): Free";
-            addonBanquetLabel.textContent = "Banquet: " + currency + " " + addOnCurrency.banquet;
+            addonBanquetLabel.textContent = "Banquet: " + formatMopWithUsdApprox(addOnFees.banquet.mop, addOnFees.banquet.usd);
         }
 
         function clearBaseSelection() {
@@ -561,26 +520,27 @@ function toggleMenu() {
                 return;
             }
 
-            var currency = getSelectedCurrency();
-            var addOnCurrency = addOnFees[currency];
             var addOnTotal = 0;
+            var addOnUsdTotal = 0;
             var addOnLabels = getSelectedAddOnNames();
 
             addonOptions.forEach(function (addonCheckbox) {
                 if (addonCheckbox.checked && !addonCheckbox.disabled) {
                     var addOnKey = addonCheckbox.getAttribute("data-addon-key");
-                    addOnTotal += addOnCurrency[addOnKey];
+                    addOnTotal += addOnFees[addOnKey].mop;
+                    addOnUsdTotal += addOnFees[addOnKey].usd;
                 }
             });
 
             var total = baseSelection.amount + addOnTotal;
+            var usdTotal = baseSelection.usdApprox + addOnUsdTotal;
             amountInput.value = String(total);
 
             var breakdown = "Base: " + baseSelection.label;
             if (addOnLabels.length > 0) {
                 breakdown += "; Add-ons: " + addOnLabels.join(" + ");
             }
-            selectedAmountPreview.innerHTML = "Selected amount: <span class=\"selected-amount-value\">" + currency + " " + total + "</span> (" + breakdown + ")";
+            selectedAmountPreview.innerHTML = "Selected amount: <span class=\"selected-amount-value\">" + formatMopWithUsdApprox(total, usdTotal) + "</span> (" + breakdown + ")";
         }
 
         function getSelectedAddOnNames() {
@@ -625,12 +585,28 @@ function toggleMenu() {
             return "Registration" + (submissionIdText ? " - " + submissionIdText : "");
         }
 
+        function getSelectedUsdApproxTotal() {
+            if (!baseSelection) {
+                return 0;
+            }
+            var usdTotal = baseSelection.usdApprox;
+            addonOptions.forEach(function (addonCheckbox) {
+                if (addonCheckbox.checked && !addonCheckbox.disabled) {
+                    var addOnKey = addonCheckbox.getAttribute("data-addon-key");
+                    usdTotal += addOnFees[addOnKey].usd;
+                }
+            });
+            return usdTotal;
+        }
+
         function buildDraftContent() {
             var attendeeName = fullNameInput && fullNameInput.value ? fullNameInput.value.trim() : "";
             var attendeeAffiliation = affiliationInput && affiliationInput.value ? affiliationInput.value.trim() : "";
             var submissionIdText = submissionIdInput.value.trim();
-            var currency = getSelectedCurrency();
             var amountValue = amountInput.value || "N/A";
+            var paymentAmountText = amountValue === "N/A"
+                ? "N/A"
+                : formatMopWithUsdApprox(Number(amountValue), getSelectedUsdApproxTotal());
             var dietaryText = dietaryRequirementsInput && dietaryRequirementsInput.value ? dietaryRequirementsInput.value : "N/A";
             var paymentTypeLines = getPaymentTypeParts().map(function (item) {
                 return "- " + item;
@@ -650,7 +626,7 @@ function toggleMenu() {
                 "Submission ID: " + (submissionIdText || "N/A"),
                 "Payment type:",
                 paymentTypeLines.join("\n"),
-                "Payment amount: " + currency + " " + amountValue,
+                "Payment amount: " + paymentAmountText,
                 "Dietary requirements: " + dietaryText,
                 "",
                 attachmentLines.join("\n"),
@@ -704,7 +680,6 @@ function toggleMenu() {
             clearBaseSelection();
 
             var role = getSelectedRole();
-            var currency = getSelectedCurrency();
             var localKey = isMacauLocal() ? "local" : "nonLocal";
             var earlyAllowed = isEarlyBirdAllowedForRole(role);
 
@@ -717,12 +692,22 @@ function toggleMenu() {
                 return;
             }
 
-            var roleRates = feeTable[currency][role][localKey];
+            var roleRates = feeTable[role][localKey];
             var conferenceLabel = earlyAllowed ? "Conference (Early Bird)" : "Conference (Regular)";
-            var conferenceAmount = earlyAllowed ? roleRates.early : roleRates.regular;
-            var rateCards = [{ key: earlyAllowed ? "early" : "regular", label: conferenceLabel, amount: conferenceAmount }];
+            var conferenceRate = earlyAllowed ? roleRates.early : roleRates.regular;
+            var rateCards = [{
+                key: earlyAllowed ? "early" : "regular",
+                label: conferenceLabel,
+                amount: conferenceRate.mop,
+                usdApprox: conferenceRate.usd
+            }];
             if (earlyAllowed) {
-                rateCards.push({ key: "bundle", label: "Bundle (Registration + Banquet)", amount: roleRates.bundle });
+                rateCards.push({
+                    key: "bundle",
+                    label: "Bundle (Registration + Banquet)",
+                    amount: roleRates.bundle.mop,
+                    usdApprox: roleRates.bundle.usd
+                });
             }
 
             var roleText = roleLabelMap[role];
@@ -757,14 +742,15 @@ function toggleMenu() {
                     baseSelection = {
                         rateKey: rateCard.key,
                         label: roleText + " - " + localText + " - " + rateCard.label,
-                        amount: rateCard.amount
+                        amount: rateCard.amount,
+                        usdApprox: rateCard.usdApprox
                     };
                     tile.classList.add("selected");
                     updateAddOnAvailability();
                     updateSelectedAmountPreview();
                 });
 
-                var text = document.createTextNode(" " + rateCard.label + ": " + currency + " " + rateCard.amount);
+                var text = document.createTextNode(" " + rateCard.label + ": " + formatMopWithUsdApprox(rateCard.amount, rateCard.usdApprox));
                 tile.appendChild(checkbox);
                 tile.appendChild(text);
                 baseRateCards.appendChild(tile);
@@ -795,29 +781,9 @@ function toggleMenu() {
             }
         }
 
-        function selectPaymentMethod(methodValue, showCreditCardComingSoonPopup) {
-            var targetRadio = form.querySelector('input[name="paymentMethod"][value="' + methodValue + '"]');
-            if (!targetRadio) {
-                return;
-            }
-            targetRadio.checked = true;
-            updatePaymentUi(showCreditCardComingSoonPopup);
-        }
-
         paymentMethodRadios.forEach(function (radio) {
             radio.addEventListener("change", function () {
                 updatePaymentUi(true);
-            });
-        });
-
-        currencyRadios.forEach(function (radio) {
-            radio.addEventListener("change", function () {
-                var selectedCurrency = getSelectedCurrency();
-                selectedCurrencyInput.value = selectedCurrency;
-                if (selectedCurrency === "USD") {
-                    selectPaymentMethod("credit-card", true);
-                }
-                renderBaseRateCards();
             });
         });
 
