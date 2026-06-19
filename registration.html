@@ -161,6 +161,16 @@
         }
         .registration-table-block .table-scroll {
             width: 100%;
+            display: block;
+        }
+        .registration-table-block .table-scroll > table.registration-pricing-table {
+            width: 100%;
+            min-width: 100%;
+            max-width: 100%;
+            table-layout: fixed;
+        }
+        .fee-categories-table col:first-child {
+            width: 18%;
         }
         .addons-table-compact th,
         .addons-table-compact td {
@@ -222,9 +232,8 @@ function toggleMenu() {
                 <strong>Early-bird registration deadline:</strong> 15 July 2026</p>
                 <h3>Fee Categories</h3>
                 <div class="table-scroll registration-table-block registration-standard-width">
-                <table class="transport-table fees-table fees-table-compact registration-pricing-table">
+                <table class="transport-table fees-table fees-table-compact registration-pricing-table fee-categories-table">
                     <colgroup>
-                        <col>
                         <col>
                         <col style="background-color:#e0f2f1;">
                         <col style="background-color:#e0f2f1;">
