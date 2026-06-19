@@ -125,20 +125,38 @@
         .fees-table-compact {
             table-layout: fixed;
             width: 100%;
-            font-size: 0.82rem;
+            font-size: 0.9rem;
         }
         .fees-table-compact th,
         .fees-table-compact td {
             white-space: normal;
             text-align: center;
             vertical-align: middle;
-            padding: 6px 4px;
-            line-height: 1.25;
+            padding: 10px 8px;
+            line-height: 1.3;
         }
         .fees-table-compact th:first-child,
         .fees-table-compact td:first-child {
             text-align: left;
-            width: 17%;
+            width: 18%;
+        }
+        .registration-pricing-table {
+            width: 100%;
+        }
+        .registration-table-block {
+            width: 100%;
+        }
+        .registration-table-block .table-scroll {
+            width: 100%;
+        }
+        .addons-table-compact th:first-child,
+        .addons-table-compact td:first-child {
+            width: 82%;
+            text-align: left;
+        }
+        .addons-table-compact th:last-child,
+        .addons-table-compact td:last-child {
+            width: 18%;
         }
         .fee-header-sub {
             display: block;
@@ -155,9 +173,6 @@
             font-size: 0.82em;
             color: #555;
             margin-top: 2px;
-        }
-        .addons-table-compact {
-            max-width: 520px;
         }
     </style>
 </head>
@@ -182,15 +197,15 @@ function toggleMenu() {
         <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
     </header>    
     <main>
-        <div class="container">
+        <div class="container container-wide">
             <section id="reg-intro" class="content-block">
                 <h2>Registration Information</h2>
                 <div class="text-body">
                 <p><strong>Presenter registration and payment deadline:</strong> 30 June 2026<br>
                 <strong>Early-bird registration deadline:</strong> 15 July 2026</p>
                 <h3>Fee Categories</h3>
-                <div class="table-scroll">
-                <table class="transport-table fees-table fees-table-compact">
+                <div class="table-scroll registration-table-block">
+                <table class="transport-table fees-table fees-table-compact registration-pricing-table">
                     <colgroup>
                         <col>
                         <col>
@@ -258,8 +273,8 @@ function toggleMenu() {
                 <h2>Optional Add-ons</h2>
                 <div class="text-body">
                 <p>Participants may also register for the following optional events:</p>
-                <div class="table-scroll">
-                <table class="transport-table fees-table-compact addons-table-compact">
+                <div class="table-scroll registration-table-block">
+                <table class="transport-table fees-table fees-table-compact addons-table-compact registration-pricing-table">
                     <tr>
                         <th></th>
                         <th>MOP</th>
