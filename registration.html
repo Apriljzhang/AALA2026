@@ -592,12 +592,13 @@ function toggleMenu() {
 
         function updateSubmissionIdUi() {
             var role = getSelectedRole();
-            var needsSubmissionId = role === "presenter" || role === "student";
-            submissionIdWrapper.style.display = needsSubmissionId ? "block" : "none";
-            submissionIdInput.required = needsSubmissionId;
-            if (needsSubmissionId && !submissionIdInput.value) {
+            var requiresSubmissionId = role === "presenter" || role === "student";
+            var showsSubmissionId = requiresSubmissionId || isAddonsOnlyRole();
+            submissionIdWrapper.style.display = showsSubmissionId ? "block" : "none";
+            submissionIdInput.required = requiresSubmissionId;
+            if (requiresSubmissionId && !submissionIdInput.value) {
                 submissionIdInput.value = "AALA2026";
-            } else if (!needsSubmissionId) {
+            } else if (!showsSubmissionId) {
                 submissionIdInput.value = "";
             }
         }
@@ -947,7 +948,7 @@ function toggleMenu() {
                 window.alert("Submission ID is required for presenters and student presenters.");
                 return;
             }
-            if ((role === "presenter" || role === "student") && submissionIdText.toUpperCase() === "AALA2026") {
+            if (submissionIdText && submissionIdText.toUpperCase() === "AALA2026") {
                 event.preventDefault();
                 window.alert("Submission ID cannot be only AALA2026. Please append three or four digits.");
                 submissionIdInput.focus();
