@@ -327,7 +327,8 @@ function toggleMenu() {
                                 <div id="roleSelection">
                                     <label><input type="radio" name="participantRole" value="presenter"> Presenter</label><br>
                                     <label><input type="radio" name="participantRole" value="student"> Student Presenter</label><br>
-                                    <label><input type="radio" name="participantRole" value="participant"> Participant (not presenting)</label>
+                                    <label><input type="radio" name="participantRole" value="participant"> Participant (not presenting)</label><br>
+                                    <label><input type="radio" name="participantRole" value="addons-only"> Add-ons only</label>
                                 </div>
 
                                 <h3 style="margin-top: 14px;">2 Personal Information</h3>
@@ -354,7 +355,8 @@ function toggleMenu() {
                                     </span>
                                 </p>
 
-                                <p style="margin-top: 10px;">
+                                <div id="macauLocalSection">
+                                <p id="macauLocalWrapper" style="margin-top: 10px;">
                                     <label>
                                         <input type="checkbox" id="isMacauLocal" name="isMacauLocal">
                                         I qualify as Macau local (Macau resident / student studying in Macau / Macau blue card holder).
@@ -363,13 +365,16 @@ function toggleMenu() {
                                 <p class="form-reminder">
                                     Please provide valid documentation, such as a Macau ID, student card, or staff card.
                                 </p>
+                                </div>
                             </div>
 
                             <div id="amountTilesPanel">
-                                <h3>3 Choose Registration Rate</h3>
-                                <div id="baseRateCards" class="fee-tile-grid"></div>
+                                <div id="baseRateSection">
+                                    <h3>3 Choose Registration Rate</h3>
+                                    <div id="baseRateCards" class="fee-tile-grid"></div>
+                                </div>
 
-                                <h3 style="margin-top: 14px;">4 Optional Add-ons</h3>
+                                <h3 id="addonsSectionTitle" style="margin-top: 14px;">4 Optional Add-ons</h3>
                                 <div id="addonCards" class="fee-tile-grid">
                                     <label class="fee-tile">
                                         <input type="checkbox" class="addon-option workshop-option" id="addonWorkshop1" data-addon-key="workshop" data-workshop-title="Assessing English language students with Specific Learning Difficulties">
@@ -400,7 +405,7 @@ function toggleMenu() {
                                     </span>
                                 </p>
 
-                                <h3 style="margin-top: 14px;">5 Payment Method</h3>
+                                <h3 id="paymentSectionTitle" style="margin-top: 14px;">5 Payment Method</h3>
                                 <div id="paymentMethodSelection">
                                     <label>
                                         <input type="radio" name="paymentMethod" value="qr-code" checked>
@@ -475,13 +480,19 @@ function toggleMenu() {
         var roleLabelMap = {
             presenter: "Presenter",
             student: "Student Presenter",
-            participant: "Participant (not presenting)"
+            participant: "Participant (not presenting)",
+            "addons-only": "Add-ons only"
         };
 
         var paymentMethodRadios = form.querySelectorAll('input[name="paymentMethod"]');
         var roleRadios = form.querySelectorAll('input[name="participantRole"]');
         var qrPaymentSection = document.getElementById("qrPaymentSection");
+        var baseRateSection = document.getElementById("baseRateSection");
         var baseRateCards = document.getElementById("baseRateCards");
+        var addonsSectionTitle = document.getElementById("addonsSectionTitle");
+        var paymentSectionTitle = document.getElementById("paymentSectionTitle");
+        var macauLocalWrapper = document.getElementById("macauLocalWrapper");
+        var macauLocalSection = document.getElementById("macauLocalSection");
         var addonOptions = form.querySelectorAll(".addon-option");
         var workshopOptions = form.querySelectorAll(".workshop-option");
         var addonBanquet = document.getElementById("addonBanquet");
@@ -516,6 +527,40 @@ function toggleMenu() {
         function getSelectedRole() {
             var selected = form.querySelector('input[name="participantRole"]:checked');
             return selected ? selected.value : "";
+        }
+
+        function isAddonsOnlyRole() {
+            return getSelectedRole() === "addons-only";
+        }
+
+        function getSelectedAddOnTotal() {
+            var addOnTotal = 0;
+            addonOptions.forEach(function (addonCheckbox) {
+                if (addonCheckbox.checked && !addonCheckbox.disabled) {
+                    var addOnKey = addonCheckbox.getAttribute("data-addon-key");
+                    addOnTotal += addOnFees[addOnKey].mop;
+                }
+            });
+            return addOnTotal;
+        }
+
+        function updateRoleDependentUi() {
+            var addonsOnly = isAddonsOnlyRole();
+            if (baseRateSection) {
+                baseRateSection.style.display = addonsOnly ? "none" : "block";
+            }
+            if (addonsSectionTitle) {
+                addonsSectionTitle.textContent = addonsOnly ? "3 Optional Add-ons" : "4 Optional Add-ons";
+            }
+            if (paymentSectionTitle) {
+                paymentSectionTitle.textContent = addonsOnly ? "4 Payment Method" : "5 Payment Method";
+            }
+            if (macauLocalSection) {
+                macauLocalSection.style.display = addonsOnly ? "none" : "block";
+            }
+            if (addonsOnly && isMacauLocalCheckbox) {
+                isMacauLocalCheckbox.checked = false;
+            }
         }
 
         function isMacauLocal() {
@@ -589,21 +634,25 @@ function toggleMenu() {
         }
 
         function updateSelectedAmountPreview() {
+            var addOnTotal = getSelectedAddOnTotal();
+            var addOnLabels = getSelectedAddOnNames();
+
+            if (isAddonsOnlyRole()) {
+                if (addOnLabels.length === 0) {
+                    selectedAmountPreview.textContent = "Selected amount: None";
+                    amountInput.value = "";
+                    return;
+                }
+                amountInput.value = String(addOnTotal);
+                selectedAmountPreview.innerHTML = "Selected amount: <span class=\"selected-amount-value\">" + formatMopLabel(addOnTotal) + "</span> (Add-ons: " + addOnLabels.join(" + ") + ")";
+                return;
+            }
+
             if (!baseSelection) {
                 selectedAmountPreview.textContent = "Selected amount: None";
                 amountInput.value = "";
                 return;
             }
-
-            var addOnTotal = 0;
-            var addOnLabels = getSelectedAddOnNames();
-
-            addonOptions.forEach(function (addonCheckbox) {
-                if (addonCheckbox.checked && !addonCheckbox.disabled) {
-                    var addOnKey = addonCheckbox.getAttribute("data-addon-key");
-                    addOnTotal += addOnFees[addOnKey].mop;
-                }
-            });
 
             var total = baseSelection.amount + addOnTotal;
             amountInput.value = String(total);
@@ -635,6 +684,13 @@ function toggleMenu() {
             var role = getSelectedRole();
             var roleText = roleLabelMap[role] || "Role Not Selected";
             var parts = [roleText];
+            if (isAddonsOnlyRole()) {
+                var addOnNames = getSelectedAddOnNames();
+                if (addOnNames.length > 0) {
+                    parts.push("Add-ons: " + addOnNames.join(" + "));
+                }
+                return parts;
+            }
             if (isMacauLocal()) {
                 parts.push("Macau Local");
             }
@@ -693,7 +749,7 @@ function toggleMenu() {
         }
 
         function updateAddOnAvailability() {
-            var bundleSelected = Boolean(baseSelection && baseSelection.rateKey === "bundle");
+            var bundleSelected = !isAddonsOnlyRole() && Boolean(baseSelection && baseSelection.rateKey === "bundle");
 
             addonBanquet.disabled = bundleSelected;
             if (bundleSelected) {
@@ -734,19 +790,20 @@ function toggleMenu() {
 
         function renderBaseRateCards() {
             clearBaseSelection();
+            updateRoleDependentUi();
 
             var role = getSelectedRole();
-            var localKey = isMacauLocal() ? "local" : "nonLocal";
-            var earlyAllowed = isEarlyBirdAllowedForRole(role);
-
             updateAddOnLabels();
             updateQrReminder();
 
-            if (!role) {
+            if (!role || isAddonsOnlyRole()) {
                 updateSelectedAmountPreview();
                 updateAddOnAvailability();
                 return;
             }
+
+            var localKey = isMacauLocal() ? "local" : "nonLocal";
+            var earlyAllowed = isEarlyBirdAllowedForRole(role);
 
             var roleRates = feeTable[role][localKey];
             var conferenceLabel = earlyAllowed ? "Conference (Early Bird)" : "Conference (Regular)";
@@ -817,7 +874,7 @@ function toggleMenu() {
         }
 
         function validateEarlyBirdBeforeSubmit() {
-            if (!baseSelection) {
+            if (isAddonsOnlyRole() || !baseSelection) {
                 return true;
             }
             var isEarlyBased = baseSelection.rateKey === "early" || baseSelection.rateKey === "bundle";
@@ -897,7 +954,13 @@ function toggleMenu() {
                 return;
             }
 
-            if (!baseSelection || !amountInput.value) {
+            if (isAddonsOnlyRole()) {
+                if (!amountInput.value || getSelectedAddOnNames().length === 0) {
+                    event.preventDefault();
+                    window.alert("Please select at least one add-on before proceeding.");
+                    return;
+                }
+            } else if (!baseSelection || !amountInput.value) {
                 event.preventDefault();
                 window.alert("Please choose one registration rate card before proceeding.");
                 return;
