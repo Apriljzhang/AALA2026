@@ -348,8 +348,8 @@ function toggleMenu() {
                                 </p>
                                 <p id="submissionIdWrapper" style="display: none; margin-top: 10px;">
                                     <label for="submissionId">Submission ID</label><br>
-                                    <input type="text" id="submissionId" name="submissionId" placeholder="Enter your submission ID" value="AALA2026">
-                                    <span class="form-reminder" style="display:block;">
+                                    <input type="text" id="submissionId" name="submissionId" placeholder="Enter your submission ID">
+                                    <span id="submissionIdReminder" class="form-reminder" style="display:block;">
                                         Please append three or four digits to the provided AALA2026 prefix.<br>
                                         For multiple submissions, please include all submission IDs in this field and complete one single payment.
                                     </span>
@@ -506,6 +506,7 @@ function toggleMenu() {
         var dietaryRequirementsInput = document.getElementById("dietaryRequirements");
         var submissionIdWrapper = document.getElementById("submissionIdWrapper");
         var submissionIdInput = document.getElementById("submissionId");
+        var submissionIdReminder = document.getElementById("submissionIdReminder");
         var qrReminderList = document.getElementById("qrReminderList");
         var isMacauLocalCheckbox = document.getElementById("isMacauLocal");
         var selectedCurrencyInput = document.getElementById("selectedCurrency");
@@ -596,9 +597,18 @@ function toggleMenu() {
             var showsSubmissionId = requiresSubmissionId || isAddonsOnlyRole();
             submissionIdWrapper.style.display = showsSubmissionId ? "block" : "none";
             submissionIdInput.required = requiresSubmissionId;
+            if (submissionIdReminder) {
+                if (isAddonsOnlyRole()) {
+                    submissionIdReminder.textContent = "If you are presenting, please enter your submission ID. If not, leave this field blank.";
+                } else {
+                    submissionIdReminder.innerHTML = "Please append three or four digits to the provided AALA2026 prefix.<br>For multiple submissions, please include all submission IDs in this field and complete one single payment.";
+                }
+            }
             if (requiresSubmissionId && !submissionIdInput.value) {
                 submissionIdInput.value = "AALA2026";
             } else if (!showsSubmissionId) {
+                submissionIdInput.value = "";
+            } else if (isAddonsOnlyRole() && submissionIdInput.value === "AALA2026") {
                 submissionIdInput.value = "";
             }
         }
