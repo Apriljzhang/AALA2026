@@ -201,6 +201,12 @@
             color: #555;
             margin-top: 2px;
         }
+        .registration-deadline-notice {
+            color: #c62828;
+            font-weight: 700;
+            line-height: 1.5;
+            margin: 0 0 16px;
+        }
     </style>
 </head>
 <script>
@@ -228,8 +234,7 @@ function toggleMenu() {
             <section id="reg-intro" class="content-block">
                 <h2>Registration Information</h2>
                 <div class="text-body">
-                <p><strong>Presenter registration and payment deadline:</strong> 30 June 2026<br>
-                <strong>Early-bird registration deadline:</strong> 15 July 2026</p>
+                <p class="registration-deadline-notice">Due to unexpected payment issues, presenter registration and payment, as well as early-bird registration for everyone, have been extended to 15 July 2026.</p>
                 <h3>Fee Categories</h3>
                 <div class="table-scroll registration-table-block registration-standard-width">
                 <table class="transport-table fees-table fees-table-compact registration-pricing-table fee-categories-table">
@@ -587,7 +592,7 @@ function toggleMenu() {
                 return true;
             }
             var chinaDate = getCurrentChinaDateString();
-            var deadline = role === "participant" ? "2026-07-15" : "2026-06-30";
+            var deadline = "2026-07-15";
             return chinaDate <= deadline;
         }
 
@@ -979,7 +984,7 @@ function toggleMenu() {
 
             if (!validateEarlyBirdBeforeSubmit()) {
                 event.preventDefault();
-                var deadlineLabel = role === "participant" ? "15 July 2026" : "30 June 2026";
+                var deadlineLabel = "15 July 2026";
                 window.alert("Early-bird options are closed for the selected payment date. Please choose a regular card. Deadline: " + deadlineLabel + " (China time).");
                 renderBaseRateCards();
                 return;
