@@ -333,9 +333,24 @@ function toggleMenu() {
                 <h2>Registration Form</h2>
                 <div class="text-body">
                     <form id="conferenceRegistrationForm" class="registration-standard-width" action="#" method="post" enctype="multipart/form-data">
+                        <h3 style="margin-top: 0;">1 Payment Method</h3>
+                        <div id="paymentMethodSelection">
+                            <label>
+                                <input type="radio" name="paymentMethod" value="qr-code" checked>
+                                Online Payment (QR Code)
+                            </label><br>
+                            <label>
+                                <input type="radio" name="paymentMethod" value="credit-card">
+                                Credit Card
+                            </label>
+                            <p class="form-reminder">
+                                Credit card users will be redirected to our collaborating company's website to complete registration and payment securely.
+                            </p>
+                        </div>
+
                         <div id="feeChooserLayout">
                             <div id="currencyPanel">
-                                <h3>1 Select Role</h3>
+                                <h3>2 Select Role</h3>
                                 <div id="roleSelection">
                                     <label><input type="radio" name="participantRole" value="presenter"> Presenter</label><br>
                                     <label><input type="radio" name="participantRole" value="student"> Student Presenter</label><br>
@@ -343,7 +358,7 @@ function toggleMenu() {
                                     <label><input type="radio" name="participantRole" value="addons-only"> Add-ons only</label>
                                 </div>
 
-                                <h3 style="margin-top: 14px;">2 Personal Information</h3>
+                                <h3 style="margin-top: 14px;">3 Personal Information</h3>
                                 <p style="margin-top: 10px;">
                                     <label for="fullName">Full Name</label><br>
                                     <input type="text" id="fullName" name="fullName" required>
@@ -382,11 +397,11 @@ function toggleMenu() {
 
                             <div id="amountTilesPanel">
                                 <div id="baseRateSection">
-                                    <h3>3 Choose Registration Rate</h3>
+                                    <h3>4 Choose Registration Rate</h3>
                                     <div id="baseRateCards" class="fee-tile-grid"></div>
                                 </div>
 
-                                <h3 id="addonsSectionTitle" style="margin-top: 14px;">4 Optional Add-ons</h3>
+                                <h3 id="addonsSectionTitle" style="margin-top: 14px;">5 Optional Add-ons</h3>
                                 <div id="addonCards" class="fee-tile-grid">
                                     <label class="fee-tile">
                                         <input type="checkbox" class="addon-option workshop-option" id="addonWorkshop1" data-addon-key="workshop" data-workshop-title="Assessing English language students with Specific Learning Difficulties">
@@ -416,18 +431,6 @@ function toggleMenu() {
                                         Please specify any food allergies or dietary restrictions; enter N/A if none apply.
                                     </span>
                                 </p>
-
-                                <h3 id="paymentSectionTitle" style="margin-top: 14px;">5 Payment Method</h3>
-                                <div id="paymentMethodSelection">
-                                    <label>
-                                        <input type="radio" name="paymentMethod" value="qr-code" checked>
-                                        Online Payment (QR Code)
-                                    </label><br>
-                                    <label>
-                                        <input type="radio" name="paymentMethod" value="credit-card">
-                                        Credit Card (Visa / MasterCard)
-                                    </label>
-                                </div>
 
                                 <div id="qrPaymentSection" style="display: none; margin-top: 12px;">
                                     <div class="qr-payment-row">
@@ -502,7 +505,6 @@ function toggleMenu() {
         var baseRateSection = document.getElementById("baseRateSection");
         var baseRateCards = document.getElementById("baseRateCards");
         var addonsSectionTitle = document.getElementById("addonsSectionTitle");
-        var paymentSectionTitle = document.getElementById("paymentSectionTitle");
         var macauLocalWrapper = document.getElementById("macauLocalWrapper");
         var macauLocalSection = document.getElementById("macauLocalSection");
         var addonOptions = form.querySelectorAll(".addon-option");
@@ -563,10 +565,7 @@ function toggleMenu() {
                 baseRateSection.style.display = addonsOnly ? "none" : "block";
             }
             if (addonsSectionTitle) {
-                addonsSectionTitle.textContent = addonsOnly ? "3 Optional Add-ons" : "4 Optional Add-ons";
-            }
-            if (paymentSectionTitle) {
-                paymentSectionTitle.textContent = addonsOnly ? "4 Payment Method" : "5 Payment Method";
+                addonsSectionTitle.textContent = addonsOnly ? "4 Optional Add-ons" : "5 Optional Add-ons";
             }
             if (macauLocalSection) {
                 macauLocalSection.style.display = addonsOnly ? "none" : "block";
@@ -912,13 +911,14 @@ function toggleMenu() {
             var selected = form.querySelector('input[name="paymentMethod"]:checked');
             var isQrPayment = selected && selected.value === "qr-code";
             qrPaymentSection.style.display = isQrPayment ? "block" : "none";
-            if (showCreditCardComingSoonPopup && !isQrPayment) {
-                window.alert("Credit card payment method is coming soon.");
-            }
         }
 
         paymentMethodRadios.forEach(function (radio) {
             radio.addEventListener("change", function () {
+                if (radio.value === "credit-card" && radio.checked) {
+                    window.location.href = "https://apriljzhang.github.io/HMC/products-services.html";
+                    return;
+                }
                 updatePaymentUi(true);
             });
         });
@@ -1000,7 +1000,7 @@ function toggleMenu() {
             event.preventDefault();
 
             if (!isQrPayment) {
-                window.alert("Credit card payment method is coming soon. Please switch to Online Payment (QR Code) to send registration email.");
+                window.location.href = "https://apriljzhang.github.io/HMC/products-services.html";
                 return;
             }
 
