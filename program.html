@@ -1,107 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Detailed program for the AALA 2026 Conference at the University of Macau.">
     <title>Program - AALA 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* New styles for Speaker section added directly to HTML */
-        .speaker-container {
-            margin-top: 40px;
-        }
-        .speaker-entry {
-            display: flex;
-            gap: 30px;
-            margin-bottom: 60px;
-            align-items: flex-start;
-        }
-        .speaker-photo {
-            width: 200px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            flex-shrink: 0;
-        }
-        .speaker-details h3 {
-            margin-top: 0;
-            color: #168e6a;
-            font-size: 1.6rem;
-        }
-        .talk-info {
-            background-color: #f4f4f4;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 5px solid #168e6a;
-            margin-top: 15px;
-        }
-        .talk-title {
-            font-weight: bold;
-            display: block;
-            margin-bottom: 10px;
-            font-size: 1.1rem;
-            color: #333;
-        }
-        .abstract-label {
-            font-weight: bold;
-            text-decoration: underline;
-        }
-        @media (max-width: 768px) {
-            .speaker-entry {
-                flex-direction: column;
-                align-items: center;
-            }
-            .speaker-photo {
-                width: 100%;
-                max-width: 250px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="tokens.css">
+    <link rel="stylesheet" href="program.css">
+    <script src="program-data.js" defer></script>
+    <script src="program.js" defer></script>
 </head>
-<script>
-function toggleMenu() {
-    var nav = document.getElementById("navLinks");
-    nav.classList.toggle("active");
-}
-</script>
-<body>
+<body class="programme-page">
     <header class="navbar">
-        <div class="logo-area"><img src="aala2026-logo.png" alt="Logo" style="height: 60px;"></div>
-            <nav class="nav-links" id="navLinks">
-                <a href="index.html">Home</a>
-                <a href="call-for-papers.html">Call For Papers</a>
-                <a href="speakers.html">Speakers</a>
-                <a href="workshops.html">Workshops</a>
-                <a href="program.html">Program</a>
-                <a href="registration.html">Registration</a>
-                <a href="venue.html">Logistics</a>
-            </nav>
-        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-    </header>    
+        <div class="logo-area">
+            <a href="index.html" aria-label="AALA 2026 home"><img src="aala2026-logo.png" alt="AALA 2026"></a>
+        </div>
+        <nav class="nav-links" id="navLinks" aria-label="Conference">
+            <a href="index.html">Home</a>
+            <a href="call-for-papers.html">Call For Papers</a>
+            <a href="speakers.html">Speakers</a>
+            <a href="workshops.html">Workshops</a>
+            <a href="program.html" aria-current="page">Program</a>
+            <a href="registration.html">Registration</a>
+            <a href="venue.html">Logistics</a>
+        </nav>
+        <button class="hamburger" id="menuToggle" type="button" aria-controls="navLinks" aria-expanded="false" aria-label="Open conference menu">☰</button>
+    </header>
+
     <main>
-        <div class="container">
-            
-            <section id="prog" class="content-block">
-                <h2>Conference Program Overview</h2>
-                <div class="text-body">
-                    <table class="transport-table">
-                        <tr><th>Date</th><th>Time</th><th>Activity</th><th>Notes</th></tr>
-                        <tr><td><b>Sept 18</b></td><td>Afternoon</td><td>Pre-conference Workshops</td><td>Optional Add-ons</td></tr>
-                        <tr><td></td><td>Evening</td><td><b>Welcome Reception</b></td><td>Included in Fee</td></tr>
-                        <tr><td><b>Sept 19</b></td><td>Morning</td><td>Plenary, Parallel Sessions & Tea Break</td><td>Opening Day</td></tr>
-                        <tr><td></td><td>Lunch</td><td>Lunch & Poster Presentations</td><td>Networking Session</td></tr>
-                        <tr><td></td><td>Afternoon</td><td>Plenary, Parallel Sessions & Tea Break</td><td></td></tr>
-                        <tr><td></td><td>Evening</td><td><b>Banquet & Student Awards</b></td><td>Optional Add-ons</td></tr>
-                        <tr><td><b>Sept 20</b></td><td>Morning</td><td>Plenary, Parallel Sessions & Tea Break</td><td>Second Day</td></tr>
-                        <tr><td></td><td>Lunch</td><td>Lunch & Poster Presentations</td><td>Networking Session</td></tr>
-                        <tr><td></td><td>Afternoon</td><td>Plenary, Parallel Sessions & Tea Break</td><td>Closing Remarks</td></tr>
-                        <tr><td><b>Sept 21</b></td><td>Post-Conference</td><td>Post-Conference Workshop</td><td>Free Activity</td></tr>
-                    </table>
+        <div class="container container-wide programme-container">
+            <section class="programme-intro content-block" aria-labelledby="programme-title">
+                <div class="programme-intro-copy">
+                    <h1 id="programme-title">Detailed Conference Program</h1>
+                </div>
+                <div class="programme-download">
+                    <a class="download-link" href="output/pdf/AALA2026-detailed-programme.pdf" download>Download 4-page PDF <span aria-hidden="true">↓</span></a>
                 </div>
             </section>
-            
+
+            <section class="programme-shell" aria-label="Conference program">
+                <div class="programme-key content-block" aria-labelledby="colour-key-title">
+                    <h2 id="colour-key-title">Colour key</h2>
+                    <div class="legend" id="programLegend"></div>
+                </div>
+                <div class="day-tabs-wrap"><div class="day-tabs" id="dayTabs" role="tablist" aria-label="Program days"></div></div>
+                <div id="dayPanels"></div>
+                <noscript><p class="programme-error">JavaScript is required for the interactive program. Please use the downloadable PDF instead.</p></noscript>
+            </section>
         </div>
     </main>
-    <footer class="footer"><p>&copy; AALA 2026 Conference. All Rights Reserved.</p></footer>
+
+    <footer class="footer program-footer"><p>© AALA 2026 Conference. All Rights Reserved.</p></footer>
 </body>
 </html>
