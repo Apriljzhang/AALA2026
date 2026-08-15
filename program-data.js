@@ -3593,12 +3593,12 @@ window.AALA_PROGRAM = {
       "events": [
         {
           "id": "",
-          "title": "Registration",
+          "title": "Registration at Culture Centre",
           "abstract": "",
           "authors": [],
           "category": "break",
           "categoryLabel": "Programme activity",
-          "room": "Room 1 Go Green",
+          "room": "Culture Centre",
           "start": "09:00",
           "end": "09:30"
         },
