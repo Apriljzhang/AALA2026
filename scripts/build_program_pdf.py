@@ -8,7 +8,7 @@ from html import escape
 from pathlib import Path
 
 from reportlab.lib import colors
-from reportlab.lib.enums import TA_CENTER, TA_LEFT
+from reportlab.lib.enums import TA_LEFT
 from reportlab.lib.pagesizes import A1, landscape
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.units import mm
@@ -18,9 +18,9 @@ from reportlab.pdfgen import canvas
 from reportlab.platypus import Paragraph
 
 
-PAPER = colors.HexColor("#FCF9F1")
-PAPER_RAISED = colors.HexColor("#FFFDF8")
-PAPER_SOFT = colors.HexColor("#F2EEE4")
+PAPER = colors.HexColor("#FFFFFF")
+PAPER_RAISED = colors.HexColor("#FFFFFF")
+PAPER_SOFT = colors.HexColor("#FFFFFF")
 INK = colors.HexColor("#26384E")
 INK_SOFT = colors.HexColor("#566575")
 RULE = colors.HexColor("#CFC7B8")
@@ -170,10 +170,10 @@ def draw_event(c, event, x, y, width, height, *, shared=False, compact=False):
     c.setFillColor(accent)
     stripe = 2.0 * mm if width > 35 * mm else 1.3 * mm
     c.rect(x, y + height - stripe, width, stripe, fill=1, stroke=0)
-    markup = event_markup(event, show_meta=shared, compact=compact)
+    markup = event_markup(event, show_meta=not compact, compact=compact)
     if shared:
         sizes = [10, 9, 8, 7, 6]
-        align = TA_CENTER
+        align = TA_LEFT
         padding = 2.1 * mm
     elif compact:
         sizes = [6.2, 5.8, 5.4, 5.0, 4.6, 4.2]
@@ -212,7 +212,7 @@ def draw_poster_column(c, event, x, y, width, height):
         width,
         header_height,
         [7.2, 6.5],
-        alignment=TA_CENTER,
+        alignment=TA_LEFT,
         color=WHITE,
         padding=1.2 * mm,
     )
@@ -226,6 +226,84 @@ def day_bounds(day):
     starts = [minutes(event["start"]) for event in day["events"]]
     ends = [minutes(event["end"]) for event in day["events"]]
     return min(starts), max(ends)
+
+
+def event_required_height(event, width, *, shared=False, compact=False):
+    stripe = 2.0 * mm if width > 35 * mm else 1.3 * mm
+    padding = 2.1 * mm if shared else (1.2 * mm if compact else 1.5 * mm)
+    font_size = 8 if shared else (5.4 if compact else 6.4)
+    markup = event_markup(event, show_meta=not compact, compact=compact)
+    _, used_height = fit_paragraph(
+        markup,
+        max(1, width - 2 * padding),
+        1000 * mm,
+        [font_size],
+        alignment=TA_LEFT,
+    )
+    return used_height + 2 * padding + stripe
+
+
+def poster_required_height(event, width):
+    return 8 * mm + sum(
+        max(11 * mm, event_required_height(poster, width, compact=True))
+        for poster in event.get("posters", [])
+    )
+
+
+def build_variable_grid(day, rooms, column_width, shared_width, available_height):
+    boundaries = sorted({
+        minutes(value)
+        for event in day["events"]
+        for value in (event["start"], event["end"])
+    })
+    heights = [7 * mm for _ in range(len(boundaries) - 1)]
+    boundary_index = {value: index for index, value in enumerate(boundaries)}
+
+    def ensure_height(start, end, required):
+        start_index = boundary_index[minutes(start)]
+        end_index = boundary_index[minutes(end)]
+        current = sum(heights[start_index:end_index])
+        if current >= required:
+            return
+        addition = (required - current) / max(1, end_index - start_index)
+        for index in range(start_index, end_index):
+            heights[index] += addition
+
+    poster_event = next((event for event in day["events"] if event.get("posters")), None)
+    if poster_event and "Poster area" in rooms:
+        ensure_height(
+            poster_event["start"],
+            poster_event["end"],
+            poster_required_height(poster_event, column_width),
+        )
+
+    shared_groups = {}
+    for event in day["events"]:
+        if event.get("posters"):
+            continue
+        if is_shared(event, rooms):
+            shared_groups.setdefault(event["start"], []).append(event)
+        else:
+            ensure_height(
+                event["start"],
+                event["end"],
+                max(11 * mm, event_required_height(event, column_width)),
+            )
+
+    for start, events in shared_groups.items():
+        end = max(events, key=lambda event: minutes(event["end"]))["end"]
+        item_width = shared_width if len(events) == 1 else (shared_width - 1.2 * mm * (len(events) - 1)) / len(events)
+        required = max(
+            max(11 * mm, event_required_height(event, item_width, shared=True))
+            for event in events
+        )
+        ensure_height(start, end, required)
+
+    total = sum(heights)
+    if total > available_height:
+        scale = available_height / total
+        heights = [height * scale for height in heights]
+    return boundaries, heights
 
 
 def is_shared(event, rooms):
@@ -289,40 +367,48 @@ def draw_day(c, data, day, page_number, page_size):
     column_width = grid_width / len(rooms)
     grid_top = page_height - top - header_height - room_header_height
     grid_bottom_limit = bottom + footer_height
-    start_time, end_time = day_bounds(day)
-    slot_count = (end_time - start_time) // 30
     available_height = grid_top - grid_bottom_limit
-    row_height = min(38 * mm, available_height / slot_count)
-    grid_height = row_height * slot_count
+    shared_width = column_width * main_room_count
+    boundaries, row_heights = build_variable_grid(
+        day,
+        rooms,
+        column_width,
+        shared_width,
+        available_height,
+    )
+    grid_height = sum(row_heights)
     grid_bottom = grid_top - grid_height
 
     c.setFillColor(TEAL_DARK)
     c.rect(left, grid_top, time_width, room_header_height, fill=1, stroke=0)
-    draw_fitted(c, "<b>Time</b>", left, grid_top, time_width, room_header_height, [8], alignment=TA_CENTER, color=WHITE)
+    draw_fitted(c, "<b>Time</b>", left, grid_top, time_width, room_header_height, [8], alignment=TA_LEFT, color=WHITE)
     for index, room in enumerate(rooms):
         x = grid_left + index * column_width
         fill = CATEGORY_COLORS["poster"] if room == "Poster area" else TEAL_DARK
         c.setFillColor(fill)
         c.setStrokeColor(PAPER)
         c.rect(x, grid_top, column_width, room_header_height, fill=1, stroke=1)
-        draw_fitted(c, f"<b>{xml(room)}</b>", x, grid_top, column_width, room_header_height, [8, 7.2, 6.5], alignment=TA_CENTER, color=WHITE)
+        draw_fitted(c, f"<b>{xml(room)}</b>", x, grid_top, column_width, room_header_height, [8, 7.2, 6.5], alignment=TA_LEFT, color=WHITE)
 
     c.setStrokeColor(RULE)
     c.setLineWidth(0.35)
-    for slot in range(slot_count + 1):
-        y = grid_top - slot * row_height
+    y_positions = {boundaries[0]: grid_top}
+    y = grid_top
+    for index, row_height in enumerate(row_heights):
         c.line(left, y, page_width - right, y)
-        if slot < slot_count:
-            c.setFillColor(INK_SOFT)
-            c.setFont("ProgramBold" if slot % 2 == 0 else "ProgramRegular", 7)
-            c.drawRightString(left + time_width - 2 * mm, y - 4.2 * mm, time_label(start_time + slot * 30))
+        c.setFillColor(INK_SOFT)
+        c.setFont("ProgramBold", 7)
+        c.drawString(left + 2 * mm, y - 4.2 * mm, time_label(boundaries[index]))
+        y -= row_height
+        y_positions[boundaries[index + 1]] = y
+    c.line(left, grid_bottom, page_width - right, grid_bottom)
     for index in range(len(rooms) + 1):
         x = grid_left + index * column_width
         c.line(x, grid_bottom, x, grid_top)
     c.line(left, grid_bottom, left, grid_top)
 
     def y_for(value):
-        return grid_top - ((minutes(value) - start_time) / 30) * row_height
+        return y_positions[minutes(value)]
 
     poster_event = next((event for event in day["events"] if event.get("posters")), None)
     if poster_event and poster_index is not None:
@@ -341,7 +427,6 @@ def draw_day(c, data, day, page_number, page_size):
         else:
             room_events.append(event)
 
-    shared_width = column_width * main_room_count
     for start, events in shared_groups.items():
         end = max(events, key=lambda event: minutes(event["end"]))["end"]
         top_y = y_for(start)
@@ -360,8 +445,11 @@ def draw_day(c, data, day, page_number, page_size):
     c.line(left, 8 * mm, page_width - right, 8 * mm)
     c.setFillColor(INK_SOFT)
     c.setFont("ProgramRegular", 7)
-    c.drawString(left, 4.5 * mm, "AALA 2026 | University of Macau | Titles, submission IDs, authors and affiliations")
-    c.drawRightString(page_width - right, 4.5 * mm, f"Page {page_number} of {len(data['days'])}")
+    c.drawString(
+        left,
+        4.5 * mm,
+        f"AALA 2026 | University of Macau | Titles, submission IDs, authors and affiliations | Page {page_number} of {len(data['days'])}",
+    )
     c.showPage()
 
 

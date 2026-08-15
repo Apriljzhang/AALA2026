@@ -1831,7 +1831,7 @@ window.AALA_PROGRAM = {
           "authors": [],
           "category": "ceremony",
           "categoryLabel": "Opening / closing / social",
-          "room": "Culture Centre",
+          "room": "Altira Macau, 17th Floor",
           "start": "18:30",
           "end": "20:30",
           "note": "For paid and invited attendees."
