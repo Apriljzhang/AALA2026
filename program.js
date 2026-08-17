@@ -24,8 +24,8 @@
   const roomOrder = [
     "Culture Centre Room 1",
     "Culture Centre Room 2",
-    "HG01",
     "HG02",
+    "HG01",
     "HG03",
     "L205",
     "L206",

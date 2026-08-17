@@ -2038,8 +2038,8 @@ window.AALA_PROGRAM = {
               "bio": "Zhenjing Wang is an associate professor at the School of Foreign Languages, China University of Geosciences (Beijing). She received her PhD from University of Auckland, New Zealand. Her research interests include teacher feedback, second language writing, teacher cognition, and the use of artificial intelligence in education. She has published academic papers as well as books and teaching materials in these areas. Her work focuses on understanding how feedback practices and emerging technologies shape language learning and writing development in higher education contexts. She is also engaged in research on the integration of AI-mediated tools into language teaching and assessment."
             }
           ],
-          "category": "other",
-          "categoryLabel": "Special session",
+          "category": "theme-3",
+          "categoryLabel": "Theme 3",
           "room": "L306",
           "start": "11:00",
           "end": "11:30"
