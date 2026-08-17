@@ -153,6 +153,53 @@ def header(c, title, subtitle, page_number, total_pages):
     c.drawRightString(width - 12 * mm, 7 * mm, f"Page {page_number} of {total_pages}")
 
 
+def concurrent_blocks(day):
+    events = session_events(day)
+    if not events:
+        return []
+    occupied = []
+    for minute in range(
+        min(to_minutes(event["start"]) for event in events),
+        max(to_minutes(event["end"]) for event in events),
+        30,
+    ):
+        active = [
+            event for event in events
+            if to_minutes(event["start"]) <= minute < to_minutes(event["end"])
+        ]
+        if len(active) >= 2:
+            occupied.append(minute)
+    groups = []
+    for minute in occupied:
+        if not groups or minute != groups[-1][-1] + 30:
+            groups.append([minute])
+        else:
+            groups[-1].append(minute)
+    blocks = []
+    for group in groups:
+        start = group[0]
+        end = group[-1] + 30
+        rooms = sorted(
+            {
+                event["room"] for event in events
+                if to_minutes(event["start"]) < end and to_minutes(event["end"]) > start
+            },
+            key=lambda room: ROOM_ORDER.index(room) if room in ROOM_ORDER else 99,
+        )
+        blocks.append({
+            "id": "",
+            "title": "Concurrent sessions",
+            "abstract": "",
+            "authors": [],
+            "category": "other",
+            "categoryLabel": f"{len(rooms)} rooms",
+            "room": ", ".join(rooms),
+            "start": from_minutes(start),
+            "end": from_minutes(end),
+        })
+    return blocks
+
+
 def draw_overview(c, day, page_number, total_pages):
     header(
         c,
@@ -177,25 +224,36 @@ def draw_overview(c, day, page_number, total_pages):
     c.setFont("AALARegular", 10)
     c.drawString(x + 5 * mm, top - 11 * mm, clean(day["date"]))
     shared = [event for event in day["events"] if not event.get("posters") and event.get("category") in SHARED]
+    timeline = shared + concurrent_blocks(day)
+    original_order = {id(event): index for index, event in enumerate(day["events"])}
+    timeline.sort(key=lambda event: (to_minutes(event["start"]), original_order.get(id(event), len(day["events"]))))
     y = top - 20 * mm
-    for event in shared:
-        markup = event_markup(event, include_room=True)
-        item, used = paragraph(markup, col_width - 12 * mm, 9.5)
-        card_h = used + 4 * mm
+    note = "Detailed room assignments are shown on the following pages."
+    for font_size in (9.5, 9.0, 8.5, 8.0, 7.5):
+        card_specs = []
+        for event in timeline:
+            markup = event_markup(event, include_room=True)
+            item, used = paragraph(markup, col_width - 12 * mm, font_size)
+            card_specs.append((event, item, used + 3.2 * mm))
+        note_item, note_h = paragraph(f"<b>{xml(note)}</b>", col_width - 12 * mm, font_size, color=TEAL)
+        required = sum(card_h + 1.2 * mm for _, _, card_h in card_specs) + note_h + 4 * mm
+        if required <= y - bottom:
+            break
+    else:
+        raise ValueError(f"Overview timeline does not fit: {day['date']}")
+    for event, item, card_h in card_specs:
         fill, accent = category_colours(event)
         c.setFillColor(fill)
         c.setStrokeColor(RULE)
         c.roundRect(x + 4 * mm, y - card_h, col_width - 8 * mm, card_h, 1.5 * mm, fill=1, stroke=1)
         c.setFillColor(accent)
         c.rect(x + 4 * mm, y - 1.2 * mm, col_width - 8 * mm, 1.2 * mm, fill=1, stroke=0)
-        item.drawOn(c, x + 6 * mm, y - card_h + 2 * mm)
-        y -= card_h + 2 * mm
-    note = "Concurrent sessions and their venues are shown on the following pages."
-    note_item, note_h = paragraph(f"<b>{xml(note)}</b>", col_width - 12 * mm, 10, color=TEAL)
+        item.drawOn(c, x + 6 * mm, y - card_h + 1.6 * mm)
+        y -= card_h + 1.2 * mm
     c.setFillColor(TEAL_PALE)
     c.setStrokeColor(TEAL_MID)
-    c.roundRect(x + 4 * mm, y - note_h - 5 * mm, col_width - 8 * mm, note_h + 5 * mm, 1.5 * mm, fill=1, stroke=1)
-    note_item.drawOn(c, x + 6 * mm, y - note_h - 2.5 * mm)
+    c.roundRect(x + 4 * mm, y - note_h - 3 * mm, col_width - 8 * mm, note_h + 3 * mm, 1.5 * mm, fill=1, stroke=1)
+    note_item.drawOn(c, x + 6 * mm, y - note_h - 1.5 * mm)
     c.showPage()
 
 
