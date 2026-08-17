@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the printable A4 AALA 2026 at-a-glance programme."""
+"""Build the printable A4 AALA 2026 detailed daily programme."""
 
 import json
 import re
@@ -71,6 +71,8 @@ def authors(event):
     labels = []
     for author in event.get("authors", []):
         label = clean(author.get("name"))
+        if event.get("id") == "AALA20260206" and author.get("affiliation"):
+            label = f"{label} ({clean(author.get('affiliation'))})"
         if label:
             labels.append(label)
     return "; ".join(labels)
@@ -124,82 +126,109 @@ def header(c, title, subtitle, page_number, total_pages):
     c.drawRightString(width - 12 * mm, 7 * mm, f"Page {page_number} of {total_pages}")
 
 
-def draw_overview(c, days, part, parts, page_number, total_pages):
-    header(c, "AALA2026 at a glance", f"Shared programme and conference-wide activities | Part {part} of {parts}", page_number, total_pages)
+def draw_overview(c, day, page_number, total_pages):
+    header(
+        c,
+        "AALA2026 at a glance",
+        f"{clean(day['weekday'])}, {clean(day['date'])} | Shared programme and conference-wide activities",
+        page_number,
+        total_pages,
+    )
     width, height = landscape(A4)
-    left, right, gap = 12 * mm, 12 * mm, 5 * mm
+    left, right = 30 * mm, 30 * mm
     top, bottom = height - 32 * mm, 13 * mm
-    col_width = (width - left - right - gap * (len(days) - 1)) / len(days)
-    for index, day in enumerate(days):
-        x = left + index * (col_width + gap)
-        c.setFillColor(TEAL_PALE)
-        c.setStrokeColor(RULE)
-        c.roundRect(x, bottom, col_width, top - bottom, 2 * mm, fill=1, stroke=1)
-        c.setFillColor(TEAL)
-        c.rect(x, top - 15 * mm, col_width, 15 * mm, fill=1, stroke=0)
+    col_width = width - left - right
+    x = left
+    c.setFillColor(TEAL_PALE)
+    c.setStrokeColor(RULE)
+    c.roundRect(x, bottom, col_width, top - bottom, 2 * mm, fill=1, stroke=1)
+    c.setFillColor(TEAL)
+    c.rect(x, top - 15 * mm, col_width, 15 * mm, fill=1, stroke=0)
+    c.setFillColor(WHITE)
+    c.setFont("AALABold", 13)
+    c.drawString(x + 5 * mm, top - 6 * mm, clean(day["weekday"]))
+    c.setFont("AALARegular", 10)
+    c.drawString(x + 5 * mm, top - 11 * mm, clean(day["date"]))
+    shared = [event for event in day["events"] if not event.get("posters") and event.get("category") in SHARED]
+    y = top - 20 * mm
+    for event in shared:
+        markup = event_markup(event, include_room=True)
+        item, used = paragraph(markup, col_width - 12 * mm, 9.5)
+        card_h = used + 4 * mm
         c.setFillColor(WHITE)
-        c.setFont("AALABold", 12)
-        c.drawString(x + 4 * mm, top - 6 * mm, clean(day["weekday"]))
-        c.setFont("AALARegular", 9)
-        c.drawString(x + 4 * mm, top - 11 * mm, clean(day["date"]))
-        shared = [event for event in day["events"] if not event.get("posters") and event.get("category") in SHARED]
-        y = top - 20 * mm
-        for event in shared:
-            markup = event_markup(event, include_room=True)
-            item, used = paragraph(markup, col_width - 8 * mm, 9.0)
-            card_h = used + 3 * mm
-            c.setFillColor(WHITE)
-            c.setStrokeColor(RULE)
-            c.roundRect(x + 3 * mm, y - card_h, col_width - 6 * mm, card_h, 1.5 * mm, fill=1, stroke=1)
-            item.drawOn(c, x + 6 * mm, y - card_h + 1.5 * mm)
-            y -= card_h + 1.5 * mm
+        c.setStrokeColor(RULE)
+        c.roundRect(x + 4 * mm, y - card_h, col_width - 8 * mm, card_h, 1.5 * mm, fill=1, stroke=1)
+        c.setFillColor(TEAL_MID)
+        c.rect(x + 4 * mm, y - 1.2 * mm, col_width - 8 * mm, 1.2 * mm, fill=1, stroke=0)
+        item.drawOn(c, x + 6 * mm, y - card_h + 2 * mm)
+        y -= card_h + 2 * mm
     c.showPage()
 
 
 def room_height(events, width, size):
     total = 0
     for event in events:
-        _, used = paragraph(event_markup(event), width - 8 * mm, size)
+        _, used = paragraph(event_markup(event), width - 3 * mm, size)
         total += used + 3 * mm + 1.2 * mm
     return total
 
 
 def fit_room_font(events, width, available_height):
-    for size in (10.0, 9.5, 9.0, 8.5):
+    for size in (8.0, 7.6, 7.2, 6.8, 6.4):
         if room_height(events, width, size) <= available_height:
             return size
-    raise ValueError("Room content does not fit at the minimum 8.5-point size")
+    raise ValueError("Room content does not fit at the minimum 6.4-point size")
 
 
-def draw_room_page(c, day, entries, part, parts, page_number, total_pages):
-    room_label = ", ".join(entry["room"] for entry in entries)
-    header(c, "AALA2026 at a glance", f"{clean(day['weekday'])}, {clean(day['date'])} | Rooms: {room_label} | Part {part} of {parts}", page_number, total_pages)
+def draw_room_page(c, day, rooms, events, part, parts, page_number, total_pages):
+    window_start = min(event["start"] for event in events)
+    window_end = max(event["end"] for event in events)
+    header(
+        c,
+        "AALA2026 at a glance",
+        f"{clean(day['weekday'])}, {clean(day['date'])} | Detailed sessions {window_start}-{window_end} | {len(rooms)} rooms | Part {part} of {parts}",
+        page_number,
+        total_pages,
+    )
     width, height = landscape(A4)
-    left, right, gap = 12 * mm, 12 * mm, 5 * mm
+    left, right, gap = 8 * mm, 8 * mm, 1.2 * mm
     top, bottom = height - 32 * mm, 14 * mm
-    col_width = (width - left - right - gap * (len(entries) - 1)) / len(entries)
-    for index, entry in enumerate(entries):
-        room = entry["room"]
+    col_width = (width - left - right - gap * (len(rooms) - 1)) / len(rooms)
+    room_events = {
+        room: sorted(
+            [event for event in events if event.get("room") == room],
+            key=lambda event: (event["start"], event["end"], event.get("id", "")),
+        )
+        for room in rooms
+    }
+    available = top - 13 * mm - bottom
+    size = min(fit_room_font(items, col_width, available) for items in room_events.values() if items)
+    for index, room in enumerate(rooms):
         x = left + index * (col_width + gap)
         c.setFillColor(TEAL)
-        c.roundRect(x, top - 11 * mm, col_width, 11 * mm, 2 * mm, fill=1, stroke=0)
+        c.roundRect(x, top - 10 * mm, col_width, 10 * mm, 1.2 * mm, fill=1, stroke=0)
         c.setFillColor(WHITE)
-        c.setFont("AALABold", 11)
-        room_heading = f"{room} (continued)" if entry.get("continued") else room
-        c.drawCentredString(x + col_width / 2, top - 7 * mm, room_heading)
-        events = entry["events"]
-        y = top - 15 * mm
-        available = y - bottom
-        size = fit_room_font(events, col_width, available)
-        for event in events:
-            item, used = paragraph(event_markup(event), col_width - 8 * mm, size)
+        c.setFont("AALABold", 7.2 if len(rooms) >= 9 else 9.0)
+        c.drawCentredString(x + col_width / 2, top - 6.4 * mm, clean(room))
+        items = room_events[room]
+        y = top - 13 * mm
+        if not items:
+            c.setFillColor(TEAL_PALE)
+            c.setStrokeColor(RULE)
+            c.roundRect(x, bottom, col_width, y - bottom, 1.2 * mm, fill=1, stroke=1)
+            c.setFillColor(MUTED)
+            c.setFont("AALARegular", 6.2)
+            c.drawCentredString(x + col_width / 2, y - 7 * mm, "No session")
+            continue
+        for event in items:
+            item, used = paragraph(event_markup(event), col_width - 3 * mm, size)
             card_h = used + 3 * mm
             c.setFillColor(WHITE)
             c.setStrokeColor(RULE)
-            c.roundRect(x, y - card_h, col_width, card_h, 1.5 * mm, fill=1, stroke=1)
+            c.roundRect(x, y - card_h, col_width, card_h, 1.2 * mm, fill=1, stroke=1)
             c.setFillColor(TEAL_MID)
-            c.rect(x, y - 1.2 * mm, col_width, 1.2 * mm, fill=1, stroke=0)
-            item.drawOn(c, x + 4 * mm, y - card_h + 1.5 * mm)
+            c.rect(x, y - 1.0 * mm, col_width, 1.0 * mm, fill=1, stroke=0)
+            item.drawOn(c, x + 1.5 * mm, y - card_h + 1.5 * mm)
             y -= card_h + 1.2 * mm
     c.showPage()
 
@@ -229,51 +258,52 @@ def draw_poster_page(c, day, poster_band, page_number, total_pages):
     c.showPage()
 
 
+def session_events(day):
+    return [
+        event for event in day["events"]
+        if not event.get("posters") and event.get("category") not in SHARED and event.get("room")
+    ]
+
+
+def session_groups(day, rooms):
+    events = session_events(day)
+    starts = sorted({event["start"] for event in events})
+    width, height = landscape(A4)
+    left, right, gap = 8 * mm, 8 * mm, 1.2 * mm
+    top, bottom = height - 32 * mm, 14 * mm
+    col_width = (width - left - right - gap * (len(rooms) - 1)) / len(rooms)
+    available = top - 13 * mm - bottom
+    groups = []
+    current_starts = []
+    for start in starts:
+        proposed_starts = current_starts + [start]
+        proposed_events = [event for event in events if event["start"] in proposed_starts]
+        fits = all(
+            room_height([event for event in proposed_events if event.get("room") == room], col_width, 6.4) <= available
+            for room in rooms
+        )
+        if current_starts and (not fits or len(proposed_starts) > 2):
+            groups.append([event for event in events if event["start"] in current_starts])
+            current_starts = [start]
+        else:
+            current_starts = proposed_starts
+    if current_starts:
+        groups.append([event for event in events if event["start"] in current_starts])
+    return groups
+
+
 def build_specs(data):
-    overview_pages = [[day] for day in data["days"]]
-    specs = [("overview", (days, index, len(overview_pages))) for index, days in enumerate(overview_pages, 1)]
+    specs = []
     for day in data["days"]:
-        rooms = sorted({event.get("room") for event in day["events"] if event.get("room") and not event.get("posters") and event.get("category") not in SHARED}, key=lambda room: ROOM_ORDER.index(room) if room in ROOM_ORDER else 99)
-        width, height = landscape(A4)
-        left, right, gap = 12 * mm, 12 * mm, 5 * mm
-        top, bottom = height - 32 * mm, 14 * mm
-        available = top - 15 * mm - bottom
-        pair_width = (width - left - right - gap) / 2
-        room_pages = []
-        index = 0
-        while index < len(rooms):
-            pair = rooms[index:index + 2]
-            if len(pair) == 2:
-                fits = True
-                for room in pair:
-                    events = [event for event in day["events"] if not event.get("posters") and event.get("category") not in SHARED and event.get("room") == room]
-                    fits = fits and room_height(events, pair_width, 8.5) <= available
-                if fits:
-                    room_pages.append([
-                        {"room": room, "events": sorted([event for event in day["events"] if not event.get("posters") and event.get("category") not in SHARED and event.get("room") == room], key=lambda event: (event["start"], event["end"], event.get("id", "")))}
-                        for room in pair
-                    ])
-                    index += 2
-                    continue
-            room = rooms[index]
-            events = sorted([event for event in day["events"] if not event.get("posters") and event.get("category") not in SHARED and event.get("room") == room], key=lambda event: (event["start"], event["end"], event.get("id", "")))
-            full_width = width - left - right
-            event_chunks = []
-            current = []
-            for event in events:
-                proposed = current + [event]
-                if current and room_height(proposed, full_width, 8.5) > available:
-                    event_chunks.append(current)
-                    current = [event]
-                else:
-                    current = proposed
-            if current:
-                event_chunks.append(current)
-            for chunk_index, event_chunk in enumerate(event_chunks):
-                room_pages.append([{"room": room, "events": event_chunk, "continued": chunk_index > 0}])
-            index += 1
-        for index, entries in enumerate(room_pages, 1):
-            specs.append(("rooms", (day, entries, index, len(room_pages))))
+        specs.append(("overview", (day,)))
+        events = session_events(day)
+        rooms = sorted(
+            {event["room"] for event in events},
+            key=lambda room: ROOM_ORDER.index(room) if room in ROOM_ORDER else 99,
+        )
+        groups = session_groups(day, rooms) if rooms else []
+        for index, events_in_group in enumerate(groups, 1):
+            specs.append(("rooms", (day, rooms, events_in_group, index, len(groups))))
         for event in day["events"]:
             if event.get("posters"):
                 specs.append(("posters", (day, event)))

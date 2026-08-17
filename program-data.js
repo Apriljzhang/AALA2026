@@ -2271,31 +2271,31 @@ window.AALA_PROGRAM = {
         {
           "id": "AALA20260206",
           "title": "Editors’ Forum: Bridging Academia and Publishing – A Dialogue with Editors-in-Chief of Language Assessment Journals",
-          "abstract": "",
+          "abstract": "This Editors’ Forum is exclusively titled and sponsored by the journal Language Testing and Assessment. Founded by Foreign Language Teaching and Research Press (FLTRP), and led by Professor He Lianzhen from Zhejiang University as its Editor-in-Chief and Professor Min Shangchao as its editorial director, the journal is a key academic platform in China dedicated to language testing and assessment.\nGuided by its core mission of ‘serving national strategic development, serving foreign language education reform, and serving foreign language talent cultivation’, the journal distinguishes itself through four key principles: integrating international perspectives with Chinese realities, combining theoretical research with practical application, uniting professional specialization with integrated development, and balancing professional leadership with social service.\nIts scope covers language testing theory and practice, language proficiency standards and assessment systems, test washback effects, and the interface between testing and instruction. Committed to advancing the academic rigor, standardization, and internationalization of language testing research in China, this key academic platform aims to foster high-level dialogue between researchers and practitioners in the country’s language testing field, while nurturing emerging scholars in the discipline.",
           "authors": [
             {
-              "name": "Min Shangchao",
-              "affiliation": "",
+              "name": "Prof Min Shangchao",
+              "affiliation": "Zhejiang University; Language Testing and Assessment",
               "bio": ""
             },
             {
-              "name": "Peter Yongqi Gu",
-              "affiliation": "",
+              "name": "Prof Peter Yongqi Gu",
+              "affiliation": "Victoria University of Wellington; Studies in Language Assessment (SiLA)",
               "bio": ""
             },
             {
-              "name": "Jin Yan",
-              "affiliation": "",
+              "name": "Prof Jin Yan",
+              "affiliation": "Shanghai Jiao Tong University; Language Testing in Asia (LTA)",
               "bio": ""
             },
             {
-              "name": "Yan Xun",
-              "affiliation": "",
+              "name": "Prof Yan Xun",
+              "affiliation": "University of Illinois at Urbana Champaign; Language Testing (LT)",
               "bio": ""
             },
             {
-              "name": "Xie Qin",
-              "affiliation": "",
+              "name": "Prof Xie Qin",
+              "affiliation": "University of Macau; Language Education and Assessment (LEA)",
               "bio": ""
             }
           ],
