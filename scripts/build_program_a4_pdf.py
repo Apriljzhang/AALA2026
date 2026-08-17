@@ -30,12 +30,39 @@ TEAL_MID = colors.HexColor("#167F7A")
 TEAL_PALE = colors.HexColor("#E7F3F1")
 GOLD = colors.HexColor("#D5A83D")
 RULE = colors.HexColor("#CDD8D6")
+UPDATED = "17 August 2026"
+
+CATEGORY_COLOURS = {
+    "featured": (colors.HexColor("#FFF0D7"), colors.HexColor("#C87A12")),
+    "theme-1": (colors.HexColor("#FDE1E8"), colors.HexColor("#C74364")),
+    "theme-2": (colors.HexColor("#DDF1FA"), colors.HexColor("#2584A8")),
+    "theme-3": (colors.HexColor("#E3F5DE"), colors.HexColor("#4F8C3A")),
+    "theme-4": (colors.HexColor("#EEE5FA"), colors.HexColor("#7652A8")),
+    "symposium": (colors.HexColor("#FFD9D5"), colors.HexColor("#C33B32")),
+    "editors-forum": (colors.HexColor("#FFD9D5"), colors.HexColor("#C33B32")),
+    "sponsor": (colors.HexColor("#FFF3C8"), colors.HexColor("#9A7514")),
+    "poster": (colors.HexColor("#F1E8F7"), colors.HexColor("#85539C")),
+    "plenary": (colors.HexColor("#DDF0E3"), colors.HexColor("#34784A")),
+    "ceremony": (colors.HexColor("#DDF0E3"), colors.HexColor("#34784A")),
+    "break": (colors.HexColor("#FFF2C6"), colors.HexColor("#A27B16")),
+    "workshop": (colors.HexColor("#DDF3F6"), colors.HexColor("#267C87")),
+    "other": (colors.HexColor("#E3F3F5"), colors.HexColor("#377F87")),
+}
 
 ROOM_ORDER = [
     "Culture Centre Room 1", "Culture Centre Room 2", "HG01", "HG02", "HG03",
     "L205", "L206", "L207", "L305", "L306", "L307", "Poster area",
 ]
 SHARED = {"break", "plenary", "ceremony"}
+
+
+def category_colours(event):
+    return CATEGORY_COLOURS.get(event.get("category"), (WHITE, TEAL_MID))
+
+
+def day_label(day):
+    labels = {"Saturday": "Day 1 - 19 September", "Sunday": "Day 2 - 20 September"}
+    return labels.get(day.get("weekday"), f"{clean(day.get('weekday'))}, {clean(day.get('date'))}")
 
 
 def clean(value):
@@ -122,7 +149,7 @@ def header(c, title, subtitle, page_number, total_pages):
     c.rect(0, height - 26 * mm, width, 1 * mm, fill=1, stroke=0)
     c.setFillColor(MUTED)
     c.setFont("AALARegular", 7.5)
-    c.drawString(12 * mm, 7 * mm, "University of Macau | 18-21 September 2026 | Programme details and time slots are subject to adjustment.")
+    c.drawString(12 * mm, 7 * mm, f"University of Macau | 18-21 September 2026 | Updated {UPDATED} | Programme details and time slots are subject to adjustment.")
     c.drawRightString(width - 12 * mm, 7 * mm, f"Page {page_number} of {total_pages}")
 
 
@@ -130,7 +157,7 @@ def draw_overview(c, day, page_number, total_pages):
     header(
         c,
         "AALA2026 at a glance",
-        f"{clean(day['weekday'])}, {clean(day['date'])} | Shared programme and conference-wide activities",
+        f"{day_label(day)} | Shared sessions, including plenary sessions",
         page_number,
         total_pages,
     )
@@ -155,13 +182,20 @@ def draw_overview(c, day, page_number, total_pages):
         markup = event_markup(event, include_room=True)
         item, used = paragraph(markup, col_width - 12 * mm, 9.5)
         card_h = used + 4 * mm
-        c.setFillColor(WHITE)
+        fill, accent = category_colours(event)
+        c.setFillColor(fill)
         c.setStrokeColor(RULE)
         c.roundRect(x + 4 * mm, y - card_h, col_width - 8 * mm, card_h, 1.5 * mm, fill=1, stroke=1)
-        c.setFillColor(TEAL_MID)
+        c.setFillColor(accent)
         c.rect(x + 4 * mm, y - 1.2 * mm, col_width - 8 * mm, 1.2 * mm, fill=1, stroke=0)
         item.drawOn(c, x + 6 * mm, y - card_h + 2 * mm)
         y -= card_h + 2 * mm
+    note = "Concurrent sessions and their venues are shown on the following pages."
+    note_item, note_h = paragraph(f"<b>{xml(note)}</b>", col_width - 12 * mm, 10, color=TEAL)
+    c.setFillColor(TEAL_PALE)
+    c.setStrokeColor(TEAL_MID)
+    c.roundRect(x + 4 * mm, y - note_h - 5 * mm, col_width - 8 * mm, note_h + 5 * mm, 1.5 * mm, fill=1, stroke=1)
+    note_item.drawOn(c, x + 6 * mm, y - note_h - 2.5 * mm)
     c.showPage()
 
 
@@ -170,14 +204,47 @@ def card_height(event, width, size, include_room=False):
     return used + 3 * mm
 
 
+def to_minutes(value):
+    hour, minute = map(int, value.split(":"))
+    return hour * 60 + minute
+
+
+def from_minutes(value):
+    return f"{value // 60:02d}:{value % 60:02d}"
+
+
+def time_slots(events):
+    start = min(to_minutes(event["start"]) for event in events)
+    end = max(to_minutes(event["end"]) for event in events)
+    return [from_minutes(value) for value in range(start, end, 30)]
+
+
+def grid_layout(events, width, size):
+    slots = time_slots(events)
+    gap = 1.5 * mm
+    row_heights = []
+    for slot in slots:
+        short_events = [
+            event for event in events
+            if event["start"] == slot and to_minutes(event["end"]) - to_minutes(event["start"]) <= 30
+        ]
+        row_heights.append(max([14 * mm] + [card_height(event, width, size) for event in short_events]))
+    for event in events:
+        covered = [index for index, slot in enumerate(slots) if event["start"] <= slot < event["end"]]
+        if not covered:
+            continue
+        available = sum(row_heights[index] for index in covered) + gap * (len(covered) - 1)
+        needed = card_height(event, width, size)
+        if needed > available:
+            extra = (needed - available) / len(covered)
+            for index in covered:
+                row_heights[index] += extra
+    return slots, row_heights
+
+
 def grid_height(events, rooms, width, size):
-    starts = sorted({event["start"] for event in events})
-    total = 0
-    for start in starts:
-        row_events = [event for event in events if event["start"] == start]
-        heights = [card_height(event, width, size) for event in row_events]
-        total += max(heights, default=12 * mm) + 1.5 * mm
-    return total
+    slots, heights = grid_layout(events, width, size)
+    return sum(heights) + 1.5 * mm * max(0, len(slots) - 1)
 
 
 def fit_grid_font(events, rooms, width, available_height):
@@ -193,7 +260,7 @@ def draw_room_page(c, day, rooms, events, part, parts, page_number, total_pages)
     header(
         c,
         "AALA2026 at a glance",
-        f"{clean(day['weekday'])}, {clean(day['date'])} | Detailed sessions {window_start}-{window_end} | {len(rooms)} rooms | Part {part} of {parts}",
+        f"{day_label(day)} | Concurrent sessions {window_start}-{window_end} | {len(rooms)} rooms | Part {part} of {parts}",
         page_number,
         total_pages,
     )
@@ -210,31 +277,40 @@ def draw_room_page(c, day, rooms, events, part, parts, page_number, total_pages)
         c.setFillColor(WHITE)
         c.setFont("AALABold", 7.2 if len(rooms) >= 9 else 9.0)
         c.drawCentredString(x + col_width / 2, top - 6.4 * mm, clean(room))
+    slots, row_heights = grid_layout(events, col_width, size)
+    row_tops = []
     y = top - 13 * mm
-    for start in sorted({event["start"] for event in events}):
-        row_events = [event for event in events if event["start"] == start]
-        row_h = max(card_height(event, col_width, size) for event in row_events)
-        for index, room in enumerate(rooms):
-            x = left + index * (col_width + gap)
-            matching = [event for event in row_events if event.get("room") == room]
-            c.setStrokeColor(RULE)
-            if matching:
-                event = matching[0]
+    for row_h in row_heights:
+        row_tops.append(y)
+        y -= row_h + 1.5 * mm
+    for index, room in enumerate(rooms):
+        x = left + index * (col_width + gap)
+        room_events = [event for event in events if event.get("room") == room]
+        for slot_index, slot in enumerate(slots):
+            active = [event for event in room_events if event["start"] <= slot < event["end"]]
+            if active and active[0]["start"] != slot:
+                continue
+            top_y = row_tops[slot_index]
+            if active:
+                event = active[0]
+                covered = [i for i, candidate in enumerate(slots) if event["start"] <= candidate < event["end"]]
+                span_h = sum(row_heights[i] for i in covered) + 1.5 * mm * (len(covered) - 1)
                 item, used = paragraph(event_markup(event), col_width - 3 * mm, size)
-                c.setFillColor(WHITE)
+                fill, accent = category_colours(event)
+                c.setFillColor(fill)
+                c.setStrokeColor(RULE)
+                c.roundRect(x, top_y - span_h, col_width, span_h, 1.2 * mm, fill=1, stroke=1)
+                c.setFillColor(accent)
+                c.rect(x, top_y - 1.0 * mm, col_width, 1.0 * mm, fill=1, stroke=0)
+                item.drawOn(c, x + 1.5 * mm, top_y - used - 1.5 * mm)
             else:
-                item = None
+                row_h = row_heights[slot_index]
                 c.setFillColor(TEAL_PALE)
-            c.roundRect(x, y - row_h, col_width, row_h, 1.2 * mm, fill=1, stroke=1)
-            if matching:
-                c.setFillColor(TEAL_MID)
-                c.rect(x, y - 1.0 * mm, col_width, 1.0 * mm, fill=1, stroke=0)
-                item.drawOn(c, x + 1.5 * mm, y - used - 1.5 * mm)
-            else:
+                c.setStrokeColor(RULE)
+                c.roundRect(x, top_y - row_h, col_width, row_h, 1.2 * mm, fill=1, stroke=1)
                 c.setFillColor(MUTED)
                 c.setFont("AALARegular", 5.8)
-                c.drawCentredString(x + col_width / 2, y - 5 * mm, f"No {start} session")
-        y -= row_h + 1.5 * mm
+                c.drawCentredString(x + col_width / 2, top_y - 5 * mm, f"No {slot} session")
     c.showPage()
 
 
@@ -283,7 +359,8 @@ def workshop_panel(c, day, x, panel_width, top, bottom):
             col_x = x + index * (col_width + gap)
             matching = [event for event in row if column_for(event) == column]
             c.setStrokeColor(RULE)
-            c.setFillColor(WHITE if matching else TEAL_PALE)
+            fill, accent = category_colours(matching[0]) if matching else (TEAL_PALE, TEAL_MID)
+            c.setFillColor(fill)
             c.roundRect(col_x, y - row_h, col_width, row_h, 1.2 * mm, fill=1, stroke=1)
             if matching:
                 event = matching[0]
@@ -292,7 +369,7 @@ def workshop_panel(c, day, x, panel_width, top, bottom):
                     col_width - 3 * mm,
                     size,
                 )
-                c.setFillColor(TEAL_MID)
+                c.setFillColor(accent)
                 c.rect(col_x, y - 1.0 * mm, col_width, 1.0 * mm, fill=1, stroke=0)
                 item.drawOn(c, col_x + 1.5 * mm, y - used - 1.5 * mm)
             else:
@@ -321,7 +398,7 @@ def draw_workshop_page(c, friday, monday, page_number, total_pages):
 
 
 def draw_poster_page(c, day, poster_band, page_number, total_pages):
-    header(c, "AALA2026 at a glance", f"{clean(day['weekday'])}, {clean(day['date'])} | Poster presentations | {poster_band['start']}-{poster_band['end']} | {clean(poster_band.get('room'))}", page_number, total_pages)
+    header(c, "AALA2026 at a glance", f"{day_label(day)} | Poster presentations | {poster_band['start']}-{poster_band['end']} | {clean(poster_band.get('room'))}", page_number, total_pages)
     width, height = landscape(A4)
     left, right, gap = 12 * mm, 12 * mm, 6 * mm
     top, bottom = height - 32 * mm, 14 * mm
@@ -335,10 +412,11 @@ def draw_poster_page(c, day, poster_band, page_number, total_pages):
         for event in items:
             item, used = paragraph(event_markup(event), col_width - 8 * mm, 8.5)
             card_h = used + 6 * mm
-            c.setFillColor(WHITE)
+            fill, accent = category_colours(event)
+            c.setFillColor(fill)
             c.setStrokeColor(RULE)
             c.roundRect(x, y - card_h, col_width, card_h, 1.5 * mm, fill=1, stroke=1)
-            c.setFillColor(TEAL_MID)
+            c.setFillColor(accent)
             c.rect(x, y - 1.2 * mm, col_width, 1.2 * mm, fill=1, stroke=0)
             item.drawOn(c, x + 4 * mm, y - card_h + 3 * mm)
             y -= card_h + 2.5 * mm
@@ -362,15 +440,25 @@ def session_groups(day, rooms):
     available = top - 13 * mm - bottom
     groups = []
     current_starts = []
+    current_end = "00:00"
     for start in starts:
+        start_events = [event for event in events if event["start"] == start]
+        starts_long_event = any(to_minutes(event["end"]) - to_minutes(event["start"]) > 30 for event in start_events)
+        must_continue = bool(current_starts) and start < current_end
         proposed_starts = current_starts + [start]
         proposed_events = [event for event in events if event["start"] in proposed_starts]
         fits = grid_height(proposed_events, rooms, col_width, 6.4) <= available
-        if current_starts and (not fits or len(proposed_starts) > 2):
+        should_break = current_starts and not must_continue and (len(current_starts) >= 2 or starts_long_event or not fits)
+        if should_break:
             groups.append([event for event in events if event["start"] in current_starts])
             current_starts = [start]
+            current_end = max(event["end"] for event in start_events)
         else:
             current_starts = proposed_starts
+            current_end = max([current_end] + [event["end"] for event in start_events])
+        current_events = [event for event in events if event["start"] in current_starts]
+        if grid_height(current_events, rooms, col_width, 6.4) > available:
+            raise ValueError(f"Session group does not fit: {day['date']} {current_starts}")
     if current_starts:
         groups.append([event for event in events if event["start"] in current_starts])
     return groups

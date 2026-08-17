@@ -133,7 +133,8 @@
         panel.hidden = index !== 0;
 
         const heading = element("header", "day-heading");
-        heading.append(element("h2", "", `${day.weekday}, ${day.date}`));
+        const dayLabel = day.key === "sep19" ? "Day 1 - 19 September" : day.key === "sep20" ? "Day 2 - 20 September" : `${day.weekday}, ${day.date}`;
+        heading.append(element("h2", "", dayLabel));
         heading.append(element("p", "", day.subtitle));
         panel.append(heading);
 
@@ -188,7 +189,8 @@
         });
 
         data.days.forEach((day, index) => {
-            const tab = element("button", "day-tab", day.date.replace("September", "Sep"));
+            const tabLabel = day.key === "sep19" ? "Day 1 - 19 Sep" : day.key === "sep20" ? "Day 2 - 20 Sep" : day.date.replace("September", "Sep");
+            const tab = element("button", "day-tab", tabLabel);
             tab.id = `tab-${day.key}`;
             tab.type = "button";
             tab.setAttribute("role", "tab");

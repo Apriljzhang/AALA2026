@@ -375,28 +375,18 @@ window.AALA_PROGRAM = {
           "end": "12:00"
         },
         {
-          "id": "AALA2026012",
-          "title": "Exploring Fairness and suitability in A-level Chinese exam: Teachers’ perspectives from England",
-          "abstract": "This presentation reports a mixed-methods investigation into the A-level Chinese examination in England, addressing key issues of the CEFR alignment and test appropriateness for Chinese as a second language learners from teachers’ perspectives. As the high-stakes exam for university entry in England, Edexcel A-level Chinese, designed by Pearson, is the only current qualification available for students to take at the age of 18. The study combined a survey with fifty Chinese teachers, semi-structured interviews with nine teachers, and a formal standard-setting process involving twelve teachers. Findings from the survey and interviews indicated that the design of the A-level Chinese examination disproportionately disadvantages Chinese as a second language learners in the UK. Teachers also highlighted a lack of appropriate teaching and learning resources for this course, as well as a huge transitional gap between GCSE and A-level Chinese provision. In the standard-setting exercise, listening and reading items from two past papers were rated against the CEFR descriptors. Teachers completed two rounds of difficulty ratings and provided evaluative comments. Most raters expressed concern that the A-level Chinese examination is not well-suited to Chinese as a second language learners, particularly because of the high cognitive demand in writing and multiple integrated language skills; moreover, listening papers contain a mixture of formal vocabulary and colloquial expressions that some learners may find difficult to process. Panel discussions further suggested that the level of cultural and cognitive knowledge required is too demanding for non-native speakers, who face dual linguistic and cultural challenges in this exam. Our study contributes to ongoing discussions about fairness in testing an Asian language in a non-Asian society such as England, and offers practical suggestions for policymakers, exam boards, and curriculum designers seeking to make Chinese language assessment more equitable and accountable.",
+          "id": "AALA2026030",
+          "title": "Human Judgment and Data-Driven Evidence in Dialogue: A Multi-Method Approach to CEFR Standard Setting",
+          "abstract": "Aligning language tests with the Common European Framework of Reference for Languages (CEFR) enhances score transparency, comparability, and accountability across educational contexts. While traditional standard-setting procedures provide structured expert judgment, questions often remain regarding the extent to which theoretically defined proficiency levels correspond to empirically observable performance groupings. Addressing this issue, the present study employed a triangulated design integrating judgment-based and statistical approaches to establish CEFR-aligned cut scores for the Listening and Reading sections of a tertiary-level English proficiency test. Two research questions guided the study: (1) To what extent do independently trained panels agree on CEFR cut scores established through the Bookmark method? and (2) To what extent do statistically derived proficiency groupings correspond with Bookmark-based standards? Using operational Listening and Reading data (N = 1,674), CEFR cut scores were determined through a four-round Bookmark procedure conducted with 18 panelists across two independent sites. High intraclass correlation coefficients and strong cross-site convergence indicated substantial inter-panelist reliability and procedural stability. To complement the judgment-based findings, Hierarchical Cluster Analysis (HCA) (Shin & Lidster, 2017) and Latent Class Analysis (LCA) (Binici & Cuhadar, 2022) were applied to examine the underlying performance structure. Both statistical approaches identified a smaller number of empirically distinguishable proficiency groupings than the seven CEFR-aligned levels initially targeted, particularly in score regions with lower test-taker density. Nevertheless, the ordinal progression of CEFR levels was preserved across methods, and convergence was strongest within the intermediate proficiency bands targeted by the assessment. Overall, findings provide evidence supporting the general alignment of the test with CEFR levels while highlighting considerations related to proficiency distribution and sublevel reporting. The study underscores the value of methodological triangulation in strengthening validity arguments for CEFR-based performance standards.",
           "authors": [
             {
-              "name": "Jia Li",
-              "affiliation": "University of Southampton",
-              "bio": "Jia Li has been teaching Mandarin in secondary and Sixth Form education since 2014, specialising in Chinese CLIL pedagogy and the delivery of GCSE, A-level, and HSK courses. She leads KS4 and KS5 provision within her department and delivers in-school teacher training programmes. Alongside her teaching, she is pursuing a PhD at the University of Southampton, focusing on Chinese CLIL research. She collaborates with partner organisations on eye-tracking and intelligibility studies in L2 assessment. Her work bridges classroom practice and research, with particular emphasis on Mandarin language assessment and Mandarin Chinese teaching and learning in the UK."
+              "name": "Sun-Young Shin",
+              "affiliation": "Indiana University",
+              "bio": "Sun-Young Shin is an Associate Professor in the Department of Second Language Studies at Indiana University. His research interests include GenAI-mediated language assessment, authenticity in language assessment, L2 pragmatics assessment, standard setting, and interactive classroom-based language assessment. His work has been published in numerous journals and edited volumes, and he has been invited to deliver lectures and workshops on L2 assessment in several countries. He currently serves on the editorial boards of Language Testing and Language Assessment Quarterly."
             },
             {
-              "name": "Ying Zheng",
-              "affiliation": "University of Southampton",
-              "bio": ""
-            },
-            {
-              "name": "Xiaotian Kuai",
-              "affiliation": "Anhui University",
-              "bio": ""
-            },
-            {
-              "name": "Yu-Hua Chen",
-              "affiliation": "University of Leeds",
+              "name": "Sijia Huang",
+              "affiliation": "Indiana University",
               "bio": ""
             }
           ],
@@ -424,14 +414,24 @@ window.AALA_PROGRAM = {
           "end": "12:00"
         },
         {
-          "id": "AALA2026031",
-          "title": "Exploring the predictive validity of standardized academic English proficiency tests using longitudinal data analysis",
-          "abstract": "Standardized English language proficiency tests are widely used in university admissions and for placement into ESL support courses (e.g., Intensive English Programs or for-credit English support courses), yet comparative evidence on their longitudinal predictive validity remains limited. Previous research has focused primarily on first-year GPA and composite scores (Ihlenfeldt & Rios, 2023; Isaacs et al., 2023), leaving important gaps in understanding how section-level proficiencies relate to GPA development over time and whether these relationships vary across academic disciplines or ESL support course placement decisions. This study compares three major English proficiency assessments: the TOEFL iBT, the IELTS, and the Duolingo English Test (DET). Using institutional data from 411 international undergraduate students tracked across four academic semesters, the study examines (a) the extent to which overall and section scores predict first-semester cumulative GPA, (b) how these scores relate to GPA trajectories across four semesters, (c) whether predictive relationships differ between STEM and non-STEM disciplines, and (d) whether placement decisions based on section-score cutoffs predict subsequent GPA development. Results from linear mixed-effects growth modeling revealed clear differences in longitudinal sensitivity across tests. TOEFL iBT demonstrated limited, skill-specific predictive validity, largely restricted to entry-level GPA and driven primarily by Speaking. IELTS showed moderate predictive validity, with overall scores and Reading predicting initial GPA but exhibiting weaker associations with GPA growth. DET demonstrated the strongest longitudinal sensitivity, with overall and multiple subsection scores predicting both initial academic standing and cumulative GPA development. No statistically significant interactions involving academic discipline were observed, suggesting that predictive relationships were stable across disciplines. Placement decisions based on DET section-score cutoffs more clearly differentiated students with lower first-semester GPAs and their subsequent GPA trajectories than decisions based on TOEFL iBT or IELTS. These findings underscore differences in how proficiency tests capture both early and sustained academic performance and provide evidence to inform admissions practices and ESL support course placement policies in higher education.",
+          "id": "AALA2026040",
+          "title": "Comparing Full-Test and One-Skill Retakes in IELTS Speaking: Evidence from Growth Curve Modelling",
+          "abstract": "The introduction of One-Skill retake (OSR) in IELTS marks a significant shift from the traditional full-test retake policy that has been the standard for years and raises important questions regarding the validity of score changes following the retake. Specifically, it remains unclear how score changes operate when only a single skill is retaken, and whether score change patterns observed in OSR resemble those found in the full-test retake. This study examined two IELTS retake options - full-test retakes and OSR - with a focus on the Speaking test. IELTS score data from two groups were obtained: OSR test-takers (n = 890) who opted for a Speaking OSR and full-test retakers (n = 352) who retook the full test up to four times. All test-takers are Chinese.\nScore changes across retakes were analysed using descriptive analysis and growth curve modelling implemented through linear mixed-effects models. The findings indicate that both retake options led to measurable score gains, but the magnitude and patterns of improvement vary with retake format. Mean Speaking band scores for full-test retakers improve from 5.6 on the first attempt to 5.9 by the fourth attempt. The initial gains come quickly, but further improvement becomes harder to achieve after the second attempt. OSRs in Speaking generate more pronounced and consistent improvements from a mean of 5.43 to 5.80, with average gains of approximately half a band. Full-test retakers demonstrate the largest gains in Grammatical Range and Accuracy and the smallest gains in Pronunciation. In contrast, OSR Speaking test-takers show greater gains in Fluency and Coherence. This study contributes validation evidence for the IELTS OSR policy, offering empirical insights into how retake formats function in practice. And it provides useful evidence to help test takers choose retake formats more strategically and assist IELTS instructors in adjusting their instructional approaches.",
           "authors": [
             {
-              "name": "Sun-Young Shin",
-              "affiliation": "Indiana University",
-              "bio": "Sun-Young Shin is an Associate Professor in the Department of Second Language Studies at Indiana University. His research interests include GenAI-mediated language assessment, authenticity in language assessment, L2 pragmatics assessment, standard setting, and interactive classroom-based language assessment. His work has been published in numerous journals and edited volumes, and he has been invited to deliver lectures and workshops on L2 assessment in several countries. He currently serves on the editorial boards of Language Testing and Language Assessment Quarterly."
+              "name": "Lulu Zhang",
+              "affiliation": "Henan University",
+              "bio": "Lulu Zhang is an assistant professor at Henan University in China. She received her PhD from the University of Southampton in the UK. Her research interests include language testing, assessment feedback and teacher professional development. Her work examines topics such as IELTS retake policy, the content validity of A-Level Mandarin exam, test-taking motivation and preparation in HSK contexts, and comparative analyses of trait-based marking approaches in PTE tests. She also studies feedback culture, automated feedback, teacher assessment literacy and classroom engagement."
+            },
+            {
+              "name": "Ying Zheng",
+              "affiliation": "University of Southampton",
+              "bio": ""
+            },
+            {
+              "name": "Emma Bruce",
+              "affiliation": "British Council",
+              "bio": ""
             }
           ],
           "category": "theme-4",
@@ -490,8 +490,8 @@ window.AALA_PROGRAM = {
               "bio": "Saerhim Oh is a Research Scientist at the ETS Research Institute, where she conducts research on the TOEIC family of assessments and the assessment of interactional communicative competence in written communication. Her work focuses on workplace and academic language assessment, particularly L2 writing assessment, interactional competence in written interactions, and standard-setting studies for workplace contexts. She earned an Ed.D. in Applied Linguistics with a focus on language assessment from Teachers College, Columbia University and received the 2019 Jacqueline Ross Dissertation Award. Her research has appeared in journals such as Language Assessment Quarterly, Journal of Second Language Writing, and Assessing Writing."
             }
           ],
-          "category": "featured",
-          "categoryLabel": "Featured",
+          "category": "sponsor",
+          "categoryLabel": "Sponsor",
           "room": "HG01",
           "start": "14:00",
           "end": "14:30"
@@ -534,8 +534,8 @@ window.AALA_PROGRAM = {
               "bio": "Leda Lampropoulou is Head of Research at LANGUAGECERT, where she leads the organisation’s research strategy and chairs the Research Committee. With over 15 years’ experience in language testing and second language acquisition, she specialises in speaking assessment, test reliability, and benchmarking. She has led concordance studies and large-scale alignment to international frameworks, supporting principled, data-informed assessment development and decision-making."
             }
           ],
-          "category": "featured",
-          "categoryLabel": "Featured",
+          "category": "sponsor",
+          "categoryLabel": "Sponsor",
           "room": "HG03",
           "start": "14:00",
           "end": "14:30"
@@ -563,19 +563,19 @@ window.AALA_PROGRAM = {
           "end": "14:30"
         },
         {
-          "id": "AALA2026030",
-          "title": "Human Judgment and Data-Driven Evidence in Dialogue: A Multi-Method Approach to CEFR Standard Setting",
-          "abstract": "Aligning language tests with the Common European Framework of Reference for Languages (CEFR) enhances score transparency, comparability, and accountability across educational contexts. While traditional standard-setting procedures provide structured expert judgment, questions often remain regarding the extent to which theoretically defined proficiency levels correspond to empirically observable performance groupings. Addressing this issue, the present study employed a triangulated design integrating judgment-based and statistical approaches to establish CEFR-aligned cut scores for the Listening and Reading sections of a tertiary-level English proficiency test. Two research questions guided the study: (1) To what extent do independently trained panels agree on CEFR cut scores established through the Bookmark method? and (2) To what extent do statistically derived proficiency groupings correspond with Bookmark-based standards? Using operational Listening and Reading data (N = 1,674), CEFR cut scores were determined through a four-round Bookmark procedure conducted with 18 panelists across two independent sites. High intraclass correlation coefficients and strong cross-site convergence indicated substantial inter-panelist reliability and procedural stability. To complement the judgment-based findings, Hierarchical Cluster Analysis (HCA) (Shin & Lidster, 2017) and Latent Class Analysis (LCA) (Binici & Cuhadar, 2022) were applied to examine the underlying performance structure. Both statistical approaches identified a smaller number of empirically distinguishable proficiency groupings than the seven CEFR-aligned levels initially targeted, particularly in score regions with lower test-taker density. Nevertheless, the ordinal progression of CEFR levels was preserved across methods, and convergence was strongest within the intermediate proficiency bands targeted by the assessment. Overall, findings provide evidence supporting the general alignment of the test with CEFR levels while highlighting considerations related to proficiency distribution and sublevel reporting. The study underscores the value of methodological triangulation in strengthening validity arguments for CEFR-based performance standards.",
+          "id": "AALA2026063",
+          "title": "The impact of language policy on L3 learning motivation: a study of Tibetan-Chinese-English trilingual learners",
+          "abstract": "Motivation is a critical determinant of success in second language acquisition, yet its role in third language (L3) learning remains underexplored, particularly in complex multilingual contexts involving ethnic minority learners. Furthermore, while prior research has identified diverse sources of language learning motivation, empirical evidence on how language policy changes shape language learning motivation is scarce. To address these gaps, the current research investigates the impact of a major educational reform on the English learning motivation of Tibetan students in Qinghai province, China. Specifically, the reform elevated English, the students’ L3, to a high-stakes, compulsory subject in the National College Entrance Examination (NCEE). Grounded in Self-Determination Theory, this research examines changes across multiple dimensions of language learning motivation. Data were collected from two independent cohorts of Tibetan students, with 221 surveyed before the reform and 204 surveyed after its implementation. A multivariate analysis of variance (MANOVA) was employed to analyze the differences between the two groups. The findings reveal significant changes in students’ motivation levels across intrinsic motivation, extrinsic motivation, and amotivation. Results show that, compared to their counterparts in the pre-reform group, students in the post-reform cohort demonstrated a marked decrease in amotivation, alongside significant increases in both extrinsic motivation and intrinsic motivation. These results indicate that elevating English to a high-stakes, compulsory subject substantially influences Tibetan students’ motivation for L3 learning. By providing quantitative evidence of policy-driven motivational changes in an L3 minority context, this study contributes to the literature on the relationship between language policy and motivation. The findings also suggest that recent proposals to de-emphasize English in the NCEE may have detrimental effects on the L3 development of minority students.",
           "authors": [
             {
-              "name": "Sun-Young Shin",
-              "affiliation": "Indiana University",
-              "bio": "Sun-Young Shin is an Associate Professor in the Department of Second Language Studies at Indiana University. His research interests include GenAI-mediated language assessment, authenticity in language assessment, L2 pragmatics assessment, standard setting, and interactive classroom-based language assessment. His work has been published in numerous journals and edited volumes, and he has been invited to deliver lectures and workshops on L2 assessment in several countries. He currently serves on the editorial boards of Language Testing and Language Assessment Quarterly."
+              "name": "Qingzeng Zhuoma",
+              "affiliation": "University of Macau",
+              "bio": "Qingzeng Zhuoma is currently pursuing her PhD in the Department of English at the University of Macau. Her research focuses on language assessment, English learning among ethnic minority learners, and language proficiency of the Tibetan language."
             },
             {
-              "name": "Sijia Huang",
-              "affiliation": "Indiana University",
-              "bio": ""
+              "name": "Shangwen Chen",
+              "affiliation": "University of Macau",
+              "bio": "Shangwen Chen is a current PhD candidate in the Department of English at the University of Macau. Her research interests are in the areas of individual differences in L2 acquisition, L2 listening assessment, and incidental vocabulary learning."
             }
           ],
           "category": "theme-2",
@@ -607,24 +607,14 @@ window.AALA_PROGRAM = {
           "end": "14:30"
         },
         {
-          "id": "AALA2026040",
-          "title": "Comparing Full-Test and One-Skill Retakes in IELTS Speaking: Evidence from Growth Curve Modelling",
-          "abstract": "The introduction of One-Skill retake (OSR) in IELTS marks a significant shift from the traditional full-test retake policy that has been the standard for years and raises important questions regarding the validity of score changes following the retake. Specifically, it remains unclear how score changes operate when only a single skill is retaken, and whether score change patterns observed in OSR resemble those found in the full-test retake. This study examined two IELTS retake options - full-test retakes and OSR - with a focus on the Speaking test. IELTS score data from two groups were obtained: OSR test-takers (n = 890) who opted for a Speaking OSR and full-test retakers (n = 352) who retook the full test up to four times. All test-takers are Chinese.\nScore changes across retakes were analysed using descriptive analysis and growth curve modelling implemented through linear mixed-effects models. The findings indicate that both retake options led to measurable score gains, but the magnitude and patterns of improvement vary with retake format. Mean Speaking band scores for full-test retakers improve from 5.6 on the first attempt to 5.9 by the fourth attempt. The initial gains come quickly, but further improvement becomes harder to achieve after the second attempt. OSRs in Speaking generate more pronounced and consistent improvements from a mean of 5.43 to 5.80, with average gains of approximately half a band. Full-test retakers demonstrate the largest gains in Grammatical Range and Accuracy and the smallest gains in Pronunciation. In contrast, OSR Speaking test-takers show greater gains in Fluency and Coherence. This study contributes validation evidence for the IELTS OSR policy, offering empirical insights into how retake formats function in practice. And it provides useful evidence to help test takers choose retake formats more strategically and assist IELTS instructors in adjusting their instructional approaches.",
+          "id": "AALA2026031",
+          "title": "Exploring the predictive validity of standardized academic English proficiency tests using longitudinal data analysis",
+          "abstract": "Standardized English language proficiency tests are widely used in university admissions and for placement into ESL support courses (e.g., Intensive English Programs or for-credit English support courses), yet comparative evidence on their longitudinal predictive validity remains limited. Previous research has focused primarily on first-year GPA and composite scores (Ihlenfeldt & Rios, 2023; Isaacs et al., 2023), leaving important gaps in understanding how section-level proficiencies relate to GPA development over time and whether these relationships vary across academic disciplines or ESL support course placement decisions. This study compares three major English proficiency assessments: the TOEFL iBT, the IELTS, and the Duolingo English Test (DET). Using institutional data from 411 international undergraduate students tracked across four academic semesters, the study examines (a) the extent to which overall and section scores predict first-semester cumulative GPA, (b) how these scores relate to GPA trajectories across four semesters, (c) whether predictive relationships differ between STEM and non-STEM disciplines, and (d) whether placement decisions based on section-score cutoffs predict subsequent GPA development. Results from linear mixed-effects growth modeling revealed clear differences in longitudinal sensitivity across tests. TOEFL iBT demonstrated limited, skill-specific predictive validity, largely restricted to entry-level GPA and driven primarily by Speaking. IELTS showed moderate predictive validity, with overall scores and Reading predicting initial GPA but exhibiting weaker associations with GPA growth. DET demonstrated the strongest longitudinal sensitivity, with overall and multiple subsection scores predicting both initial academic standing and cumulative GPA development. No statistically significant interactions involving academic discipline were observed, suggesting that predictive relationships were stable across disciplines. Placement decisions based on DET section-score cutoffs more clearly differentiated students with lower first-semester GPAs and their subsequent GPA trajectories than decisions based on TOEFL iBT or IELTS. These findings underscore differences in how proficiency tests capture both early and sustained academic performance and provide evidence to inform admissions practices and ESL support course placement policies in higher education.",
           "authors": [
             {
-              "name": "Lulu Zhang",
-              "affiliation": "Henan University",
-              "bio": "Lulu Zhang is an assistant professor at Henan University in China. She received her PhD from the University of Southampton in the UK. Her research interests include language testing, assessment feedback and teacher professional development. Her work examines topics such as IELTS retake policy, the content validity of A-Level Mandarin exam, test-taking motivation and preparation in HSK contexts, and comparative analyses of trait-based marking approaches in PTE tests. She also studies feedback culture, automated feedback, teacher assessment literacy and classroom engagement."
-            },
-            {
-              "name": "Ying Zheng",
-              "affiliation": "University of Southampton",
-              "bio": ""
-            },
-            {
-              "name": "Emma Bruce",
-              "affiliation": "British Council",
-              "bio": ""
+              "name": "Sun-Young Shin",
+              "affiliation": "Indiana University",
+              "bio": "Sun-Young Shin is an Associate Professor in the Department of Second Language Studies at Indiana University. His research interests include GenAI-mediated language assessment, authenticity in language assessment, L2 pragmatics assessment, standard setting, and interactive classroom-based language assessment. His work has been published in numerous journals and edited volumes, and he has been invited to deliver lectures and workshops on L2 assessment in several countries. He currently serves on the editorial boards of Language Testing and Language Assessment Quarterly."
             }
           ],
           "category": "theme-4",
@@ -708,8 +698,8 @@ window.AALA_PROGRAM = {
               "bio": ""
             }
           ],
-          "category": "featured",
-          "categoryLabel": "Featured",
+          "category": "sponsor",
+          "categoryLabel": "Sponsor",
           "room": "HG01",
           "start": "14:30",
           "end": "15:00"
@@ -725,8 +715,8 @@ window.AALA_PROGRAM = {
               "bio": "Meha Dayal is Assessment Development Manager at British Council. She is responsible for test development, production, localisation and platform strategy for key test products in India. Besides this, Meha has been involved in rater quality assurance and optimisation of marking delivery platforms for over a decade. She holds an MA in Language Testing from Lancaster University."
             }
           ],
-          "category": "featured",
-          "categoryLabel": "Featured",
+          "category": "sponsor",
+          "categoryLabel": "Sponsor",
           "room": "HG02",
           "start": "14:30",
           "end": "15:00"
@@ -747,8 +737,8 @@ window.AALA_PROGRAM = {
               "bio": ""
             }
           ],
-          "category": "featured",
-          "categoryLabel": "Featured",
+          "category": "sponsor",
+          "categoryLabel": "Sponsor",
           "room": "HG03",
           "start": "14:30",
           "end": "15:00"
@@ -990,19 +980,29 @@ window.AALA_PROGRAM = {
           "end": "16:00"
         },
         {
-          "id": "AALA2026044",
-          "title": "Does morphological awareness assessment matter for Chinese-English bilingual children with reading difficulties? A systematic review and meta-analysis",
-          "abstract": "Rationale and Theoretical framing Reading difficulties affect many children, but identifying these issues in bilingual children is complex. Morphological awareness refers to a learner’s ability to recognize and manipulate meaningful parts of words. For bilingual children, especially those learning languages with different writing systems such as morphosyllabic Chinese and alphabetic English, the weakness in morphological awareness may be associated with persistent reading problems. This meta-analysis aimed to determine whether Chinese-English bilingual children with reading difficulties (RD) have significant deficits in morphological awareness (MA), phonological awareness, and word reading, in both their first and second languages (L1 and L2). It also evaluated the influence of RD severity, age, diglossia context, and methodological design on effect sizes.\nMethods We conducted a “meta-analysis”, a method that combines data from a certain number of studies to get a clearer, more reliable picture than any single study can provide. We analyzed 14 primary empirical studies involving a total of 4,516 Chinese-English bilingual children. We looked at the children’s performance in three specific skills in both languages: morphological awareness, phonological awareness, and word reading. We examined whether factors like the child’s age, the severity of reading difficulty, the study design, or the region they lived in played any role in interpreting our findings.\nKey findings Results showed medium effect sizes for MA (g= -0.722) and PA ( g = -0.625), and a large effect size for word reading ( g = -2.042) in L1 Chinese. In L2 English, medium to large effect sizes were found for MA (g =-1.083), PA (g = -0.857), and word reading (g = -0.730). Age was the only significant moderator, with larger deficits observed as age increased.\nImplications These findings align with studies on monolinguals with dyslexia and bilinguals with normal abilities or disabilities, recommending MA tasks in assessments.",
+          "id": "AALA2026012",
+          "title": "Exploring Fairness and suitability in A-level Chinese exam: Teachers’ perspectives from England",
+          "abstract": "This presentation reports a mixed-methods investigation into the A-level Chinese examination in England, addressing key issues of the CEFR alignment and test appropriateness for Chinese as a second language learners from teachers’ perspectives. As the high-stakes exam for university entry in England, Edexcel A-level Chinese, designed by Pearson, is the only current qualification available for students to take at the age of 18. The study combined a survey with fifty Chinese teachers, semi-structured interviews with nine teachers, and a formal standard-setting process involving twelve teachers. Findings from the survey and interviews indicated that the design of the A-level Chinese examination disproportionately disadvantages Chinese as a second language learners in the UK. Teachers also highlighted a lack of appropriate teaching and learning resources for this course, as well as a huge transitional gap between GCSE and A-level Chinese provision. In the standard-setting exercise, listening and reading items from two past papers were rated against the CEFR descriptors. Teachers completed two rounds of difficulty ratings and provided evaluative comments. Most raters expressed concern that the A-level Chinese examination is not well-suited to Chinese as a second language learners, particularly because of the high cognitive demand in writing and multiple integrated language skills; moreover, listening papers contain a mixture of formal vocabulary and colloquial expressions that some learners may find difficult to process. Panel discussions further suggested that the level of cultural and cognitive knowledge required is too demanding for non-native speakers, who face dual linguistic and cultural challenges in this exam. Our study contributes to ongoing discussions about fairness in testing an Asian language in a non-Asian society such as England, and offers practical suggestions for policymakers, exam boards, and curriculum designers seeking to make Chinese language assessment more equitable and accountable.",
           "authors": [
             {
-              "name": "Sihui (Echo) Ke",
-              "affiliation": "The Hong Kong Polytechnic University",
-              "bio": "Dr. KE Sihui (Echo) is an Associate Professor at the Department of Language Science and Technology, the Hong Kong Polytechnic University. Ke's primary research interest is second language reading and biliteracy development. Ke is also interested in Chinese applied linguistics, ESL/bilingual/foreign language education, as well as assessment and instruction. Her work has been published in international refereed journals such as Journal of Educational Psychology, Language Learning, and Reading Research Quarterly."
+              "name": "Jia Li",
+              "affiliation": "University of Southampton",
+              "bio": "Jia Li has been teaching Mandarin in secondary and Sixth Form education since 2014, specialising in Chinese CLIL pedagogy and the delivery of GCSE, A-level, and HSK courses. She leads KS4 and KS5 provision within her department and delivers in-school teacher training programmes. Alongside her teaching, she is pursuing a PhD at the University of Southampton, focusing on Chinese CLIL research. She collaborates with partner organisations on eye-tracking and intelligibility studies in L2 assessment. Her work bridges classroom practice and research, with particular emphasis on Mandarin language assessment and Mandarin Chinese teaching and learning in the UK."
             },
             {
-              "name": "Shuxin Liu",
-              "affiliation": "University of Texas at Austin, United States",
-              "bio": "Miss Shuxin Liu is currently a PhD student at the Department of Special Education, The University of Texas at Austin, United States. Liu is interested in reading and mathematics education."
+              "name": "Ying Zheng",
+              "affiliation": "University of Southampton",
+              "bio": ""
+            },
+            {
+              "name": "Xiaotian Kuai",
+              "affiliation": "Anhui University",
+              "bio": ""
+            },
+            {
+              "name": "Yu-Hua Chen",
+              "affiliation": "University of Leeds",
+              "bio": ""
             }
           ],
           "category": "theme-2",
@@ -1233,19 +1233,19 @@ window.AALA_PROGRAM = {
           "end": "16:30"
         },
         {
-          "id": "AALA2026058",
-          "title": "Rethinking Standard Setting: A Job-Description Driven and Empirically Informed Standard Setting Study",
-          "abstract": "Standard setting plays a critical role in establishing benchmark scores that distinguish examinees who meet minimum proficiency requirements from those who do not. While test-centered approaches (e.g., the Angoff and Bookmark methods) are psychometrically robust, they rely on expert panels and are resource-intensive, limiting their feasibility. Examinee-centered alternatives, such as the Contrasting Groups method (Livingston & Zieky, 1982), offer a more practical option by deriving cut scores from input provided by Subject Matter Experts (SMEs) and examinee score distributions. However, this approach requires qualified SMEs who can accurately evaluate examinees’ mastery of language use and an adequate examinee sample—requirements that are difficult to meet in many organizational settings.\nIn this study, we explored a needs-based approach to standard setting designed to address these constraints by centering decisions on the communicative needs of job roles. The study focused on establishing cut scores for TOEIC® Link in collaboration with a business process provider based in South Asia. Five customer-service-related roles were evaluated: customer service associate (call), customer service associate (chat), quality analyst, trainer, and team leader.\nUtilizing job descriptors, generative AI, and SME feedback, researchers developed job-specific “can-do” statements describing essential English communication tasks. Twenty SMEs evaluated the statements for relevance and importance, and 703 employees completed a self-assessment survey and TOEIC Link. Cut score decisions were guided by integrating expected language proficiency derived from the job-specific “can-do” statements and SMEs’ importance ratings with observed TOEIC Link performance from a reference group of job incumbents. This approach allowed benchmarks to reflect both the communicative demands of the roles and typical performance levels in the workplace, while remaining feasible to implement in organizational contexts.\nThe study demonstrates a new approach to setting cut scores that remains empirically based but more practical than traditional standard-setting methods, supporting job-relevant decisions in organizational contexts.",
+          "id": "AALA2026044",
+          "title": "Does morphological awareness assessment matter for Chinese-English bilingual children with reading difficulties? A systematic review and meta-analysis",
+          "abstract": "Rationale and Theoretical framing Reading difficulties affect many children, but identifying these issues in bilingual children is complex. Morphological awareness refers to a learner’s ability to recognize and manipulate meaningful parts of words. For bilingual children, especially those learning languages with different writing systems such as morphosyllabic Chinese and alphabetic English, the weakness in morphological awareness may be associated with persistent reading problems. This meta-analysis aimed to determine whether Chinese-English bilingual children with reading difficulties (RD) have significant deficits in morphological awareness (MA), phonological awareness, and word reading, in both their first and second languages (L1 and L2). It also evaluated the influence of RD severity, age, diglossia context, and methodological design on effect sizes.\nMethods We conducted a “meta-analysis”, a method that combines data from a certain number of studies to get a clearer, more reliable picture than any single study can provide. We analyzed 14 primary empirical studies involving a total of 4,516 Chinese-English bilingual children. We looked at the children’s performance in three specific skills in both languages: morphological awareness, phonological awareness, and word reading. We examined whether factors like the child’s age, the severity of reading difficulty, the study design, or the region they lived in played any role in interpreting our findings.\nKey findings Results showed medium effect sizes for MA (g= -0.722) and PA ( g = -0.625), and a large effect size for word reading ( g = -2.042) in L1 Chinese. In L2 English, medium to large effect sizes were found for MA (g =-1.083), PA (g = -0.857), and word reading (g = -0.730). Age was the only significant moderator, with larger deficits observed as age increased.\nImplications These findings align with studies on monolinguals with dyslexia and bilinguals with normal abilities or disabilities, recommending MA tasks in assessments.",
           "authors": [
             {
-              "name": "Saerhim Oh",
-              "affiliation": "Educational Testing Service (ETS)",
-              "bio": "Saerhim Oh is a Research Scientist at the ETS Research Institute, where she conducts research on the TOEIC family of assessments and the assessment of interactional communicative competence in written communication. Her work focuses on workplace and academic language assessment, particularly L2 writing assessment, interactional competence in written interactions, and standard-setting studies for workplace contexts. She earned an Ed.D. in Applied Linguistics with a focus on language assessment from Teachers College, Columbia University and received the 2019 Jacqueline Ross Dissertation Award. Her research has appeared in journals such as Language Assessment Quarterly, Journal of Second Language Writing, and Assessing Writing."
+              "name": "Sihui (Echo) Ke",
+              "affiliation": "The Hong Kong Polytechnic University",
+              "bio": "Dr. KE Sihui (Echo) is an Associate Professor at the Department of Language Science and Technology, the Hong Kong Polytechnic University. Ke's primary research interest is second language reading and biliteracy development. Ke is also interested in Chinese applied linguistics, ESL/bilingual/foreign language education, as well as assessment and instruction. Her work has been published in international refereed journals such as Journal of Educational Psychology, Language Learning, and Reading Research Quarterly."
             },
             {
-              "name": "Jonathan Schmidgall",
-              "affiliation": "Educational Testing Service (ETS)",
-              "bio": "Jonathan Schmidgall is a Senior Research Scientist at the ETS Research Institute. As a language testing researcher, he has focused on oral proficiency and the use of English in higher education (ITA) and international workplace contexts. He has published broadly on the topics of language test design, scoring, test quality (reliability, validity, fairness), and appropriate uses of assessment (e.g., standard setting). He completed his PhD in applied linguistics with a focus on language assessment at UCLA, has coordinated research for ETS’ TOEIC tests since 2015, and serves as Associate Editor for ETS’ Research Memorandum and Report series."
+              "name": "Shuxin Liu",
+              "affiliation": "University of Texas at Austin, United States",
+              "bio": "Miss Shuxin Liu is currently a PhD student at the Department of Special Education, The University of Texas at Austin, United States. Liu is interested in reading and mathematics education."
             }
           ],
           "category": "theme-2",
@@ -1355,19 +1355,19 @@ window.AALA_PROGRAM = {
           "end": "17:00"
         },
         {
-          "id": "AALA2026063",
-          "title": "The impact of language policy on L3 learning motivation: a study of Tibetan-Chinese-English trilingual learners",
-          "abstract": "Motivation is a critical determinant of success in second language acquisition, yet its role in third language (L3) learning remains underexplored, particularly in complex multilingual contexts involving ethnic minority learners. Furthermore, while prior research has identified diverse sources of language learning motivation, empirical evidence on how language policy changes shape language learning motivation is scarce. To address these gaps, the current research investigates the impact of a major educational reform on the English learning motivation of Tibetan students in Qinghai province, China. Specifically, the reform elevated English, the students’ L3, to a high-stakes, compulsory subject in the National College Entrance Examination (NCEE). Grounded in Self-Determination Theory, this research examines changes across multiple dimensions of language learning motivation. Data were collected from two independent cohorts of Tibetan students, with 221 surveyed before the reform and 204 surveyed after its implementation. A multivariate analysis of variance (MANOVA) was employed to analyze the differences between the two groups. The findings reveal significant changes in students’ motivation levels across intrinsic motivation, extrinsic motivation, and amotivation. Results show that, compared to their counterparts in the pre-reform group, students in the post-reform cohort demonstrated a marked decrease in amotivation, alongside significant increases in both extrinsic motivation and intrinsic motivation. These results indicate that elevating English to a high-stakes, compulsory subject substantially influences Tibetan students’ motivation for L3 learning. By providing quantitative evidence of policy-driven motivational changes in an L3 minority context, this study contributes to the literature on the relationship between language policy and motivation. The findings also suggest that recent proposals to de-emphasize English in the NCEE may have detrimental effects on the L3 development of minority students.",
+          "id": "AALA2026058",
+          "title": "Rethinking Standard Setting: A Job-Description Driven and Empirically Informed Standard Setting Study",
+          "abstract": "Standard setting plays a critical role in establishing benchmark scores that distinguish examinees who meet minimum proficiency requirements from those who do not. While test-centered approaches (e.g., the Angoff and Bookmark methods) are psychometrically robust, they rely on expert panels and are resource-intensive, limiting their feasibility. Examinee-centered alternatives, such as the Contrasting Groups method (Livingston & Zieky, 1982), offer a more practical option by deriving cut scores from input provided by Subject Matter Experts (SMEs) and examinee score distributions. However, this approach requires qualified SMEs who can accurately evaluate examinees’ mastery of language use and an adequate examinee sample—requirements that are difficult to meet in many organizational settings.\nIn this study, we explored a needs-based approach to standard setting designed to address these constraints by centering decisions on the communicative needs of job roles. The study focused on establishing cut scores for TOEIC® Link in collaboration with a business process provider based in South Asia. Five customer-service-related roles were evaluated: customer service associate (call), customer service associate (chat), quality analyst, trainer, and team leader.\nUtilizing job descriptors, generative AI, and SME feedback, researchers developed job-specific “can-do” statements describing essential English communication tasks. Twenty SMEs evaluated the statements for relevance and importance, and 703 employees completed a self-assessment survey and TOEIC Link. Cut score decisions were guided by integrating expected language proficiency derived from the job-specific “can-do” statements and SMEs’ importance ratings with observed TOEIC Link performance from a reference group of job incumbents. This approach allowed benchmarks to reflect both the communicative demands of the roles and typical performance levels in the workplace, while remaining feasible to implement in organizational contexts.\nThe study demonstrates a new approach to setting cut scores that remains empirically based but more practical than traditional standard-setting methods, supporting job-relevant decisions in organizational contexts.",
           "authors": [
             {
-              "name": "Qingzeng Zhuoma",
-              "affiliation": "University of Macau",
-              "bio": "Qingzeng Zhuoma is currently pursuing her PhD in the Department of English at the University of Macau. Her research focuses on language assessment, English learning among ethnic minority learners, and language proficiency of the Tibetan language."
+              "name": "Saerhim Oh",
+              "affiliation": "Educational Testing Service (ETS)",
+              "bio": "Saerhim Oh is a Research Scientist at the ETS Research Institute, where she conducts research on the TOEIC family of assessments and the assessment of interactional communicative competence in written communication. Her work focuses on workplace and academic language assessment, particularly L2 writing assessment, interactional competence in written interactions, and standard-setting studies for workplace contexts. She earned an Ed.D. in Applied Linguistics with a focus on language assessment from Teachers College, Columbia University and received the 2019 Jacqueline Ross Dissertation Award. Her research has appeared in journals such as Language Assessment Quarterly, Journal of Second Language Writing, and Assessing Writing."
             },
             {
-              "name": "Shangwen Chen",
-              "affiliation": "University of Macau",
-              "bio": "Shangwen Chen is a current PhD candidate in the Department of English at the University of Macau. Her research interests are in the areas of individual differences in L2 acquisition, L2 listening assessment, and incidental vocabulary learning."
+              "name": "Jonathan Schmidgall",
+              "affiliation": "Educational Testing Service (ETS)",
+              "bio": "Jonathan Schmidgall is a Senior Research Scientist at the ETS Research Institute. As a language testing researcher, he has focused on oral proficiency and the use of English in higher education (ITA) and international workplace contexts. He has published broadly on the topics of language test design, scoring, test quality (reliability, validity, fairness), and appropriate uses of assessment (e.g., standard setting). He completed his PhD in applied linguistics with a focus on language assessment at UCLA, has coordinated research for ETS’ TOEIC tests since 2015, and serves as Associate Editor for ETS’ Research Memorandum and Report series."
             }
           ],
           "category": "theme-2",
@@ -1639,23 +1639,6 @@ window.AALA_PROGRAM = {
               "end": "15:30"
             },
             {
-              "id": "AALA20260134",
-              "title": "Comparing human and GenAI-mediated interlocutors in L2 speaking assessment: effects on linguistic and neurocognitive behaviour",
-              "abstract": "Assessing second language (L2) oral proficiency has long been a daunting task for test developers and researchers due to challenges in balancing between construct validity, scoring reliability, and test practicality. Many large-scale L2 English oral proficiency tests, such as TOEFL, rely on monologic tasks, which have been criticized for their limited authenticity in representing real-life interactive language use. While some tests have included interactive tasks, test-takers’ performance may be influenced by interlocutor characteristics, raising further concerns about scoring reliability and test validity. Spoken dialogue systems (SDSs) have therefore been proposed as alternative interlocutors. Recent advancements in generative artificial intelligence (GenAI) enable SDSs to support more flexible and natural interaction. Additionally, avatar-based systems introduce visual embodiment, holding potential to increase social presence and interactional realism. However, empirical evidence on how different interlocutor conditions influence L2 speaking performance remains limited. In particular, while prior studies have compared human and SDS interlocutors, no research has examined differences between voice-only and avatar-based SDSs. Furthermore, existing studies have primarily focused on linguistic performance as an observable product, with little attention to the underlying cognitive processes involved in speech production. To address these gaps, this study compares test-takers’ oral performance across three interlocutor conditions: human, voice-only SDS, and avatar-based SDS. English-as-a-foreign-language (EFL) university students complete topic-based interview tasks. Linguistic performance is operationalised using complexity, accuracy, and fluency (CAF) indices, while neurocognitive processing is examined using functional near-infrared spectroscopy (fNIRS) to capture real-time changes in cortical activation during speech production. The findings are expected to provide insights into the comparability and validity of GenAI-mediated speaking assessment.",
-              "authors": [
-                {
-                  "name": "Han Yining",
-                  "affiliation": "Nanyang Technological University",
-                  "bio": "Yining Han is a first-year PhD student at the National Institute of Education, Nanyang Technological University, Singapore. Her research interests include technology-enhanced language assessment and research synthesis methodologies in applied linguistics. She has published in peer-reviewed journals such as Computer Assisted Language Learning."
-                }
-              ],
-              "category": "poster",
-              "categoryLabel": "Poster",
-              "room": "Space between Culture Centre Room 1 & 2",
-              "start": "10:30",
-              "end": "15:30"
-            },
-            {
               "id": "AALA2026028",
               "title": "The Therapeutic Potential of L2 Writing: Using English Diaries to Mitigate Negative Emotions in Students",
               "abstract": "This work-in-progress study explores the therapeutic potential of second language (L2) writing by investigating whether composing emotional diaries in English can help Chinese university students process negative experiences and improve their psychological well-being. Grounded in the concept of \"foreign language effect\" on emotional processing, we hypothesize that writing about distressing events in a foreign language may create psychological distance, thereby reducing emotional reactivity and fostering a healthier reappraisal of those experiences.\nIn this randomized controlled trial, 60-80 non-English major undergraduates will be randomly assigned to a 7-day online emotional diary task. The experimental group will write about their most upsetting or frustrating daily event in English, while the control group will do so in Chinese. We will measure:\nAnxiety and sleep quality pre- and post-intervention.\nDaily self-rated emotional intensity related to the written event.\nEnglish proficiency as a potential moderating variable.\nWe hypothesize that the English diary group will show significantly greater reductions in anxiety and emotional intensity, and greater improvement in sleep quality, compared to the Chinese group. As a work-in-progress, this poster will present the detailed research design, its theoretical rationale linking L2 writing to emotional healing, and preliminary insights from the pilot phase. It aims to spark discussion on humanistic, low-intensity interventions that integrate language use into student mental health support, directly aligning with the conference theme of \"assessment for learning and well-being.\"",
@@ -1816,6 +1799,23 @@ window.AALA_PROGRAM = {
                   "name": "April Jiawei Zhang",
                   "affiliation": "City University of Macau",
                   "bio": ""
+                }
+              ],
+              "category": "poster",
+              "categoryLabel": "Poster",
+              "room": "Space between Culture Centre Room 1 & 2",
+              "start": "10:30",
+              "end": "15:30"
+            },
+            {
+              "id": "AALA20260134",
+              "title": "Comparing human and GenAI-mediated interlocutors in L2 speaking assessment: effects on linguistic and neurocognitive behaviour",
+              "abstract": "Assessing second language (L2) oral proficiency has long been a daunting task for test developers and researchers due to challenges in balancing between construct validity, scoring reliability, and test practicality. Many large-scale L2 English oral proficiency tests, such as TOEFL, rely on monologic tasks, which have been criticized for their limited authenticity in representing real-life interactive language use. While some tests have included interactive tasks, test-takers’ performance may be influenced by interlocutor characteristics, raising further concerns about scoring reliability and test validity. Spoken dialogue systems (SDSs) have therefore been proposed as alternative interlocutors. Recent advancements in generative artificial intelligence (GenAI) enable SDSs to support more flexible and natural interaction. Additionally, avatar-based systems introduce visual embodiment, holding potential to increase social presence and interactional realism. However, empirical evidence on how different interlocutor conditions influence L2 speaking performance remains limited. In particular, while prior studies have compared human and SDS interlocutors, no research has examined differences between voice-only and avatar-based SDSs. Furthermore, existing studies have primarily focused on linguistic performance as an observable product, with little attention to the underlying cognitive processes involved in speech production. To address these gaps, this study compares test-takers’ oral performance across three interlocutor conditions: human, voice-only SDS, and avatar-based SDS. English-as-a-foreign-language (EFL) university students complete topic-based interview tasks. Linguistic performance is operationalised using complexity, accuracy, and fluency (CAF) indices, while neurocognitive processing is examined using functional near-infrared spectroscopy (fNIRS) to capture real-time changes in cortical activation during speech production. The findings are expected to provide insights into the comparability and validity of GenAI-mediated speaking assessment.",
+              "authors": [
+                {
+                  "name": "Han Yining",
+                  "affiliation": "Nanyang Technological University",
+                  "bio": "Yining Han is a first-year PhD student at the National Institute of Education, Nanyang Technological University, Singapore. Her research interests include technology-enhanced language assessment and research synthesis methodologies in applied linguistics. She has published in peer-reviewed journals such as Computer Assisted Language Learning."
                 }
               ],
               "category": "poster",
@@ -2374,14 +2374,24 @@ window.AALA_PROGRAM = {
           "end": "13:30"
         },
         {
-          "id": "AALA2026050",
-          "title": "The Impact of Generative AI-Assisted Visual Materials on Academic English Listening Tests",
-          "abstract": "This study explores the effects of different visual aid formats (including generative AI-generated materials) on academic English listening tests, grounded in the Target Language Use (TLU) domain framework. Three groups of test-takers were assigned distinct visual aid conditions: Group 1 accessed full text of questions and options, Group 2 viewed only scene-introducing images, and Group 3 received both scene images and AI-generated visuals aligned with audio content and real TLU contexts. A mixed-methods approach was employed: one-way ANOVA analyzed test scores and metacognitive strategy use frequency, while thematic analysis interpreted semi-structured interview data. Results revealed significant effects of visual aids on both test performance and metacognitive strategy use. Group 3 achieved significantly higher scores than Groups 1 and 2, with Group 1 slightly outperforming Group 2; Group 3 also reported the highest frequency of metacognitive strategy use, followed by Group 1 and then Group 2. Qualitative findings indicated that richer, more relevant, and authentic visual materials enhanced strategy effectiveness: Group 3’s AI-generated visuals better activated predictive, monitoring, and evaluative strategies by aligning with real language use scenarios. This study provides empirical and theoretical support for visual aid design in academic English listening tests.",
+          "id": "AALA20260154",
+          "title": "Validating a Computerized Dynamic Diagnostic Assessment of L2 Pragmatic Competence: An ABV and validity-as-fairness argument integrated approach",
+          "abstract": "The present study aims to carry out a comprehensive validation of a newly developed Computerized Dynamic Diagnostic Assessment of Pragmatic Competence (CDDA-P) by integrating an argument-based validation framework with a validity-as-fairness perspective. Positioned at the intersection of language assessment and sociocultural theory, the CDDA-P represents an innovative attempt to unify diagnostic and dynamic assessment features within a single computerized platform, thereby enhancing the diagnostic, intervention, and predictive functions of assessment. Our prior validation (Lu, Chen, & Yang, 2026) has demonstrated the system’s capacity to diagnose learners’ strengths and weaknesses, identify their zones of proximal development, and facilitate gains in pragmatic performance; the present study extends the validation argument to encompass broader considerations of effectiveness and fairness. A comprehensive validity argument was constructed by examining evidence related to domain definition, evaluation, explanation, utilization, impact, and fairness. Data were collected from 58 ESL learners and 7 expert raters using a mixed-methods design. Quantitative analyses included Many-Facet Rasch Model, Mann-Whitney U test, Friedman test, and Generalized Linear Mixed Models. Qualitative evidence was derived from verbal protocol analysis and thematic analysis, providing insights into learners’ cognitive and interactional processes during assessment. Findings indicate that the CDDA-P yields reliable and interpretable diagnostic information, effectively captures learners’ developmental potential, and supports meaningful gains in pragmatic competence. The study contributes to ongoing discussions of validity by illustrating how argument-based and fairness-oriented approaches can be jointly operationalized in technology-enhanced assessment contexts. Implications are drawn for the design and validation of specialized diagnostic language assessments, while also illuminating the application of argument-based validation and fairness-as-validity frameworks in low-stakes assessment contexts.",
           "authors": [
             {
-              "name": "Tong Yao",
-              "affiliation": "Guangdong University of Foreign Studies",
-              "bio": "Tong Yao is a PhD candidate at the Center for Linguistics and Applied Linguistics, Guangdong University of Foreign Studies. Her research focuses on language testing, particularly the integration of generative AI and visual aids in academic English listening assessment. She has conducted empirical studies on test-taker performance and metacognitive strategy use, aiming to optimize visual support design for fairer and more effective language assessment."
+              "name": "Mengqi Chen",
+              "affiliation": "Ocean University of China",
+              "bio": "Mengqi Chen is a postgraduate student in the College of Foreign Languages at Ocean University of China. Her research interests include second language acquisition, language assessment, diagnostic assessment and computerized dynamic assessment."
+            },
+            {
+              "name": "Ying Chen",
+              "affiliation": "Ocean University of China",
+              "bio": "Ying Chen is Professor of Applied Linguistics at Ocean University of China. Her research interests include language assessment, diagnostic assessment, and research methodology. She has published in leading journals like Applied Linguistics, Language Testing, Language Teaching Research, and Modern Foreign Languages. She has led six funded projects and is the principal researcher of a national project supported by the National Planning Office for Philosophy and Social Sciences."
+            },
+            {
+              "name": "Xiaoxian Guan",
+              "affiliation": "East China Normal University",
+              "bio": "Xiaoxian Guan (Ph.D., Shanghai Jiao Tong University) is a faculty member at East China Normal University and a former visiting scholar at the University of Illinois Urbana-Champaign. Drawing on her extensive experience in teaching English reading and writing, she specializes in the integration of instructional design and assessment development. Dr. Guan currently leads school-based test development and item bank initiatives, applying pedagogical insights to enhance the reliability, validity, and washback of both high- and low-stakes institutional assessments."
             }
           ],
           "category": "theme-3",
@@ -2496,14 +2506,14 @@ window.AALA_PROGRAM = {
           "end": "14:00"
         },
         {
-          "id": "AALA20260133",
-          "title": "Exploring the Application Path of Brain-Computer Interfaces in the Age of Artificial Intelligence from the Perspective of PRISMA",
-          "abstract": "In an era of rapid advancements in artificial intelligence, most languages worldwide face the threat of digital marginalization. Cantonese, as a vital language carrying rich Lingnan culture, is no exception, facing numerous severe challenges in its transmission and development. To explore new pathways for technology-enabled language preservation, this paper employs the PRISMA systematic literature review method, analyzing 63 articles on the application of brain-computer interface (BCI) technology in language studies. The analysis reveals a significant gap in BCI technology validation, primarily focusing on English and its application in medical rehabilitation, with substantial research gaps in language education and cultural transmission. Addressing this gap, this paper innovatively proposes application pathways for BCI technology in Cantonese transmission and establishes an interdisciplinary analytical framework integrating neuroscience, linguistics, and cultural studies. This paper focuses on three core application pathways of BCI technology in Cantonese transmission: first, the design of an immersive Cantonese learning system based on neurofeedback mechanisms; second, the development of BCI-assisted communication technologies for groups with language impairments; and third, the construction of a Cantonese cultural cognition database based on neural activity patterns. Finally, this paper delves into the ethical, technological, and cultural challenges involved in the application of BCI technology and looks forward to its future development prospects, aiming to provide an innovative theoretical framework and practical paradigm for the technological empowerment and protection of Cantonese and other endangered languages.",
+          "id": "AALA2026050",
+          "title": "The Impact of Generative AI-Assisted Visual Materials on Academic English Listening Tests",
+          "abstract": "This study explores the effects of different visual aid formats (including generative AI-generated materials) on academic English listening tests, grounded in the Target Language Use (TLU) domain framework. Three groups of test-takers were assigned distinct visual aid conditions: Group 1 accessed full text of questions and options, Group 2 viewed only scene-introducing images, and Group 3 received both scene images and AI-generated visuals aligned with audio content and real TLU contexts. A mixed-methods approach was employed: one-way ANOVA analyzed test scores and metacognitive strategy use frequency, while thematic analysis interpreted semi-structured interview data. Results revealed significant effects of visual aids on both test performance and metacognitive strategy use. Group 3 achieved significantly higher scores than Groups 1 and 2, with Group 1 slightly outperforming Group 2; Group 3 also reported the highest frequency of metacognitive strategy use, followed by Group 1 and then Group 2. Qualitative findings indicated that richer, more relevant, and authentic visual materials enhanced strategy effectiveness: Group 3’s AI-generated visuals better activated predictive, monitoring, and evaluative strategies by aligning with real language use scenarios. This study provides empirical and theoretical support for visual aid design in academic English listening tests.",
           "authors": [
             {
-              "name": "Wei Jiawen",
-              "affiliation": "Macao Polytechnic University",
-              "bio": "I (Wei Jiawen) am a second-year Master of Business Administration student at the Macao Polytechnic University. My research interests include language preservation, digital transformation, environmental legislation, green development, and regional economics. In terms of academic achievements, I have published four solo papers and one solo conference paper."
+              "name": "Tong Yao",
+              "affiliation": "Guangdong University of Foreign Studies",
+              "bio": "Tong Yao is a PhD candidate at the Center for Linguistics and Applied Linguistics, Guangdong University of Foreign Studies. Her research focuses on language testing, particularly the integration of generative AI and visual aids in academic English listening assessment. She has conducted empirical studies on test-taker performance and metacognitive strategy use, aiming to optimize visual support design for fairer and more effective language assessment."
             }
           ],
           "category": "theme-3",
@@ -2656,24 +2666,14 @@ window.AALA_PROGRAM = {
           "end": "14:30"
         },
         {
-          "id": "AALA20260154",
-          "title": "Validating a Computerized Dynamic Diagnostic Assessment of L2 Pragmatic Competence: An ABV and validity-as-fairness argument integrated approach",
-          "abstract": "The present study aims to carry out a comprehensive validation of a newly developed Computerized Dynamic Diagnostic Assessment of Pragmatic Competence (CDDA-P) by integrating an argument-based validation framework with a validity-as-fairness perspective. Positioned at the intersection of language assessment and sociocultural theory, the CDDA-P represents an innovative attempt to unify diagnostic and dynamic assessment features within a single computerized platform, thereby enhancing the diagnostic, intervention, and predictive functions of assessment. Our prior validation (Lu, Chen, & Yang, 2026) has demonstrated the system’s capacity to diagnose learners’ strengths and weaknesses, identify their zones of proximal development, and facilitate gains in pragmatic performance; the present study extends the validation argument to encompass broader considerations of effectiveness and fairness. A comprehensive validity argument was constructed by examining evidence related to domain definition, evaluation, explanation, utilization, impact, and fairness. Data were collected from 58 ESL learners and 7 expert raters using a mixed-methods design. Quantitative analyses included Many-Facet Rasch Model, Mann-Whitney U test, Friedman test, and Generalized Linear Mixed Models. Qualitative evidence was derived from verbal protocol analysis and thematic analysis, providing insights into learners’ cognitive and interactional processes during assessment. Findings indicate that the CDDA-P yields reliable and interpretable diagnostic information, effectively captures learners’ developmental potential, and supports meaningful gains in pragmatic competence. The study contributes to ongoing discussions of validity by illustrating how argument-based and fairness-oriented approaches can be jointly operationalized in technology-enhanced assessment contexts. Implications are drawn for the design and validation of specialized diagnostic language assessments, while also illuminating the application of argument-based validation and fairness-as-validity frameworks in low-stakes assessment contexts.",
+          "id": "AALA20260133",
+          "title": "Exploring the Application Path of Brain-Computer Interfaces in the Age of Artificial Intelligence from the Perspective of PRISMA",
+          "abstract": "In an era of rapid advancements in artificial intelligence, most languages worldwide face the threat of digital marginalization. Cantonese, as a vital language carrying rich Lingnan culture, is no exception, facing numerous severe challenges in its transmission and development. To explore new pathways for technology-enabled language preservation, this paper employs the PRISMA systematic literature review method, analyzing 63 articles on the application of brain-computer interface (BCI) technology in language studies. The analysis reveals a significant gap in BCI technology validation, primarily focusing on English and its application in medical rehabilitation, with substantial research gaps in language education and cultural transmission. Addressing this gap, this paper innovatively proposes application pathways for BCI technology in Cantonese transmission and establishes an interdisciplinary analytical framework integrating neuroscience, linguistics, and cultural studies. This paper focuses on three core application pathways of BCI technology in Cantonese transmission: first, the design of an immersive Cantonese learning system based on neurofeedback mechanisms; second, the development of BCI-assisted communication technologies for groups with language impairments; and third, the construction of a Cantonese cultural cognition database based on neural activity patterns. Finally, this paper delves into the ethical, technological, and cultural challenges involved in the application of BCI technology and looks forward to its future development prospects, aiming to provide an innovative theoretical framework and practical paradigm for the technological empowerment and protection of Cantonese and other endangered languages.",
           "authors": [
             {
-              "name": "Mengqi Chen",
-              "affiliation": "Ocean University of China",
-              "bio": "Mengqi Chen is a postgraduate student in the College of Foreign Languages at Ocean University of China. Her research interests include second language acquisition, language assessment, diagnostic assessment and computerized dynamic assessment."
-            },
-            {
-              "name": "Ying Chen",
-              "affiliation": "Ocean University of China",
-              "bio": "Ying Chen is Professor of Applied Linguistics at Ocean University of China. Her research interests include language assessment, diagnostic assessment, and research methodology. She has published in leading journals like Applied Linguistics, Language Testing, Language Teaching Research, and Modern Foreign Languages. She has led six funded projects and is the principal researcher of a national project supported by the National Planning Office for Philosophy and Social Sciences."
-            },
-            {
-              "name": "Xiaoxian Guan",
-              "affiliation": "East China Normal University",
-              "bio": "Xiaoxian Guan (Ph.D., Shanghai Jiao Tong University) is a faculty member at East China Normal University and a former visiting scholar at the University of Illinois Urbana-Champaign. Drawing on her extensive experience in teaching English reading and writing, she specializes in the integration of instructional design and assessment development. Dr. Guan currently leads school-based test development and item bank initiatives, applying pedagogical insights to enhance the reliability, validity, and washback of both high- and low-stakes institutional assessments."
+              "name": "Wei Jiawen",
+              "affiliation": "Macao Polytechnic University",
+              "bio": "I (Wei Jiawen) am a second-year Master of Business Administration student at the Macao Polytechnic University. My research interests include language preservation, digital transformation, environmental legislation, green development, and regional economics. In terms of academic achievements, I have published four solo papers and one solo conference paper."
             }
           ],
           "category": "theme-3",
@@ -2842,19 +2842,24 @@ window.AALA_PROGRAM = {
           "end": "15:00"
         },
         {
-          "id": "AALA20260149",
-          "title": "AI Source Disclosure and Chinese University EFL Learners’ Willingness to Use AI-Generated Texts as Reading Materials",
-          "abstract": "Generative AI in higher education is widely used by university students for language learning, writing assistance, and information searching. While AI-generated texts hold potential as educational tools, ethical considerations regarding transparency raise important questions about how learners perceive and utilize such content. This study investigates the impact of AI disclosure on Chinese English as a foreign language learners’ perceived credibility and willingness to use AI-generated texts for English learning. A total of 271 university students with intermediate English proficiency were randomly assigned to either an AI disclosure group (n = 134) or a non-disclosure group (n = 137). Participants evaluated the same AI-generated passage under different source cues and completed 10-point Likert-scale questionnaires measuring perceived credibility and willingness to use similar texts for English learning. Results showed that AI disclosure significantly reduced learners’ perceived credibility, while its direct effect on willingness to use was not significant. Learners were more willing to use AI-generated texts when they perceived them as more credible, and mediation analysis indicated that AI disclosure influenced willingness indirectly through reduced perceived credibility. Further analyses showed that disclosure lowered both the competence dimension and the trustworthiness dimension of perceived credibility. However, the trustworthiness dimension emerged as the stronger predictor of willingness to use. Within-group analyses confirmed this pattern: in the non-disclosure group, only the trustworthiness dimension predicted willingness, whereas in the disclosure group, both dimensions were significant, with the trustworthiness dimension remaining the stronger predictor. These findings suggest that transparent use of AI-generated materials should be supported by credibility-building practices. Results bear important implications for the ethical and social dimensions of AI use in educational and assessment contexts, providing practical recommendations for integrating AI-generated materials into language learning and assessment. These recommendations address the increasingly popular application of automated content and item generation in language assessments.",
+          "id": "AALA20260140",
+          "title": "Language Assessment Literacy among Chinese EFL Teachers in Primary and Secondary Schools",
+          "abstract": "Despite its importance, language assessment literacy (LAL) remains underexplored among primary and secondary school teachers in China, particularly across different educational levels and social contexts. To address the research gaps, this study selected Guangdong and Henan provinces as the focal regions due to their vast number of participants for college entrance examinations and different socio-economic profiles. Kremmel and Harding’s (2020) LAL questionnaire was adapted and distributed among primary and secondary EFL teachers working in the two regions to examine their LAL levels. Based on 155 valid responses, teachers’ reported LAL levels were first compared to the perceived LAL needs profile for language teachers (Kremmel & Harding, 2020), and then examined across teachers’ experiential and contextual characteristics. Results indicated that teachers’ LAL proficiency did not reach the perceived levels needed, except in the dimension of assessment policy and local practices. In addition to the importance of language testing and assessment training for teachers’ LAL development, this study also identified regional variations in teachers LAL levels. For example, teachers in Guangdong province reported to be more proficient in knowledge of language assessment concepts, while primary teachers in Henan province reported to be more proficient in language assessment skills and knowledge of using assessment in language pedagogy. These findings further underscore the importance of contextual factors in LAL and language assessment, demonstrating the significance of designing context-specific language assessment programs for teachers in different provinces of China.",
           "authors": [
             {
-              "name": "Qiling Zhang",
-              "affiliation": "University of Macau",
-              "bio": "Qiling Zhang (alinazqling@163.com) is a Master's student in English Studies in the Department of English at the University of Macau. Her research interests focus on generative AI in language education, AI literacy assessment, and adaptive reading assessment. Prior to her Master's studies, she obtained a Bachelor’s degree in Translation from Nanjing University of Information Science and Technology."
+              "name": "Jincheng Wu",
+              "affiliation": "Hunan University",
+              "bio": "Jincheng WU is Assistant Professor in the School of Foreign Languages, Hunan University. His research interests include multimodal composing and its assessment, English for academic purposes, and second language teaching and learning."
+            },
+            {
+              "name": "Hongmei Liang",
+              "affiliation": "South China Normal University",
+              "bio": "Hongmei LIANG, Ph.D., is a lecturer in the School of Foreign Studies at South China Normal University. Her research interests include corpus linguistics, phraseology, and corpus assisted language learning."
             },
             {
               "name": "Cecilia Guanfang Zhao",
               "affiliation": "University of Macau",
-              "bio": "Cecilia Guanfang Zhao is an Associate Professor of Applied Linguistics in the Department of English at the University of Macau."
+              "bio": "Cecilia Guanfang ZHAO is Associate Professor in the Department of English, Faculty of Arts and Humanities, University of Macau. Her research interests include language assessment, second language writing, English for academic purposes, and second language teaching and learning."
             }
           ],
           "category": "theme-3",
@@ -2885,8 +2890,8 @@ window.AALA_PROGRAM = {
               "bio": ""
             }
           ],
-          "category": "featured",
-          "categoryLabel": "Featured",
+          "category": "other",
+          "categoryLabel": "Best dissertation",
           "room": "HG01",
           "start": "15:30",
           "end": "16:00"
@@ -2980,19 +2985,19 @@ window.AALA_PROGRAM = {
           "end": "16:00"
         },
         {
-          "id": "AALA2026038",
-          "title": "An AI-Assisted Writing Assessment and Feedback Tool for Young L2 Learners of English: Investigating Student Use and Perceptions",
-          "abstract": "Generative AI tools have gained traction as writing assistants for L2 learners because of their capability to provide immediate and personalized feedback (Barrot, 2023). A growing body of research has examined how L2 learners and teachers engage with AI tools such as ChatGPT for writing development (e.g., Koltovskaia et al., 2024; Guo & Wang, 2024). However, most studies focus on adult learners, and empirical research on the use of AI tools with younger, school-aged L2 learners remains limited.\n\nAddressing this gap, this study investigates how young L2 learners interact with an AI tool during the writing process. The study utilized an AI-assisted writing assessment and feedback prototype developed for K–12 English learners. The tool features a chatbot employing the GPT-4o model, allowing for interactive feedback. Specifically, we examined the types of chat messages students produced, how they incorporated AI feedback into revisions, and their perceptions of the tool.\n\nParticipants included eight teachers and their L2 learners (N = 206) in Grades 4 to 9 from China, Korea, Turkiye, and the USA. Students interacted with the chatbot during outlining and revision across three prompts and completed a survey. Chat messages were coded, while first and revised drafts were analyzed using NLP technologies. Descriptive statistics of the codings, NLP features, and survey responses were computed to identify patterns.\n\nResults showed substantial variation in chatbot use (1 to 39 messages per student; M = 5.9), with more interactions during outlining than revision. Translation and idea development requests were most frequent, followed by grammar-related queries. Students’ use of AI feedback in revisions also varied. Survey responses indicated positive perceptions of the tool, although the degree of positivity differed across classrooms. The findings have implications for classroom writing assessments and teachers’ roles in guiding young learners’ effective and appropriate use of AI in writing.",
+          "id": "AALA20260146",
+          "title": "Mapping Theoretical Frameworks Supporting AI Integration in L2 Assessment: A Systematic Review in the GenAI Era",
+          "abstract": "Generative Artificial Intelligence (GenAI) has created new possibilities for second language (L2) assessment, enabling adaptive feedback, automated scoring, and intelligent item generation. Despite rapid growth, the theoretical foundations guiding AI integration remain underexplored. Existing reviews mainly focus on challenges and opportunities, and AWE systems, often lacking a systematic mapping of theoretical frameworks across assessment dimensions. In this study, theoretical frameworks refer to conceptual, assessment, or pedagogical theories that explain how AI is integrated into L2 assessment. As theory guides research practice, examining the theoretical grounding of GenAI-based innovations is essential.\nThis study conducts a PRISMA-guided systematic review of peer-reviewed empirical research (2023-2025) in Web of Science and Scopus. The initial search yielded 179 records, of which 71 studies met the inclusion criteria. The review addresses three questions concerning frameworks and tools, use across dimensions and skills, and emerging themes and directions.\nPreliminary analysis of 21 coded studies shows that fewer than half explicitly adopt theoretical frameworks. Among these, generalizability theory is used to examine reliability by modeling sources of score variance in AI-assisted scoring while some studies reflect construct-oriented considerations in task design and scoring without explicitly theoretical grounding. It suggests that theoretical applications are limited, uneven, and primarily associated with writing contexts   Further findings show that ChatGPT is the most widely used GenAI tool, while others are less frequently examined. Research focuses on scoring and feedback in writing, with limited attention to other skills and assessment dimensions. Key themes include validity and reliability concerns, human-AI collaboration, and AI-generated feedback. Future directions focus on improving validation, refining technical aspects (e.g., prompt design and model performance), and expanding research tasks and contexts.   By mapping the theoretical landscape of AI-driven L2 assessment, this study clarifies how theory supports AI integration and highlights the need for more theoretically grounded and methodologically robust research.",
           "authors": [
             {
-              "name": "Mikyung Kim Wolf",
-              "affiliation": "ETS",
-              "bio": "Mikyung Kim Wolf is a principal research scientist at ETS. She has over 20 years of experience in developing and researching language assessments for multilingual learners. Her research areas include technology-enhanced language assessments, the use of AI in language assessment and learning, formative assessment, and validity issues in assessing K-12 English language learners both in the U.S. and globally. She has edited two volumes: Assessing English Language Proficiency in U.S. K-12 Schools (2020, Routledge) and English Language Proficiency Assessment for Young Learners (2017, Routledge)."
+              "name": "Han Qiqi",
+              "affiliation": "University of Macau",
+              "bio": "Han Qiqi (Miki) is a PhD student at the Faculty of Education, University of Macau, under the supervision of Prof."
             },
             {
-              "name": "Michael Suhan, ETS, msuhan@ets.org",
-              "affiliation": "",
-              "bio": ""
+              "name": "Xie Qin",
+              "affiliation": "University of Macau",
+              "bio": "Xie Qin. Her research interests include language testing and assessment, second language acquisition, and the use of artificial intelligence in language education. She is currently involved in a systematic review exploring theoretical frameworks related to AI integration in L2 assessment."
             }
           ],
           "category": "theme-3",
@@ -3019,19 +3024,19 @@ window.AALA_PROGRAM = {
           "end": "16:00"
         },
         {
-          "id": "AALA2026068",
-          "title": "Reflecting Through Data: How Chinese EFL Teachers Engage with a Multimodal Learning Analytics System for Professional Development",
-          "abstract": "Reflective practice is vital for developing teacher assessment literacy (TAL), yet traditional methods often rely on subjective judgment. While Multimodal Learning Analytics (MMLA) offers automated, data-driven insights, its impact on TAL requires further empirical study. This research explores the district-wide integration of an MMLA system designed to help teachers monitor and revise classroom questioning, a common assessment type in Chinese K-12 contexts. Using Actor-Network Theory (ANT), the study conceptualizes MMLA adoption as the formation and stabilization of sociomaterial networks and examines the influence of these networks on TAL development. Adopting a qualitative design, we conducted semi-structured interviews with four secondary school EFL teachers and collected artifacts of system use, including MMLA reports and reflective documents. ANT-informed analysis focused on the negotiation processes through which actors define problems, recruit allies, and stabilize (or destabilize) the network. Findings indicate that district- and school-level support were critical in enrolling teachers and stabilizing the MMLA network. Teachers also actively engaged in negotiations to sustain the system’s use, which prevented the networks from dissolving but resulted in only partial realization of the original goals. Network effects on TAL were different for individual teachers: some utilized MMLA data as a formative tool to iteratively improve their classroom assessment designs, both individually and collaboratively in community activities, while others distanced themselves from the network, implementing minimal change. Crucially, the study found that assessment designs became increasingly aligned with dominant district discourses through system use. The study highlights the necessity of both institutional support and teacher agency for sustainable MMLA integration. It also cautions against top-down, discourse-laden technological implementations that may limit the transformative potential of reflective practice.",
+          "id": "AALA20260149",
+          "title": "AI Source Disclosure and Chinese University EFL Learners’ Willingness to Use AI-Generated Texts as Reading Materials",
+          "abstract": "Generative AI in higher education is widely used by university students for language learning, writing assistance, and information searching. While AI-generated texts hold potential as educational tools, ethical considerations regarding transparency raise important questions about how learners perceive and utilize such content. This study investigates the impact of AI disclosure on Chinese English as a foreign language learners’ perceived credibility and willingness to use AI-generated texts for English learning. A total of 271 university students with intermediate English proficiency were randomly assigned to either an AI disclosure group (n = 134) or a non-disclosure group (n = 137). Participants evaluated the same AI-generated passage under different source cues and completed 10-point Likert-scale questionnaires measuring perceived credibility and willingness to use similar texts for English learning. Results showed that AI disclosure significantly reduced learners’ perceived credibility, while its direct effect on willingness to use was not significant. Learners were more willing to use AI-generated texts when they perceived them as more credible, and mediation analysis indicated that AI disclosure influenced willingness indirectly through reduced perceived credibility. Further analyses showed that disclosure lowered both the competence dimension and the trustworthiness dimension of perceived credibility. However, the trustworthiness dimension emerged as the stronger predictor of willingness to use. Within-group analyses confirmed this pattern: in the non-disclosure group, only the trustworthiness dimension predicted willingness, whereas in the disclosure group, both dimensions were significant, with the trustworthiness dimension remaining the stronger predictor. These findings suggest that transparent use of AI-generated materials should be supported by credibility-building practices. Results bear important implications for the ethical and social dimensions of AI use in educational and assessment contexts, providing practical recommendations for integrating AI-generated materials into language learning and assessment. These recommendations address the increasingly popular application of automated content and item generation in language assessments.",
           "authors": [
             {
-              "name": "Yi Ding",
-              "affiliation": "Fudan University",
-              "bio": "Yi Ding is a graduate student at the College of Foreign Languages and Literature, Fudan University. The main focus of her research is assessment practices within K-12 contexts, with a specific interest in teacher assessment literacy. Her work explores how the integration of technology into assessment can enhance teaching effectiveness and support student learning."
+              "name": "Qiling Zhang",
+              "affiliation": "University of Macau",
+              "bio": "Qiling Zhang (alinazqling@163.com) is a Master's student in English Studies in the Department of English at the University of Macau. Her research interests focus on generative AI in language education, AI literacy assessment, and adaptive reading assessment. Prior to her Master's studies, she obtained a Bachelor’s degree in Translation from Nanjing University of Information Science and Technology."
             },
             {
-              "name": "Jiming Zhou",
-              "affiliation": "Fudan University",
-              "bio": ""
+              "name": "Cecilia Guanfang Zhao",
+              "affiliation": "University of Macau",
+              "bio": "Cecilia Guanfang Zhao is an Associate Professor of Applied Linguistics in the Department of English at the University of Macau."
             }
           ],
           "category": "theme-3",
@@ -3041,19 +3046,19 @@ window.AALA_PROGRAM = {
           "end": "16:00"
         },
         {
-          "id": "AALA20260146",
-          "title": "Mapping Theoretical Frameworks Supporting AI Integration in L2 Assessment: A Systematic Review in the GenAI Era",
-          "abstract": "Generative Artificial Intelligence (GenAI) has created new possibilities for second language (L2) assessment, enabling adaptive feedback, automated scoring, and intelligent item generation. Despite rapid growth, the theoretical foundations guiding AI integration remain underexplored. Existing reviews mainly focus on challenges and opportunities, and AWE systems, often lacking a systematic mapping of theoretical frameworks across assessment dimensions. In this study, theoretical frameworks refer to conceptual, assessment, or pedagogical theories that explain how AI is integrated into L2 assessment. As theory guides research practice, examining the theoretical grounding of GenAI-based innovations is essential.\nThis study conducts a PRISMA-guided systematic review of peer-reviewed empirical research (2023-2025) in Web of Science and Scopus. The initial search yielded 179 records, of which 71 studies met the inclusion criteria. The review addresses three questions concerning frameworks and tools, use across dimensions and skills, and emerging themes and directions.\nPreliminary analysis of 21 coded studies shows that fewer than half explicitly adopt theoretical frameworks. Among these, generalizability theory is used to examine reliability by modeling sources of score variance in AI-assisted scoring while some studies reflect construct-oriented considerations in task design and scoring without explicitly theoretical grounding. It suggests that theoretical applications are limited, uneven, and primarily associated with writing contexts   Further findings show that ChatGPT is the most widely used GenAI tool, while others are less frequently examined. Research focuses on scoring and feedback in writing, with limited attention to other skills and assessment dimensions. Key themes include validity and reliability concerns, human-AI collaboration, and AI-generated feedback. Future directions focus on improving validation, refining technical aspects (e.g., prompt design and model performance), and expanding research tasks and contexts.   By mapping the theoretical landscape of AI-driven L2 assessment, this study clarifies how theory supports AI integration and highlights the need for more theoretically grounded and methodologically robust research.",
+          "id": "AALA2026038",
+          "title": "An AI-Assisted Writing Assessment and Feedback Tool for Young L2 Learners of English: Investigating Student Use and Perceptions",
+          "abstract": "Generative AI tools have gained traction as writing assistants for L2 learners because of their capability to provide immediate and personalized feedback (Barrot, 2023). A growing body of research has examined how L2 learners and teachers engage with AI tools such as ChatGPT for writing development (e.g., Koltovskaia et al., 2024; Guo & Wang, 2024). However, most studies focus on adult learners, and empirical research on the use of AI tools with younger, school-aged L2 learners remains limited.\n\nAddressing this gap, this study investigates how young L2 learners interact with an AI tool during the writing process. The study utilized an AI-assisted writing assessment and feedback prototype developed for K–12 English learners. The tool features a chatbot employing the GPT-4o model, allowing for interactive feedback. Specifically, we examined the types of chat messages students produced, how they incorporated AI feedback into revisions, and their perceptions of the tool.\n\nParticipants included eight teachers and their L2 learners (N = 206) in Grades 4 to 9 from China, Korea, Turkiye, and the USA. Students interacted with the chatbot during outlining and revision across three prompts and completed a survey. Chat messages were coded, while first and revised drafts were analyzed using NLP technologies. Descriptive statistics of the codings, NLP features, and survey responses were computed to identify patterns.\n\nResults showed substantial variation in chatbot use (1 to 39 messages per student; M = 5.9), with more interactions during outlining than revision. Translation and idea development requests were most frequent, followed by grammar-related queries. Students’ use of AI feedback in revisions also varied. Survey responses indicated positive perceptions of the tool, although the degree of positivity differed across classrooms. The findings have implications for classroom writing assessments and teachers’ roles in guiding young learners’ effective and appropriate use of AI in writing.",
           "authors": [
             {
-              "name": "Han Qiqi",
-              "affiliation": "University of Macau",
-              "bio": "Han Qiqi (Miki) is a PhD student at the Faculty of Education, University of Macau, under the supervision of Prof."
+              "name": "Mikyung Kim Wolf",
+              "affiliation": "ETS",
+              "bio": "Mikyung Kim Wolf is a principal research scientist at ETS. She has over 20 years of experience in developing and researching language assessments for multilingual learners. Her research areas include technology-enhanced language assessments, the use of AI in language assessment and learning, formative assessment, and validity issues in assessing K-12 English language learners both in the U.S. and globally. She has edited two volumes: Assessing English Language Proficiency in U.S. K-12 Schools (2020, Routledge) and English Language Proficiency Assessment for Young Learners (2017, Routledge)."
             },
             {
-              "name": "Xie Qin",
-              "affiliation": "University of Macau",
-              "bio": "Xie Qin. Her research interests include language testing and assessment, second language acquisition, and the use of artificial intelligence in language education. She is currently involved in a systematic review exploring theoretical frameworks related to AI integration in L2 assessment."
+              "name": "Michael Suhan, ETS, msuhan@ets.org",
+              "affiliation": "",
+              "bio": ""
             }
           ],
           "category": "theme-3",
@@ -3136,14 +3141,19 @@ window.AALA_PROGRAM = {
           "end": "16:30"
         },
         {
-          "id": "AALA2026091",
-          "title": "The Best of Both Worlds? A Mixed-Methods Evaluation of AI-Mediated Formative Feedback and Feedback Literacy in Malaysian Higher Education",
-          "abstract": "The rapid integration of artificial intelligence (AI) has shifted the landscape of formative assessment, offering immediate, automated feedback to student writers. While AI tools provide a potential solution to feedback bottlenecks in tertiary settings, little is known about how students critically negotiate these suggestions or the extent of their \"AI feedback literacy\". This study employed a sequential exploratory mixed-methods design to investigate the perceptions of 210 undergraduate ESL students at a Malaysian public university. Quantitative survey data were complemented by qualitative narratives gathered through focus group interviews to explore the lived experience of using AI for academic writing. The findings indicate that students perceive AI-mediated formative feedback as a highly effective tool for identifying language issues and expanding academic vocabulary. Beyond cognitive support, the use of AI feedback was found to foster learner autonomy and provide significant affective support by increasing writing confidence and reducing anxiety. Students particularly valued the immediacy of the feedback, which allowed for real-time revisions during the drafting process. However, a notable literacy gap emerged: despite finding the tools effective, students expressed lower confidence in their ability to critically evaluate the quality of AI-generated suggestions. Consequently, participants reported a strong preference for a hybrid model where AI-powered diagnostic support is combined with human instructor guidance rather than replacing it. The study concludes that while AI serves as an efficient diagnostic \"scaffold,\" it does not replace the human instructor’s role in navigating nuance and tone. For a truly \"best of both worlds\" approach, higher education assessment frameworks must prioritize the development of student feedback literacy to ensure ethical and critical engagement with automated tools.",
+          "id": "AALA2026099",
+          "title": "Assessing L2 Interactional Competence with LLM-based AI Agents: Do Interaction Styles Matter?",
+          "abstract": "Interactional competence (IC) is a key component of second language oral proficiency, reflecting how learners manage interactive communication through strategies such as turn-taking, topic management, and repair. Accurate assessment of IC is resource-intensive and challenging, as interlocutor idiosyncrasies can threaten test validity and fairness. Spoken dialogue systems (SDSs) offer a more stable alternative to mitigate interlocutor variability. However, SDSs often yield procedural, constrained exchanges that limit their potential to assess a full range of IC. By contrast, large language model (LLM)–based chatbots offer greater flexibility and human-like responsiveness. Because unconstrained LLMs can over-manage discourse, reducing opportunities for learners to display IC, configuring AI bots’ interaction styles is critical for designing conversational agents.\nThis study examined whether purposefully designed LLM-based AI agents with distinct interaction styles can elicit robust IC evidence from learners of Chinese as a second language (CSL). Thirty CSL learners completed the same oral tasks with an AI agent configured in three styles—interviewer, facilitator, and conversational partner—in a counterbalanced design. All interactions were audio-recorded, transcribed, and analyzed for interactional features. The findings inform the design of GenAI chatbots as test interlocutors that are capable of balancing scaffolding with conversational space to elicit sufficient evidence of IC. This study offers practical implications for developing and assessing IC with LLM-based AI agents and provides fresh insights into refining AI chatbot designs to ensure reliable, authentic, and valid assessments.",
           "authors": [
             {
-              "name": "Norhaslinda Hassan",
-              "affiliation": "Universiti Teknologi Mara",
-              "bio": "Dr. Norhaslinda Hassan is a Senior Lecturer at Universiti Teknologi MARA (UiTM) Penang Branch Campus with a specialized background in language assessment. Her research has centered on washback, learning oriented assessment and formative assessment practices within ESL instruction. Currently, she leads international research on AI-mediated feedback to enhance learner autonomy and feedback literacy. She advocates for a hybrid assessment model that balances the efficiency of automated tools with essential human pedagogical expertise."
+              "name": "Yang Yang",
+              "affiliation": "University of Macau",
+              "bio": "Yang Yang is a PhD student in the Faculty of Education at the University of Macau. Her research focuses on Language Testing and Assessment and the application of AI technology in education."
+            },
+            {
+              "name": "Qin Xie",
+              "affiliation": "University of Macau",
+              "bio": "Dr. Qin Xie is an Associate Professor at the Faculty of Education, University of Macau. She has published extensively in international peer-reviewed journals focusing on various topics of language assessment, such as washback, test validation, diagnostic assessment of academic writing, and formative assessment in ESL writing classrooms."
             }
           ],
           "category": "theme-3",
@@ -3175,24 +3185,19 @@ window.AALA_PROGRAM = {
           "end": "16:30"
         },
         {
-          "id": "AALA20260140",
-          "title": "Language Assessment Literacy among Chinese EFL Teachers in Primary and Secondary Schools",
-          "abstract": "Despite its importance, language assessment literacy (LAL) remains underexplored among primary and secondary school teachers in China, particularly across different educational levels and social contexts. To address the research gaps, this study selected Guangdong and Henan provinces as the focal regions due to their vast number of participants for college entrance examinations and different socio-economic profiles. Kremmel and Harding’s (2020) LAL questionnaire was adapted and distributed among primary and secondary EFL teachers working in the two regions to examine their LAL levels. Based on 155 valid responses, teachers’ reported LAL levels were first compared to the perceived LAL needs profile for language teachers (Kremmel & Harding, 2020), and then examined across teachers’ experiential and contextual characteristics. Results indicated that teachers’ LAL proficiency did not reach the perceived levels needed, except in the dimension of assessment policy and local practices. In addition to the importance of language testing and assessment training for teachers’ LAL development, this study also identified regional variations in teachers LAL levels. For example, teachers in Guangdong province reported to be more proficient in knowledge of language assessment concepts, while primary teachers in Henan province reported to be more proficient in language assessment skills and knowledge of using assessment in language pedagogy. These findings further underscore the importance of contextual factors in LAL and language assessment, demonstrating the significance of designing context-specific language assessment programs for teachers in different provinces of China.",
+          "id": "AALA2026068",
+          "title": "Reflecting Through Data: How Chinese EFL Teachers Engage with a Multimodal Learning Analytics System for Professional Development",
+          "abstract": "Reflective practice is vital for developing teacher assessment literacy (TAL), yet traditional methods often rely on subjective judgment. While Multimodal Learning Analytics (MMLA) offers automated, data-driven insights, its impact on TAL requires further empirical study. This research explores the district-wide integration of an MMLA system designed to help teachers monitor and revise classroom questioning, a common assessment type in Chinese K-12 contexts. Using Actor-Network Theory (ANT), the study conceptualizes MMLA adoption as the formation and stabilization of sociomaterial networks and examines the influence of these networks on TAL development. Adopting a qualitative design, we conducted semi-structured interviews with four secondary school EFL teachers and collected artifacts of system use, including MMLA reports and reflective documents. ANT-informed analysis focused on the negotiation processes through which actors define problems, recruit allies, and stabilize (or destabilize) the network. Findings indicate that district- and school-level support were critical in enrolling teachers and stabilizing the MMLA network. Teachers also actively engaged in negotiations to sustain the system’s use, which prevented the networks from dissolving but resulted in only partial realization of the original goals. Network effects on TAL were different for individual teachers: some utilized MMLA data as a formative tool to iteratively improve their classroom assessment designs, both individually and collaboratively in community activities, while others distanced themselves from the network, implementing minimal change. Crucially, the study found that assessment designs became increasingly aligned with dominant district discourses through system use. The study highlights the necessity of both institutional support and teacher agency for sustainable MMLA integration. It also cautions against top-down, discourse-laden technological implementations that may limit the transformative potential of reflective practice.",
           "authors": [
             {
-              "name": "Jincheng Wu",
-              "affiliation": "Hunan University",
-              "bio": "Jincheng WU is Assistant Professor in the School of Foreign Languages, Hunan University. His research interests include multimodal composing and its assessment, English for academic purposes, and second language teaching and learning."
+              "name": "Yi Ding",
+              "affiliation": "Fudan University",
+              "bio": "Yi Ding is a graduate student at the College of Foreign Languages and Literature, Fudan University. The main focus of her research is assessment practices within K-12 contexts, with a specific interest in teacher assessment literacy. Her work explores how the integration of technology into assessment can enhance teaching effectiveness and support student learning."
             },
             {
-              "name": "Hongmei Liang",
-              "affiliation": "South China Normal University",
-              "bio": "Hongmei LIANG, Ph.D., is a lecturer in the School of Foreign Studies at South China Normal University. Her research interests include corpus linguistics, phraseology, and corpus assisted language learning."
-            },
-            {
-              "name": "Cecilia Guanfang Zhao",
-              "affiliation": "University of Macau",
-              "bio": "Cecilia Guanfang ZHAO is Associate Professor in the Department of English, Faculty of Arts and Humanities, University of Macau. Her research interests include language assessment, second language writing, English for academic purposes, and second language teaching and learning."
+              "name": "Jiming Zhou",
+              "affiliation": "Fudan University",
+              "bio": ""
             }
           ],
           "category": "theme-3",
@@ -3213,19 +3218,14 @@ window.AALA_PROGRAM = {
           "end": "17:00"
         },
         {
-          "id": "AALA2026099",
-          "title": "Assessing L2 Interactional Competence with LLM-based AI Agents: Do Interaction Styles Matter?",
-          "abstract": "Interactional competence (IC) is a key component of second language oral proficiency, reflecting how learners manage interactive communication through strategies such as turn-taking, topic management, and repair. Accurate assessment of IC is resource-intensive and challenging, as interlocutor idiosyncrasies can threaten test validity and fairness. Spoken dialogue systems (SDSs) offer a more stable alternative to mitigate interlocutor variability. However, SDSs often yield procedural, constrained exchanges that limit their potential to assess a full range of IC. By contrast, large language model (LLM)–based chatbots offer greater flexibility and human-like responsiveness. Because unconstrained LLMs can over-manage discourse, reducing opportunities for learners to display IC, configuring AI bots’ interaction styles is critical for designing conversational agents.\nThis study examined whether purposefully designed LLM-based AI agents with distinct interaction styles can elicit robust IC evidence from learners of Chinese as a second language (CSL). Thirty CSL learners completed the same oral tasks with an AI agent configured in three styles—interviewer, facilitator, and conversational partner—in a counterbalanced design. All interactions were audio-recorded, transcribed, and analyzed for interactional features. The findings inform the design of GenAI chatbots as test interlocutors that are capable of balancing scaffolding with conversational space to elicit sufficient evidence of IC. This study offers practical implications for developing and assessing IC with LLM-based AI agents and provides fresh insights into refining AI chatbot designs to ensure reliable, authentic, and valid assessments.",
+          "id": "AALA2026091",
+          "title": "The Best of Both Worlds? A Mixed-Methods Evaluation of AI-Mediated Formative Feedback and Feedback Literacy in Malaysian Higher Education",
+          "abstract": "The rapid integration of artificial intelligence (AI) has shifted the landscape of formative assessment, offering immediate, automated feedback to student writers. While AI tools provide a potential solution to feedback bottlenecks in tertiary settings, little is known about how students critically negotiate these suggestions or the extent of their \"AI feedback literacy\". This study employed a sequential exploratory mixed-methods design to investigate the perceptions of 210 undergraduate ESL students at a Malaysian public university. Quantitative survey data were complemented by qualitative narratives gathered through focus group interviews to explore the lived experience of using AI for academic writing. The findings indicate that students perceive AI-mediated formative feedback as a highly effective tool for identifying language issues and expanding academic vocabulary. Beyond cognitive support, the use of AI feedback was found to foster learner autonomy and provide significant affective support by increasing writing confidence and reducing anxiety. Students particularly valued the immediacy of the feedback, which allowed for real-time revisions during the drafting process. However, a notable literacy gap emerged: despite finding the tools effective, students expressed lower confidence in their ability to critically evaluate the quality of AI-generated suggestions. Consequently, participants reported a strong preference for a hybrid model where AI-powered diagnostic support is combined with human instructor guidance rather than replacing it. The study concludes that while AI serves as an efficient diagnostic \"scaffold,\" it does not replace the human instructor’s role in navigating nuance and tone. For a truly \"best of both worlds\" approach, higher education assessment frameworks must prioritize the development of student feedback literacy to ensure ethical and critical engagement with automated tools.",
           "authors": [
             {
-              "name": "Yang Yang",
-              "affiliation": "University of Macau",
-              "bio": "Yang Yang is a PhD student in the Faculty of Education at the University of Macau. Her research focuses on Language Testing and Assessment and the application of AI technology in education."
-            },
-            {
-              "name": "Qin Xie",
-              "affiliation": "University of Macau",
-              "bio": "Dr. Qin Xie is an Associate Professor at the Faculty of Education, University of Macau. She has published extensively in international peer-reviewed journals focusing on various topics of language assessment, such as washback, test validation, diagnostic assessment of academic writing, and formative assessment in ESL writing classrooms."
+              "name": "Norhaslinda Hassan",
+              "affiliation": "Universiti Teknologi Mara",
+              "bio": "Dr. Norhaslinda Hassan is a Senior Lecturer at Universiti Teknologi MARA (UiTM) Penang Branch Campus with a specialized background in language assessment. Her research has centered on washback, learning oriented assessment and formative assessment practices within ESL instruction. Currently, she leads international research on AI-mediated feedback to enhance learner autonomy and feedback literacy. She advocates for a hybrid assessment model that balances the efficiency of automated tools with essential human pedagogical expertise."
             }
           ],
           "category": "theme-3",
@@ -3236,7 +3236,7 @@ window.AALA_PROGRAM = {
         },
         {
           "id": "AALA2026060",
-          "title": "Human?Centred Re?thinking of Academic English Assessment: Evidence from a Large?Scale Scoping Review and Stakeholder Interviews",
+          "title": "Human-Centred Re-thinking of Academic English Assessment: Evidence from a Large-Scale Scoping Review and Stakeholder Interviews",
           "abstract": "As English-medium higher education is increasingly shaped by digital and AI-mediated communication, prevailing academic English proficiency constructs may not fully capture the integrated and interactional language demands students now face. Building on Xi’s (2025) argument that communicative competence and language assessment constructs should be reconsidered in response to AI-mediated communication, this paper re-examines what counts as academic English in contemporary English-medium higher education and how pre-enrolment language assessment can better reflect the competencies needed for meaningful participation.\nAdopting a human-centred assessment perspective, the study defines construct relevance in relation to students’ and faculty members’ lived academic practices and the consequences of assessment decisions. It investigates: (1) how students use English across academic, institutional, social, and wellbeing domains; (2) which knowledge and skills are required for successful participation and are relevant to pre-enrolment assessment; and (3) which of these demands are likely to remain salient in the future.\nThe study draws on two complementary sources of evidence: a scoping review of 94 peer-reviewed studies and semi-structured interviews with international students (n = 15) and faculty members (n = 8) experienced in English-medium higher education. Interview protocols were informed by the review, enabling triangulation between published research and stakeholders’ lived experiences.\nAcross both data sources, academic English emerges not as a set of discrete skills but as an integrated, task-embedded construct shaped by interaction, mediation, and participation within academic communities. Reading and writing remain central but are closely intertwined with listening and speaking in lectures, discussions, presentations, and interaction. Language use also extends beyond coursework to engagement with institutional services, social participation, professional networking, and wellbeing. The findings support a human-centred approach to assessment design that moves beyond static, decontextualised proficiency models toward broader construct definitions and more integrated tasks reflecting authentic participation, learner agency, and student wellbeing.",
           "authors": [
             {
