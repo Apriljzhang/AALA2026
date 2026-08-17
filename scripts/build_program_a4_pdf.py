@@ -50,7 +50,7 @@ CATEGORY_COLOURS = {
 }
 
 ROOM_ORDER = [
-    "Culture Centre Room 1", "Culture Centre Room 2", "HG02", "HG01", "HG03",
+    "Culture Centre Room 1", "Culture Centre Room 2", "HG01", "HG02", "HG03",
     "L205", "L206", "L207", "L305", "L306", "L307", "Poster area",
 ]
 SHARED = {"break", "plenary", "ceremony"}
