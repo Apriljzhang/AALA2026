@@ -149,7 +149,7 @@ def header(c, title, subtitle, page_number, total_pages):
     c.rect(0, height - 26 * mm, width, 1 * mm, fill=1, stroke=0)
     c.setFillColor(MUTED)
     c.setFont("AALARegular", 7.5)
-    c.drawString(12 * mm, 7 * mm, f"University of Macau | 18-21 September 2026 | Updated {UPDATED} | Programme details and time slots are subject to adjustment.")
+    c.drawString(12 * mm, 7 * mm, f"City University of Macau | 18-21 September 2026 | Updated {UPDATED} | Programme details and time slots are subject to adjustment.")
     c.drawRightString(width - 12 * mm, 7 * mm, f"Page {page_number} of {total_pages}")
 
 
