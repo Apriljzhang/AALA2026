@@ -1,5 +1,5 @@
 window.AALA_PROGRAM = {
-  "generatedFrom": "20260815 AALA2026_All.xlsx",
+  "generatedFrom": "20260815 AALA2026_All.xlsx (schedule revised 17 August 2026)",
   "title": "AALA 2026 Detailed Programme",
   "venue": "University of Macau",
   "days": [
@@ -11,12 +11,12 @@ window.AALA_PROGRAM = {
       "events": [
         {
           "id": "",
-          "title": "Registration at Culture Centre",
+          "title": "Registration at Culture Centre Entrance",
           "abstract": "",
           "authors": [],
           "category": "break",
           "categoryLabel": "Programme activity",
-          "room": "Room 1",
+          "room": "Culture Centre Entrance",
           "start": "13:00",
           "end": "14:00"
         },
@@ -78,7 +78,7 @@ window.AALA_PROGRAM = {
           "authors": [],
           "category": "break",
           "categoryLabel": "Programme activity",
-          "room": "Room 1",
+          "room": "Zam Zam",
           "start": "17:30",
           "end": "18:30"
         },
@@ -104,12 +104,12 @@ window.AALA_PROGRAM = {
       "events": [
         {
           "id": "",
-          "title": "Registration at Culture Centre",
+          "title": "Registration at Culture Centre Entrance",
           "abstract": "",
           "authors": [],
           "category": "break",
           "categoryLabel": "Programme activity",
-          "room": "Culture Centre",
+          "room": "Culture Centre Entrance",
           "start": "08:30",
           "end": "09:00"
         },
@@ -120,7 +120,7 @@ window.AALA_PROGRAM = {
           "authors": [],
           "category": "ceremony",
           "categoryLabel": "Opening / closing / social",
-          "room": "Culture Centre",
+          "room": "Culture Centre Theatre",
           "start": "09:00",
           "end": "09:30"
         },
@@ -137,7 +137,7 @@ window.AALA_PROGRAM = {
           ],
           "category": "plenary",
           "categoryLabel": "Plenary",
-          "room": "Culture Centre",
+          "room": "Culture Centre Theatre",
           "start": "09:30",
           "end": "10:30"
         },
@@ -148,242 +148,9 @@ window.AALA_PROGRAM = {
           "authors": [],
           "category": "break",
           "categoryLabel": "Programme activity",
-          "room": "",
+          "room": "Culture Centre Room 1 & 2",
           "start": "10:30",
           "end": "11:00"
-        },
-        {
-          "id": "",
-          "title": "Full-day poster presentations",
-          "abstract": "",
-          "authors": [],
-          "category": "poster",
-          "categoryLabel": "Poster",
-          "room": "Poster area",
-          "start": "10:30",
-          "end": "15:30",
-          "posters": [
-            {
-              "id": "AALA2026001",
-              "title": "Enhancing Beginner HSK Speaking via Generative AI: A Human-Centered Approach to Multilingual Learners",
-              "abstract": "The revised HSK 3.0 framework, with its first global trial in January 2026, incorporates speaking and translation from Band 4 onward, whereas Bands 1-3 (beginner levels) primarily emphasize listening, reading, handwriting, and basic recognition, resulting in persistent \"mute Chinese\" challenges and increased speaking anxiety among novice learners. Drawing on the humanistic approach, this study investigates how generative AI (e.g., Gliglish) might bridge the gap in novice HSK training by allowing for tailored oral practice, hence increasing learner agency, emotional well-being, and equity in a variety of circumstances. The study, which is based on Human-Centered AI in Assessment and Self-Determination Theory (which emphasizes autonomy, competence, and relatedness), looks into student-customized prompts that incorporate personal backgrounds (for example, name, profession, native/multiple languages, learning duration, current HSK level, and daily lesson notes via PDF/text). Participants (n=15 beginner learners from diverse backgrounds: Germany, Thailand, Korea, Mexico, India, and France) completed weekly AI-facilitated oral activities (recorded responses to designed questions), followed by sympathetic, corrected feedback. A mixed-methods pilot included pre/post oral recordings (to assess fluency/pronunciation), anxiety and well-being surveys (modified Foreign Language Classroom Anxiety Scale and enjoyment scales), and semi-structured interviews. Preliminary results show considerable reductions in speaking fear, enhanced self-efficacy and enjoyment (for example, learners reported feeling \"understood\" by AI that accommodated their multilingual/cultural contexts), and increased agency through fast customization. However, discrepancies in digital access (for example, network challenges in some locations) call for caution. Implications indicate that HSK policies for basic levels might include optional AI-integrated oral modules to encourage humanistic innovation, balance uniformity with empathy, and promote fairness in global, multilingual assessment settings. This practitioner-led approach emphasizes technology's ability to humanize early-stage language evaluation.",
-              "authors": [
-                {
-                  "name": "Wang Tong",
-                  "affiliation": "Universiti Sains Malaysia",
-                  "bio": "WangTong is a PhD candidate in Education (Higher Education) at Universiti Sains Malaysia (USM), Pulau Pinang, where she is currently pursuing research on the relationships among teacher self-efficacy, professional development, and teacher performance in international and cross-cultural teaching contexts. Her fields of specialization include Educational Psychology, Teacher Self-Efficacy, Teacher Performance, Professional Development, and International and Cross-Cultural Education. She holds a Bachelor’s degree (2011–2015) in Teaching Chinese as a Foreign Language and a Master’s degree (2015–2017) in Teaching Chinese to Speakers of Other Languages. With extensive practical experience, WangTong served as a Hanban-funded teacher (2016–2018) at Confucius Classroom in Hatyai, Thailand. Her research interests focus on enhancing teacher agency and well-being in diverse, multilingual language assessment and teaching environments, particularly through innovative tools like generative AI in beginner-level Chinese proficiency programs such as HSK."
-                }
-              ],
-              "category": "poster",
-              "categoryLabel": "Poster",
-              "room": "Poster area",
-              "start": "10:30",
-              "end": "15:30"
-            },
-            {
-              "id": "AALA2026005",
-              "title": "Beyond Test Scores: Developing and Validating the Student Assessment Literacy Scale (SALS) for Chinese EFL Learners",
-              "abstract": "This research proposal addresses a critical gap in washback research by developing and validating the Student Assessment Literacy Scale (SALS) for Chinese EFL learners engaged in high-stakes testing, such as IELTS and the Gaokao. While traditional studies, including the researcher’s doctoral work , have focused on observable test effects, this project explores Student Assessment Literacy (SAL) as a mediating learner capacity that shapes how students interpret and respond to assessment systems. Adapting Chan and Luo’s (2021) framework , the study proposes a refined four-dimensional model comprising Knowledge, Attitude, Action, and Critical Awareness, the latter of which involves a reflective understanding of test consequences and fairness.Currently a work in progress, the project utilizes a sequential mixed-methods design. Phase 1 involves generating an initial item pool through secondary thematic analysis of an existing doctoral interview corpus. Upcoming phases will employ Exploratory and Confirmatory Factor Analysis (EFA/CFA) with a sample of 500 learners to validate the scale’s psychometric properties. Finally, Structural Equation Modelling (SEM) will be used to examine the structural associations between SAL profiles and actual test performance. By operationalizing SAL in a large-scale testing context, this research shifts the focus from passive test-taking to active learner agency, offering significant implications for test preparation and learner support.",
-              "authors": [
-                {
-                  "name": "Liu Yuan",
-                  "affiliation": "Universiti Sains Malaysia",
-                  "bio": "My name is LIU YUAN and you can call me Quentin. I am currently taking my doctoral study at Universit Sains Malaysia. My research focuses on language Language Assessment, including the washback effect and language assessment literacy. The title of my Ph.D project is 'The Washback effect of the IELTS Speaking test on Chinese EFL test-takers'."
-                }
-              ],
-              "category": "poster",
-              "categoryLabel": "Poster",
-              "room": "Poster area",
-              "start": "10:30",
-              "end": "15:30"
-            },
-            {
-              "id": "AALA2026024",
-              "title": "Investigating washback on teaching from a semi-direct speaking test of English in junior high schools in Metropolitan Tokyo",
-              "abstract": "This poster presentation presents a work-in-progress research study that investigates the washback of the English Speaking Achievement Test for Junior High School Students (ESAT-J) in public junior high schools in the Tokyo Metropolitan Area. The ESAT-J is taken by first and second-year students for formative purposes and third-year students for use in entrance to public senior high schools in Tokyo. Given the prominent place of the test within the English curriculum and its use for high-stakes school admissions, the test is expected to generate significant washback, which is defined as the codetermined effect of a test and stakeholder and context-related factors on teaching and learning (Allen, 2025). This study investigates the extent to which the ESAT-J influences teaching in schools by employing a two-phase sequential explanatory mixed methods research design (Cresswell & Plano-Clark, 2018). In Phase 1, a survey will be distributed to junior high school teachers to approximately 600 public schools in the Tokyo Metropolitan Area. The survey focuses on a range of mediating factors (e.g., access to resources, perceived difficulty and importance of the assessment, teacher beliefs about teaching/assessing speaking) and perceived washback from the test on their teaching practices. In Phase 2, teacher observations and interviews will be conducted with teachers at various schools with the aim of further probing into washback effects and mediating factors at those schools. Taken together, the study will provide robust data on the perceived and observed washback effects of the ESAT-J on teaching. The implications of the study include the development of a theory of action to support positive impact and mitigate any unintended washback effects in line with the sociocognitive model of test development and validation (Chalhoub-Deville & O’Sullivan, 2020).",
-              "authors": [
-                {
-                  "name": "David Allen",
-                  "affiliation": "Ochanomizu University",
-                  "bio": "David Allen is Associate Professor at Ochanomizu University in Tokyo, Japan, where he teaches language, pedagogy, and applied linguistics-related courses at undergraduate and graduate levels. He has studied washback for over a decade and his research has been funded by the British Council, Cambridge University Press and Assessment, and the Eiken Foundation of Japan. His research has appeared in Language Testing, Language Assessment Quarterly, Language Testing in Asia, JLTA Journal, IELTS Partnership Research Papers and British Council ARAGs Research Reports. He is the editor of a new washback volume, Washback research in language assessment: Fundamentals and contexts (2025, Routledge)."
-                }
-              ],
-              "category": "poster",
-              "categoryLabel": "Poster",
-              "room": "Poster area",
-              "start": "10:30",
-              "end": "15:30"
-            },
-            {
-              "id": "AALA2026028",
-              "title": "The Therapeutic Potential of L2 Writing: Using English Diaries to Mitigate Negative Emotions in Students",
-              "abstract": "This work-in-progress study explores the therapeutic potential of second language (L2) writing by investigating whether composing emotional diaries in English can help Chinese university students process negative experiences and improve their psychological well-being. Grounded in the concept of \"foreign language effect\" on emotional processing, we hypothesize that writing about distressing events in a foreign language may create psychological distance, thereby reducing emotional reactivity and fostering a healthier reappraisal of those experiences.\nIn this randomized controlled trial, 60-80 non-English major undergraduates will be randomly assigned to a 7-day online emotional diary task. The experimental group will write about their most upsetting or frustrating daily event in English, while the control group will do so in Chinese. We will measure:\nAnxiety and sleep quality pre- and post-intervention.\nDaily self-rated emotional intensity related to the written event.\nEnglish proficiency as a potential moderating variable.\nWe hypothesize that the English diary group will show significantly greater reductions in anxiety and emotional intensity, and greater improvement in sleep quality, compared to the Chinese group. As a work-in-progress, this poster will present the detailed research design, its theoretical rationale linking L2 writing to emotional healing, and preliminary insights from the pilot phase. It aims to spark discussion on humanistic, low-intensity interventions that integrate language use into student mental health support, directly aligning with the conference theme of \"assessment for learning and well-being.\"",
-              "authors": [
-                {
-                  "name": "Miao Yiran",
-                  "affiliation": "City University of Macau",
-                  "bio": "Miao Yiran, female, is a teacher at Chengdu University of Information Technology and a current Ph.D. candidate at City University of Macau. Her research interests include: English Education, Educational Psychology, and English-Chinese Translation."
-                }
-              ],
-              "category": "poster",
-              "categoryLabel": "Poster",
-              "room": "Poster area",
-              "start": "10:30",
-              "end": "15:30"
-            },
-            {
-              "id": "AALA2026061",
-              "title": "Exploring Segmentation Design on Cognitive Load in Chinese Scrambled Sentence Tasks: An Eye-tracking Study",
-              "abstract": "In standardised language tests like the Hanyu Shuiping Kaoshi (HSK), Scrambled Sentence Tasks (SST) are commonly used to evaluate L2 learners' understanding of syntactic rules and word order. However, traditional language assessments mostly focus on accuracy, often overlooking the implicit cognitive load imposed by a test item's segmentation design. This eye-tracking study investigates the processing time and cognitive load of L1 Chinese speakers in completing ba(?)-construction in SSTs. By establishing a native speaker baseline with varying segmentation granularity and syntactic complexity, this study aims to evaluate the construct relevance of SSTs and provide empirical evidence regarding their cognitive demands as well as the construct being measured.\nIn reading tasks, it is commonly assumed that longer sentences are more difficult to understand due to their length (Sung et al., 2015). However, our eye-tracking results challenge the assumption that text length is a significant factor. The findings suggest that task difficulty is not directly determined by word count, but rather influenced by the granularity of segmentation and syntactic complexity. Specifically, over-segmented short sentences induced larger pupil sizes, reflecting higher cognitive demand, whereas reasonably segmented sentences maintained stable pupil sizes and elicited longer single fixation durations indicative of steady semantic processing. Even when sentence length and segmentation were the same, the presence of complex embedded complements still caused larger pupil sizes, revealing significant cognitive effort for native speakers.\nConsequently, if such segmentation practices impose high cognitive demands on L1 speakers, the impact on L2 learners is expected to be even more pronounced. This study suggests that some of the SST tasks may require test takers to exhaust their cognitive capacities on short-term memory rather than syntactic decoding. We propose optimising segmentation design while ensuring the accuracy and fairness of L2 assessments requires further research and in-depth exploration.",
-              "authors": [
-                {
-                  "name": "Yuchen Xing",
-                  "affiliation": "University of Southampton",
-                  "bio": "Yuchen Xing is a PhD student in Modern Languages at the University of Southampton, holding a Master's in Education from the University of Glasgow. Her research interests include L2 speaking assessment and Teaching Chinese as a Foreign Language (TCFL). Drawing on her background in international Chinese teaching, her current study uses eye-tracking technology to explore cognitive load in Chinese language testing, aiming to enhance the fairness and validity of L2 assessments."
-                },
-                {
-                  "name": "Ying Zheng",
-                  "affiliation": "University of Southampton",
-                  "bio": ""
-                },
-                {
-                  "name": "Jia Li",
-                  "affiliation": "University of Southampton",
-                  "bio": ""
-                },
-                {
-                  "name": "Yuxuan Yang",
-                  "affiliation": "University of Southampton",
-                  "bio": ""
-                }
-              ],
-              "category": "poster",
-              "categoryLabel": "Poster",
-              "room": "Poster area",
-              "start": "10:30",
-              "end": "15:30"
-            },
-            {
-              "id": "AALA2026066",
-              "title": "Validating Duolingo's Multimodal Tasks: A Longitudinal Triangulation of Cognitive Processes Across Proficiency Levels",
-              "abstract": "Investigating examinees' cognitive processes within language testing is pivotal for understanding test constructs and enhancing examination validity. However, existing research predominantly relies on single data sources, such as test scores, which makes it challenging to comprehensively capture the complexity of cognitive processing.\nThis study aims to utilise multimodal data to delve into the internal cognitive processes of learners at different English proficiency levels during interactive tasks in the Duolingo English Test. We conducted a trial with 30 participants in September 2025 to identify which behavioural indicators, such as fixation duration, pupil size, and saccade, were most indicative of cognitive engagement. The findings revealed that eye-tracking data alone was insufficient to capture the full range of cognitive strategies, prompting the addition of keystroke logging in the main study to provide a more complete picture of response processes. The lack of significant findings observed in the trial was likely attributable to the small sample size, which limited the ability to detect meaningful patterns.\nTo address this limitation, we plan to recruit another 30 participants and employ a longitudinal design, triangulating eye-tracking, keystroke logging, and think-aloud protocols. Through integrated analysis of multimodal data, this study aims to establish detailed cognitive process maps across varying English proficiency levels, reveal intrinsic connections between eye-tracking patterns, keyboard behaviour, and verbalised thinking, and ultimately validate the effectiveness of Duolingo's interactive tasks in measuring English proficiency.",
-              "authors": [
-                {
-                  "name": "Yuxuan Yang",
-                  "affiliation": "University of Southampton",
-                  "bio": "I am a PHD student at University of Southampton. My research interests include language assessment, Eye Trackingn and EFL students English learning."
-                },
-                {
-                  "name": "Ying Zheng",
-                  "affiliation": "",
-                  "bio": ""
-                },
-                {
-                  "name": "Jia Li",
-                  "affiliation": "",
-                  "bio": ""
-                },
-                {
-                  "name": "Yuchen Xing",
-                  "affiliation": "",
-                  "bio": ""
-                }
-              ],
-              "category": "poster",
-              "categoryLabel": "Poster",
-              "room": "Poster area",
-              "start": "10:30",
-              "end": "15:30"
-            },
-            {
-              "id": "AALA20260100",
-              "title": "Towards human-centred reading-into-writing assessment: A study on item writing, source text characteristics, and learner cognition and perceptions",
-              "abstract": "Integrated reading-into-writing tasks aim to reflect authentic language uses and stimulate assessment for learning. Developing such tasks, however, is known to be challenging given the complex task designs and constructs they might elicit. Despite this, little research has explored how actual reading-into-writing tasks, including source texts and production prompts, are created by item writers. Additionally, although the quality of language input is central to integrated-task development, our understanding of what makes good-quality source texts for reading-into-writing tasks remains relatively limited. In this poster, I propose a study that investigates (1) how item writers develop multi-text reading-into-writing tasks for a given set of test specifications, (2) what the features are of good-quality source texts for this task type, and (3) how learners interact with and perceive these tasks. The tasks form part of a computer-delivered English proficiency assessment aiming to evaluate and encourage learners’ real-life communicative and transferable skills for educational and professional purposes. The poster will describe and seek conference attendees’ feedback on the proposed mixed-methods research design, which involves: a) interviews with item writers during the task development stage to understand their item writing processes; b) interviews with item writers and item reviewers at the task development stage, and questionnaires with test-takers at the task administration stage, to gauge perceptions of good-quality source texts in integrated tasks; and c) think-alouds with test-takers to clarify how they interact with source texts during the composing process, and d) analysis of written performances to understand how learners use source text content in their writing. Findings from the proposed research are expected to contribute to the scholarly literature on human-centred assessment design, including item writing for integrated assessment, features of good-quality source texts for reading-into-writing tasks, and the cognitive and perceptual dimensions of assessment, drawing on multiple types of evidence from multiple stakeholders.",
-              "authors": [
-                {
-                  "name": "Pham Ngoc Bao Tram",
-                  "affiliation": "Lancaster University",
-                  "bio": "Pham Ngoc Bao Tram is currently a second-year PhD student in Linguistics at Lancaster University. Her research interests centred on language testing, particularly item writing for reading assessment and integrated assessment."
-                }
-              ],
-              "category": "poster",
-              "categoryLabel": "Poster",
-              "room": "Poster area",
-              "start": "10:30",
-              "end": "15:30"
-            },
-            {
-              "id": "AALA20260102",
-              "title": "Leveraging Process Data Through Multi-Agent Collaboration: A Formative Assessment Framework for Academic English",
-              "abstract": "Classroom-based formative assessment in Academic English courses continues to face persistent challenges, including delayed feedback, limited construct coverage, and insufficient use of process data to capture learners’ ongoing development. To address these issues, this study proposes a multi-agent collaborative system that integrates large language models with retrieval-augmented generation to support classroom-based formative assessment in Academic English instruction. The system is designed to collect multidimensional assessment evidence from students’ engagement in academic reading, writing, discussion, and reflective tasks and generate individualized learner profiles. In this design, students’ task products and process data are used to support formative assessment of language performance, higher order thinking, AI literacy, and their adherence to academic conventions. Adopting a mixed-methods design, the study will analyze student-agent interaction logs, task products, questionnaire responses, and semi-structured interviews to examine how process data generated through multi-agent support can enhance the validity, feasibility, and pedagogical usefulness of classroom-based formative assessment. The study aims to contribute to current discussions on the use of process data in classroom-based language assessment and to offer practical implications for formative assessment in tertiary foreign language education.",
-              "authors": [
-                {
-                  "name": "Xueshan Zhang",
-                  "affiliation": "Beijing Normal-Hong Kong Baptist University",
-                  "bio": "Xueshan Zhang, a lecturer in the Center for Foreign Language at Beijing Normal-Hongkong Baptist University. Her main research interests are language teacher development, psychology of language education/acquisition, AI literacy, and AI in language education."
-                },
-                {
-                  "name": "Hui Ma",
-                  "affiliation": "Beijing Normal-Hong Kong Baptist University",
-                  "bio": ""
-                },
-                {
-                  "name": "Chenxi Liu",
-                  "affiliation": "Beijing Normal-Hong Kong Baptist University",
-                  "bio": ""
-                },
-                {
-                  "name": "Jonathan James Corbett",
-                  "affiliation": "Beijing Normal-Hong Kong Baptist University",
-                  "bio": ""
-                }
-              ],
-              "category": "poster",
-              "categoryLabel": "Poster",
-              "room": "Poster area",
-              "start": "10:30",
-              "end": "15:30"
-            },
-            {
-              "id": "AALA20260106",
-              "title": "Teacher Assessment Literacy for Human-in-the-Loop Use of Generative AI in Secondary EFL Writing Feedback",
-              "abstract": "Generative AI is beginning to enter classroom writing assessment, yet teacher assessment literacy for its human-in-the-loop use in secondary EFL writing feedback remains conceptually underdeveloped. Existing AI literacy and teacher competence frameworks identify broad technological, pedagogical, and ethical capacities, but they do not sufficiently specify the assessment-focused competencies teachers need when using AI under local policy and school constraints. This issue is especially salient in mainland China, where recent guidance supports human–AI collaboration in feedback, rubric design, and learning diagnosis while requiring teachers to retain final evaluative responsibility. This work-in-progress study asks: What constitutes teacher assessment literacy for the human-in-the-loop use of generative AI in secondary EFL writing feedback under current policy and school conditions in mainland China? Adopting a qualitative framework-building design, the study will first analyze policy documents, international AI competency frameworks, and scholarship on teacher assessment literacy, AI literacy, and L2 writing feedback to identify candidate dimensions of the construct. It will then conduct semi-structured interviews with secondary EFL teachers and teacher educators to refine context-sensitive descriptors of competent practice. The inquiry focuses on three connected assessment episodes: AI-assisted writing feedback, rubric-guided judgment, and diagnostic interpretation for instructional follow-up. Data will be examined through qualitative content analysis and constant comparison. The expected outcome is a context-sensitive conceptual framework specifying the knowledge, evaluative judgment, ethical awareness, and interpretive practices teachers need when working with generative AI in writing feedback. The study aims to contribute an assessment-specific account of teacher AI assessment literacy, inform teacher professional learning, and support more human-centred, fair, and accountable uses of generative AI in local assessment settings.",
-              "authors": [
-                {
-                  "name": "Zihan Sun",
-                  "affiliation": "City University of Macau",
-                  "bio": "Zihan Sun is a PhD candidate in Education at City University of Macau and a visiting student at Southern University of Science and Technology. Her research focuses on educational technology, educational assessment, educational leadership, and organizational learning, especially AI-supported assessment systems, deep interaction in online teaching, and precision evaluation. She presented at AALA 2024 on feedback literacy in film studies and at AALA 2025 on generative AI in formative assessment for K–12 English writing. She also participates in a national project on deep interaction and precision evaluation in online teaching."
-                }
-              ],
-              "category": "poster",
-              "categoryLabel": "Poster",
-              "room": "Poster area",
-              "start": "10:30",
-              "end": "15:30"
-            },
-            {
-              "id": "AALA20260125",
-              "title": "Formative Assessment Practices in Chinese College English Contexts: New Insights from a Mixed Methods Investigation",
-              "abstract": "Based on the formative assessment (FA) framework of Black and Wiliam (2009), this study delineates the current landscape of FA implementation in Chinese College English. The research question including (1) What is the frequency of FA strategies in College English Classroom? and (2) What are the usage and characteristic of FA strategies in College English Classroom? Employ large-scale questionnaire surveys to obtain statistically significant descriptive data to answer the first question. However, to construct a more holistic portrait of FA implementation in College English instruction, this study also collects data through qualitative methods to answer the second question. This is because the usage characteristics of FA strategies involve specific classroom interaction details and teacher behaviors, the richness and complexity of which are difficult to capture through questionnaire frequency statistics alone. The research data are 525 valid questionnaires as quantitative data and reflection journal of 20 students and semi-structured interviews of 10 students as qualitative date from the first-year students not majoring in English in a university, which is in the Yangtze River Delta region with high education quality. The results reveal a significant increase in FA application over the past decade in Chinese College English, whose strategies, however, remains predominantly teacher-directed. While teachers demonstrate proficiency in eliciting evidence of learning and providing feedback, significant deficiencies exist in providing clear success criteria and empowering students as autonomous learners. The application of the five core formative assessment strategies is uneven and highly variable across instructors, indicating that effective FA transcends mere mechanical execution of strategies. Its essence lies in the teacher’s commitment to cultivating a safe, supportive, and feedback-rich classroom ecology—an environment where assessment is reframed from a threat into an opportunity for growth, thereby facilitating student’s transition from passive recipients of knowledge to active constructors of meaning.",
-              "authors": [
-                {
-                  "name": "Jiang Haitian",
-                  "affiliation": "City University of Macau; Tianping College of Suzhou University of Science and Technology",
-                  "bio": "Jiang Haitian, a doctoral student at the City University of Macau, has 6 years of experience in teaching English in higher education. Her research interests include formative assessment, academic emotions, and learning English as a foreign language."
-                },
-                {
-                  "name": "April Jiawei Zhang",
-                  "affiliation": "City University of Macau",
-                  "bio": ""
-                }
-              ],
-              "category": "poster",
-              "categoryLabel": "Poster",
-              "room": "Poster area",
-              "start": "10:30",
-              "end": "15:30"
-            }
-          ]
         },
         {
           "id": "AALA20260114",
@@ -680,7 +447,7 @@ window.AALA_PROGRAM = {
           "authors": [],
           "category": "break",
           "categoryLabel": "Programme activity",
-          "room": "",
+          "room": "Culture Centre Room 1 & 2",
           "start": "12:00",
           "end": "13:00"
         },
@@ -691,7 +458,7 @@ window.AALA_PROGRAM = {
           "authors": [],
           "category": "break",
           "categoryLabel": "Programme activity",
-          "room": "Culture Centre",
+          "room": "Culture Centre Room 1 & 2",
           "start": "12:00",
           "end": "12:30"
         },
@@ -708,7 +475,7 @@ window.AALA_PROGRAM = {
           ],
           "category": "plenary",
           "categoryLabel": "Plenary",
-          "room": "Culture Centre",
+          "room": "Culture Centre Theatre",
           "start": "13:00",
           "end": "14:00"
         },
@@ -774,14 +541,19 @@ window.AALA_PROGRAM = {
           "end": "14:30"
         },
         {
-          "id": "AALA2026020",
-          "title": "Reevaluating AI-Based Writing Feedback: A Comparative Study of Holistic and Linguistic-Specific Evaluation Criteria in EFL Learners’",
-          "abstract": "This study explores how different evaluation rubrics influence the usefulness of AI-based writing feedback in an EFL learners’ essay. While recent advances in generative AI have made it possible for learners to receive fast and consistent feedback, previous studies have mainly relied on broad, holistic rubrics, which provide general evaluations of writing quality. Building on these studies, the present research takes a learner-oriented perspective and examines whether feedback based on more linguistic-specific rubric can offer clearer and more practical support for writing revision. Using a qualitative-dominant mixed-methods design, the study compares AI-based feedback based on a conventional holistic rubric and a linguistic-specific rubric focusing on features such as lexical diversity, grammatical accuracy. Four EFL learners wrote essays and received two versions of feedback from ChatGPT under the two writing rubric conditions. Questionnaire responses and interviews were then collected to explore learners’ perceptions and preferences. The results suggest that linguistic-specific feedback was perceived as more concrete and easier to apply during revision, suggesting the in AI-based writing feedback.",
+          "id": "AALA20260110",
+          "title": "Writing Assessment Literacy in Practice: Insights from the classroom of a university English teacher",
+          "abstract": "Writing assessment literacy (WAL) —stakeholders’ knowledge, beliefs, and practices in evaluating written performance —has emerged as a critical area of inquiry in language assessment. While WAL is conceptualised as multidimensional and measurable,  significant gaps are identified in understanding how teachers navigate the interplay between assessment beliefs, knowledge and classroom practices. Studies indicate that teachers face challenges in enacting their WAL due to contextual constraints such as exam-driven cultures and institutional policies. Yet what remains underexplored is how teachers negotiate these challenges through their lived experiences. \nThe current study adopts an ethnographic case approach to address these gaps by examining how a university English teacher enacted WAL in writing assessment practices. Data were collected over three semesters through multiple sources: framed narratives, semi-structured interviews with the teacher, focus group interviews with students, classroom observations and assessment artefacts including rubrics, feedback samples and student essays.\nThe longitudinal investigation reveals a complex enactment trajectory. The teacher’s WAL, shaped by his prior training and doctoral study, was translated into practice through genre-based pedagogy aligned with textbook topics, student needs, and proficiency. He facilitated students’ collaborative writing and peer feedback by using teacher-prepared rubrics. However, several constraints emerged: a lack of teacher-student collaboration in assessment, students’ heavy reliance on teacher criteria and feedback and delayed feedback due to large class sizes and non-teaching responsibilities.\nThe study offers implications for teachers’ WAL enactment. In classroom instruction, teachers can collaborate with students on assessment criteria to foster ownership and trust in peer feedback and enhance student feedback literacy. In teacher education, programmes should prioritise teachers’ WAL to support timely and effective multimodal feedback (e.g., textual, audio, video, pictorial, and/or digital) to transcend contextual constraints. This study illuminates the dynamic processes of WAL enactment and pathways toward sustainable transformation in writing assessment practices.",
           "authors": [
             {
-              "name": "Xiaolian Jin (Soyeon Kim)",
-              "affiliation": "Seoul National University",
-              "bio": "I'm a second-semester Master’s student in the Department of English Language and Literature at Seoul National University. My research interests center on English language assessment and Second Language Acquisition (SLA). Currently, I'm investigating the integration of artificial intelligence into language pedagogy, with a focus on developing technology-driven approaches and enhanced rubric design for language assessment."
+              "name": "Ling Gan",
+              "affiliation": "Beijing Technology and Business University",
+              "bio": "Ling Gan has a Ph.D. in Education from Hong Kong Baptist University. She is now an associate professor at the School of Languages and Communication, Beijing Technology and Business University in China. Her research interests include language assessment literacy and teacher professional development. She has published articles in RELC Journal, Education Sciences, Chinese Journal of Applied Linguistics, Language Assessment Quarterly and Language Testing in Asia."
+            },
+            {
+              "name": "Ricky Lam    Hong Kong Baptist University",
+              "affiliation": "",
+              "bio": ""
             }
           ],
           "category": "theme-1",
@@ -1120,28 +892,38 @@ window.AALA_PROGRAM = {
           "authors": [],
           "category": "break",
           "categoryLabel": "Programme activity",
-          "room": "",
+          "room": "Culture Centre Room 1 & 2",
           "start": "15:00",
           "end": "15:30"
         },
         {
-          "id": "AALA2026038",
-          "title": "An AI-Assisted Writing Assessment and Feedback Tool for Young L2 Learners of English: Investigating Student Use and Perceptions",
-          "abstract": "Generative AI tools have gained traction as writing assistants for L2 learners because of their capability to provide immediate and personalized feedback (Barrot, 2023). A growing body of research has examined how L2 learners and teachers engage with AI tools such as ChatGPT for writing development (e.g., Koltovskaia et al., 2024; Guo & Wang, 2024). However, most studies focus on adult learners, and empirical research on the use of AI tools with younger, school-aged L2 learners remains limited.\nAddressing this gap, this study investigates how young L2 learners interact with an AI tool during the writing process. The study utilized an AI-assisted writing assessment and feedback prototype developed for K–12 English learners. The tool features a chatbot employing the GPT-4o model, allowing for interactive feedback. Specifically, we examined the types of chat messages students produced, how they incorporated AI feedback into revisions, and their perceptions of the tool.\nParticipants included eight teachers and their L2 learners (N = 206) in Grades 4 to 9 from China, Korea, Turkiye, and the USA. Students interacted with the chatbot during outlining and revision across three prompts and completed a survey. Chat messages were coded, while first and revised drafts were analyzed using NLP technologies. Descriptive statistics of the codings, NLP features, and survey responses were computed to identify patterns.\nResults showed substantial variation in chatbot use (1 to 39 messages per student; M = 5.9), with more interactions during outlining than revision. Translation and idea development requests were most frequent, followed by grammar-related queries. Students’ use of AI feedback in revisions also varied. Survey responses indicated positive perceptions of the tool, although the degree of positivity differed across classrooms. The findings have implications for classroom writing assessments and teachers’ roles in guiding young learners’ effective and appropriate use of AI in writing.",
+          "id": "AALA2026048",
+          "title": "The role of metacognitive strategy use in diminishing the negative impact of percepved linguistic difficulty on English reading test performance: A case of the Dual-Mode Hypothesis",
+          "abstract": "Readers’ perception of the linguistic difficulty of a reading passage places a threat to their reading test performance. Studies suggest that this threat might be reduced through readers’ active use of metacognitive strategies during their reading test performance. Framed under the Dual Mode Hypothesis, this correlational study examined two mechanisms by which the use of metacognitive strategies influences readers’ perceived linguistic difficulty: reducing the level of perceived linguistic difficulty and weakening its detrimental effect on English reading performance. Participants included 1176 undergraduate students (females = 75%, Mage = 23.13 years, SD = 1.61) from two Chinese universities. Results of partial least squares structural equation modeling (PLS-SEM) showed that: (1) perceived linguistic difficulty negatively predicted reading performance, (2) metacognitive strategies positively predicted reading test performance, (3) metacognitive strategies negatively predicted linguistic difficulty, and (4) metacognitive strategies positively moderated the relationship between perceived linguistic difficulty and reading test performance, weakening its strength in impairing reading test performance. The study demonstrates the important role of metacognitive strategy use in reducing the detrimental effect of perceived linguistic difficulty during English reading.",
           "authors": [
             {
-              "name": "Mikyung Kim Wolf",
-              "affiliation": "ETS",
-              "bio": "Mikyung Kim Wolf is a principal research scientist at ETS. She has over 20 years of experience in developing and researching language assessments for multilingual learners. Her research areas include technology-enhanced language assessments, the use of AI in language assessment and learning, formative assessment, and validity issues in assessing K-12 English language learners both in the U.S. and globally. She has edited two volumes: Assessing English Language Proficiency in U.S. K-12 Schools (2020, Routledge) and English Language Proficiency Assessment for Young Learners (2017, Routledge)."
+              "name": "Huimin Guo",
+              "affiliation": "Shanghai International Studies University",
+              "bio": "Huimin Guo is a graduate student at the School of Education, Shanghai International Studies University. Her research integrates language assessment with educational psychology, specifically examining how Generative Artificial Intelligence (GAI) mediates metacognitive processes in English language testing."
             },
             {
-              "name": "Michael Suhan",
-              "affiliation": "ETS",
+              "name": "Yuyang Cai",
+              "affiliation": "Shanghai International Studies University",
+              "bio": ""
+            },
+            {
+              "name": "Qianwen Ge",
+              "affiliation": "Shanghai International Studies University",
+              "bio": ""
+            },
+            {
+              "name": "Yan Yang",
+              "affiliation": "University of Otago",
               "bio": ""
             }
           ],
-          "category": "theme-3",
-          "categoryLabel": "Theme 3",
+          "category": "theme-1",
+          "categoryLabel": "Theme 1",
           "room": "HG01",
           "start": "15:30",
           "end": "16:00"
@@ -1341,11 +1123,6 @@ window.AALA_PROGRAM = {
               "name": "Yan Yang",
               "affiliation": "University of Otago, New Zealand",
               "bio": ""
-            },
-            {
-              "name": "Yuyang Cai",
-              "affiliation": "Shanghai International Studies University",
-              "bio": "Dr. Yuyang Cai is Professor of Language Assessment and Education at Shanghai International Studies University. His research centers on test validation and the intersection of language assessment with educational psychology."
             }
           ],
           "category": "symposium",
@@ -1561,29 +1338,19 @@ window.AALA_PROGRAM = {
           "end": "16:30"
         },
         {
-          "id": "AALA2026048",
-          "title": "The role of metacognitive strategy use in diminishing the negative impact of percepved linguistic difficulty on English reading test performance: A case of the Dual-Mode Hypothesis",
-          "abstract": "Readers’ perception of the linguistic difficulty of a reading passage places a threat to their reading test performance. Studies suggest that this threat might be reduced through readers’ active use of metacognitive strategies during their reading test performance. Framed under the Dual Mode Hypothesis, this correlational study examined two mechanisms by which the use of metacognitive strategies influences readers’ perceived linguistic difficulty: reducing the level of perceived linguistic difficulty and weakening its detrimental effect on English reading performance. Participants included 1176 undergraduate students (females = 75%, Mage = 23.13 years, SD = 1.61) from two Chinese universities. Results of partial least squares structural equation modeling (PLS-SEM) showed that: (1) perceived linguistic difficulty negatively predicted reading performance, (2) metacognitive strategies positively predicted reading test performance, (3) metacognitive strategies negatively predicted linguistic difficulty, and (4) metacognitive strategies positively moderated the relationship between perceived linguistic difficulty and reading test performance, weakening its strength in impairing reading test performance. The study demonstrates the important role of metacognitive strategy use in reducing the detrimental effect of perceived linguistic difficulty during English reading.",
+          "id": "AALA2026051",
+          "title": "Individual differences in L2 speaking performance: The interplay of willingness to communicate, L2 grit, and foreign language anxiety",
+          "abstract": "Second language (L2) speaking is a cognitively demanding and multifaceted skill influenced by an intricate interplay of psychological, affective, and contextual factors. Despite the critical role of individual difference (ID) factors in L2 acquisition, there remains a scarcity of research examining how these variables jointly impact learners’ speaking performance. Grounded in MacIntyre et al.’s pyramid model of L2 willingness to communicate (WTC), the current study addresses this gap by investigating the interplay of L2 grit, foreign language anxiety (FLA), and WTC in predicting speaking performance. Data collected from 443 Chinese high school students were analyzed using partial least squares structural equation modeling (PLS-SEM). The results suggest that 1) the two dimensions of L2 grit, consistency of interest (CI) and perseverance of effort (PE), significantly negatively predict FLA; 2) CI and WTC serve as significant direct predictors of speaking performance, whereas PE and FLA do not directly influence the final outcome; 3) both PE and FLA exert significant indirect effects on speaking through the mediation of WTC; and 4) both PE and CI significantly predict speaking through a serial mediation pathway via FLA and WTC. These findings highlight the importance of cultivating grit and mitigating anxiety to enhance WTC and, consequently, speaking performance. Ultimately, the study sheds light on the complex relationships among ID factors in L2 speaking and provides empirical support for the WTC pyramid model, offering practical implications for teachers seeking to tailor instruction to learners’ distinct ID profiles and improve overall speaking proficiency.",
           "authors": [
             {
-              "name": "Huimin Guo",
-              "affiliation": "Shanghai International Studies University",
-              "bio": "Huimin Guo is a graduate student at the School of Education, Shanghai International Studies University. Her research integrates language assessment with educational psychology, specifically examining how Generative Artificial Intelligence (GAI) mediates metacognitive processes in English language testing."
+              "name": "Zhaoyu Zheng",
+              "affiliation": "Tin Ka Ping Secondary School",
+              "bio": "Zhaoyu ZHENG is a master's graduate of the Department of English at the University of Macau. Her research interests mainly include second language acquisition, individual differences, and computer-assisted language learning."
             },
             {
-              "name": "Yuyang Cai",
-              "affiliation": "Shanghai International Studies University",
-              "bio": ""
-            },
-            {
-              "name": "Qianwen Ge",
-              "affiliation": "Shanghai International Studies University",
-              "bio": ""
-            },
-            {
-              "name": "Yan Yang",
-              "affiliation": "University of Otago",
-              "bio": ""
+              "name": "Shangwen Chen",
+              "affiliation": "University of Macau",
+              "bio": "Shangwen CHEN is a current PhD candidate in the Department of English at the University of Macau. Her research interests are in the areas of individual differences in language acquisition, L2 listening assessment, and incidental vocabulary learning."
             }
           ],
           "category": "theme-1",
@@ -1698,19 +1465,14 @@ window.AALA_PROGRAM = {
           "end": "17:00"
         },
         {
-          "id": "AALA2026051",
-          "title": "Individual differences in L2 speaking performance: The interplay of willingness to communicate, L2 grit, and foreign language anxiety",
-          "abstract": "Second language (L2) speaking is a cognitively demanding and multifaceted skill influenced by an intricate interplay of psychological, affective, and contextual factors. Despite the critical role of individual difference (ID) factors in L2 acquisition, there remains a scarcity of research examining how these variables jointly impact learners’ speaking performance. Grounded in MacIntyre et al.’s pyramid model of L2 willingness to communicate (WTC), the current study addresses this gap by investigating the interplay of L2 grit, foreign language anxiety (FLA), and WTC in predicting speaking performance. Data collected from 443 Chinese high school students were analyzed using partial least squares structural equation modeling (PLS-SEM). The results suggest that 1) the two dimensions of L2 grit, consistency of interest (CI) and perseverance of effort (PE), significantly negatively predict FLA; 2) CI and WTC serve as significant direct predictors of speaking performance, whereas PE and FLA do not directly influence the final outcome; 3) both PE and FLA exert significant indirect effects on speaking through the mediation of WTC; and 4) both PE and CI significantly predict speaking through a serial mediation pathway via FLA and WTC. These findings highlight the importance of cultivating grit and mitigating anxiety to enhance WTC and, consequently, speaking performance. Ultimately, the study sheds light on the complex relationships among ID factors in L2 speaking and provides empirical support for the WTC pyramid model, offering practical implications for teachers seeking to tailor instruction to learners’ distinct ID profiles and improve overall speaking proficiency.",
+          "id": "AALA2026055",
+          "title": "What skills matter most? Stakeholder priorities and the future of standardised English language assessment",
+          "abstract": "Recent debates about English language testing have seen critical scholars questioning whether standardised assessments capture authentic academic communication, whilst others argue that standardisation remains essential for fairness and comparability. However, these perspectives have largely been advanced by researchers rather than test score users, leaving a significant gap in our understanding of what university stakeholders actually value.\n\nThis paper presents findings from a global mixed-methods survey of 156 university personnel across six regions, examining the language skills they prioritise, the evidence types they trust, and how they perceive current assessment practices. Findings reveal remarkable consensus across regions, institution types, and professional roles: integrated and listening skills were rated most highly, and the ability to synthesise information from multiple sources emerged as the single most valued skill. Crucially, no significant regional or role-based variation was found, providing empirical support for standardised assessment when it focuses on universally valued, authentic academic competencies.\n\nThree findings carry particular implications for humanistic assessment design. First, traditional essay tasks were valued less than expected relative to integrated-skills and shorter writing tasks focusing on specific skills. Second, despite speaking and listening being widely tested, over 30% of respondents perceived these skills as inadequately assessed, revealing a construct-authenticity gap in current assessment design. Third, 98.3% of respondents identified AI literacy as a key future skill, signalling a fundamental shift in the communicative demands of academic contexts.\n\nThe paper argues that the challenge is not whether to standardise assessment, but how to standardise authentically, such as through scenario-anchored tasks, integrated assessment formats and AI-mediated adaptive systems that preserve comparability whilst reflecting authentic academic contexts that stakeholders describe. Implications are drawn for assessment design, policy, and teacher agency in navigating an evolving assessment landscape.",
           "authors": [
             {
-              "name": "Zhaoyu Zheng",
-              "affiliation": "Tin Ka Ping Secondary School",
-              "bio": "Zhaoyu ZHENG is a master's graduate of the Department of English at the University of Macau. Her research interests mainly include second language acquisition, individual differences, and computer-assisted language learning."
-            },
-            {
-              "name": "Shangwen Chen",
-              "affiliation": "University of Macau",
-              "bio": "Shangwen CHEN is a current PhD candidate in the Department of English at the University of Macau. Her research interests are in the areas of individual differences in language acquisition, L2 listening assessment, and incidental vocabulary learning."
+              "name": "Nathaniel Owen",
+              "affiliation": "Oxford University Press",
+              "bio": "Dr. Nathaniel Owen (PhD) is Senior Research and Analysis Manager at Oxford University Press. He holds a PhD in language testing from the University of Leicester specialising in L2 reading processes. His research interests and publications include the interface of language testing and technology, big data analytics, the use of language tests in English-medium instruction contexts, research methods and widening participation in higher education. He has presented work at multiple national and international conferences."
             }
           ],
           "category": "theme-1",
@@ -1831,10 +1593,243 @@ window.AALA_PROGRAM = {
           "authors": [],
           "category": "ceremony",
           "categoryLabel": "Opening / closing / social",
-          "room": "Altira Macau, 17th Floor",
+          "room": "17th Floor, Altira Macau",
           "start": "18:30",
           "end": "20:30",
           "note": "For paid and invited attendees."
+        },
+        {
+          "id": "",
+          "title": "Full-day poster presentations",
+          "abstract": "",
+          "authors": [],
+          "category": "poster",
+          "categoryLabel": "Poster",
+          "room": "Space between Culture Centre Room 1 & 2",
+          "start": "10:30",
+          "end": "15:30",
+          "posters": [
+            {
+              "id": "AALA2026001",
+              "title": "Enhancing Beginner HSK Speaking via Generative AI: A Human-Centered Approach to Multilingual Learners",
+              "abstract": "The revised HSK 3.0 framework, with its first global trial in January 2026, incorporates speaking and translation from Band 4 onward, whereas Bands 1-3 (beginner levels) primarily emphasize listening, reading, handwriting, and basic recognition, resulting in persistent \"mute Chinese\" challenges and increased speaking anxiety among novice learners. Drawing on the humanistic approach, this study investigates how generative AI (e.g., Gliglish) might bridge the gap in novice HSK training by allowing for tailored oral practice, hence increasing learner agency, emotional well-being, and equity in a variety of circumstances. The study, which is based on Human-Centered AI in Assessment and Self-Determination Theory (which emphasizes autonomy, competence, and relatedness), looks into student-customized prompts that incorporate personal backgrounds (for example, name, profession, native/multiple languages, learning duration, current HSK level, and daily lesson notes via PDF/text). Participants (n=15 beginner learners from diverse backgrounds: Germany, Thailand, Korea, Mexico, India, and France) completed weekly AI-facilitated oral activities (recorded responses to designed questions), followed by sympathetic, corrected feedback. A mixed-methods pilot included pre/post oral recordings (to assess fluency/pronunciation), anxiety and well-being surveys (modified Foreign Language Classroom Anxiety Scale and enjoyment scales), and semi-structured interviews. Preliminary results show considerable reductions in speaking fear, enhanced self-efficacy and enjoyment (for example, learners reported feeling \"understood\" by AI that accommodated their multilingual/cultural contexts), and increased agency through fast customization. However, discrepancies in digital access (for example, network challenges in some locations) call for caution. Implications indicate that HSK policies for basic levels might include optional AI-integrated oral modules to encourage humanistic innovation, balance uniformity with empathy, and promote fairness in global, multilingual assessment settings. This practitioner-led approach emphasizes technology's ability to humanize early-stage language evaluation.",
+              "authors": [
+                {
+                  "name": "Wang Tong",
+                  "affiliation": "Universiti Sains Malaysia",
+                  "bio": "WangTong is a PhD candidate in Education (Higher Education) at Universiti Sains Malaysia (USM), Pulau Pinang, where she is currently pursuing research on the relationships among teacher self-efficacy, professional development, and teacher performance in international and cross-cultural teaching contexts. Her fields of specialization include Educational Psychology, Teacher Self-Efficacy, Teacher Performance, Professional Development, and International and Cross-Cultural Education. She holds a Bachelor’s degree (2011–2015) in Teaching Chinese as a Foreign Language and a Master’s degree (2015–2017) in Teaching Chinese to Speakers of Other Languages. With extensive practical experience, WangTong served as a Hanban-funded teacher (2016–2018) at Confucius Classroom in Hatyai, Thailand. Her research interests focus on enhancing teacher agency and well-being in diverse, multilingual language assessment and teaching environments, particularly through innovative tools like generative AI in beginner-level Chinese proficiency programs such as HSK."
+                }
+              ],
+              "category": "poster",
+              "categoryLabel": "Poster",
+              "room": "Space between Culture Centre Room 1 & 2",
+              "start": "10:30",
+              "end": "15:30"
+            },
+            {
+              "id": "AALA2026005",
+              "title": "Beyond Test Scores: Developing and Validating the Student Assessment Literacy Scale (SALS) for Chinese EFL Learners",
+              "abstract": "This research proposal addresses a critical gap in washback research by developing and validating the Student Assessment Literacy Scale (SALS) for Chinese EFL learners engaged in high-stakes testing, such as IELTS and the Gaokao. While traditional studies, including the researcher’s doctoral work , have focused on observable test effects, this project explores Student Assessment Literacy (SAL) as a mediating learner capacity that shapes how students interpret and respond to assessment systems. Adapting Chan and Luo’s (2021) framework , the study proposes a refined four-dimensional model comprising Knowledge, Attitude, Action, and Critical Awareness, the latter of which involves a reflective understanding of test consequences and fairness.Currently a work in progress, the project utilizes a sequential mixed-methods design. Phase 1 involves generating an initial item pool through secondary thematic analysis of an existing doctoral interview corpus. Upcoming phases will employ Exploratory and Confirmatory Factor Analysis (EFA/CFA) with a sample of 500 learners to validate the scale’s psychometric properties. Finally, Structural Equation Modelling (SEM) will be used to examine the structural associations between SAL profiles and actual test performance. By operationalizing SAL in a large-scale testing context, this research shifts the focus from passive test-taking to active learner agency, offering significant implications for test preparation and learner support.",
+              "authors": [
+                {
+                  "name": "Liu Yuan",
+                  "affiliation": "Universiti Sains Malaysia",
+                  "bio": "My name is LIU YUAN and you can call me Quentin. I am currently taking my doctoral study at Universit Sains Malaysia. My research focuses on language Language Assessment, including the washback effect and language assessment literacy. The title of my Ph.D project is 'The Washback effect of the IELTS Speaking test on Chinese EFL test-takers'."
+                }
+              ],
+              "category": "poster",
+              "categoryLabel": "Poster",
+              "room": "Space between Culture Centre Room 1 & 2",
+              "start": "10:30",
+              "end": "15:30"
+            },
+            {
+              "id": "AALA2026024",
+              "title": "Investigating washback on teaching from a semi-direct speaking test of English in junior high schools in Metropolitan Tokyo",
+              "abstract": "This poster presentation presents a work-in-progress research study that investigates the washback of the English Speaking Achievement Test for Junior High School Students (ESAT-J) in public junior high schools in the Tokyo Metropolitan Area. The ESAT-J is taken by first and second-year students for formative purposes and third-year students for use in entrance to public senior high schools in Tokyo. Given the prominent place of the test within the English curriculum and its use for high-stakes school admissions, the test is expected to generate significant washback, which is defined as the codetermined effect of a test and stakeholder and context-related factors on teaching and learning (Allen, 2025). This study investigates the extent to which the ESAT-J influences teaching in schools by employing a two-phase sequential explanatory mixed methods research design (Cresswell & Plano-Clark, 2018). In Phase 1, a survey will be distributed to junior high school teachers to approximately 600 public schools in the Tokyo Metropolitan Area. The survey focuses on a range of mediating factors (e.g., access to resources, perceived difficulty and importance of the assessment, teacher beliefs about teaching/assessing speaking) and perceived washback from the test on their teaching practices. In Phase 2, teacher observations and interviews will be conducted with teachers at various schools with the aim of further probing into washback effects and mediating factors at those schools. Taken together, the study will provide robust data on the perceived and observed washback effects of the ESAT-J on teaching. The implications of the study include the development of a theory of action to support positive impact and mitigate any unintended washback effects in line with the sociocognitive model of test development and validation (Chalhoub-Deville & O’Sullivan, 2020).",
+              "authors": [
+                {
+                  "name": "David Allen",
+                  "affiliation": "Ochanomizu University",
+                  "bio": "David Allen is Associate Professor at Ochanomizu University in Tokyo, Japan, where he teaches language, pedagogy, and applied linguistics-related courses at undergraduate and graduate levels. He has studied washback for over a decade and his research has been funded by the British Council, Cambridge University Press and Assessment, and the Eiken Foundation of Japan. His research has appeared in Language Testing, Language Assessment Quarterly, Language Testing in Asia, JLTA Journal, IELTS Partnership Research Papers and British Council ARAGs Research Reports. He is the editor of a new washback volume, Washback research in language assessment: Fundamentals and contexts (2025, Routledge)."
+                }
+              ],
+              "category": "poster",
+              "categoryLabel": "Poster",
+              "room": "Space between Culture Centre Room 1 & 2",
+              "start": "10:30",
+              "end": "15:30"
+            },
+            {
+              "id": "AALA2026028",
+              "title": "The Therapeutic Potential of L2 Writing: Using English Diaries to Mitigate Negative Emotions in Students",
+              "abstract": "This work-in-progress study explores the therapeutic potential of second language (L2) writing by investigating whether composing emotional diaries in English can help Chinese university students process negative experiences and improve their psychological well-being. Grounded in the concept of \"foreign language effect\" on emotional processing, we hypothesize that writing about distressing events in a foreign language may create psychological distance, thereby reducing emotional reactivity and fostering a healthier reappraisal of those experiences.\nIn this randomized controlled trial, 60-80 non-English major undergraduates will be randomly assigned to a 7-day online emotional diary task. The experimental group will write about their most upsetting or frustrating daily event in English, while the control group will do so in Chinese. We will measure:\nAnxiety and sleep quality pre- and post-intervention.\nDaily self-rated emotional intensity related to the written event.\nEnglish proficiency as a potential moderating variable.\nWe hypothesize that the English diary group will show significantly greater reductions in anxiety and emotional intensity, and greater improvement in sleep quality, compared to the Chinese group. As a work-in-progress, this poster will present the detailed research design, its theoretical rationale linking L2 writing to emotional healing, and preliminary insights from the pilot phase. It aims to spark discussion on humanistic, low-intensity interventions that integrate language use into student mental health support, directly aligning with the conference theme of \"assessment for learning and well-being.\"",
+              "authors": [
+                {
+                  "name": "Miao Yiran",
+                  "affiliation": "City University of Macau",
+                  "bio": "Miao Yiran, female, is a teacher at Chengdu University of Information Technology and a current Ph.D. candidate at City University of Macau. Her research interests include: English Education, Educational Psychology, and English-Chinese Translation."
+                }
+              ],
+              "category": "poster",
+              "categoryLabel": "Poster",
+              "room": "Space between Culture Centre Room 1 & 2",
+              "start": "10:30",
+              "end": "15:30"
+            },
+            {
+              "id": "AALA2026061",
+              "title": "Exploring Segmentation Design on Cognitive Load in Chinese Scrambled Sentence Tasks: An Eye-tracking Study",
+              "abstract": "In standardised language tests like the Hanyu Shuiping Kaoshi (HSK), Scrambled Sentence Tasks (SST) are commonly used to evaluate L2 learners' understanding of syntactic rules and word order. However, traditional language assessments mostly focus on accuracy, often overlooking the implicit cognitive load imposed by a test item's segmentation design. This eye-tracking study investigates the processing time and cognitive load of L1 Chinese speakers in completing ba(?)-construction in SSTs. By establishing a native speaker baseline with varying segmentation granularity and syntactic complexity, this study aims to evaluate the construct relevance of SSTs and provide empirical evidence regarding their cognitive demands as well as the construct being measured.\nIn reading tasks, it is commonly assumed that longer sentences are more difficult to understand due to their length (Sung et al., 2015). However, our eye-tracking results challenge the assumption that text length is a significant factor. The findings suggest that task difficulty is not directly determined by word count, but rather influenced by the granularity of segmentation and syntactic complexity. Specifically, over-segmented short sentences induced larger pupil sizes, reflecting higher cognitive demand, whereas reasonably segmented sentences maintained stable pupil sizes and elicited longer single fixation durations indicative of steady semantic processing. Even when sentence length and segmentation were the same, the presence of complex embedded complements still caused larger pupil sizes, revealing significant cognitive effort for native speakers.\nConsequently, if such segmentation practices impose high cognitive demands on L1 speakers, the impact on L2 learners is expected to be even more pronounced. This study suggests that some of the SST tasks may require test takers to exhaust their cognitive capacities on short-term memory rather than syntactic decoding. We propose optimising segmentation design while ensuring the accuracy and fairness of L2 assessments requires further research and in-depth exploration.",
+              "authors": [
+                {
+                  "name": "Yuchen Xing",
+                  "affiliation": "University of Southampton",
+                  "bio": "Yuchen Xing is a PhD student in Modern Languages at the University of Southampton, holding a Master's in Education from the University of Glasgow. Her research interests include L2 speaking assessment and Teaching Chinese as a Foreign Language (TCFL). Drawing on her background in international Chinese teaching, her current study uses eye-tracking technology to explore cognitive load in Chinese language testing, aiming to enhance the fairness and validity of L2 assessments."
+                },
+                {
+                  "name": "Ying Zheng",
+                  "affiliation": "University of Southampton",
+                  "bio": ""
+                },
+                {
+                  "name": "Jia Li",
+                  "affiliation": "University of Southampton",
+                  "bio": ""
+                },
+                {
+                  "name": "Yuxuan Yang",
+                  "affiliation": "University of Southampton",
+                  "bio": ""
+                }
+              ],
+              "category": "poster",
+              "categoryLabel": "Poster",
+              "room": "Space between Culture Centre Room 1 & 2",
+              "start": "10:30",
+              "end": "15:30"
+            },
+            {
+              "id": "AALA2026066",
+              "title": "Validating Duolingo's Multimodal Tasks: A Longitudinal Triangulation of Cognitive Processes Across Proficiency Levels",
+              "abstract": "Investigating examinees' cognitive processes within language testing is pivotal for understanding test constructs and enhancing examination validity. However, existing research predominantly relies on single data sources, such as test scores, which makes it challenging to comprehensively capture the complexity of cognitive processing.\nThis study aims to utilise multimodal data to delve into the internal cognitive processes of learners at different English proficiency levels during interactive tasks in the Duolingo English Test. We conducted a trial with 30 participants in September 2025 to identify which behavioural indicators, such as fixation duration, pupil size, and saccade, were most indicative of cognitive engagement. The findings revealed that eye-tracking data alone was insufficient to capture the full range of cognitive strategies, prompting the addition of keystroke logging in the main study to provide a more complete picture of response processes. The lack of significant findings observed in the trial was likely attributable to the small sample size, which limited the ability to detect meaningful patterns.\nTo address this limitation, we plan to recruit another 30 participants and employ a longitudinal design, triangulating eye-tracking, keystroke logging, and think-aloud protocols. Through integrated analysis of multimodal data, this study aims to establish detailed cognitive process maps across varying English proficiency levels, reveal intrinsic connections between eye-tracking patterns, keyboard behaviour, and verbalised thinking, and ultimately validate the effectiveness of Duolingo's interactive tasks in measuring English proficiency.",
+              "authors": [
+                {
+                  "name": "Yuxuan Yang",
+                  "affiliation": "University of Southampton",
+                  "bio": "I am a PHD student at University of Southampton. My research interests include language assessment, Eye Trackingn and EFL students English learning."
+                },
+                {
+                  "name": "Ying Zheng",
+                  "affiliation": "",
+                  "bio": ""
+                },
+                {
+                  "name": "Jia Li",
+                  "affiliation": "",
+                  "bio": ""
+                },
+                {
+                  "name": "Yuchen Xing",
+                  "affiliation": "",
+                  "bio": ""
+                }
+              ],
+              "category": "poster",
+              "categoryLabel": "Poster",
+              "room": "Space between Culture Centre Room 1 & 2",
+              "start": "10:30",
+              "end": "15:30"
+            },
+            {
+              "id": "AALA20260100",
+              "title": "Towards human-centred reading-into-writing assessment: A study on item writing, source text characteristics, and learner cognition and perceptions",
+              "abstract": "Integrated reading-into-writing tasks aim to reflect authentic language uses and stimulate assessment for learning. Developing such tasks, however, is known to be challenging given the complex task designs and constructs they might elicit. Despite this, little research has explored how actual reading-into-writing tasks, including source texts and production prompts, are created by item writers. Additionally, although the quality of language input is central to integrated-task development, our understanding of what makes good-quality source texts for reading-into-writing tasks remains relatively limited. In this poster, I propose a study that investigates (1) how item writers develop multi-text reading-into-writing tasks for a given set of test specifications, (2) what the features are of good-quality source texts for this task type, and (3) how learners interact with and perceive these tasks. The tasks form part of a computer-delivered English proficiency assessment aiming to evaluate and encourage learners’ real-life communicative and transferable skills for educational and professional purposes. The poster will describe and seek conference attendees’ feedback on the proposed mixed-methods research design, which involves: a) interviews with item writers during the task development stage to understand their item writing processes; b) interviews with item writers and item reviewers at the task development stage, and questionnaires with test-takers at the task administration stage, to gauge perceptions of good-quality source texts in integrated tasks; and c) think-alouds with test-takers to clarify how they interact with source texts during the composing process, and d) analysis of written performances to understand how learners use source text content in their writing. Findings from the proposed research are expected to contribute to the scholarly literature on human-centred assessment design, including item writing for integrated assessment, features of good-quality source texts for reading-into-writing tasks, and the cognitive and perceptual dimensions of assessment, drawing on multiple types of evidence from multiple stakeholders.",
+              "authors": [
+                {
+                  "name": "Pham Ngoc Bao Tram",
+                  "affiliation": "Lancaster University",
+                  "bio": "Pham Ngoc Bao Tram is currently a second-year PhD student in Linguistics at Lancaster University. Her research interests centred on language testing, particularly item writing for reading assessment and integrated assessment."
+                }
+              ],
+              "category": "poster",
+              "categoryLabel": "Poster",
+              "room": "Space between Culture Centre Room 1 & 2",
+              "start": "10:30",
+              "end": "15:30"
+            },
+            {
+              "id": "AALA20260102",
+              "title": "Leveraging Process Data Through Multi-Agent Collaboration: A Formative Assessment Framework for Academic English",
+              "abstract": "Classroom-based formative assessment in Academic English courses continues to face persistent challenges, including delayed feedback, limited construct coverage, and insufficient use of process data to capture learners’ ongoing development. To address these issues, this study proposes a multi-agent collaborative system that integrates large language models with retrieval-augmented generation to support classroom-based formative assessment in Academic English instruction. The system is designed to collect multidimensional assessment evidence from students’ engagement in academic reading, writing, discussion, and reflective tasks and generate individualized learner profiles. In this design, students’ task products and process data are used to support formative assessment of language performance, higher order thinking, AI literacy, and their adherence to academic conventions. Adopting a mixed-methods design, the study will analyze student-agent interaction logs, task products, questionnaire responses, and semi-structured interviews to examine how process data generated through multi-agent support can enhance the validity, feasibility, and pedagogical usefulness of classroom-based formative assessment. The study aims to contribute to current discussions on the use of process data in classroom-based language assessment and to offer practical implications for formative assessment in tertiary foreign language education.",
+              "authors": [
+                {
+                  "name": "Xueshan Zhang",
+                  "affiliation": "Beijing Normal-Hong Kong Baptist University",
+                  "bio": "Xueshan Zhang, a lecturer in the Center for Foreign Language at Beijing Normal-Hongkong Baptist University. Her main research interests are language teacher development, psychology of language education/acquisition, AI literacy, and AI in language education."
+                },
+                {
+                  "name": "Hui Ma",
+                  "affiliation": "Beijing Normal-Hong Kong Baptist University",
+                  "bio": ""
+                },
+                {
+                  "name": "Chenxi Liu",
+                  "affiliation": "Beijing Normal-Hong Kong Baptist University",
+                  "bio": ""
+                },
+                {
+                  "name": "Jonathan James Corbett",
+                  "affiliation": "Beijing Normal-Hong Kong Baptist University",
+                  "bio": ""
+                }
+              ],
+              "category": "poster",
+              "categoryLabel": "Poster",
+              "room": "Space between Culture Centre Room 1 & 2",
+              "start": "10:30",
+              "end": "15:30"
+            },
+            {
+              "id": "AALA20260106",
+              "title": "Teacher Assessment Literacy for Human-in-the-Loop Use of Generative AI in Secondary EFL Writing Feedback",
+              "abstract": "Generative AI is beginning to enter classroom writing assessment, yet teacher assessment literacy for its human-in-the-loop use in secondary EFL writing feedback remains conceptually underdeveloped. Existing AI literacy and teacher competence frameworks identify broad technological, pedagogical, and ethical capacities, but they do not sufficiently specify the assessment-focused competencies teachers need when using AI under local policy and school constraints. This issue is especially salient in mainland China, where recent guidance supports human–AI collaboration in feedback, rubric design, and learning diagnosis while requiring teachers to retain final evaluative responsibility. This work-in-progress study asks: What constitutes teacher assessment literacy for the human-in-the-loop use of generative AI in secondary EFL writing feedback under current policy and school conditions in mainland China? Adopting a qualitative framework-building design, the study will first analyze policy documents, international AI competency frameworks, and scholarship on teacher assessment literacy, AI literacy, and L2 writing feedback to identify candidate dimensions of the construct. It will then conduct semi-structured interviews with secondary EFL teachers and teacher educators to refine context-sensitive descriptors of competent practice. The inquiry focuses on three connected assessment episodes: AI-assisted writing feedback, rubric-guided judgment, and diagnostic interpretation for instructional follow-up. Data will be examined through qualitative content analysis and constant comparison. The expected outcome is a context-sensitive conceptual framework specifying the knowledge, evaluative judgment, ethical awareness, and interpretive practices teachers need when working with generative AI in writing feedback. The study aims to contribute an assessment-specific account of teacher AI assessment literacy, inform teacher professional learning, and support more human-centred, fair, and accountable uses of generative AI in local assessment settings.",
+              "authors": [
+                {
+                  "name": "Zihan Sun",
+                  "affiliation": "City University of Macau",
+                  "bio": "Zihan Sun is a PhD candidate in Education at City University of Macau and a visiting student at Southern University of Science and Technology. Her research focuses on educational technology, educational assessment, educational leadership, and organizational learning, especially AI-supported assessment systems, deep interaction in online teaching, and precision evaluation. She presented at AALA 2024 on feedback literacy in film studies and at AALA 2025 on generative AI in formative assessment for K–12 English writing. She also participates in a national project on deep interaction and precision evaluation in online teaching."
+                }
+              ],
+              "category": "poster",
+              "categoryLabel": "Poster",
+              "room": "Space between Culture Centre Room 1 & 2",
+              "start": "10:30",
+              "end": "15:30"
+            },
+            {
+              "id": "AALA20260125",
+              "title": "Formative Assessment Practices in Chinese College English Contexts: New Insights from a Mixed Methods Investigation",
+              "abstract": "Based on the formative assessment (FA) framework of Black and Wiliam (2009), this study delineates the current landscape of FA implementation in Chinese College English. The research question including (1) What is the frequency of FA strategies in College English Classroom? and (2) What are the usage and characteristic of FA strategies in College English Classroom? Employ large-scale questionnaire surveys to obtain statistically significant descriptive data to answer the first question. However, to construct a more holistic portrait of FA implementation in College English instruction, this study also collects data through qualitative methods to answer the second question. This is because the usage characteristics of FA strategies involve specific classroom interaction details and teacher behaviors, the richness and complexity of which are difficult to capture through questionnaire frequency statistics alone. The research data are 525 valid questionnaires as quantitative data and reflection journal of 20 students and semi-structured interviews of 10 students as qualitative date from the first-year students not majoring in English in a university, which is in the Yangtze River Delta region with high education quality. The results reveal a significant increase in FA application over the past decade in Chinese College English, whose strategies, however, remains predominantly teacher-directed. While teachers demonstrate proficiency in eliciting evidence of learning and providing feedback, significant deficiencies exist in providing clear success criteria and empowering students as autonomous learners. The application of the five core formative assessment strategies is uneven and highly variable across instructors, indicating that effective FA transcends mere mechanical execution of strategies. Its essence lies in the teacher’s commitment to cultivating a safe, supportive, and feedback-rich classroom ecology—an environment where assessment is reframed from a threat into an opportunity for growth, thereby facilitating student’s transition from passive recipients of knowledge to active constructors of meaning.",
+              "authors": [
+                {
+                  "name": "Jiang Haitian",
+                  "affiliation": "City University of Macau; Tianping College of Suzhou University of Science and Technology",
+                  "bio": "Jiang Haitian, a doctoral student at the City University of Macau, has 6 years of experience in teaching English in higher education. Her research interests include formative assessment, academic emotions, and learning English as a foreign language."
+                },
+                {
+                  "name": "April Jiawei Zhang",
+                  "affiliation": "City University of Macau",
+                  "bio": ""
+                }
+              ],
+              "category": "poster",
+              "categoryLabel": "Poster",
+              "room": "Space between Culture Centre Room 1 & 2",
+              "start": "10:30",
+              "end": "15:30"
+            }
+          ]
         }
       ]
     },
@@ -1846,12 +1841,12 @@ window.AALA_PROGRAM = {
       "events": [
         {
           "id": "",
-          "title": "Registration at Culture Centre",
+          "title": "Registration at Culture Centre Entrance",
           "abstract": "",
           "authors": [],
           "category": "break",
           "categoryLabel": "Programme activity",
-          "room": "Culture Centre",
+          "room": "Culture Centre Entrance",
           "start": "09:00",
           "end": "09:30"
         },
@@ -1879,222 +1874,9 @@ window.AALA_PROGRAM = {
           "authors": [],
           "category": "break",
           "categoryLabel": "Programme activity",
-          "room": "",
+          "room": "Culture Centre Room 1 & 2",
           "start": "10:30",
           "end": "11:00"
-        },
-        {
-          "id": "",
-          "title": "Full-day poster presentations",
-          "abstract": "",
-          "authors": [],
-          "category": "poster",
-          "categoryLabel": "Poster",
-          "room": "Poster area",
-          "start": "10:30",
-          "end": "15:30",
-          "posters": [
-            {
-              "id": "AALA20260134",
-              "title": "Comparing human and GenAI-mediated interlocutors in L2 speaking assessment: effects on linguistic and neurocognitive behaviour",
-              "abstract": "Assessing second language (L2) oral proficiency has long been a daunting task for test developers and researchers due to challenges in balancing between construct validity, scoring reliability, and test practicality. Many large-scale L2 English oral proficiency tests, such as TOEFL, rely on monologic tasks, which have been criticized for their limited authenticity in representing real-life interactive language use. While some tests have included interactive tasks, test-takers’ performance may be influenced by interlocutor characteristics, raising further concerns about scoring reliability and test validity. Spoken dialogue systems (SDSs) have therefore been proposed as alternative interlocutors. Recent advancements in generative artificial intelligence (GenAI) enable SDSs to support more flexible and natural interaction. Additionally, avatar-based systems introduce visual embodiment, holding potential to increase social presence and interactional realism. However, empirical evidence on how different interlocutor conditions influence L2 speaking performance remains limited. In particular, while prior studies have compared human and SDS interlocutors, no research has examined differences between voice-only and avatar-based SDSs. Furthermore, existing studies have primarily focused on linguistic performance as an observable product, with little attention to the underlying cognitive processes involved in speech production. To address these gaps, this study compares test-takers’ oral performance across three interlocutor conditions: human, voice-only SDS, and avatar-based SDS. English-as-a-foreign-language (EFL) university students complete topic-based interview tasks. Linguistic performance is operationalised using complexity, accuracy, and fluency (CAF) indices, while neurocognitive processing is examined using functional near-infrared spectroscopy (fNIRS) to capture real-time changes in cortical activation during speech production. The findings are expected to provide insights into the comparability and validity of GenAI-mediated speaking assessment.",
-              "authors": [
-                {
-                  "name": "Han Yining",
-                  "affiliation": "Nanyang Technological University",
-                  "bio": "Yining Han is a first-year PhD student at the National Institute of Education, Nanyang Technological University, Singapore. Her research interests include technology-enhanced language assessment and research synthesis methodologies in applied linguistics. She has published in peer-reviewed journals such as Computer Assisted Language Learning."
-                }
-              ],
-              "category": "poster",
-              "categoryLabel": "Poster",
-              "room": "Poster area",
-              "start": "10:30",
-              "end": "15:30"
-            },
-            {
-              "id": "AALA20260143",
-              "title": "Research on Ethical Dilemmas and Coping Strategies of University Teachers in the Context of AI-Enabled Assessment",
-              "abstract": "With the wide application of generative AI and automated assessment tools in university teaching assessment and scientific research assessment, AI technology has improved the quality and efficiency of university assessment, while also bringing a series of ethical challenges to university teachers. Taking university teachers as the research object, this study adopts a mixed research method combining questionnaires and in-depth interviews. Through investigating teachers from multiple comprehensive, science and engineering, and normal universities (questionnaire survey N=300, in-depth interview N=15), it systematically explores the application status of AI assessment in university scenarios, focusing on analyzing the core ethical dilemmas faced by university teachers when using AI to carry out assessments (including homework correction, thesis review, teaching effect assessment, etc.). These dilemmas include disputes over assessment fairness caused by algorithmic bias, ambiguity in the accuracy of AI feedback and responsibility definition, risks of assessment data privacy leakage, and weakening of teachers' assessment subjectivity. Combining survey data and interview materials, the study sorts out the formation mechanism of ethical dilemmas, clarifies the ethical responsibility boundary of university teachers in AI assessment, and finally puts forward coping strategies that balance technological empowerment and ethical norms. It provides theoretical support and practical reference for universities to standardize AI assessment practices and improve teachers' ethical literacy in AI assessment, helping to realize the benign integration of human-centered assessment concepts and AI technology.",
-              "authors": [
-                {
-                  "name": "Zhaorui Xie",
-                  "affiliation": "City University of Macau",
-                  "bio": "I am a doctoral student. My research interests focus on educational assessment, educational ethics, and the application of AI in higher education. I am particularly committed to exploring ethical dilemmas faced by university teachers in the context of AI-enabled assessment, and has rich research experience in mixed research methods such as questionnaires and interviews. My research aims to promote the healthy integration of AI technology and educational assessment."
-                }
-              ],
-              "category": "poster",
-              "categoryLabel": "Poster",
-              "room": "Poster area",
-              "start": "10:30",
-              "end": "15:30"
-            },
-            {
-              "id": "AALA20260145",
-              "title": "Validating an AI-Mediated Role-Play Prompt Framework for Generating Focused, Explicit Feedback in Speaking",
-              "abstract": "Generative AI is increasingly being integrated into language classrooms. For instance, Yang et al. found that a task-based AI chatbot (Ellie) enhanced learners’ confidence, engagement, and interaction, with an average of 9.63 speaking turns per session which is substantially higher than typical classroom participation. Similarly, Tanaka et al. demonstrated that an AI-supported trialogue system (ASR + GPT) led to significantly higher retention rates compared to a no-feedback condition, highlighting the potential of prompt-based corrective feedback to improve accuracy and support form-focused speaking practice. Despite these promising findings, the pedagogical application of generative AI remains underdeveloped. Existing approaches often lack construct-aligned task design and targeted feedback, particularly for young and lower-proficiency learners. Although AI-generated feedback has been shown to be effective, it is frequently overly lengthy, predominantly evaluative, and insufficiently actionable. Furthermore, limited guidance exists on how prompts should be systematically designed to support pedagogically meaningful role-play interactions. To address these gaps, this study proposes an AI-Mediated Role-Play Prompt Design Framework, comprising a Prompt Engineering Component and a Pedagogical Flow. The prompt engineering component integrates role-play prompting, few-shot examples, and automatic iteration to ensure contextually grounded, consistent, and construct-aligned outputs. In parallel, the pedagogical flow translates these prompts into classroom practice through scenario design, construct operationalisation, feedback strategy selection, actionable feedback design, and evaluation. Learners engage in CEFR-aligned role-play tasks, receiving focused, explicit feedback targeting two high-leverage features, followed by feedforward guidance. By positioning AI as a mediating tool, this framework offers a scalable model for integrating AI into speaking instruction. Preliminary findings further suggest that teachers generally hold positive perceptions of the framework’s ability to generate focused and explicit feedback. However, several areas for improvement were identified, including the limited length and depth of role-play interactions, repetitive or unnatural questioning patterns, and occasional inconsistencies in AI-generated feedback delivery.",
-              "authors": [
-                {
-                  "name": "Shereen Wong",
-                  "affiliation": "University of Tsukuba",
-                  "bio": "Shereen Wong was born in Sarawak, Malaysia. She earned her Master’s in TESL from the National University of Malaysia. Her six years of teaching experience in a rural primary school inspired her interest in technology-enhanced language learning. She has also served as a district lead trainer and head of the English panel, supporting teachers and leading initiatives to improve English instruction. In addition, she has participated in innovation competitions aimed at enhancing learning opportunities for students in underserved communities. She is currently a first-year doctoral student at the University of Tsukuba, focusing on the use of AI for speaking assessment."
-                }
-              ],
-              "category": "poster",
-              "categoryLabel": "Poster",
-              "room": "Poster area",
-              "start": "10:30",
-              "end": "15:30"
-            },
-            {
-              "id": "AALA20260156",
-              "title": "SCENARIO-BASED NEEDS ANALYSIS OF PRAGMATICS IN EIL CONTEXTS",
-              "abstract": "In the changing landscape of global communication, EIL (English as an International Language) has emerged and become an important paradigm in which individuals from various cultural and language backgrounds communicate with each other using English as a mutual means (Matsuda, 2017). This has led to significant changes in English language testing and assessment. A number of scholars argue that it is no longer appropriate to use native speaker standards as a yardstick to assess English users’ proficiency. Instead, pragmatic competence, the ability to use English appropriately in different social settings (Roever, 2021), should be taken into account (Canagarajah, 2014; Jenkins, Cogo, & Dewey, 2012). Scenario-based assessment (SBA), an instrument that places participants in scenarios simulating real-world situations, is believed to be promising for assessing PC in EIL contexts. Notably, needs analysis is one of the key steps in developing SBA (Kunnan et al., 2022); however, research on scenario-based pragmatic needs in EIL contexts remains insufficient. This study examines the perceptions of different stakeholders about scenario-based pragmatic demands in a specific EIL context. To collect data, interviews with lecturers and English-majored students will be conducted, along with a questionnaire distributed to 150 students at the target university. Overall, significant pragmatic needs were identified, exhibiting varying patterns among stakeholder groups, English users’ proficiency levels, and academic status. The findings are additionally discussed regarding their implications for building an SBA tool for pragmatic competence in EIL.",
-              "authors": [
-                {
-                  "name": "Dieu Hong Nguyen",
-                  "affiliation": "Vietnam National University, University of Languages and International Studies",
-                  "bio": "Dieu Hong Nguyen (M.A.) has been working as a lecturer at Vietnam National University, University of Languages and International Studies, for 10 years. Her research interests include pragmatics, EIL, and testing and assessment. She is currently pursuing a PhD in Language Assessment. She also has experience as an examiner and item writer of English proficiency tests developed in Vietnam."
-                }
-              ],
-              "category": "poster",
-              "categoryLabel": "Poster",
-              "room": "Poster area",
-              "start": "10:30",
-              "end": "15:30"
-            },
-            {
-              "id": "AALA20260167",
-              "title": "Cultivating Feedback Literacy in Academic Writing: An AI-Powered Chatbot for Literature Review Assignments",
-              "abstract": "Feedback is central to developing disciplinary writing competence, yet students often struggle to interpret and act on comments related to synthesis, criticality, and authorial voice, particularly in literature review assignments. This poster presents an innovative AI-powered chatbot prototype designed to enhance feedback literacy by guiding students through structured, dialogic interactions that promote reflection and revision.\nGrounded in sociocultural theory, the chatbot draws on the concepts of mediation and the Zone of Proximal Development to provide scaffolded support adapted to learners' responses. The design is further informed by feedback literacy frameworks (Carless & Boud, 2018), which emphasize learners' capacity to interpret and use feedback productively, and genre-based pedagogy, which foregrounds disciplinary writing conventions. Principles of formative assessment and self-regulated learning also underpin the tool's focus on iteration and learner agency.\nRather than generating direct corrections, the chatbot employs graduated prompting to encourage active meaning-making. For instance, it may ask, \"How does this source connect to your previous point?\" or \"What position are you taking in relation to these studies?\" This approach scaffolds key aspects of literature review writing, including organizing sources, identifying gaps, and constructing critical comparisons.\nPreliminary observations suggest the chatbot supports both immediate revision and longer-term development of writing and feedback literacy. The poster also raises important considerations regarding the role of AI in maintaining academic voice and integrity.\nThis work contributes to the conference sub-theme of Innovation and Technology in Assessment by demonstrating how AI tools can be designed not merely to deliver feedback, but to cultivate more active, reflective, and capable academic writers within a humanistic assessment framework.",
-              "authors": [
-                {
-                  "name": "Michelle Reyes Raquel",
-                  "affiliation": "University of Hong Kong",
-                  "bio": "Michelle is a Senior Lecturer at HKU's Centre for Applied English Studies with over 20 years of higher education experience. Her pedagogical expertise centers on curriculum design and communication skills integration. She leads a university-wide effort to embed communication competencies across the curriculum, building faculty capacity and communities of practice. She has coordinated several language enhancement courses and responsible for teaching and learning quality assurance for a number of years. Her scholarship expertise is on language assessment and innovative pedagogies."
-                },
-                {
-                  "name": "Simon Boynton",
-                  "affiliation": "University of Hong Kong",
-                  "bio": ""
-                },
-                {
-                  "name": "Wim Vergult",
-                  "affiliation": "University of Hong Kong",
-                  "bio": ""
-                },
-                {
-                  "name": "Nicholas Mo",
-                  "affiliation": "University of Hong Kong",
-                  "bio": ""
-                }
-              ],
-              "category": "poster",
-              "categoryLabel": "Poster",
-              "room": "Poster area",
-              "start": "10:30",
-              "end": "15:30"
-            },
-            {
-              "id": "AALA20260174",
-              "title": "Comprehending or Responding? Comparing Selective and Interactive Listening Tasks",
-              "abstract": "The shift toward viewing listening as a reciprocal activity rather than a purely receptive skill has led to an interactive approach to listening assessment, in which test takers are required not only to comprehend input but also to produce contextually appropriate responses. Although such listening task has been adopted in high-stake English proficiency tests such as the TOEFL iBT and the Duolingo English Test, research on interactive listening remains limited. Therefore, the present study aims to compare Chinese university students’ performance on selective and interactive listening tasks, in a multiple-choice format using the same listening texts. Data will be analyzed using many-facet Rasch modeling to compare the difficulty and discrimination power of the two task types and to examine the interaction between task type and proficiency level. The findings are expected to offer insights into how different listening task types influence test performance across proficiency levels.",
-              "authors": [
-                {
-                  "name": "Guan Shuya",
-                  "affiliation": "University of Macau",
-                  "bio": "Guan Shuya is a first-year PhD student at the Faculty of Arts and Humanities, University of Macau. Her current research interests include vocabulary assessment and listening assessment."
-                }
-              ],
-              "category": "poster",
-              "categoryLabel": "Poster",
-              "room": "Poster area",
-              "start": "10:30",
-              "end": "15:30"
-            },
-            {
-              "id": "AALA20260178",
-              "title": "Development and Psychometric Validation of an AI Dependency Scale for College Students: Evidence Based on the Rasch Model",
-              "abstract": "With the widespread application of generative AI in higher education, university students’ use of AI has gradually exhibited characteristics of structural dependence. However, existing research still has limitations in construct definition and measurement methods. Based on Media System Dependency Theory and the perspective of cognitive offloading, this study develops and validates a multidimensional College Student AI Dependency Scale and conducts a systematic psychometric evaluation. A sample of 1,055 university students from six universities in Jiangxi Province was used. Exploratory and confirmatory factor analyses were employed to examine the scale structure, while a Rasch Rating Scale Model (RSM) was used to calibrate category functioning, item fit, and measurement precision. Multidimensional models, differential item functioning (DIF), and latent regression analyses were also used to evaluate structural validity and group stability. The results indicate that AI dependency comprises functional, emotional, and cognitive dimensions. These dimensions are correlated but show good discriminant validity. Measurement precision improved substantially after optimization of the rating structure; item fit was satisfactory; and the scale showed good stability across groups. In addition, each dimension was associated with relevant external variables in the expected direction, supporting criterion-related validity. This study provides a reliable tool for measuring AI dependency and a methodological foundation for future research and educational practice.",
-              "authors": [
-                {
-                  "name": "Zhong Zhen",
-                  "affiliation": "City University of Macau",
-                  "bio": "Zhong Zhen holds a doctorate in education from City University of Macau and is a university teacher. Zhong has previously served as a student counsellor and director of a university Youth League committee office, with extensive experience in student affairs and Youth League administration. Zhong has led and participated in several education research projects and has received honours including Outstanding Communist Youth League Cadre at the provincial level and Advanced Worker at the university level, demonstrating extensive experience in educational administration and research practice."
-                },
-                {
-                  "name": "Gao Guangming",
-                  "affiliation": "City University of Macau",
-                  "bio": ""
-                }
-              ],
-              "category": "poster",
-              "categoryLabel": "Poster",
-              "room": "Poster area",
-              "start": "10:30",
-              "end": "15:30"
-            },
-            {
-              "id": "AALA20260185",
-              "title": "Note‑Taking Modality and Its Effects on Performance in Computer‑Based Listening Assessment",
-              "abstract": "The increasing adoption of computer-based formats in high-stakes listening assessments has significantly influenced how test-takers interact with input and deploy strategies during comprehension. While a paper-based test allows flexible handwriting, including abbreviations, symbols, and other semiotic marks, the computer-based format typically limits note‑taking to on‑screen highlighting, with occasional use of paper based on test takers’ personal habits. This shift may influence test takers’ cognitive processing during listening, raising questions about whether traditional handwritten note-taking supports comprehension or instead imposes additional cognitive demands. In this context, this study investigates the impact of note-taking modality on listening test outcomes in a computer-based IELTS context. All participants complete on‑screen highlighting during the question‑preview stage to reflect authentic test conditions. The experimental manipulation concerns their behavior while listening, with two groups completing the task under different note‑taking conditions: no note‑taking or unrestricted handwritten notes. Drawing on cognitive load theory and L2 listening research, the study examines whether real-time note-taking demands additional attentional loads that may hinder test takers’ auditory input processing or whether it facilitates comprehension through memory support. Using a between-group design with university-level EFL learners, the study collects listening scores as well as qualitative data on note characteristics, including both linguistic and semiotic forms. The analysis further explores how note-taking interacts with real-time processing demands under test conditions. The findings are expected to justify note-taking as a context-dependent practice shaped by timing, modality, and cognitive constraints during listening tests. Pedagogically, the study will contribute to IELTS preparation by clarifying whether learners should rely on pre-listening highlighting alone or integrate selective while-listening note-taking in computer-based environments.",
-              "authors": [
-                {
-                  "name": "Yining Yang",
-                  "affiliation": "University of Macau",
-                  "bio": "The presenter is a PhD candidate in Applied Linguistics with research interests in second language acquisition and listening assessment. Her work focuses on L2 listening development in instructional and testing contexts, particularly how learners process spoken input and use cognitive and metacognitive strategies while listening. She is especially interested in computer-based language assessment and the impact of task design on test performance. Her current research examines note-taking behavior and cognitive processing in computer-based listening tests. Through this work, she aims to contribute to a better understanding of how assessment formats influence listening performance and strategy use among second language learners."
-                }
-              ],
-              "category": "poster",
-              "categoryLabel": "Poster",
-              "room": "Poster area",
-              "start": "10:30",
-              "end": "15:30"
-            },
-            {
-              "id": "AALA20260187",
-              "title": "A Triangulated Study on Generative AI Feedback versus Human Feedback of English-Chinese Consecutive Interpreting",
-              "abstract": "Interpreting assessment is significant for interpreting training, but previous assessment methods relied exclusively on human raters and therefore provided limited timely and tailored feedback for students, especially in large classes. With the popularization of Generative AI, large language models (LLMs) have the potential to facilitate automatic assessment in classroom-based formative evaluation. However, few research have examined the acceptability and perceptions of Generative AI feedback, especially among the primary actors in the classroom—teachers and students. Thus, this study will investigate the quality and practicality of Generative AI feedback in three ways. Firstly, one of the better-performing LLMs, Claude, will be employed to assess students' interpreting quality by giving scores and offering evaluative comments and future learning strategies. Afterwards, the scores and feedback generated by Claude will be compared with those provided by senior interpreting teachers using the same set of rubrics. Secondly, students' responses to both feedback will be analyzed, which are collected by using the adapted Feedback and Assessment Perception Questionnaire (FAPQ) and a qualitative questionnaire. Finally, semi-constructed interviews will be conducted on teachers to see their opinions on the feedback provided by LLMs and whether it can be widely applied in classroom-based formative assessment. The research is still ongoing, and the results are not available yet, but it is believed that the results will have important pedagogical implications on future interpreting teaching and learning.",
-              "authors": [
-                {
-                  "name": "Ip Weng Han",
-                  "affiliation": "University of Macau",
-                  "bio": "My research interests focus on L2 listening assessment and translation and interpreting assessment, with particular attention to how assessment practices can more accurately and meaningfully capture learners’ performance across different tasks."
-                }
-              ],
-              "category": "poster",
-              "categoryLabel": "Poster",
-              "room": "Poster area",
-              "start": "10:30",
-              "end": "15:30"
-            }
-          ]
-        },
-        {
-          "id": "AALA20260147",
-          "title": "The Learning-Oriented Washback Ecosystem (LOWE) Framework: Integrating Learning-Oriented Assessment and Washback for Assessment Reform in Asian Contexts",
-          "abstract": "This featured presentation introduces the Learning-Oriented Washback Ecosystem (LOWE) Framework, a conceptual model that reconceptualises washback as a dynamic, multi-layered ecosystem rather than a linear effect of testing on teaching and learning. While traditional washback research has largely examined how tests influence classroom practices, and Learning-Oriented Assessment (LOA) has focused on designing assessments to support learning, an integrated framework explaining how these processes interact within complex educational systems remains underdeveloped.\nThe LOWE framework positions assessment design as the starting point, grounded in LOA principles such as authentic tasks, feedback as feedforward, and student involvement in evaluative processes. However, the effects of assessment design are mediated by stakeholder interpretations, where teachers, students, and policymakers construct meanings about assessment demands and success criteria. These interpretations interact with broader ecosystem factors, including teacher language assessment literacy, institutional contexts, policy pressures, and technological infrastructures, which shape how assessment practices are enacted in classrooms.\nThrough these mediating processes, assessment design gives rise to washback processes that influence curriculum alignment, pedagogical strategies, and test preparation practices. These, in turn, shape key learning outcomes, including learner motivation, learning strategies, communicative competence, and assessment literacy. Importantly, the framework incorporates a feedback loop in which learning outcomes inform policy decisions and future assessment design, highlighting the cyclical nature of washback.\nThe presentation outlines five conceptual propositions underpinning the framework and demonstrates its applicability through examples from Asian contexts. By offering a theoretically grounded yet practice-oriented model, the LOWE framework provides a foundation for understanding and intentionally engineering positive washback in high-stakes assessment systems.",
-          "authors": [
-            {
-              "name": "Alla Baksh Mohamed Ayub Khan",
-              "affiliation": "Universiti Sains Malaysia",
-              "bio": "Dr. Alla Baksh Mohd Ayub Khan is a senior lecturer at the School of Languages, Literacies and Translation, Universiti Sains Malaysia (USM). He had served as an English language teacher (2008 - 2019) before taking up the position as a senior lecturer. His specialized research areas include course design in English for Specific Purposes (ESP), formative and summative assessment, school-based Assessment, learning-oriented assessment, test impact/washback effects, and assessment literacy. He has recently been appointed as the Vice-President of the Malaysian Association for Language Testing (MALT)."
-            },
-            {
-              "name": "Norhaslinda Hassan",
-              "affiliation": "Universiti Teknologi MARA",
-              "bio": ""
-            },
-            {
-              "name": "Atta Gebril",
-              "affiliation": "American University in Cairo",
-              "bio": ""
-            }
-          ],
-          "category": "featured",
-          "categoryLabel": "Featured",
-          "room": "HG02",
-          "start": "11:00",
-          "end": "11:30"
         },
         {
           "id": "AALA2026057",
@@ -2125,6 +1907,33 @@ window.AALA_PROGRAM = {
           "category": "featured",
           "categoryLabel": "Featured",
           "room": "HG01",
+          "start": "11:00",
+          "end": "11:30"
+        },
+        {
+          "id": "AALA20260147",
+          "title": "The Learning-Oriented Washback Ecosystem (LOWE) Framework: Integrating Learning-Oriented Assessment and Washback for Assessment Reform in Asian Contexts",
+          "abstract": "This featured presentation introduces the Learning-Oriented Washback Ecosystem (LOWE) Framework, a conceptual model that reconceptualises washback as a dynamic, multi-layered ecosystem rather than a linear effect of testing on teaching and learning. While traditional washback research has largely examined how tests influence classroom practices, and Learning-Oriented Assessment (LOA) has focused on designing assessments to support learning, an integrated framework explaining how these processes interact within complex educational systems remains underdeveloped.\nThe LOWE framework positions assessment design as the starting point, grounded in LOA principles such as authentic tasks, feedback as feedforward, and student involvement in evaluative processes. However, the effects of assessment design are mediated by stakeholder interpretations, where teachers, students, and policymakers construct meanings about assessment demands and success criteria. These interpretations interact with broader ecosystem factors, including teacher language assessment literacy, institutional contexts, policy pressures, and technological infrastructures, which shape how assessment practices are enacted in classrooms.\nThrough these mediating processes, assessment design gives rise to washback processes that influence curriculum alignment, pedagogical strategies, and test preparation practices. These, in turn, shape key learning outcomes, including learner motivation, learning strategies, communicative competence, and assessment literacy. Importantly, the framework incorporates a feedback loop in which learning outcomes inform policy decisions and future assessment design, highlighting the cyclical nature of washback.\nThe presentation outlines five conceptual propositions underpinning the framework and demonstrates its applicability through examples from Asian contexts. By offering a theoretically grounded yet practice-oriented model, the LOWE framework provides a foundation for understanding and intentionally engineering positive washback in high-stakes assessment systems.",
+          "authors": [
+            {
+              "name": "Alla Baksh Mohamed Ayub Khan",
+              "affiliation": "Universiti Sains Malaysia",
+              "bio": "Dr. Alla Baksh Mohd Ayub Khan is a senior lecturer at the School of Languages, Literacies and Translation, Universiti Sains Malaysia (USM). He had served as an English language teacher (2008 - 2019) before taking up the position as a senior lecturer. His specialized research areas include course design in English for Specific Purposes (ESP), formative and summative assessment, school-based Assessment, learning-oriented assessment, test impact/washback effects, and assessment literacy. He has recently been appointed as the Vice-President of the Malaysian Association for Language Testing (MALT)."
+            },
+            {
+              "name": "Norhaslinda Hassan",
+              "affiliation": "Universiti Teknologi MARA",
+              "bio": ""
+            },
+            {
+              "name": "Atta Gebril",
+              "affiliation": "American University in Cairo",
+              "bio": ""
+            }
+          ],
+          "category": "featured",
+          "categoryLabel": "Featured",
+          "room": "HG02",
           "start": "11:00",
           "end": "11:30"
         },
@@ -2241,33 +2050,6 @@ window.AALA_PROGRAM = {
           "end": "11:30"
         },
         {
-          "id": "AALA20260195",
-          "title": "A snapshot of Gen Z’s English proficiency to prepare for the assessment of the Gen Alpha in Vietnam",
-          "abstract": "It has been a common belief among both English professionals and practitioners in Vietnam that there are different features in English proficiency between those born in the 1970s and 1980s and ‘the youngsters’ below 30 years old (often called as the Gen Z): the former generation report that within a certain English test they would perform better at items about knowledge of English such as vocabulary and grammar than skill-based ones; while the GenZ are claimed to perform better at skill-based tests, especially receptive skills. Although quite widely accepted, these judgements have been severely under-researched. However, it is not hard to expect that generations of English learners may possess different traits shaped by their contemporary world of certain educational and technological advances. The current study aims at providing a sketch snapshot of the contemporary English proficiency of the teenagers born in 2010 in Vietnam, who are considered the end tail of the GenZ and beginning of the Gen Alpha. This can be reflected from the analysis of the performance of about five hundred Grade 9 students taking three high-stakes English tests developed from the same test specification within 10 weeks. Their scores of five areas of English constructs (vocabulary, grammar, reading comprehension, conversation, and essay writing) will be statistically analyzed to see if they consistenly perform better or worse at some certain constructs. These then can suggest some prototypical features of these special Gen Z population. The findings are expected to inform English educators at secondary education in Vietnam to prepare for Gen Alpha students with a view of maximizing the learners’ advantages while providing them with more educational interventions to fully develop their English competencies across the English profile as described in the CEFR.",
-          "authors": [
-            {
-              "name": "Nguyen Thi Ngoc Quynh",
-              "affiliation": "University of Languages and International Studies, Vietnam National University, Hanoi",
-              "bio": "Nguyen Thi Ngoc Quynh (or Quynh Nguyen) is the Director of Assessment and Quality Control at the VNU University of Languages and International Studies, Vietnam. She is also the Immediate Past President of the Asian Association for Language Assessment. She has led multiple national and international projects on language education and assessment."
-            },
-            {
-              "name": "Nguyen Thi Phuong Thao",
-              "affiliation": "University of Languages and International Studies, Vietnam National University, Hanoi",
-              "bio": ""
-            },
-            {
-              "name": "Nguyen Thi Chi",
-              "affiliation": "University of Languages and International Studies, Vietnam National University, Hanoi",
-              "bio": ""
-            }
-          ],
-          "category": "featured",
-          "categoryLabel": "Featured",
-          "room": "HG02",
-          "start": "11:30",
-          "end": "12:00"
-        },
-        {
           "id": "AALA2026025",
           "title": "Investigating the impact of a high-stakes language proficiency exam: A systematic review of IELTS impact research",
           "abstract": "In the context of growing emphasis on accountability and transparency in language assessment, understanding the impact of high-stakes tests on stakeholders and education systems has become an important concern. One prominent example is the International English Language Testing System (IELTS), a high-stakes test used to assess the language proficiency of candidates intending to work or study abroad.\nTest impact occurs at macro and micro levels, referring to effects on society and individual stakeholders (Bachman & Palmer, 1996; Saville, 2009). Washback represents one form of such impact, referring specifically to effects on teaching and learning (Saville & Khalifa, 2016). Although a growing body of research has examined IELTS-related impact and washback, these findings have not been systematically synthesised.\nThis presentation reports a systematic review of IELTS impact research, building on previous reviews of washback (e.g., Cheng et al., 2015). The review addressed three research questions, focusing on the characteristics of IELTS impact studies (e.g., participants, contexts, research approaches and methods), primary research focus, and the impacts identified across the literature.\nEmpirical studies from peer-reviewed journals, book chapters, doctoral dissertations, and IELTS research reports were identified through searches of ERIC, Scopus, Web of Science, and the IELTS Research Reports database. The review process followed PRISMA guidelines, resulting in 44 publications for analysis.\nFindings indicate that most IELTS impact research focuses on micro-level washback, particularly teaching practices and learner preparation. IELTS preparation often overlaps with English for Academic Purposes instruction and may support the development of academic literacy skills, such as critical thinking. However, negative and unintended consequences have also been reported, including perceived mismatches between test content and local educational contexts, and impacts arising from policy uses of test scores. The study outcomes are expected to direct future impact research into IELTS and other high stakes language assessments.",
@@ -2291,6 +2073,33 @@ window.AALA_PROGRAM = {
           "category": "featured",
           "categoryLabel": "Featured",
           "room": "HG01",
+          "start": "11:30",
+          "end": "12:00"
+        },
+        {
+          "id": "AALA20260195",
+          "title": "A snapshot of Gen Z’s English proficiency to prepare for the assessment of the Gen Alpha in Vietnam",
+          "abstract": "It has been a common belief among both English professionals and practitioners in Vietnam that there are different features in English proficiency between those born in the 1970s and 1980s and ‘the youngsters’ below 30 years old (often called as the Gen Z): the former generation report that within a certain English test they would perform better at items about knowledge of English such as vocabulary and grammar than skill-based ones; while the GenZ are claimed to perform better at skill-based tests, especially receptive skills. Although quite widely accepted, these judgements have been severely under-researched. However, it is not hard to expect that generations of English learners may possess different traits shaped by their contemporary world of certain educational and technological advances. The current study aims at providing a sketch snapshot of the contemporary English proficiency of the teenagers born in 2010 in Vietnam, who are considered the end tail of the GenZ and beginning of the Gen Alpha. This can be reflected from the analysis of the performance of about five hundred Grade 9 students taking three high-stakes English tests developed from the same test specification within 10 weeks. Their scores of five areas of English constructs (vocabulary, grammar, reading comprehension, conversation, and essay writing) will be statistically analyzed to see if they consistenly perform better or worse at some certain constructs. These then can suggest some prototypical features of these special Gen Z population. The findings are expected to inform English educators at secondary education in Vietnam to prepare for Gen Alpha students with a view of maximizing the learners’ advantages while providing them with more educational interventions to fully develop their English competencies across the English profile as described in the CEFR.",
+          "authors": [
+            {
+              "name": "Nguyen Thi Ngoc Quynh",
+              "affiliation": "University of Languages and International Studies, Vietnam National University, Hanoi",
+              "bio": "Nguyen Thi Ngoc Quynh (or Quynh Nguyen) is the Director of Assessment and Quality Control at the VNU University of Languages and International Studies, Vietnam. She is also the Immediate Past President of the Asian Association for Language Assessment. She has led multiple national and international projects on language education and assessment."
+            },
+            {
+              "name": "Nguyen Thi Phuong Thao",
+              "affiliation": "University of Languages and International Studies, Vietnam National University, Hanoi",
+              "bio": ""
+            },
+            {
+              "name": "Nguyen Thi Chi",
+              "affiliation": "University of Languages and International Studies, Vietnam National University, Hanoi",
+              "bio": ""
+            }
+          ],
+          "category": "featured",
+          "categoryLabel": "Featured",
+          "room": "HG02",
           "start": "11:30",
           "end": "12:00"
         },
@@ -2423,9 +2232,41 @@ window.AALA_PROGRAM = {
           "authors": [],
           "category": "break",
           "categoryLabel": "Programme activity",
-          "room": "",
+          "room": "Culture Centre Room 1 & 2",
           "start": "12:00",
           "end": "13:00"
+        },
+        {
+          "id": "AALA20260163",
+          "title": "Keeping humans in the loop: AI and human agency in language assessment",
+          "abstract": "The increasingly widespread use of AI technologies in language assessment and learning has raised critical questions about the role of human actors in the assessment process. In particular, it calls for closer attention to how these actors exercise agency and how their values and motivations shape language assessment practices (Harding, 2025). This mini-symposium, featuring three presentations from three different learning and assessment contexts in Asia, seeks to explore these issues. Agency is often conceptualized as the socio-culturally mediated capacity to act (Ahearn, 1999). We argue that human agency must be re-centred in discussions of AI in language assessment.\nThe first paper, by Yasuyo Sawaki, focuses on the role of learners and instructors in the L2 writing classroom incorporating automated feedback for learning-oriented assessment (LOA). Focusing on university academic writing classrooms in Japan, the paper discusses the agency of learners and instructors in the use of technology-mediated LOA in university L2 academic writing classrooms in Japan. The second paper, by Yong-Won Lee, addresses key research issues and topics in designing, developing, and evaluating GenAI-powered, automated assessment systems in language testing and assessment in the South Korean context, with a special focus on automated essay/speech evaluation and item generation. In the third paper, Mingwei Pan explores how test developers, educational institutions, and policymakers involved in high-stakes testing programs in China are engaging with GenAI tools, critically examining how human expertise, oversight, and accountability are maintained within these automated processes.\nTaken together, these three papers underscore the importance of ‘keeping humans in the loop’ in language assessment by foregrounding human agency, values and intentionality in the use of AI technologies. The symposium will also invite critical reflection on how AI technologies may challenge dominant ideologies about language assessment and reconfigure relations of power and agency among key stakeholders.",
+          "authors": [
+            {
+              "name": "Jason Fan",
+              "affiliation": "University of Melbourne",
+              "bio": "Jason Fan is Deputy Director and Principal Research Fellow at the Language Testing Research Centre (LTRC), University of Melbourne. His research interests include test validity and validation, speaking and writing assessment, Rasch measurement theory, and the social and political dimensions of language assessment. He is the Co-President of Asian Association for Language Assessment (AALA) and serves on the editorial boards of Language Testing and Studies in Language Assessment."
+            },
+            {
+              "name": "Yasuyo Sawaki",
+              "affiliation": "Waseda University, Japan",
+              "bio": ""
+            },
+            {
+              "name": "Yong-Won Lee",
+              "affiliation": "Seoul National University, South Korea",
+              "bio": ""
+            },
+            {
+              "name": "Mingwei Pan",
+              "affiliation": "Shanghai International Studies University, China",
+              "bio": ""
+            }
+          ],
+          "category": "symposium",
+          "categoryLabel": "Symposium",
+          "room": "HG01",
+          "start": "13:00",
+          "end": "14:00"
         },
         {
           "id": "AALA20260206",
@@ -2465,38 +2306,6 @@ window.AALA_PROGRAM = {
           "end": "14:00"
         },
         {
-          "id": "AALA20260163",
-          "title": "Keeping humans in the loop: AI and human agency in language assessment",
-          "abstract": "The increasingly widespread use of AI technologies in language assessment and learning has raised critical questions about the role of human actors in the assessment process. In particular, it calls for closer attention to how these actors exercise agency and how their values and motivations shape language assessment practices (Harding, 2025). This mini-symposium, featuring three presentations from three different learning and assessment contexts in Asia, seeks to explore these issues. Agency is often conceptualized as the socio-culturally mediated capacity to act (Ahearn, 1999). We argue that human agency must be re-centred in discussions of AI in language assessment.\nThe first paper, by Yasuyo Sawaki, focuses on the role of learners and instructors in the L2 writing classroom incorporating automated feedback for learning-oriented assessment (LOA). Focusing on university academic writing classrooms in Japan, the paper discusses the agency of learners and instructors in the use of technology-mediated LOA in university L2 academic writing classrooms in Japan. The second paper, by Yong-Won Lee, addresses key research issues and topics in designing, developing, and evaluating GenAI-powered, automated assessment systems in language testing and assessment in the South Korean context, with a special focus on automated essay/speech evaluation and item generation. In the third paper, Mingwei Pan explores how test developers, educational institutions, and policymakers involved in high-stakes testing programs in China are engaging with GenAI tools, critically examining how human expertise, oversight, and accountability are maintained within these automated processes.\nTaken together, these three papers underscore the importance of ‘keeping humans in the loop’ in language assessment by foregrounding human agency, values and intentionality in the use of AI technologies. The symposium will also invite critical reflection on how AI technologies may challenge dominant ideologies about language assessment and reconfigure relations of power and agency among key stakeholders.",
-          "authors": [
-            {
-              "name": "Jason Fan",
-              "affiliation": "University of Melbourne",
-              "bio": "Jason Fan is Deputy Director and Principal Research Fellow at the Language Testing Research Centre (LTRC), University of Melbourne. His research interests include test validity and validation, speaking and writing assessment, Rasch measurement theory, and the social and political dimensions of language assessment. He is the Co-President of Asian Association for Language Assessment (AALA) and serves on the editorial boards of Language Testing and Studies in Language Assessment."
-            },
-            {
-              "name": "Yasuyo Sawaki",
-              "affiliation": "Waseda University, Japan",
-              "bio": ""
-            },
-            {
-              "name": "Yong-Won Lee",
-              "affiliation": "Seoul National University, South Korea",
-              "bio": ""
-            },
-            {
-              "name": "Mingwei Pan",
-              "affiliation": "Shanghai International Studies University, China",
-              "bio": ""
-            }
-          ],
-          "category": "symposium",
-          "categoryLabel": "Symposium",
-          "room": "HG01",
-          "start": "13:00",
-          "end": "14:00"
-        },
-        {
           "id": "AALA20260208",
           "title": "Learning Journals as a Formative Assessment Tool: Fostering Self-regulated Listening Strategy Use Among Chinese English Majors",
           "abstract": "While formative assessment (FA) has been shown to support L2 self-regulated learning (SRL) through methods like peer and self-assessment, the potential of learning journals as a FA tool for enhancing L2 learners’ SRL strategy use remains largely under-explored. Moreover, the limited research on the interplay between FA and L2 learners’ SRL has predominantly centered on writing, overlooking listening contexts. This case study investigated the potential of learning journals as a FA tool in supporting EFL students’ self-regulated listening strategy use and the factors influencing its effectiveness. The study was conducted in a listening course for first-year English majors at a Tier One university in Southwest China, where learning journals were implemented as a weekly FA activity over one semester. Students kept journals to reflect on their after-class BBC news dictation experiences, including basic information (e.g., time spent), news summary, reflections on language ability, and listening strategies used during the task. This journal structure enabled students to document listening processes and difficulties; the instructor then provided formative feedback based on the journals, and students used both their reflections and feedback to adjust their learning. It thereby fulfilled the FA purpose of eliciting and using evidence of learning to inform subsequent teaching and learning (Black & Wiliam, 2009). Data were collected from two rounds of semi-structured interviews with 13 purposively selected students, as well as from their journal entries, and were analyzed thematically. Findings revealed that learning journals positively influenced students’ self-regulated listening strategy use across the forethought, performance and self-reflection phases. However, the effectiveness was shaped by four major factors: student (e.g., attitudes), task (e.g., difficulty), teacher (e.g., feedback provision), and institution (e.g., workload). This study contributes to understanding learning journals as a FA tool for developing L2 listening self-regulation and offers pedagogical implications for FA implementation in listening classrooms.",
@@ -2519,19 +2328,14 @@ window.AALA_PROGRAM = {
           "end": "13:30"
         },
         {
-          "id": "AALA20260110",
-          "title": "Writing Assessment Literacy in Practice: Insights from the classroom of a university English teacher",
-          "abstract": "Writing assessment literacy (WAL) —stakeholders’ knowledge, beliefs, and practices in evaluating written performance —has emerged as a critical area of inquiry in language assessment. While WAL is conceptualised as multidimensional and measurable, significant gaps are identified in understanding how teachers navigate the interplay between assessment beliefs, knowledge and classroom practices. Studies indicate that teachers face challenges in enacting their WAL due to contextual constraints such as exam-driven cultures and institutional policies. Yet what remains underexplored is how teachers negotiate these challenges through their lived experiences. The current study adopts an ethnographic case approach to address these gaps by examining how a university English teacher enacted WAL in writing assessment practices. Data were collected over three semesters through multiple sources: framed narratives, semi-structured interviews with the teacher, focus group interviews with students, classroom observations and assessment artefacts including rubrics, feedback samples and student essays. The longitudinal investigation reveals a complex enactment trajectory. The teacher’s WAL, shaped by his prior training and doctoral study, was translated into practice through genre-based pedagogy aligned with textbook topics, student needs, and proficiency. He facilitated students’ collaborative writing and peer feedback by using teacher-prepared rubrics. However, several constraints emerged: a lack of teacher-student collaboration in assessment, students’ heavy reliance on teacher criteria and feedback and delayed feedback due to large class sizes and non-teaching responsibilities. The study offers implications for teachers’ WAL enactment. In classroom instruction, teachers can collaborate with students on assessment criteria to foster ownership and trust in peer feedback and enhance student feedback literacy. In teacher education, programmes should prioritise teachers’ WAL to support timely and effective multimodal feedback (e.g., textual, audio, video, pictorial, and/or digital) to transcend contextual constraints. This study illuminates the dynamic processes of WAL enactment and pathways toward sustainable transformation in writing assessment practices.",
+          "id": "AALA2026020",
+          "title": "Reevaluating AI-Based Writing Feedback:  A Comparative Study of Holistic and Linguistic-Specific Evaluation Criteria in EFL Learners’",
+          "abstract": "This study explores how different evaluation rubrics influence the usefulness of AI-based writing feedback in an EFL learners’ essay. While recent advances in generative AI have made it possible for learners to receive fast and consistent feedback, previous studies have mainly relied on broad, holistic rubrics, which provide general evaluations of writing quality. Building on these studies, the present research takes a learner-oriented perspective and examines whether feedback based on more linguistic-specific rubric can offer clearer and more practical support for writing revision. Using a qualitative-dominant mixed-methods design, the study compares AI-based feedback based on a conventional holistic rubric and a linguistic-specific rubric focusing on features such as lexical diversity, grammatical accuracy. Four EFL learners wrote essays and received two versions of feedback from ChatGPT under the two writing rubric conditions. Questionnaire responses and interviews were then collected to explore learners’ perceptions and preferences. The results suggest that linguistic-specific feedback was perceived as more concrete and easier to apply during revision, suggesting the in AI-based writing feedback.",
           "authors": [
             {
-              "name": "Ling Gan",
-              "affiliation": "Beijing Technology and Business University",
-              "bio": "Ling Gan has a Ph.D. in Education from Hong Kong Baptist University. She is now an associate professor at the School of Languages and Communication, Beijing Technology and Business University in China. Her research interests include language assessment literacy and teacher professional development. She has published articles in RELC Journal, Education Sciences, Chinese Journal of Applied Linguistics, Language Assessment Quarterly and Language Testing in Asia."
-            },
-            {
-              "name": "Ricky Lam",
-              "affiliation": "Hong Kong Baptist University",
-              "bio": ""
+              "name": "XIAOLIAN JIN (Soyeon Kim)",
+              "affiliation": "Seoul National University",
+              "bio": "I'm a second-semester Master’s student in the Department of English Language and Literature at Seoul National University. My research interests center on English language assessment and Second Language Acquisition (SLA). Currently, I'm investigating the integration of artificial intelligence into language pedagogy, with a focus on developing technology-driven approaches and enhanced rubric design for language assessment."
             }
           ],
           "category": "theme-1",
@@ -2741,6 +2545,17 @@ window.AALA_PROGRAM = {
           "end": "14:00"
         },
         {
+          "id": "",
+          "title": "AALA (GMM)",
+          "abstract": "",
+          "authors": [],
+          "category": "other",
+          "categoryLabel": "Special session",
+          "room": "HG01",
+          "start": "14:00",
+          "end": "15:00"
+        },
+        {
           "id": "AALA20260205",
           "title": "Publishing in language assessment: Suggestions to potential authors",
           "abstract": "In this session, I will offer general suggestions for publishing research in the field of language assessment. This session would be valuable for beginning researchers who are attempting to publish their research in double-blind peer reviewed journals and book-length authored and edited studies.\nTo illustrate, authors who plan to publish unsolicited articles in refereed journals should generally decide on whether their submission is (1) an original research study (examining the validity or fairness of an assessment, illustrating the efficacy of a new methodology or examining language policy); (2) a brief report of a research study (examining a specific assessment policy, instrument, methodology or an overall short report); (3) a test review, a book review, a media review (examining the quality, effectiveness, or policy); (4) a review of a technology (software for psychometrics, AI-mediated tasks such as automated content generation, automated scoring). I will also offer specific suggestions regarding how to respond to journal reviewers' comments, how to balance text, tables, images, and multi-media, and how to answer the question; “So, what?”\nSuggestions will also be offered to researchers who are planning a book-length study or a book-length collection. Preparation required before writing a proposal (reading the aims and scope of the publisher to ascertain whether the proposal would be a good fit for the publisher) will be discussed. The proposal with a sample chapter is an essential component of the submission along with an outline for all chapters and selected references. The proposal should be compelling as it will first be refereed and then, if the reviews are positive, reviewed by the publisher’s editorial board for approval before a contract is issued.\nOther issues such as data availability for public analyses and the use of AI will be discussed.",
@@ -2756,17 +2571,6 @@ window.AALA_PROGRAM = {
           "room": "HG02",
           "start": "14:00",
           "end": "14:30"
-        },
-        {
-          "id": "",
-          "title": "AALA (GMM)",
-          "abstract": "",
-          "authors": [],
-          "category": "other",
-          "categoryLabel": "Special session",
-          "room": "HG01",
-          "start": "14:00",
-          "end": "15:00"
         },
         {
           "id": "AALA20260153",
@@ -2911,14 +2715,19 @@ window.AALA_PROGRAM = {
           "end": "14:30"
         },
         {
-          "id": "AALA2026091",
-          "title": "The Best of Both Worlds? A Mixed-Methods Evaluation of AI-Mediated Formative Feedback and Feedback Literacy in Malaysian Higher Education",
-          "abstract": "The rapid integration of artificial intelligence (AI) has shifted the landscape of formative assessment, offering immediate, automated feedback to student writers. While AI tools provide a potential solution to feedback bottlenecks in tertiary settings, little is known about how students critically negotiate these suggestions or the extent of their \"AI feedback literacy\". This study employed a sequential exploratory mixed-methods design to investigate the perceptions of 210 undergraduate ESL students at a Malaysian public university. Quantitative survey data were complemented by qualitative narratives gathered through focus group interviews to explore the lived experience of using AI for academic writing. The findings indicate that students perceive AI-mediated formative feedback as a highly effective tool for identifying language issues and expanding academic vocabulary. Beyond cognitive support, the use of AI feedback was found to foster learner autonomy and provide significant affective support by increasing writing confidence and reducing anxiety. Students particularly valued the immediacy of the feedback, which allowed for real-time revisions during the drafting process. However, a notable literacy gap emerged: despite finding the tools effective, students expressed lower confidence in their ability to critically evaluate the quality of AI-generated suggestions. Consequently, participants reported a strong preference for a hybrid model where AI-powered diagnostic support is combined with human instructor guidance rather than replacing it. The study concludes that while AI serves as an efficient diagnostic \"scaffold,\" it does not replace the human instructor’s role in navigating nuance and tone. For a truly \"best of both worlds\" approach, higher education assessment frameworks must prioritize the development of student feedback literacy to ensure ethical and critical engagement with automated tools.",
+          "id": "AALA20260132",
+          "title": "A humanistic approach to validating digital multimodal speaking tasks: Young language learners’ response processes and voices",
+          "abstract": "With the flourishing of digital multimodal assessments for young language learners (YLLs), it is important to ensure these assessments are both psychometrically robust and psychologically safe. Previous validation studies of large-scale standardized assessments for YLLs tended to rely on test scores as validity evidence. However, recent studies (e.g., Lee & Winke, 2018) have drawn on YLLs’ response processes, showing that cognitively inappropriate digital task features may disrupt test-taking processes, increase anxiety, and undermine validity. Investigating YLLs’ response processes and listening to their voices can therefore provide valuable evidence of how learners with developing cognitive abilities process and experience digital multimodal tasks. Ninety-six Chinese primary-school EFL learners (aged 9–12) completed two digital picture-based causal explanation speaking tasks (CESTs) in Chinese (L1) and English (L2), with eye movements recorded. Participants also completed retrospective interviews on their response processes and two English vocabulary size tests. Drawing on Weir’s socio-cognitive validation framework (Field, 2018), I examined L1 performance and response processes in relation to grade levels to establish a cognitive baseline for using CESTs in L2 assessment. L2 response processes were then analyzed in relation to L1 processes, L2 performance scores, vocabulary size, and grade levels. Results showed that 4th- and 6th-grade learners demonstrated similar L1 response processes and performance. In L2 tasks, learners with fewer linguistic resources visually attended longer and more frequently to both content-relevant and irrelevant areas. These findings reveal dynamic interactions between multimodal task features, cognitive ability, and L2 proficiency. The interview data also suggest that while YLLs can be strategic test-takers, they may experience anxiety when managing limited time and linguistic resources. This study highlights the importance of incorporating YLLs’ response processes and voices into validation, with implications for designing cognitively appropriate, fair, and learner-centered digital language assessments.",
           "authors": [
             {
-              "name": "Norhaslinda Hassan",
-              "affiliation": "Universiti Teknologi Mara",
-              "bio": "Dr. Norhaslinda Hassan is a Senior Lecturer at Universiti Teknologi MARA (UiTM) Penang Branch Campus with a specialized background in language assessment. Her research has centered on washback, learning oriented assessment and formative assessment practices within ESL instruction. Currently, she leads international research on AI-mediated feedback to enhance learner autonomy and feedback literacy. She advocates for a hybrid assessment model that balances the efficiency of automated tools with essential human pedagogical expertise."
+              "name": "Wenjun (Elyse) Ding",
+              "affiliation": "Oxford University Press",
+              "bio": "Wenjun (Elyse) Ding is an Assessment Manager at Oxford University Press. She received PhD in language assessment from University of Bristol, and MSc in Applied Linguistics from University of Oxford. Wenjun (Elyse) is interested in young language learners, language assessment, second language acquisition, and technology-enhanced language education and assessment. Her research interests have evolved from her roles as a language teacher, teacher trainer, researcher and assessment developer. Her recent publications appeared in Language Assessment Quarterly, Higher Education and Children & Society. She serves as Co-Chair of Young Learners SIG of ILTA, and Communications Officer of BAAL TEA SIG."
+            },
+            {
+              "name": "Guoxing Yu",
+              "affiliation": "University of Bristol",
+              "bio": ""
             }
           ],
           "category": "theme-3",
@@ -3066,56 +2875,51 @@ window.AALA_PROGRAM = {
           "authors": [],
           "category": "break",
           "categoryLabel": "Programme activity",
-          "room": "",
+          "room": "Culture Centre Room 1 & 2",
           "start": "15:00",
           "end": "15:30"
         },
         {
-          "id": "AALA20260132",
-          "title": "A humanistic approach to validating digital multimodal speaking tasks: Young language learners’ response processes and voices",
-          "abstract": "With the flourishing of digital multimodal assessments for young language learners (YLLs), it is important to ensure these assessments are both psychometrically robust and psychologically safe. Previous validation studies of large-scale standardized assessments for YLLs tended to rely on test scores as validity evidence. However, recent studies (e.g., Lee & Winke, 2018) have drawn on YLLs’ response processes, showing that cognitively inappropriate digital task features may disrupt test-taking processes, increase anxiety, and undermine validity. Investigating YLLs’ response processes and listening to their voices can therefore provide valuable evidence of how learners with developing cognitive abilities process and experience digital multimodal tasks. Ninety-six Chinese primary-school EFL learners (aged 9–12) completed two digital picture-based causal explanation speaking tasks (CESTs) in Chinese (L1) and English (L2), with eye movements recorded. Participants also completed retrospective interviews on their response processes and two English vocabulary size tests. Drawing on Weir’s socio-cognitive validation framework (Field, 2018), I examined L1 performance and response processes in relation to grade levels to establish a cognitive baseline for using CESTs in L2 assessment. L2 response processes were then analyzed in relation to L1 processes, L2 performance scores, vocabulary size, and grade levels. Results showed that 4th- and 6th-grade learners demonstrated similar L1 response processes and performance. In L2 tasks, learners with fewer linguistic resources visually attended longer and more frequently to both content-relevant and irrelevant areas. These findings reveal dynamic interactions between multimodal task features, cognitive ability, and L2 proficiency. The interview data also suggest that while YLLs can be strategic test-takers, they may experience anxiety when managing limited time and linguistic resources. This study highlights the importance of incorporating YLLs’ response processes and voices into validation, with implications for designing cognitively appropriate, fair, and learner-centered digital language assessments.",
+          "id": "AALA20260148",
+          "title": "The AALA Outstanding Dissertation Award for 2025 - Shengkai Yin",
+          "abstract": "",
           "authors": [
             {
-              "name": "Wenjun (Elyse) Ding",
-              "affiliation": "Oxford University Press",
-              "bio": "Wenjun (Elyse) Ding is an Assessment Manager at Oxford University Press. She received PhD in language assessment from University of Bristol, and MSc in Applied Linguistics from University of Oxford. Wenjun (Elyse) is interested in young language learners, language assessment, second language acquisition, and technology-enhanced language education and assessment. Her research interests have evolved from her roles as a language teacher, teacher trainer, researcher and assessment developer. Her recent publications appeared in Language Assessment Quarterly, Higher Education and Children & Society. She serves as Co-Chair of Young Learners SIG of ILTA, and Communications Officer of BAAL TEA SIG."
-            },
-            {
-              "name": "Guoxing Yu",
-              "affiliation": "University of Bristol",
+              "name": "Shengkai Yin",
+              "affiliation": "",
               "bio": ""
             }
           ],
-          "category": "theme-3",
-          "categoryLabel": "Theme 3",
-          "room": "HG02",
+          "category": "featured",
+          "categoryLabel": "Featured",
+          "room": "HG01",
           "start": "15:30",
           "end": "16:00"
         },
         {
-          "id": "AALA20260150",
-          "title": "From Integrity to Inference: VAAI-LA and the Governance of AI-Mediated Language Assessment",
-          "abstract": "Generative artificial intelligence has intensified long-standing questions in language assessment concerning validity, fairness, human agency, and the attribution of performance to learners. Yet much current discussion continues to frame AI chiefly as a matter of academic integrity, detection, or policy compliance. That framing is too narrow for language assessment, where observed performance is often treated as evidence of language ability itself. This paper proposes VAAI-LA (Validity Architecture for AI Integrated Assessment – Language Assessment), a domain-specific specification of a broader validity framework for educational and programme-based language assessment across K to 12 schooling, higher education English for Academic Purposes contexts, and adult settlement programmes such as LINC. The paper argues that AI-mediated disruption should be understood primarily as an inference problem. It examines how interpretive claims, construct representation, provenance expectations, assistance boundaries, scoring logic, fairness review, preparation ecology, and governance practices require re-specification once AI can generate target-language performance that may satisfy conventional assessment criteria without evidencing the learner’s own proficiency. Particular attention is given to developmental variation across contexts, modality-sensitive vulnerability, and the distinction between weakened interpretation and score noninterpretability. Rather than treating all AI use as equivalent, the framework differentiates among forms of mediation that remain compatible with bounded claims, those that require narrowed interpretation, and those that undermine attribution to the point that intended score meaning can no longer be sustained. A humanistic approach to language assessment under AI conditions, the paper argues, depends not on rejecting innovation but on making agency, evidential conditions, and local accountability structures more explicit. In doing so, the paper offers a language-testing-specific account of attribution collapse, identifies interactional competence as a current evidential anchor, and treats washback as an early governance signal. Implications are drawn for classroom assessment, EAP placement and progression, and adult settlement programming.",
+          "id": "AALA2026074",
+          "title": "Adapting CLIL Teachers’ Assessment Literacy Framework  in a Value-Integrated Foreign Language Curriculum",
+          "abstract": "Content and Language Integrated Learning (CLIL)-based foreign language instruction that embeds value-integrated curriculum goals becomes a new pedagogical practice to foster students’ ethical reasoning, cultural self-awareness, and responsible citizenship through subject-matter learning, officially termed as Curriculum Ideological and Political Education (CIPE) in Chinese educational policy. This entails interweaving of language, subject content, and values-oriented goals, thereby rendering assessment practices highly complex. What are the CLIL teachers’ assessment literacy in CIPE context becomes a pressing issue. Drawing on Lo & Leung's (2022) framework of CLIL teacher assessment literacy, this study conducted in-depth interviews with 15 CLIL teachers. The interview data validated the framework in that participants consistently demonstrated the core dimensions of assessment literacy outlined by Lo & Leung (2022), as evidenced by recurring themes across their responses. The data was supplemented by thematic analysis of  actual assessment tasks and classroom materials.First, the eight core assessment competencies identified by Lo & Leung remain applicable; however they require two new elements: (a) values-oriented assessment dimensions (b) judgment of the attainment of ethical and cultural goals.  Second, teachers predominantly emphasized operational aspects, such as rubric design and balancing content, language, and values-oriented scoring; while paying relatively less attention to deeper cognitive constructs. The findings not only validate and extend the existing framework of CLIL assessment literacy but also offer empirically grounded support for professional development initiatives in value-integrated CLIL contexts.\nKeywords: Content and Language Integrated Learning (CLIL); Value-Integrated Curriculum; Teacher Assessment Literacy; Teacher Professional Development",
           "authors": [
             {
-              "name": "Johanathan Woodworth",
-              "affiliation": "Mount Saint Vincent University",
+              "name": "Lin Feng",
+              "affiliation": "Xi’an Jiaotong University, Baoji University of Arts and Sciences",
+              "bio": "Fenglin is an Associate Professor and master's supervisor at the School of Foreign Languages, Baoji University of Arts and Sciences, currently pursuing a doctoral degree in Linguistics at Xi'an Jiaotong University. As a dedicated teacher educator, she focuses on English linguistics, EFL teaching methodology, and ideological-political integration in foreign language education. She has led multiple provincial and institutional research projects and guided students to national awards."
+            },
+            {
+              "name": "Yaru Meng",
+              "affiliation": "Xi’an Jiaotong University",
               "bio": ""
             },
             {
-              "name": "Mohamed Kharbach",
-              "affiliation": "Mount Saint Vincent University",
-              "bio": "Mohamed Kharbach is an educator, researcher, and writer whose work focuses on literacy, language, educational technology, emerging literacies, and critical approaches to digital education. He is affiliated with Mount Saint Vincent University, where he completed both his MEd and PhD in Education. With prior experience teaching English in K to 12 settings, he brings together classroom practice and scholarly inquiry in his work on AI in education, curriculum, and research methodology. He is also widely known for his contributions to practitioner-oriented educational technology publishing."
-            },
-            {
-              "name": "Christine Doe",
-              "affiliation": "Mount Saint Vincent University",
+              "name": "Jinyan Zhang",
+              "affiliation": "Baoji University of Arts and Sciences",
               "bio": ""
             }
           ],
-          "category": "theme-3",
-          "categoryLabel": "Theme 3",
-          "room": "HG01",
+          "category": "theme-1",
+          "categoryLabel": "Theme 1",
+          "room": "HG02",
           "start": "15:30",
           "end": "16:00"
         },
@@ -3181,18 +2985,23 @@ window.AALA_PROGRAM = {
           "end": "16:00"
         },
         {
-          "id": "AALA2026053",
-          "title": "Development of the Sejong Korean Assessment and Its Prospects as a Proficiency Test",
-          "abstract": "The Sejong Korean Assessment (SKA) is a proficiency test designed to measure the Korean language ability of learners studying Korean at Sejong Institutes as well as other learners of Korean as a foreign language. Development of the test began in 2019, and the first administration was conducted in 2022. Since then, the test has been administered three times a year through the global network of Sejong Institutes, reaching its tenth administration to date. The purpose of this study is to examine the development and implementation of SKA and to explore its significance and future prospects as a Korean language proficiency assessment. SKA was designed to complement and differentiate itself from the Test of Proficiency in Korean (TOPIK) by focusing on aspects of language ability that are not sufficiently addressed by existing proficiency tests. The development of SKA was motivated by both external and internal factors. Externally, limitations in the availability of TOPIK test sites and difficulties in test registration highlighted the need for a more accessible assessment. Internally, the structure of existing proficiency tests and their item formats have limitations in measuring the range of communicative abilities required by Korean learners worldwide. Based on the global infrastructure of Sejong Institutes, SKA was developed as an assessment that can be administered wherever a Sejong Institute operates. Considering that many Sejong Institute learners are beginner- and intermediate-level learners seeking to assess their overall communicative ability, particularly speaking skills, the test was designed from the outset to include the four language skills of listening, reading, writing, and speaking. In addition, SKA adopts a single-format model capable of measuring proficiency across beginner, intermediate, and advanced levels. By analyzing data from the ten administrations conducted so far, including test locations, learner performance, and patterns of proficiency development, this study examines what SKA reveals about the Korean language abilities of Sejong Institute learners. The study also discusses the potential and limitations of SKA as a proficiency assessment and proposes directions for its future development.",
+          "id": "AALA2026038",
+          "title": "An AI-Assisted Writing Assessment and Feedback Tool for Young L2 Learners of English: Investigating Student Use and Perceptions",
+          "abstract": "Generative AI tools have gained traction as writing assistants for L2 learners because of their capability to provide immediate and personalized feedback (Barrot, 2023). A growing body of research has examined how L2 learners and teachers engage with AI tools such as ChatGPT for writing development (e.g., Koltovskaia et al., 2024; Guo & Wang, 2024). However, most studies focus on adult learners, and empirical research on the use of AI tools with younger, school-aged L2 learners remains limited.\n\nAddressing this gap, this study investigates how young L2 learners interact with an AI tool during the writing process. The study utilized an AI-assisted writing assessment and feedback prototype developed for K–12 English learners. The tool features a chatbot employing the GPT-4o model, allowing for interactive feedback. Specifically, we examined the types of chat messages students produced, how they incorporated AI feedback into revisions, and their perceptions of the tool.\n\nParticipants included eight teachers and their L2 learners (N = 206) in Grades 4 to 9 from China, Korea, Turkiye, and the USA. Students interacted with the chatbot during outlining and revision across three prompts and completed a survey. Chat messages were coded, while first and revised drafts were analyzed using NLP technologies. Descriptive statistics of the codings, NLP features, and survey responses were computed to identify patterns.\n\nResults showed substantial variation in chatbot use (1 to 39 messages per student; M = 5.9), with more interactions during outlining than revision. Translation and idea development requests were most frequent, followed by grammar-related queries. Students’ use of AI feedback in revisions also varied. Survey responses indicated positive perceptions of the tool, although the degree of positivity differed across classrooms. The findings have implications for classroom writing assessments and teachers’ roles in guiding young learners’ effective and appropriate use of AI in writing.",
           "authors": [
             {
-              "name": "Mijin Won",
-              "affiliation": "Yonsei University",
-              "bio": "Mijin Won is an Associate Professor at Yonsei University specializing in Korean language education and language assessment. Her research focuses on Korean language proficiency testing, large-scale language assessment, and the validation of language assessment frameworks. She serves as the principal investigator for the development of the Sejong Korean Assessment (SKA), a global proficiency test for learners of Korean, and previously led the development of the speaking component of the Test of Proficiency in Korean (TOPIK). At Yonsei University, she supervises numerous master’s and doctoral theses in Korean language education and language assessment, contributing to the training of future researchers in the field."
+              "name": "Mikyung Kim Wolf",
+              "affiliation": "ETS",
+              "bio": "Mikyung Kim Wolf is a principal research scientist at ETS. She has over 20 years of experience in developing and researching language assessments for multilingual learners. Her research areas include technology-enhanced language assessments, the use of AI in language assessment and learning, formative assessment, and validity issues in assessing K-12 English language learners both in the U.S. and globally. She has edited two volumes: Assessing English Language Proficiency in U.S. K-12 Schools (2020, Routledge) and English Language Proficiency Assessment for Young Learners (2017, Routledge)."
+            },
+            {
+              "name": "Michael Suhan, ETS, msuhan@ets.org",
+              "affiliation": "",
+              "bio": ""
             }
           ],
-          "category": "theme-1",
-          "categoryLabel": "Theme 1",
+          "category": "theme-3",
+          "categoryLabel": "Theme 3",
           "room": "L207",
           "start": "15:30",
           "end": "16:00"
@@ -3254,24 +3063,24 @@ window.AALA_PROGRAM = {
           ],
           "category": "theme-3",
           "categoryLabel": "Theme 3",
-          "room": "HG02",
+          "room": "HG01",
           "start": "16:00",
           "end": "16:30"
         },
         {
-          "id": "AALA20260148",
-          "title": "The AALA Outstanding Dissertation Award for 2025 - Shengkai Yin",
-          "abstract": "",
+          "id": "AALA2026053",
+          "title": "Development of the Sejong Korean Assessment and Its Prospects as a Proficiency Test",
+          "abstract": "The Sejong Korean Assessment (SKA) is a proficiency test designed to measure the Korean language ability of learners studying Korean at Sejong Institutes as well as other learners of Korean as a foreign language. Development of the test began in 2019, and the first administration was conducted in 2022. Since then, the test has been administered three times a year through the global network of Sejong Institutes, reaching its tenth administration to date. The purpose of this study is to examine the development and implementation of SKA and to explore its significance and future prospects as a Korean language proficiency assessment. SKA was designed to complement and differentiate itself from the Test of Proficiency in Korean (TOPIK) by focusing on aspects of language ability that are not sufficiently addressed by existing proficiency tests. The development of SKA was motivated by both external and internal factors. Externally, limitations in the availability of TOPIK test sites and difficulties in test registration highlighted the need for a more accessible assessment. Internally, the structure of existing proficiency tests and their item formats have limitations in measuring the range of communicative abilities required by Korean learners worldwide. Based on the global infrastructure of Sejong Institutes, SKA was developed as an assessment that can be administered wherever a Sejong Institute operates. Considering that many Sejong Institute learners are beginner- and intermediate-level learners seeking to assess their overall communicative ability, particularly speaking skills, the test was designed from the outset to include the four language skills of listening, reading, writing, and speaking. In addition, SKA adopts a single-format model capable of measuring proficiency across beginner, intermediate, and advanced levels. By analyzing data from the ten administrations conducted so far, including test locations, learner performance, and patterns of proficiency development, this study examines what SKA reveals about the Korean language abilities of Sejong Institute learners. The study also discusses the potential and limitations of SKA as a proficiency assessment and proposes directions for its future development.",
           "authors": [
             {
-              "name": "Shengkai Yin",
-              "affiliation": "",
-              "bio": ""
+              "name": "Mijin Won",
+              "affiliation": "Yonsei University",
+              "bio": "Mijin Won is an Associate Professor at Yonsei University specializing in Korean language education and language assessment. Her research focuses on Korean language proficiency testing, large-scale language assessment, and the validation of language assessment frameworks. She serves as the principal investigator for the development of the Sejong Korean Assessment (SKA), a global proficiency test for learners of Korean, and previously led the development of the speaking component of the Test of Proficiency in Korean (TOPIK). At Yonsei University, she supervises numerous master’s and doctoral theses in Korean language education and language assessment, contributing to the training of future researchers in the field."
             }
           ],
-          "category": "featured",
-          "categoryLabel": "Featured",
-          "room": "HG01",
+          "category": "theme-1",
+          "categoryLabel": "Theme 1",
+          "room": "HG02",
           "start": "16:00",
           "end": "16:30"
         },
@@ -3332,18 +3141,18 @@ window.AALA_PROGRAM = {
           "end": "16:30"
         },
         {
-          "id": "AALA2026055",
-          "title": "What skills matter most? Stakeholder priorities and the future of standardised English language assessment",
-          "abstract": "Recent debates about English language testing have seen critical scholars questioning whether standardised assessments capture authentic academic communication, whilst others argue that standardisation remains essential for fairness and comparability. However, these perspectives have largely been advanced by researchers rather than test score users, leaving a significant gap in our understanding of what university stakeholders actually value.\nThis paper presents findings from a global mixed-methods survey of 156 university personnel across six regions, examining the language skills they prioritise, the evidence types they trust, and how they perceive current assessment practices. Findings reveal remarkable consensus across regions, institution types, and professional roles: integrated and listening skills were rated most highly, and the ability to synthesise information from multiple sources emerged as the single most valued skill. Crucially, no significant regional or role-based variation was found, providing empirical support for standardised assessment when it focuses on universally valued, authentic academic competencies.\nThree findings carry particular implications for humanistic assessment design. First, traditional essay tasks were valued less than expected relative to integrated-skills and shorter writing tasks focusing on specific skills. Second, despite speaking and listening being widely tested, over 30% of respondents perceived these skills as inadequately assessed, revealing a construct-authenticity gap in current assessment design. Third, 98.3% of respondents identified AI literacy as a key future skill, signalling a fundamental shift in the communicative demands of academic contexts.\nThe paper argues that the challenge is not whether to standardise assessment, but how to standardise authentically, such as through scenario-anchored tasks, integrated assessment formats and AI-mediated adaptive systems that preserve comparability whilst reflecting authentic academic contexts that stakeholders describe. Implications are drawn for assessment design, policy, and teacher agency in navigating an evolving assessment landscape.",
+          "id": "AALA2026091",
+          "title": "The Best of Both Worlds? A Mixed-Methods Evaluation of AI-Mediated Formative Feedback and Feedback Literacy in Malaysian Higher Education",
+          "abstract": "The rapid integration of artificial intelligence (AI) has shifted the landscape of formative assessment, offering immediate, automated feedback to student writers. While AI tools provide a potential solution to feedback bottlenecks in tertiary settings, little is known about how students critically negotiate these suggestions or the extent of their \"AI feedback literacy\". This study employed a sequential exploratory mixed-methods design to investigate the perceptions of 210 undergraduate ESL students at a Malaysian public university. Quantitative survey data were complemented by qualitative narratives gathered through focus group interviews to explore the lived experience of using AI for academic writing. The findings indicate that students perceive AI-mediated formative feedback as a highly effective tool for identifying language issues and expanding academic vocabulary. Beyond cognitive support, the use of AI feedback was found to foster learner autonomy and provide significant affective support by increasing writing confidence and reducing anxiety. Students particularly valued the immediacy of the feedback, which allowed for real-time revisions during the drafting process. However, a notable literacy gap emerged: despite finding the tools effective, students expressed lower confidence in their ability to critically evaluate the quality of AI-generated suggestions. Consequently, participants reported a strong preference for a hybrid model where AI-powered diagnostic support is combined with human instructor guidance rather than replacing it. The study concludes that while AI serves as an efficient diagnostic \"scaffold,\" it does not replace the human instructor’s role in navigating nuance and tone. For a truly \"best of both worlds\" approach, higher education assessment frameworks must prioritize the development of student feedback literacy to ensure ethical and critical engagement with automated tools.",
           "authors": [
             {
-              "name": "Nathaniel Owen",
-              "affiliation": "Oxford University Press",
-              "bio": "Dr. Nathaniel Owen (PhD) is Senior Research and Analysis Manager at Oxford University Press. He holds a PhD in language testing from the University of Leicester specialising in L2 reading processes. His research interests and publications include the interface of language testing and technology, big data analytics, the use of language tests in English-medium instruction contexts, research methods and widening participation in higher education. He has presented work at multiple national and international conferences."
+              "name": "Norhaslinda Hassan",
+              "affiliation": "Universiti Teknologi Mara",
+              "bio": "Dr. Norhaslinda Hassan is a Senior Lecturer at Universiti Teknologi MARA (UiTM) Penang Branch Campus with a specialized background in language assessment. Her research has centered on washback, learning oriented assessment and formative assessment practices within ESL instruction. Currently, she leads international research on AI-mediated feedback to enhance learner autonomy and feedback literacy. She advocates for a hybrid assessment model that balances the efficiency of automated tools with essential human pedagogical expertise."
             }
           ],
-          "category": "theme-1",
-          "categoryLabel": "Theme 1",
+          "category": "theme-3",
+          "categoryLabel": "Theme 3",
           "room": "L207",
           "start": "16:00",
           "end": "16:30"
@@ -3398,6 +3207,17 @@ window.AALA_PROGRAM = {
           "end": "16:30"
         },
         {
+          "id": "",
+          "title": "Best student paper presentation",
+          "abstract": "",
+          "authors": [],
+          "category": "other",
+          "categoryLabel": "Special session",
+          "room": "HG01",
+          "start": "16:30",
+          "end": "17:00"
+        },
+        {
           "id": "AALA2026099",
           "title": "Assessing L2 Interactional Competence with LLM-based AI Agents: Do Interaction Styles Matter?",
           "abstract": "Interactional competence (IC) is a key component of second language oral proficiency, reflecting how learners manage interactive communication through strategies such as turn-taking, topic management, and repair. Accurate assessment of IC is resource-intensive and challenging, as interlocutor idiosyncrasies can threaten test validity and fairness. Spoken dialogue systems (SDSs) offer a more stable alternative to mitigate interlocutor variability. However, SDSs often yield procedural, constrained exchanges that limit their potential to assess a full range of IC. By contrast, large language model (LLM)–based chatbots offer greater flexibility and human-like responsiveness. Because unconstrained LLMs can over-manage discourse, reducing opportunities for learners to display IC, configuring AI bots’ interaction styles is critical for designing conversational agents.\nThis study examined whether purposefully designed LLM-based AI agents with distinct interaction styles can elicit robust IC evidence from learners of Chinese as a second language (CSL). Thirty CSL learners completed the same oral tasks with an AI agent configured in three styles—interviewer, facilitator, and conversational partner—in a counterbalanced design. All interactions were audio-recorded, transcribed, and analyzed for interactional features. The findings inform the design of GenAI chatbots as test interlocutors that are capable of balancing scaffolding with conversational space to elicit sufficient evidence of IC. This study offers practical implications for developing and assessing IC with LLM-based AI agents and provides fresh insights into refining AI chatbot designs to ensure reliable, authentic, and valid assessments.",
@@ -3415,18 +3235,34 @@ window.AALA_PROGRAM = {
           ],
           "category": "theme-3",
           "categoryLabel": "Theme 3",
-          "room": "HG02",
+          "room": "HG01",
           "start": "16:30",
           "end": "17:00"
         },
         {
-          "id": "",
-          "title": "Best student paper presentation",
-          "abstract": "",
-          "authors": [],
-          "category": "other",
-          "categoryLabel": "Special session",
-          "room": "HG01",
+          "id": "AALA2026060",
+          "title": "Human?Centred Re?thinking of Academic English Assessment: Evidence from a Large?Scale Scoping Review and Stakeholder Interviews",
+          "abstract": "As English-medium higher education is increasingly shaped by digital and AI-mediated communication, prevailing academic English proficiency constructs may not fully capture the integrated and interactional language demands students now face. Building on Xi’s (2025) argument that communicative competence and language assessment constructs should be reconsidered in response to AI-mediated communication, this paper re-examines what counts as academic English in contemporary English-medium higher education and how pre-enrolment language assessment can better reflect the competencies needed for meaningful participation.\nAdopting a human-centred assessment perspective, the study defines construct relevance in relation to students’ and faculty members’ lived academic practices and the consequences of assessment decisions. It investigates: (1) how students use English across academic, institutional, social, and wellbeing domains; (2) which knowledge and skills are required for successful participation and are relevant to pre-enrolment assessment; and (3) which of these demands are likely to remain salient in the future.\nThe study draws on two complementary sources of evidence: a scoping review of 94 peer-reviewed studies and semi-structured interviews with international students (n = 15) and faculty members (n = 8) experienced in English-medium higher education. Interview protocols were informed by the review, enabling triangulation between published research and stakeholders’ lived experiences.\nAcross both data sources, academic English emerges not as a set of discrete skills but as an integrated, task-embedded construct shaped by interaction, mediation, and participation within academic communities. Reading and writing remain central but are closely intertwined with listening and speaking in lectures, discussions, presentations, and interaction. Language use also extends beyond coursework to engagement with institutional services, social participation, professional networking, and wellbeing. The findings support a human-centred approach to assessment design that moves beyond static, decontextualised proficiency models toward broader construct definitions and more integrated tasks reflecting authentic participation, learner agency, and student wellbeing.",
+          "authors": [
+            {
+              "name": "Hye-Won Lee",
+              "affiliation": "Cambridge University Press & Assessment",
+              "bio": "Dr Hye-won Lee is a Senior Research Manager at Cambridge University Press & Assessment, where she leads research on academic English constructs and next generation language assessment. Her work focuses on aligning assessment design with real world academic language use, learner needs, and assessment consequences. She holds a PhD in Applied Linguistics and Technology from Iowa State University, specialising in computer-assisted language assessment and argument based validation. Prior to joining Cambridge, she worked on large scale research projects at Educational Testing Service and the Center for Applied Linguistics, and taught in TESOL master’s programmes in South Korea."
+            },
+            {
+              "name": "Carla Pastorino-Campos",
+              "affiliation": "Cambridge University Press & Assessment",
+              "bio": ""
+            },
+            {
+              "name": "Filio Constantinou",
+              "affiliation": "Cambridge University Press & Assessment",
+              "bio": ""
+            }
+          ],
+          "category": "theme-1",
+          "categoryLabel": "Theme 1",
+          "room": "HG02",
           "start": "16:30",
           "end": "17:00"
         },
@@ -3507,28 +3343,28 @@ window.AALA_PROGRAM = {
           "end": "17:00"
         },
         {
-          "id": "AALA2026060",
-          "title": "Human?Centred Re?thinking of Academic English Assessment: Evidence from a Large?Scale Scoping Review and Stakeholder Interviews",
-          "abstract": "As English-medium higher education is increasingly shaped by digital and AI-mediated communication, prevailing academic English proficiency constructs may not fully capture the integrated and interactional language demands students now face. Building on Xi’s (2025) argument that communicative competence and language assessment constructs should be reconsidered in response to AI-mediated communication, this paper re-examines what counts as academic English in contemporary English-medium higher education and how pre-enrolment language assessment can better reflect the competencies needed for meaningful participation.\nAdopting a human-centred assessment perspective, the study defines construct relevance in relation to students’ and faculty members’ lived academic practices and the consequences of assessment decisions. It investigates: (1) how students use English across academic, institutional, social, and wellbeing domains; (2) which knowledge and skills are required for successful participation and are relevant to pre-enrolment assessment; and (3) which of these demands are likely to remain salient in the future.\nThe study draws on two complementary sources of evidence: a scoping review of 94 peer-reviewed studies and semi-structured interviews with international students (n = 15) and faculty members (n = 8) experienced in English-medium higher education. Interview protocols were informed by the review, enabling triangulation between published research and stakeholders’ lived experiences.\nAcross both data sources, academic English emerges not as a set of discrete skills but as an integrated, task-embedded construct shaped by interaction, mediation, and participation within academic communities. Reading and writing remain central but are closely intertwined with listening and speaking in lectures, discussions, presentations, and interaction. Language use also extends beyond coursework to engagement with institutional services, social participation, professional networking, and wellbeing. The findings support a human-centred approach to assessment design that moves beyond static, decontextualised proficiency models toward broader construct definitions and more integrated tasks reflecting authentic participation, learner agency, and student wellbeing.",
+          "id": "AALA20260150",
+          "title": "From Integrity to Inference: VAAI-LA and the Governance of AI-Mediated Language Assessment",
+          "abstract": "Generative artificial intelligence has intensified long-standing questions in language assessment concerning validity, fairness, human agency, and the attribution of performance to learners. Yet much current discussion continues to frame AI chiefly as a matter of academic integrity, detection, or policy compliance. That framing is too narrow for language assessment, where observed performance is often treated as evidence of language ability itself. This paper proposes VAAI-LA (Validity Architecture for AI Integrated Assessment – Language Assessment), a domain-specific specification of a broader validity framework for educational and programme-based language assessment across K to 12 schooling, higher education English for Academic Purposes contexts, and adult settlement programmes such as LINC. The paper argues that AI-mediated disruption should be understood primarily as an inference problem. It examines how interpretive claims, construct representation, provenance expectations, assistance boundaries, scoring logic, fairness review, preparation ecology, and governance practices require re-specification once AI can generate target-language performance that may satisfy conventional assessment criteria without evidencing the learner’s own proficiency. Particular attention is given to developmental variation across contexts, modality-sensitive vulnerability, and the distinction between weakened interpretation and score noninterpretability. Rather than treating all AI use as equivalent, the framework differentiates among forms of mediation that remain compatible with bounded claims, those that require narrowed interpretation, and those that undermine attribution to the point that intended score meaning can no longer be sustained. A humanistic approach to language assessment under AI conditions, the paper argues, depends not on rejecting innovation but on making agency, evidential conditions, and local accountability structures more explicit. In doing so, the paper offers a language-testing-specific account of attribution collapse, identifies interactional competence as a current evidential anchor, and treats washback as an early governance signal. Implications are drawn for classroom assessment, EAP placement and progression, and adult settlement programming.",
           "authors": [
             {
-              "name": "Hye-Won Lee",
-              "affiliation": "Cambridge University Press & Assessment",
-              "bio": "Dr Hye-won Lee is a Senior Research Manager at Cambridge University Press & Assessment, where she leads research on academic English constructs and next generation language assessment. Her work focuses on aligning assessment design with real world academic language use, learner needs, and assessment consequences. She holds a PhD in Applied Linguistics and Technology from Iowa State University, specialising in computer-assisted language assessment and argument based validation. Prior to joining Cambridge, she worked on large scale research projects at Educational Testing Service and the Center for Applied Linguistics, and taught in TESOL master’s programmes in South Korea."
-            },
-            {
-              "name": "Carla Pastorino-Campos",
-              "affiliation": "Cambridge University Press & Assessment",
+              "name": "Johanathan Woodworth",
+              "affiliation": "Mount Saint Vincent University",
               "bio": ""
             },
             {
-              "name": "Filio Constantinou",
-              "affiliation": "Cambridge University Press & Assessment",
+              "name": "Mohamed Kharbach",
+              "affiliation": "Mount Saint Vincent University",
+              "bio": "Mohamed Kharbach is an educator, researcher, and writer whose work focuses on literacy, language, educational technology, emerging literacies, and critical approaches to digital education. He is affiliated with Mount Saint Vincent University, where he completed both his MEd and PhD in Education. With prior experience teaching English in K to 12 settings, he brings together classroom practice and scholarly inquiry in his work on AI in education, curriculum, and research methodology. He is also widely known for his contributions to practitioner-oriented educational technology publishing."
+            },
+            {
+              "name": "Christine Doe",
+              "affiliation": "Mount Saint Vincent University",
               "bio": ""
             }
           ],
-          "category": "theme-1",
-          "categoryLabel": "Theme 1",
+          "category": "theme-3",
+          "categoryLabel": "Theme 3",
           "room": "L207",
           "start": "16:30",
           "end": "17:00"
@@ -3582,6 +3418,192 @@ window.AALA_PROGRAM = {
           "room": "HG02",
           "start": "17:00",
           "end": "17:30"
+        },
+        {
+          "id": "",
+          "title": "Full-day poster presentations",
+          "abstract": "",
+          "authors": [],
+          "category": "poster",
+          "categoryLabel": "Poster",
+          "room": "Space between Culture Centre Room 1 & 2",
+          "start": "10:30",
+          "end": "15:30",
+          "posters": [
+            {
+              "id": "AALA20260134",
+              "title": "Comparing human and GenAI-mediated interlocutors in L2 speaking assessment: effects on linguistic and neurocognitive behaviour",
+              "abstract": "Assessing second language (L2) oral proficiency has long been a daunting task for test developers and researchers due to challenges in balancing between construct validity, scoring reliability, and test practicality. Many large-scale L2 English oral proficiency tests, such as TOEFL, rely on monologic tasks, which have been criticized for their limited authenticity in representing real-life interactive language use. While some tests have included interactive tasks, test-takers’ performance may be influenced by interlocutor characteristics, raising further concerns about scoring reliability and test validity. Spoken dialogue systems (SDSs) have therefore been proposed as alternative interlocutors. Recent advancements in generative artificial intelligence (GenAI) enable SDSs to support more flexible and natural interaction. Additionally, avatar-based systems introduce visual embodiment, holding potential to increase social presence and interactional realism. However, empirical evidence on how different interlocutor conditions influence L2 speaking performance remains limited. In particular, while prior studies have compared human and SDS interlocutors, no research has examined differences between voice-only and avatar-based SDSs. Furthermore, existing studies have primarily focused on linguistic performance as an observable product, with little attention to the underlying cognitive processes involved in speech production. To address these gaps, this study compares test-takers’ oral performance across three interlocutor conditions: human, voice-only SDS, and avatar-based SDS. English-as-a-foreign-language (EFL) university students complete topic-based interview tasks. Linguistic performance is operationalised using complexity, accuracy, and fluency (CAF) indices, while neurocognitive processing is examined using functional near-infrared spectroscopy (fNIRS) to capture real-time changes in cortical activation during speech production. The findings are expected to provide insights into the comparability and validity of GenAI-mediated speaking assessment.",
+              "authors": [
+                {
+                  "name": "Han Yining",
+                  "affiliation": "Nanyang Technological University",
+                  "bio": "Yining Han is a first-year PhD student at the National Institute of Education, Nanyang Technological University, Singapore. Her research interests include technology-enhanced language assessment and research synthesis methodologies in applied linguistics. She has published in peer-reviewed journals such as Computer Assisted Language Learning."
+                }
+              ],
+              "category": "poster",
+              "categoryLabel": "Poster",
+              "room": "Space between Culture Centre Room 1 & 2",
+              "start": "10:30",
+              "end": "15:30"
+            },
+            {
+              "id": "AALA20260143",
+              "title": "Research on Ethical Dilemmas and Coping Strategies of University Teachers in the Context of AI-Enabled Assessment",
+              "abstract": "With the wide application of generative AI and automated assessment tools in university teaching assessment and scientific research assessment, AI technology has improved the quality and efficiency of university assessment, while also bringing a series of ethical challenges to university teachers. Taking university teachers as the research object, this study adopts a mixed research method combining questionnaires and in-depth interviews. Through investigating teachers from multiple comprehensive, science and engineering, and normal universities (questionnaire survey N=300, in-depth interview N=15), it systematically explores the application status of AI assessment in university scenarios, focusing on analyzing the core ethical dilemmas faced by university teachers when using AI to carry out assessments (including homework correction, thesis review, teaching effect assessment, etc.). These dilemmas include disputes over assessment fairness caused by algorithmic bias, ambiguity in the accuracy of AI feedback and responsibility definition, risks of assessment data privacy leakage, and weakening of teachers' assessment subjectivity. Combining survey data and interview materials, the study sorts out the formation mechanism of ethical dilemmas, clarifies the ethical responsibility boundary of university teachers in AI assessment, and finally puts forward coping strategies that balance technological empowerment and ethical norms. It provides theoretical support and practical reference for universities to standardize AI assessment practices and improve teachers' ethical literacy in AI assessment, helping to realize the benign integration of human-centered assessment concepts and AI technology.",
+              "authors": [
+                {
+                  "name": "Zhaorui Xie",
+                  "affiliation": "City University of Macau",
+                  "bio": "I am a doctoral student. My research interests focus on educational assessment, educational ethics, and the application of AI in higher education. I am particularly committed to exploring ethical dilemmas faced by university teachers in the context of AI-enabled assessment, and has rich research experience in mixed research methods such as questionnaires and interviews. My research aims to promote the healthy integration of AI technology and educational assessment."
+                }
+              ],
+              "category": "poster",
+              "categoryLabel": "Poster",
+              "room": "Space between Culture Centre Room 1 & 2",
+              "start": "10:30",
+              "end": "15:30"
+            },
+            {
+              "id": "AALA20260145",
+              "title": "Validating an AI-Mediated Role-Play Prompt Framework for Generating Focused, Explicit Feedback in Speaking",
+              "abstract": "Generative AI is increasingly being integrated into language classrooms. For instance, Yang et al. found that a task-based AI chatbot (Ellie) enhanced learners’ confidence, engagement, and interaction, with an average of 9.63 speaking turns per session which is substantially higher than typical classroom participation. Similarly, Tanaka et al. demonstrated that an AI-supported trialogue system (ASR + GPT) led to significantly higher retention rates compared to a no-feedback condition, highlighting the potential of prompt-based corrective feedback to improve accuracy and support form-focused speaking practice. Despite these promising findings, the pedagogical application of generative AI remains underdeveloped. Existing approaches often lack construct-aligned task design and targeted feedback, particularly for young and lower-proficiency learners. Although AI-generated feedback has been shown to be effective, it is frequently overly lengthy, predominantly evaluative, and insufficiently actionable. Furthermore, limited guidance exists on how prompts should be systematically designed to support pedagogically meaningful role-play interactions. To address these gaps, this study proposes an AI-Mediated Role-Play Prompt Design Framework, comprising a Prompt Engineering Component and a Pedagogical Flow. The prompt engineering component integrates role-play prompting, few-shot examples, and automatic iteration to ensure contextually grounded, consistent, and construct-aligned outputs. In parallel, the pedagogical flow translates these prompts into classroom practice through scenario design, construct operationalisation, feedback strategy selection, actionable feedback design, and evaluation. Learners engage in CEFR-aligned role-play tasks, receiving focused, explicit feedback targeting two high-leverage features, followed by feedforward guidance. By positioning AI as a mediating tool, this framework offers a scalable model for integrating AI into speaking instruction. Preliminary findings further suggest that teachers generally hold positive perceptions of the framework’s ability to generate focused and explicit feedback. However, several areas for improvement were identified, including the limited length and depth of role-play interactions, repetitive or unnatural questioning patterns, and occasional inconsistencies in AI-generated feedback delivery.",
+              "authors": [
+                {
+                  "name": "Shereen Wong",
+                  "affiliation": "University of Tsukuba",
+                  "bio": "Shereen Wong was born in Sarawak, Malaysia. She earned her Master’s in TESL from the National University of Malaysia. Her six years of teaching experience in a rural primary school inspired her interest in technology-enhanced language learning. She has also served as a district lead trainer and head of the English panel, supporting teachers and leading initiatives to improve English instruction. In addition, she has participated in innovation competitions aimed at enhancing learning opportunities for students in underserved communities. She is currently a first-year doctoral student at the University of Tsukuba, focusing on the use of AI for speaking assessment."
+                }
+              ],
+              "category": "poster",
+              "categoryLabel": "Poster",
+              "room": "Space between Culture Centre Room 1 & 2",
+              "start": "10:30",
+              "end": "15:30"
+            },
+            {
+              "id": "AALA20260156",
+              "title": "SCENARIO-BASED NEEDS ANALYSIS OF PRAGMATICS IN EIL CONTEXTS",
+              "abstract": "In the changing landscape of global communication, EIL (English as an International Language) has emerged and become an important paradigm in which individuals from various cultural and language backgrounds communicate with each other using English as a mutual means (Matsuda, 2017). This has led to significant changes in English language testing and assessment. A number of scholars argue that it is no longer appropriate to use native speaker standards as a yardstick to assess English users’ proficiency. Instead, pragmatic competence, the ability to use English appropriately in different social settings (Roever, 2021), should be taken into account (Canagarajah, 2014; Jenkins, Cogo, & Dewey, 2012). Scenario-based assessment (SBA), an instrument that places participants in scenarios simulating real-world situations, is believed to be promising for assessing PC in EIL contexts. Notably, needs analysis is one of the key steps in developing SBA (Kunnan et al., 2022); however, research on scenario-based pragmatic needs in EIL contexts remains insufficient. This study examines the perceptions of different stakeholders about scenario-based pragmatic demands in a specific EIL context. To collect data, interviews with lecturers and English-majored students will be conducted, along with a questionnaire distributed to 150 students at the target university. Overall, significant pragmatic needs were identified, exhibiting varying patterns among stakeholder groups, English users’ proficiency levels, and academic status. The findings are additionally discussed regarding their implications for building an SBA tool for pragmatic competence in EIL.",
+              "authors": [
+                {
+                  "name": "Dieu Hong Nguyen",
+                  "affiliation": "Vietnam National University, University of Languages and International Studies",
+                  "bio": "Dieu Hong Nguyen (M.A.) has been working as a lecturer at Vietnam National University, University of Languages and International Studies, for 10 years. Her research interests include pragmatics, EIL, and testing and assessment. She is currently pursuing a PhD in Language Assessment. She also has experience as an examiner and item writer of English proficiency tests developed in Vietnam."
+                }
+              ],
+              "category": "poster",
+              "categoryLabel": "Poster",
+              "room": "Space between Culture Centre Room 1 & 2",
+              "start": "10:30",
+              "end": "15:30"
+            },
+            {
+              "id": "AALA20260167",
+              "title": "Cultivating Feedback Literacy in Academic Writing: An AI-Powered Chatbot for Literature Review Assignments",
+              "abstract": "Feedback is central to developing disciplinary writing competence, yet students often struggle to interpret and act on comments related to synthesis, criticality, and authorial voice, particularly in literature review assignments. This poster presents an innovative AI-powered chatbot prototype designed to enhance feedback literacy by guiding students through structured, dialogic interactions that promote reflection and revision.\nGrounded in sociocultural theory, the chatbot draws on the concepts of mediation and the Zone of Proximal Development to provide scaffolded support adapted to learners' responses. The design is further informed by feedback literacy frameworks (Carless & Boud, 2018), which emphasize learners' capacity to interpret and use feedback productively, and genre-based pedagogy, which foregrounds disciplinary writing conventions. Principles of formative assessment and self-regulated learning also underpin the tool's focus on iteration and learner agency.\nRather than generating direct corrections, the chatbot employs graduated prompting to encourage active meaning-making. For instance, it may ask, \"How does this source connect to your previous point?\" or \"What position are you taking in relation to these studies?\" This approach scaffolds key aspects of literature review writing, including organizing sources, identifying gaps, and constructing critical comparisons.\nPreliminary observations suggest the chatbot supports both immediate revision and longer-term development of writing and feedback literacy. The poster also raises important considerations regarding the role of AI in maintaining academic voice and integrity.\nThis work contributes to the conference sub-theme of Innovation and Technology in Assessment by demonstrating how AI tools can be designed not merely to deliver feedback, but to cultivate more active, reflective, and capable academic writers within a humanistic assessment framework.",
+              "authors": [
+                {
+                  "name": "Michelle Reyes Raquel",
+                  "affiliation": "University of Hong Kong",
+                  "bio": "Michelle is a Senior Lecturer at HKU's Centre for Applied English Studies with over 20 years of higher education experience. Her pedagogical expertise centers on curriculum design and communication skills integration. She leads a university-wide effort to embed communication competencies across the curriculum, building faculty capacity and communities of practice. She has coordinated several language enhancement courses and responsible for teaching and learning quality assurance for a number of years. Her scholarship expertise is on language assessment and innovative pedagogies."
+                },
+                {
+                  "name": "Simon Boynton",
+                  "affiliation": "University of Hong Kong",
+                  "bio": ""
+                },
+                {
+                  "name": "Wim Vergult",
+                  "affiliation": "University of Hong Kong",
+                  "bio": ""
+                },
+                {
+                  "name": "Nicholas Mo",
+                  "affiliation": "University of Hong Kong",
+                  "bio": ""
+                }
+              ],
+              "category": "poster",
+              "categoryLabel": "Poster",
+              "room": "Space between Culture Centre Room 1 & 2",
+              "start": "10:30",
+              "end": "15:30"
+            },
+            {
+              "id": "AALA20260174",
+              "title": "Comprehending or Responding? Comparing Selective and Interactive Listening Tasks",
+              "abstract": "The shift toward viewing listening as a reciprocal activity rather than a purely receptive skill has led to an interactive approach to listening assessment, in which test takers are required not only to comprehend input but also to produce contextually appropriate responses. Although such listening task has been adopted in high-stake English proficiency tests such as the TOEFL iBT and the Duolingo English Test, research on interactive listening remains limited. Therefore, the present study aims to compare Chinese university students’ performance on selective and interactive listening tasks, in a multiple-choice format using the same listening texts. Data will be analyzed using many-facet Rasch modeling to compare the difficulty and discrimination power of the two task types and to examine the interaction between task type and proficiency level. The findings are expected to offer insights into how different listening task types influence test performance across proficiency levels.",
+              "authors": [
+                {
+                  "name": "Guan Shuya",
+                  "affiliation": "University of Macau",
+                  "bio": "Guan Shuya is a first-year PhD student at the Faculty of Arts and Humanities, University of Macau. Her current research interests include vocabulary assessment and listening assessment."
+                }
+              ],
+              "category": "poster",
+              "categoryLabel": "Poster",
+              "room": "Space between Culture Centre Room 1 & 2",
+              "start": "10:30",
+              "end": "15:30"
+            },
+            {
+              "id": "AALA20260178",
+              "title": "Development and Psychometric Validation of an AI Dependency Scale for College Students: Evidence Based on the Rasch Model",
+              "abstract": "With the widespread application of generative AI in higher education, university students’ use of AI has gradually exhibited characteristics of structural dependence. However, existing research still has limitations in construct definition and measurement methods. Based on Media System Dependency Theory and the perspective of cognitive offloading, this study develops and validates a multidimensional College Student AI Dependency Scale and conducts a systematic psychometric evaluation. A sample of 1,055 university students from six universities in Jiangxi Province was used. Exploratory and confirmatory factor analyses were employed to examine the scale structure, while a Rasch Rating Scale Model (RSM) was used to calibrate category functioning, item fit, and measurement precision. Multidimensional models, differential item functioning (DIF), and latent regression analyses were also used to evaluate structural validity and group stability. The results indicate that AI dependency comprises functional, emotional, and cognitive dimensions. These dimensions are correlated but show good discriminant validity. Measurement precision improved substantially after optimization of the rating structure; item fit was satisfactory; and the scale showed good stability across groups. In addition, each dimension was associated with relevant external variables in the expected direction, supporting criterion-related validity. This study provides a reliable tool for measuring AI dependency and a methodological foundation for future research and educational practice.",
+              "authors": [
+                {
+                  "name": "Zhong Zhen",
+                  "affiliation": "City University of Macau",
+                  "bio": "Zhong Zhen holds a doctorate in education from City University of Macau and is a university teacher. Zhong has previously served as a student counsellor and director of a university Youth League committee office, with extensive experience in student affairs and Youth League administration. Zhong has led and participated in several education research projects and has received honours including Outstanding Communist Youth League Cadre at the provincial level and Advanced Worker at the university level, demonstrating extensive experience in educational administration and research practice."
+                },
+                {
+                  "name": "Gao Guangming",
+                  "affiliation": "City University of Macau",
+                  "bio": ""
+                }
+              ],
+              "category": "poster",
+              "categoryLabel": "Poster",
+              "room": "Space between Culture Centre Room 1 & 2",
+              "start": "10:30",
+              "end": "15:30"
+            },
+            {
+              "id": "AALA20260185",
+              "title": "Note‑Taking Modality and Its Effects on Performance in Computer‑Based Listening Assessment",
+              "abstract": "The increasing adoption of computer-based formats in high-stakes listening assessments has significantly influenced how test-takers interact with input and deploy strategies during comprehension. While a paper-based test allows flexible handwriting, including abbreviations, symbols, and other semiotic marks, the computer-based format typically limits note‑taking to on‑screen highlighting, with occasional use of paper based on test takers’ personal habits. This shift may influence test takers’ cognitive processing during listening, raising questions about whether traditional handwritten note-taking supports comprehension or instead imposes additional cognitive demands. In this context, this study investigates the impact of note-taking modality on listening test outcomes in a computer-based IELTS context. All participants complete on‑screen highlighting during the question‑preview stage to reflect authentic test conditions. The experimental manipulation concerns their behavior while listening, with two groups completing the task under different note‑taking conditions: no note‑taking or unrestricted handwritten notes. Drawing on cognitive load theory and L2 listening research, the study examines whether real-time note-taking demands additional attentional loads that may hinder test takers’ auditory input processing or whether it facilitates comprehension through memory support. Using a between-group design with university-level EFL learners, the study collects listening scores as well as qualitative data on note characteristics, including both linguistic and semiotic forms. The analysis further explores how note-taking interacts with real-time processing demands under test conditions. The findings are expected to justify note-taking as a context-dependent practice shaped by timing, modality, and cognitive constraints during listening tests. Pedagogically, the study will contribute to IELTS preparation by clarifying whether learners should rely on pre-listening highlighting alone or integrate selective while-listening note-taking in computer-based environments.",
+              "authors": [
+                {
+                  "name": "Yining Yang",
+                  "affiliation": "University of Macau",
+                  "bio": "The presenter is a PhD candidate in Applied Linguistics with research interests in second language acquisition and listening assessment. Her work focuses on L2 listening development in instructional and testing contexts, particularly how learners process spoken input and use cognitive and metacognitive strategies while listening. She is especially interested in computer-based language assessment and the impact of task design on test performance. Her current research examines note-taking behavior and cognitive processing in computer-based listening tests. Through this work, she aims to contribute to a better understanding of how assessment formats influence listening performance and strategy use among second language learners."
+                }
+              ],
+              "category": "poster",
+              "categoryLabel": "Poster",
+              "room": "Space between Culture Centre Room 1 & 2",
+              "start": "10:30",
+              "end": "15:30"
+            },
+            {
+              "id": "AALA20260187",
+              "title": "A Triangulated Study on Generative AI Feedback versus Human Feedback of English-Chinese Consecutive Interpreting",
+              "abstract": "Interpreting assessment is significant for interpreting training, but previous assessment methods relied exclusively on human raters and therefore provided limited timely and tailored feedback for students, especially in large classes. With the popularization of Generative AI, large language models (LLMs) have the potential to facilitate automatic assessment in classroom-based formative evaluation. However, few research have examined the acceptability and perceptions of Generative AI feedback, especially among the primary actors in the classroom—teachers and students. Thus, this study will investigate the quality and practicality of Generative AI feedback in three ways. Firstly, one of the better-performing LLMs, Claude, will be employed to assess students' interpreting quality by giving scores and offering evaluative comments and future learning strategies. Afterwards, the scores and feedback generated by Claude will be compared with those provided by senior interpreting teachers using the same set of rubrics. Secondly, students' responses to both feedback will be analyzed, which are collected by using the adapted Feedback and Assessment Perception Questionnaire (FAPQ) and a qualitative questionnaire. Finally, semi-constructed interviews will be conducted on teachers to see their opinions on the feedback provided by LLMs and whether it can be widely applied in classroom-based formative assessment. The research is still ongoing, and the results are not available yet, but it is believed that the results will have important pedagogical implications on future interpreting teaching and learning.",
+              "authors": [
+                {
+                  "name": "Ip Weng Han",
+                  "affiliation": "University of Macau",
+                  "bio": "My research interests focus on L2 listening assessment and translation and interpreting assessment, with particular attention to how assessment practices can more accurately and meaningfully capture learners’ performance across different tasks."
+                }
+              ],
+              "category": "poster",
+              "categoryLabel": "Poster",
+              "room": "Space between Culture Centre Room 1 & 2",
+              "start": "10:30",
+              "end": "15:30"
+            }
+          ]
         }
       ]
     },
@@ -3593,12 +3615,12 @@ window.AALA_PROGRAM = {
       "events": [
         {
           "id": "",
-          "title": "Registration at Culture Centre",
+          "title": "Registration at Culture Centre Entrance",
           "abstract": "",
           "authors": [],
           "category": "break",
           "categoryLabel": "Programme activity",
-          "room": "Culture Centre",
+          "room": "Culture Centre Entrance",
           "start": "09:00",
           "end": "09:30"
         },
