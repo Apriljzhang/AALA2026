@@ -6,6 +6,21 @@
     const tabsRoot = document.getElementById("dayTabs");
     const panelsRoot = document.getElementById("dayPanels");
 
+    function applyDayOverrides() {
+        const daysByKey = new Map(data.days.map((day) => [day.key, day]));
+        const moves = [];
+        data.days.forEach((day) => {
+            day.events = day.events.filter((event) => {
+                if (!event.dayKey || event.dayKey === day.key) return true;
+                moves.push({ event, target: event.dayKey });
+                return false;
+            });
+        });
+        moves.forEach(({ event, target }) => daysByKey.get(target)?.events.push(event));
+    }
+
+    if (data?.days) applyDayOverrides();
+
     function element(tag, className, text) {
         const node = document.createElement(tag);
         if (className) node.className = className;
