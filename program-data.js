@@ -3056,8 +3056,8 @@ window.AALA_PROGRAM = {
               "bio": "Mikyung Kim Wolf is a principal research scientist at ETS. She has over 20 years of experience in developing and researching language assessments for multilingual learners. Her research areas include technology-enhanced language assessments, the use of AI in language assessment and learning, formative assessment, and validity issues in assessing K-12 English language learners both in the U.S. and globally. She has edited two volumes: Assessing English Language Proficiency in U.S. K-12 Schools (2020, Routledge) and English Language Proficiency Assessment for Young Learners (2017, Routledge)."
             },
             {
-              "name": "Michael Suhan, ETS, msuhan@ets.org",
-              "affiliation": "",
+              "name": "Michael Suhan",
+              "affiliation": "ETS",
               "bio": ""
             }
           ],
