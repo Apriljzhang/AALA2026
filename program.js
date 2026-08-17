@@ -21,19 +21,19 @@
         return value.replace(/^0/, "");
     }
 
-  const roomOrder = [
-    "Culture Centre Room 1",
-    "Culture Centre Room 2",
-    "HG02",
-    "HG01",
-    "HG03",
-    "L205",
-    "L206",
-    "L207",
-    "L305",
-    "L306",
-    "L307",
-  ];
+    const roomOrder = [
+        "Culture Centre Room 1",
+        "Culture Centre Room 2",
+        "HG01",
+        "HG02",
+        "HG03",
+        "L205",
+        "L206",
+        "L207",
+        "L305",
+        "L306",
+        "L307",
+    ];
 
     function roomRank(event) {
         const index = roomOrder.indexOf(event.room);

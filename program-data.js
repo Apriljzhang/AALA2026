@@ -3207,17 +3207,6 @@ window.AALA_PROGRAM = {
           "end": "16:30"
         },
         {
-          "id": "",
-          "title": "Best student paper presentation",
-          "abstract": "",
-          "authors": [],
-          "category": "other",
-          "categoryLabel": "Special session",
-          "room": "HG01",
-          "start": "16:30",
-          "end": "17:00"
-        },
-        {
           "id": "AALA2026091",
           "title": "The Best of Both Worlds? A Mixed-Methods Evaluation of AI-Mediated Formative Feedback and Feedback Literacy in Malaysian Higher Education",
           "abstract": "The rapid integration of artificial intelligence (AI) has shifted the landscape of formative assessment, offering immediate, automated feedback to student writers. While AI tools provide a potential solution to feedback bottlenecks in tertiary settings, little is known about how students critically negotiate these suggestions or the extent of their \"AI feedback literacy\". This study employed a sequential exploratory mixed-methods design to investigate the perceptions of 210 undergraduate ESL students at a Malaysian public university. Quantitative survey data were complemented by qualitative narratives gathered through focus group interviews to explore the lived experience of using AI for academic writing. The findings indicate that students perceive AI-mediated formative feedback as a highly effective tool for identifying language issues and expanding academic vocabulary. Beyond cognitive support, the use of AI feedback was found to foster learner autonomy and provide significant affective support by increasing writing confidence and reducing anxiety. Students particularly valued the immediacy of the feedback, which allowed for real-time revisions during the drafting process. However, a notable literacy gap emerged: despite finding the tools effective, students expressed lower confidence in their ability to critically evaluate the quality of AI-generated suggestions. Consequently, participants reported a strong preference for a hybrid model where AI-powered diagnostic support is combined with human instructor guidance rather than replacing it. The study concludes that while AI serves as an efficient diagnostic \"scaffold,\" it does not replace the human instructor’s role in navigating nuance and tone. For a truly \"best of both worlds\" approach, higher education assessment frameworks must prioritize the development of student feedback literacy to ensure ethical and critical engagement with automated tools.",
