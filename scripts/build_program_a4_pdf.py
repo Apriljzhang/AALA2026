@@ -165,19 +165,26 @@ def draw_overview(c, day, page_number, total_pages):
     c.showPage()
 
 
-def room_height(events, width, size):
+def card_height(event, width, size, include_room=False):
+    _, used = paragraph(event_markup(event, include_room=include_room), width - 3 * mm, size)
+    return used + 3 * mm
+
+
+def grid_height(events, rooms, width, size):
+    starts = sorted({event["start"] for event in events})
     total = 0
-    for event in events:
-        _, used = paragraph(event_markup(event), width - 3 * mm, size)
-        total += used + 3 * mm + 1.2 * mm
+    for start in starts:
+        row_events = [event for event in events if event["start"] == start]
+        heights = [card_height(event, width, size) for event in row_events]
+        total += max(heights, default=12 * mm) + 1.5 * mm
     return total
 
 
-def fit_room_font(events, width, available_height):
+def fit_grid_font(events, rooms, width, available_height):
     for size in (8.0, 7.6, 7.2, 6.8, 6.4):
-        if room_height(events, width, size) <= available_height:
+        if grid_height(events, rooms, width, size) <= available_height:
             return size
-    raise ValueError("Room content does not fit at the minimum 6.4-point size")
+    raise ValueError("Time-grid content does not fit at the minimum 6.4-point size")
 
 
 def draw_room_page(c, day, rooms, events, part, parts, page_number, total_pages):
@@ -194,15 +201,8 @@ def draw_room_page(c, day, rooms, events, part, parts, page_number, total_pages)
     left, right, gap = 8 * mm, 8 * mm, 1.2 * mm
     top, bottom = height - 32 * mm, 14 * mm
     col_width = (width - left - right - gap * (len(rooms) - 1)) / len(rooms)
-    room_events = {
-        room: sorted(
-            [event for event in events if event.get("room") == room],
-            key=lambda event: (event["start"], event["end"], event.get("id", "")),
-        )
-        for room in rooms
-    }
     available = top - 13 * mm - bottom
-    size = min(fit_room_font(items, col_width, available) for items in room_events.values() if items)
+    size = fit_grid_font(events, rooms, col_width, available)
     for index, room in enumerate(rooms):
         x = left + index * (col_width + gap)
         c.setFillColor(TEAL)
@@ -210,26 +210,113 @@ def draw_room_page(c, day, rooms, events, part, parts, page_number, total_pages)
         c.setFillColor(WHITE)
         c.setFont("AALABold", 7.2 if len(rooms) >= 9 else 9.0)
         c.drawCentredString(x + col_width / 2, top - 6.4 * mm, clean(room))
-        items = room_events[room]
-        y = top - 13 * mm
-        if not items:
-            c.setFillColor(TEAL_PALE)
+    y = top - 13 * mm
+    for start in sorted({event["start"] for event in events}):
+        row_events = [event for event in events if event["start"] == start]
+        row_h = max(card_height(event, col_width, size) for event in row_events)
+        for index, room in enumerate(rooms):
+            x = left + index * (col_width + gap)
+            matching = [event for event in row_events if event.get("room") == room]
             c.setStrokeColor(RULE)
-            c.roundRect(x, bottom, col_width, y - bottom, 1.2 * mm, fill=1, stroke=1)
-            c.setFillColor(MUTED)
-            c.setFont("AALARegular", 6.2)
-            c.drawCentredString(x + col_width / 2, y - 7 * mm, "No session")
-            continue
-        for event in items:
-            item, used = paragraph(event_markup(event), col_width - 3 * mm, size)
-            card_h = used + 3 * mm
-            c.setFillColor(WHITE)
+            if matching:
+                event = matching[0]
+                item, used = paragraph(event_markup(event), col_width - 3 * mm, size)
+                c.setFillColor(WHITE)
+            else:
+                item = None
+                c.setFillColor(TEAL_PALE)
+            c.roundRect(x, y - row_h, col_width, row_h, 1.2 * mm, fill=1, stroke=1)
+            if matching:
+                c.setFillColor(TEAL_MID)
+                c.rect(x, y - 1.0 * mm, col_width, 1.0 * mm, fill=1, stroke=0)
+                item.drawOn(c, x + 1.5 * mm, y - used - 1.5 * mm)
+            else:
+                c.setFillColor(MUTED)
+                c.setFont("AALARegular", 5.8)
+                c.drawCentredString(x + col_width / 2, y - 5 * mm, f"No {start} session")
+        y -= row_h + 1.5 * mm
+    c.showPage()
+
+
+def workshop_panel(c, day, x, panel_width, top, bottom):
+    all_events = [event for event in day["events"] if not event.get("posters")]
+    session_rooms = sorted(
+        {event["room"] for event in session_events(day)},
+        key=lambda room: ROOM_ORDER.index(room) if room in ROOM_ORDER else 99,
+    )
+    columns = ["Shared activities"] + session_rooms
+    gap = 1.8 * mm
+    col_width = (panel_width - gap * (len(columns) - 1)) / len(columns)
+    c.setFillColor(TEAL)
+    c.roundRect(x, top - 12 * mm, panel_width, 12 * mm, 1.8 * mm, fill=1, stroke=0)
+    c.setFillColor(WHITE)
+    c.setFont("AALABold", 11)
+    c.drawString(x + 4 * mm, top - 5.2 * mm, f"{clean(day['weekday'])}, {clean(day['date'])}")
+    c.setFont("AALARegular", 7.5)
+    c.drawString(x + 4 * mm, top - 9.4 * mm, "Shared activities and workshops")
+    heading_y = top - 15 * mm
+    for index, column in enumerate(columns):
+        col_x = x + index * (col_width + gap)
+        c.setFillColor(TEAL_MID)
+        c.roundRect(col_x, heading_y - 9 * mm, col_width, 9 * mm, 1.2 * mm, fill=1, stroke=0)
+        c.setFillColor(WHITE)
+        c.setFont("AALABold", 7.0 if len(columns) > 3 else 8.2)
+        c.drawCentredString(col_x + col_width / 2, heading_y - 5.8 * mm, clean(column))
+
+    def column_for(event):
+        return event["room"] if event.get("category") not in SHARED else "Shared activities"
+
+    available = heading_y - 12 * mm - bottom
+    starts = sorted({event["start"] for event in all_events})
+    for size in (8.5, 8.0, 7.5, 7.0, 6.5):
+        needed = 0
+        for start in starts:
+            row = [event for event in all_events if event["start"] == start]
+            needed += max(card_height(event, col_width, size, include_room=event.get("category") in SHARED) for event in row) + 1.5 * mm
+        if needed <= available:
+            break
+    y = heading_y - 12 * mm
+    for start in starts:
+        row = [event for event in all_events if event["start"] == start]
+        row_h = max(card_height(event, col_width, size, include_room=event.get("category") in SHARED) for event in row)
+        for index, column in enumerate(columns):
+            col_x = x + index * (col_width + gap)
+            matching = [event for event in row if column_for(event) == column]
             c.setStrokeColor(RULE)
-            c.roundRect(x, y - card_h, col_width, card_h, 1.2 * mm, fill=1, stroke=1)
-            c.setFillColor(TEAL_MID)
-            c.rect(x, y - 1.0 * mm, col_width, 1.0 * mm, fill=1, stroke=0)
-            item.drawOn(c, x + 1.5 * mm, y - card_h + 1.5 * mm)
-            y -= card_h + 1.2 * mm
+            c.setFillColor(WHITE if matching else TEAL_PALE)
+            c.roundRect(col_x, y - row_h, col_width, row_h, 1.2 * mm, fill=1, stroke=1)
+            if matching:
+                event = matching[0]
+                item, used = paragraph(
+                    event_markup(event, include_room=event.get("category") in SHARED),
+                    col_width - 3 * mm,
+                    size,
+                )
+                c.setFillColor(TEAL_MID)
+                c.rect(col_x, y - 1.0 * mm, col_width, 1.0 * mm, fill=1, stroke=0)
+                item.drawOn(c, col_x + 1.5 * mm, y - used - 1.5 * mm)
+            else:
+                c.setFillColor(MUTED)
+                c.setFont("AALARegular", 5.8)
+                c.drawCentredString(col_x + col_width / 2, y - 5 * mm, f"No {start} activity")
+        y -= row_h + 1.5 * mm
+
+
+def draw_workshop_page(c, friday, monday, page_number, total_pages):
+    header(
+        c,
+        "AALA2026 at a glance",
+        "18 & 21 September | Workshops, registration and shared activities",
+        page_number,
+        total_pages,
+    )
+    width, height = landscape(A4)
+    left, right, gap = 8 * mm, 8 * mm, 5 * mm
+    top, bottom = height - 32 * mm, 14 * mm
+    friday_width = (width - left - right - gap) * 0.64
+    monday_width = width - left - right - gap - friday_width
+    workshop_panel(c, friday, left, friday_width, top, bottom)
+    workshop_panel(c, monday, left + friday_width + gap, monday_width, top, bottom)
     c.showPage()
 
 
@@ -278,10 +365,7 @@ def session_groups(day, rooms):
     for start in starts:
         proposed_starts = current_starts + [start]
         proposed_events = [event for event in events if event["start"] in proposed_starts]
-        fits = all(
-            room_height([event for event in proposed_events if event.get("room") == room], col_width, 6.4) <= available
-            for room in rooms
-        )
+        fits = grid_height(proposed_events, rooms, col_width, 6.4) <= available
         if current_starts and (not fits or len(proposed_starts) > 2):
             groups.append([event for event in events if event["start"] in current_starts])
             current_starts = [start]
@@ -293,8 +377,12 @@ def session_groups(day, rooms):
 
 
 def build_specs(data):
-    specs = []
+    friday = next(day for day in data["days"] if day["weekday"] == "Friday")
+    monday = next(day for day in data["days"] if day["weekday"] == "Monday")
+    specs = [("workshops", (friday, monday))]
     for day in data["days"]:
+        if day["weekday"] in {"Friday", "Monday"}:
+            continue
         specs.append(("overview", (day,)))
         events = session_events(day)
         rooms = sorted(
@@ -320,7 +408,9 @@ def main():
     pdf.setAuthor("Asian Association for Language Assessment")
     pdf.setSubject("Printable A4 conference programme")
     for page_number, (kind, payload) in enumerate(specs, 1):
-        if kind == "overview":
+        if kind == "workshops":
+            draw_workshop_page(pdf, *payload, page_number, len(specs))
+        elif kind == "overview":
             draw_overview(pdf, *payload, page_number, len(specs))
         elif kind == "rooms":
             draw_room_page(pdf, *payload, page_number, len(specs))

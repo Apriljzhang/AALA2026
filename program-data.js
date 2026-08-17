@@ -551,8 +551,8 @@ window.AALA_PROGRAM = {
               "bio": "Ling Gan has a Ph.D. in Education from Hong Kong Baptist University. She is now an associate professor at the School of Languages and Communication, Beijing Technology and Business University in China. Her research interests include language assessment literacy and teacher professional development. She has published articles in RELC Journal, Education Sciences, Chinese Journal of Applied Linguistics, Language Assessment Quarterly and Language Testing in Asia."
             },
             {
-              "name": "Ricky Lam    Hong Kong Baptist University",
-              "affiliation": "",
+              "name": "Ricky Lam",
+              "affiliation": "Hong Kong Baptist University",
               "bio": ""
             }
           ],
@@ -596,13 +596,8 @@ window.AALA_PROGRAM = {
             },
             {
               "name": "Felicia Fang",
-              "affiliation": "",
+              "affiliation": "The Hong Kong Polytechnic University",
               "bio": "Felicia Fang is an Instructor and Assessment Lead at the English Language Centre, The Hong Kong Polytechnic University. She teaches EAP and ESP courses to undergraduate and research postgraduate students. Her research focuses on EAP, writing assessment, and integrating GenAI into English-medium higher education, particularly in EAP instruction and assessment."
-            },
-            {
-              "name": "Winnie Shum",
-              "affiliation": "All Hong Kong Polytechnic University",
-              "bio": "Winnie Shum is an Instructor at the English Language Centre, The Hong Kong Polytechnic University. She teaches EAP and ESP courses to undergraduate and research postgraduate students. She has also been actively involved in designing and organising virtual exchange programmes to enhance students’ intercultural communication skills and their use of English as a lingua franca. Her research interests include developing pedagogy for intercultural language teaching and learning, employing technology/GenAI to enhance learning experience and quality, developing AI-powered assessment for both language and communicative competencies."
             }
           ],
           "category": "theme-3",
@@ -1540,12 +1535,12 @@ window.AALA_PROGRAM = {
             {
               "name": "Do Thu Hoa",
               "affiliation": "Hanoi Pedagogical University 2",
-              "bio": "(1) Do Thu Hoa is a lecturer at Hanoi Pedagogical University 2 (HPU2). She holds a Master’s degree in TESOL from Victoria University, Australia. Currently, she is pursuing a PhD in Testing and Assessment at the University of Languages and International Studies, Vietnam National University, Hanoi (ULIS–VNU)."
+              "bio": "Do Thu Hoa is a lecturer at Hanoi Pedagogical University 2 (HPU2). She holds a Master’s degree in TESOL from Victoria University, Australia. Currently, she is pursuing a PhD in Testing and Assessment at the University of Languages and International Studies, Vietnam National University, Hanoi (ULIS–VNU)."
             },
             {
               "name": "Nguyen Thi Ngoc Quynh",
               "affiliation": "University of Languages and International Studies, Vietnam National University, Hanoi",
-              "bio": "(2) Nguyen Thi Ngoc Quynh (or Quynh Nguyen) is the Director of Office of Quality Assurance at the VNU University of Languages and International Studies, Vietnam. She is also the President of the Asian Association for Language Assessment. She has led multiple national and international projects on language education and assessment."
+              "bio": "Nguyen Thi Ngoc Quynh (or Quynh Nguyen) is the Director of Office of Quality Assurance at the VNU University of Languages and International Studies, Vietnam. She is also the President of the Asian Association for Language Assessment. She has led multiple national and international projects on language education and assessment."
             },
             {
               "name": "Antony John Kunnan",
@@ -2299,8 +2294,8 @@ window.AALA_PROGRAM = {
               "bio": ""
             }
           ],
-          "category": "symposium",
-          "categoryLabel": "Symposium",
+          "category": "editors-forum",
+          "categoryLabel": "Editors’ Forum",
           "room": "HG02",
           "start": "13:00",
           "end": "14:00"
