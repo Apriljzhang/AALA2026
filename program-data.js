@@ -132,7 +132,7 @@ window.AALA_PROGRAM = {
             {
               "name": "Eunice Eunhee Jang",
               "affiliation": "University of Toronto",
-              "bio": ""
+              "bio": "Dr. Eunice Eunhee Jang is a Professor at the Ontario Institute for Studies in Education (OISE), University of Toronto. She believes that how we assess students shapes not only what they learn, but who they become. Her work reimagines assessment as a practice of recognition rather than gatekeeping, with a particular commitment to multilingual learners and historically underserved communities. She played a key role in developing Ontario’s Steps to English Proficiency framework and now leads projects such as BalanceAI and APLUS, exploring how AI-supported diagnostic and learning-oriented assessments can strengthen teachers’ and students’ agency."
             }
           ],
           "category": "plenary",
@@ -458,7 +458,7 @@ window.AALA_PROGRAM = {
           "authors": [],
           "category": "break",
           "categoryLabel": "Programme activity",
-          "room": "Culture Centre Room 1 & 2",
+          "room": "HG02",
           "start": "12:00",
           "end": "12:30"
         },
@@ -470,7 +470,7 @@ window.AALA_PROGRAM = {
             {
               "name": "Xun Yan",
               "affiliation": "University of Illinois Urbana-Champaign",
-              "bio": ""
+              "bio": "Xun Yan is a professor of Linguistics, Second Language Acquisition and Teacher Education, and Educational Psychology at the University of Illinois Urbana-Champaign. His research interests include speaking and writing assessment, psycholinguistic and computational approaches to language testing, and language assessment literacy. His work can be found in Applied Linguistics, Assessing Writing, Journal of Second Language Writing, Language Assessment Quarterly, Language Learning, Language Testing, Studies in Second Language Acquisition, TESOL Quarterly, among others. He is a co-editor for Language Testing. Xun was the recipient of the ETS TOEFL Essentials New Scholar award in 2022 and the ILTA/Sage Best Book Award in 2024."
             }
           ],
           "category": "plenary",
@@ -490,8 +490,8 @@ window.AALA_PROGRAM = {
               "bio": "Saerhim Oh is a Research Scientist at the ETS Research Institute, where she conducts research on the TOEIC family of assessments and the assessment of interactional communicative competence in written communication. Her work focuses on workplace and academic language assessment, particularly L2 writing assessment, interactional competence in written interactions, and standard-setting studies for workplace contexts. She earned an Ed.D. in Applied Linguistics with a focus on language assessment from Teachers College, Columbia University and received the 2019 Jacqueline Ross Dissertation Award. Her research has appeared in journals such as Language Assessment Quarterly, Journal of Second Language Writing, and Assessing Writing."
             }
           ],
-          "category": "sponsor",
-          "categoryLabel": "Sponsor",
+          "category": "featured",
+          "categoryLabel": "Featured",
           "room": "HG01",
           "start": "14:00",
           "end": "14:30"
@@ -534,8 +534,8 @@ window.AALA_PROGRAM = {
               "bio": "Leda Lampropoulou is Head of Research at LANGUAGECERT, where she leads the organisation’s research strategy and chairs the Research Committee. With over 15 years’ experience in language testing and second language acquisition, she specialises in speaking assessment, test reliability, and benchmarking. She has led concordance studies and large-scale alignment to international frameworks, supporting principled, data-informed assessment development and decision-making."
             }
           ],
-          "category": "sponsor",
-          "categoryLabel": "Sponsor",
+          "category": "featured",
+          "categoryLabel": "Featured",
           "room": "HG03",
           "start": "14:00",
           "end": "14:30"
@@ -698,8 +698,8 @@ window.AALA_PROGRAM = {
               "bio": ""
             }
           ],
-          "category": "sponsor",
-          "categoryLabel": "Sponsor",
+          "category": "featured",
+          "categoryLabel": "Featured",
           "room": "HG01",
           "start": "14:30",
           "end": "15:00"
@@ -715,8 +715,8 @@ window.AALA_PROGRAM = {
               "bio": "Meha Dayal is Assessment Development Manager at British Council. She is responsible for test development, production, localisation and platform strategy for key test products in India. Besides this, Meha has been involved in rater quality assurance and optimisation of marking delivery platforms for over a decade. She holds an MA in Language Testing from Lancaster University."
             }
           ],
-          "category": "sponsor",
-          "categoryLabel": "Sponsor",
+          "category": "featured",
+          "categoryLabel": "Featured",
           "room": "HG02",
           "start": "14:30",
           "end": "15:00"
@@ -737,8 +737,8 @@ window.AALA_PROGRAM = {
               "bio": ""
             }
           ],
-          "category": "sponsor",
-          "categoryLabel": "Sponsor",
+          "category": "featured",
+          "categoryLabel": "Featured",
           "room": "HG03",
           "start": "14:30",
           "end": "15:00"
@@ -1853,7 +1853,7 @@ window.AALA_PROGRAM = {
             {
               "name": "Ying Zheng",
               "affiliation": "University of Southampton",
-              "bio": ""
+              "bio": "Ying Zheng is a Professor in the Department of Languages, Cultures and Linguistics at the University of Southampton, UK. She holds a PhD in Cognitive Studies from Queen’s University, Canada, specialising in second language testing and assessment. Before joining Southampton in 2013, she worked as a psychometrician and later director of research in the language testing division at Pearson London. Her research focuses on psychometrics, large-scale test validation, scale alignment, Mandarin exams in the UK school system and AI-enabled language assessment."
             }
           ],
           "category": "plenary",
