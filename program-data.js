@@ -786,9 +786,10 @@ window.AALA_PROGRAM = {
           ],
           "category": "theme-1",
           "categoryLabel": "Theme 1",
-          "room": "L205",
-          "start": "14:30",
-          "end": "15:00"
+          "room": "HG02",
+          "start": "16:00",
+          "end": "16:30",
+          "dayKey": "sep20"
         },
         {
           "id": "AALA2026036",
@@ -3125,9 +3126,10 @@ window.AALA_PROGRAM = {
           ],
           "category": "theme-1",
           "categoryLabel": "Theme 1",
-          "room": "HG02",
-          "start": "16:00",
-          "end": "16:30"
+          "room": "L205",
+          "start": "14:30",
+          "end": "15:00",
+          "dayKey": "sep19"
         },
         {
           "id": "AALA20260119",
