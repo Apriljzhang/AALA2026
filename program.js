@@ -120,10 +120,25 @@
         return meta;
     }
 
+    function makeSponsorship(event) {
+        if (!event.sponsorship?.logo) return null;
+        const block = element("div", "session-sponsorship");
+        block.append(element("span", "session-sponsor-label", event.sponsorship.label || "Supported by"));
+        const logo = element("img", "session-sponsor-logo");
+        logo.src = event.sponsorship.logo;
+        logo.alt = `${event.sponsorship.name || "Sponsor"} logo`;
+        logo.loading = "lazy";
+        logo.decoding = "async";
+        block.append(logo);
+        return block;
+    }
+
     function makeSession(event, extraClass) {
         const card = element("article", `session-card ${categoryClass(event.category)}${extraClass ? ` ${extraClass}` : ""}`);
         card.append(makeMeta(event), makeTitle(event));
         if (event.note) card.append(element("p", "session-note", event.note));
+        const sponsorship = makeSponsorship(event);
+        if (sponsorship) card.append(sponsorship);
         const authors = makeAuthors(event.authors);
         if (authors) card.append(authors);
         return card;

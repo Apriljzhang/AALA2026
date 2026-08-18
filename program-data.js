@@ -1,5 +1,5 @@
 window.AALA_PROGRAM = {
-  "generatedFrom": "20260815 AALA2026_All.xlsx (schedule revised 17 August 2026)",
+  "generatedFrom": "20260815 AALA2026_All.xlsx (schedule revised 18 August 2026)",
   "title": "AALA 2026 Detailed Programme",
   "venue": "University of Macau",
   "days": [
@@ -92,7 +92,12 @@ window.AALA_PROGRAM = {
           "room": "Zam Zam",
           "start": "18:30",
           "end": "20:30",
-          "note": "Open to all registered attendees. Coupons are in the conference bag."
+          "note": "Open to all registered attendees. Coupons are in the conference bag.",
+          "sponsorship": {
+            "name": "Pearson",
+            "logo": "assets/sponsors/pearson.png",
+            "label": "Supported by"
+          }
         }
       ]
     },
@@ -139,7 +144,12 @@ window.AALA_PROGRAM = {
           "categoryLabel": "Plenary",
           "room": "Culture Centre Theatre",
           "start": "09:30",
-          "end": "10:30"
+          "end": "10:30",
+          "sponsorship": {
+            "name": "The Language Training and Testing Center (LTTC)",
+            "logo": "assets/sponsors/lttc.png",
+            "label": "Sponsored by"
+          }
         },
         {
           "id": "",
@@ -150,7 +160,12 @@ window.AALA_PROGRAM = {
           "categoryLabel": "Programme activity",
           "room": "Culture Centre Room 1 & 2",
           "start": "10:30",
-          "end": "11:00"
+          "end": "11:00",
+          "sponsorship": {
+            "name": "TOEIC",
+            "logo": "assets/sponsors/toeic.png",
+            "label": "Supported by"
+          }
         },
         {
           "id": "AALA20260114",
@@ -397,14 +412,14 @@ window.AALA_PROGRAM = {
           "end": "12:00"
         },
         {
-          "id": "AALA2026003",
-          "title": "Evaluating Generative AI in writing assessment: Automatic scoring and model text generation",
-          "abstract": "The advent of Generative AI (GenAI) models has triggered a sweeping trend in language education. Particularly due to their versatility and flexibility in assisting second language writing, the amount of research in this area has steadily grown. The application of GenAI in writing assessment, however, is still scarce, with current studies mostly revolving around ChatGPT. The present study examines the performance of two popular GenAI tools, ChatGPT and DeepSeek, in scoring and generating model samples for Writing Task 2 of the International English Language Testing System (IELTS). The GenAI-produced scores were compared with human ratings and model samples with expert-written ones from a linguistic perspective. The results indicated that GenAI scoring, albeit stricter, showed strong alignment with human judgments. With respect to the linguistic characteristics of model essays, DeepSeek showed a higher degree of lexical diversity and sophistication, whereas human experts performed better in syntactic complexity, sophistication and cohesion. ChatGPT demonstrated some intermediate features, but with a strong tendency toward the linguistic profiles of DeepSeek. Based on these findings, this study discusses the opportunities and challenges of using GenAI as a writing assessment tool and explores its implications for writing assessment.",
+          "id": "AALA2026091",
+          "title": "The Best of Both Worlds? A Mixed-Methods Evaluation of AI-Mediated Formative Feedback and Feedback Literacy in Malaysian Higher Education",
+          "abstract": "The rapid integration of artificial intelligence (AI) has shifted the landscape of formative assessment, offering immediate, automated feedback to student writers. While AI tools provide a potential solution to feedback bottlenecks in tertiary settings, little is known about how students critically negotiate these suggestions or the extent of their \"AI feedback literacy\". This study employed a sequential exploratory mixed-methods design to investigate the perceptions of 210 undergraduate ESL students at a Malaysian public university. Quantitative survey data were complemented by qualitative narratives gathered through focus group interviews to explore the lived experience of using AI for academic writing. The findings indicate that students perceive AI-mediated formative feedback as a highly effective tool for identifying language issues and expanding academic vocabulary. Beyond cognitive support, the use of AI feedback was found to foster learner autonomy and provide significant affective support by increasing writing confidence and reducing anxiety. Students particularly valued the immediacy of the feedback, which allowed for real-time revisions during the drafting process. However, a notable literacy gap emerged: despite finding the tools effective, students expressed lower confidence in their ability to critically evaluate the quality of AI-generated suggestions. Consequently, participants reported a strong preference for a hybrid model where AI-powered diagnostic support is combined with human instructor guidance rather than replacing it. The study concludes that while AI serves as an efficient diagnostic \"scaffold,\" it does not replace the human instructor’s role in navigating nuance and tone. For a truly \"best of both worlds\" approach, higher education assessment frameworks must prioritize the development of student feedback literacy to ensure ethical and critical engagement with automated tools.",
           "authors": [
             {
-              "name": "Junyan Guo",
-              "affiliation": "Wuxi University",
-              "bio": "Junyan Guo holds a doctorate in Applied Linguistics. Her research focuses on language assessment as well as learner and teacher psychology. Her work has been published in peer-reviewed journals, including System, Language Assessment Quarterly, and Linguistics Vanguard. She has presented her research at major international conferences such as AALA, LTRC, and ALANZ-ALAA-ALTAANZ."
+              "name": "Norhaslinda Hassan",
+              "affiliation": "Universiti Teknologi Mara",
+              "bio": "Dr. Norhaslinda Hassan is a Senior Lecturer at Universiti Teknologi MARA (UiTM) Penang Branch Campus with a specialized background in language assessment. Her research has centered on washback, learning oriented assessment and formative assessment practices within ESL instruction. Currently, she leads international research on AI-mediated feedback to enhance learner autonomy and feedback literacy. She advocates for a hybrid assessment model that balances the efficiency of automated tools with essential human pedagogical expertise."
             }
           ],
           "category": "theme-3",
@@ -449,7 +464,12 @@ window.AALA_PROGRAM = {
           "categoryLabel": "Programme activity",
           "room": "Culture Centre Room 1 & 2",
           "start": "12:00",
-          "end": "13:00"
+          "end": "13:00",
+          "sponsorship": {
+            "name": "City University of Macau",
+            "logo": "assets/sponsors/cityu.png",
+            "label": "Supported by"
+          }
         },
         {
           "id": "",
@@ -477,7 +497,12 @@ window.AALA_PROGRAM = {
           "categoryLabel": "Plenary",
           "room": "Culture Centre Theatre",
           "start": "13:00",
-          "end": "14:00"
+          "end": "14:00",
+          "sponsorship": {
+            "name": "Duolingo English Test",
+            "logo": "assets/sponsors/duolingo.png",
+            "label": "Sponsored by"
+          }
         },
         {
           "id": "AALA20260210",
@@ -585,19 +610,14 @@ window.AALA_PROGRAM = {
           "end": "14:30"
         },
         {
-          "id": "AALA20260170",
-          "title": "Assessing language and communication competencies through an AI-Powered Scenario-Based Assessment (SBA): The development of the LCCA",
-          "abstract": "Introduction: Traditional language assessments often measure skills in isolation, perhaps because it is easier to do that or because stakeholders require individual skill reporting, overlooking the integrated and goal-oriented nature of authentic communication (Cumming, 2024). This presentation reports on a test development project being conducted at a university in Hong Kong that aims at bridging this gap in language assessment, while at the same time exploring the impact that Generative AI could have in such a context. The presenters will introduce a novel, AI-powered assessment system designed to measure language competencies through scenario-based tasks that reflect the complex demands of professional, social, and disciplinary contexts (Purpura, 2021).\nAims: The primary goal of this project is to develop an online assessment platform that measures test-takers’ integrated language and communication skills. Specifically, the system is designed to: - implement a Scenario-Based Assessment (SBA) framework, in which tasks are linked to specific, meaningful goals to simulate real-life language use and motivate learners. - use artificial intelligence to support all stages of assessment, including test delivery, scoring and personalised learner feedback. - offer progress testing in both English and Chinese, supplemented by practice tasks, to help learners understand their competencies in relation to graduation benchmarks set by the university. - integrate assessment data with the language curriculum to provide actionable insights for learners, course designers, instructors and policy makers.\nSignificance: This presentation will update delegates on the progress and challenges faced in the development of the LCCA. By combining a scenario-based framework with AI-powered analytics, this project introduces a dynamic model for a language and communication competency assessment with the potential to act as a blueprint for developing GenAI powered assessments that are authentic, motivating for learners, and highly informative for language curriculum development. While by reporting challenges encountered, the project also aims to offer some practical advice on how to balance the different needs of stakeholders. (300 words)",
+          "id": "AALA2026003",
+          "title": "Evaluating Generative AI in writing assessment: Automatic scoring and model text generation",
+          "abstract": "The advent of Generative AI (GenAI) models has triggered a sweeping trend in language education. Particularly due to their versatility and flexibility in assisting second language writing, the amount of research in this area has steadily grown. The application of GenAI in writing assessment, however, is still scarce, with current studies mostly revolving around ChatGPT. The present study examines the performance of two popular GenAI tools, ChatGPT and DeepSeek, in scoring and generating model samples for Writing Task 2 of the International English Language Testing System (IELTS). The GenAI-produced scores were compared with human ratings and model samples with expert-written ones from a linguistic perspective. The results indicated that GenAI scoring, albeit stricter, showed strong alignment with human judgments. With respect to the linguistic characteristics of model essays, DeepSeek showed a higher degree of lexical diversity and sophistication, whereas human experts performed better in syntactic complexity, sophistication and cohesion. ChatGPT demonstrated some intermediate features, but with a strong tendency toward the linguistic profiles of DeepSeek. Based on these findings, this study discusses the opportunities and challenges of using GenAI as a writing assessment tool and explores its implications for writing assessment.",
           "authors": [
             {
-              "name": "Alan Urmston",
-              "affiliation": "Hong Kong Polytechnic University",
-              "bio": "Alan Urmston is an experienced language assessment specialist who teaches courses in language testing at doctorate level in Hong Kong. He has led test development projects in government and tertiary sectors for over 20 years. He also serves the language testing community as co-editor of the Newsletter of the International Language Testing Association and as a member of the ILTA Communications Committee. His current research interests are in the use of scenario-based language assessment powered by artificial intelligence to measure the communicative competence of university undergraduates."
-            },
-            {
-              "name": "Felicia Fang",
-              "affiliation": "The Hong Kong Polytechnic University",
-              "bio": "Felicia Fang is an Instructor and Assessment Lead at the English Language Centre, The Hong Kong Polytechnic University. She teaches EAP and ESP courses to undergraduate and research postgraduate students. Her research focuses on EAP, writing assessment, and integrating GenAI into English-medium higher education, particularly in EAP instruction and assessment."
+              "name": "Junyan Guo",
+              "affiliation": "Wuxi University",
+              "bio": "Junyan Guo holds a doctorate in Applied Linguistics. Her research focuses on language assessment as well as learner and teacher psychology. Her work has been published in peer-reviewed journals, including System, Language Assessment Quarterly, and Linguistics Vanguard. She has presented her research at major international conferences such as AALA, LTRC, and ALANZ-ALAA-ALTAANZ."
             }
           ],
           "category": "theme-3",
@@ -879,7 +899,12 @@ window.AALA_PROGRAM = {
           "categoryLabel": "Programme activity",
           "room": "Culture Centre Room 1 & 2",
           "start": "15:00",
-          "end": "15:30"
+          "end": "15:30",
+          "sponsorship": {
+            "name": "中研院",
+            "logo": "assets/sponsors/zhongyan-institute.jpg",
+            "label": "Supported by"
+          }
         },
         {
           "id": "AALA2026048",
@@ -1255,18 +1280,18 @@ window.AALA_PROGRAM = {
           "end": "16:30"
         },
         {
-          "id": "AALA2026011",
-          "title": "A Study on the Reliability of ChatGPT-Based English Writing Assessment: Internal and External Perspectives",
-          "abstract": "With the advancement of big data and artificial intelligence, natural language processing (NLP) has been increasingly integrated into educational assessment, facilitating a shift from human to automated scoring in English writing assessment. This study examines the performance of ChatGPT in assessing IELTS-style essays across four dimensions: Task Response, Coherence and Cohesion, Lexical Resource, and Grammatical Range and Accuracy, along with the total score. Internal reliability was measured through multiple scoring rounds, while external reliability was assessed by comparing ChatGPT’s rating with those assigned by human raters. The results reveal that ChatGPT demonstrates moderate internal consistency, yet exhibits significant deviation from human scores, although its self-agreement surpasses that among human raters. The use of more detailed prompts is shown to enhance internal reliability, and training with human-scored samples reduces discrepancies with human ratings, albeit at a slight cost to consistency. Further analysis of scoring processes suggests that human raters prioritize overall structural and argumentative quality, whereas ChatGPT focuses on linguistic details and specific feedback. The study concludes that optimizing automated models, refining prompt strategies, and integrating human-AI scoring are essential to enhance the reliability of AI-based writing assessment.",
+          "id": "AALA2026017",
+          "title": "Generative AI as a Peer Feedback Partner in EFL Writing: Enhancing Quality, Reducing Anxiety, and Building Literacy",
+          "abstract": "Peer feedback is a vital pedagogical tool in English as a foreign language (EFL) writing classrooms, but student reviewers often face challenges such as anxiety, low confidence, and a lack of skills in providing constructive feedback. Generative AI presents new opportunities to support students in the peer feedback process. This study explores how EFL student reviewers engage with generative AI during peer feedback and examines its impact on perceived feedback quality, emotional responses (task enjoyment and anxiety), and feedback literacy. Using a quasi-experimental design, 60 Chinese undergraduate students were assigned to an experimental group (EG) that utilized generative AI (Doubao) for feedback support or a control group (CG) that completed peer review without AI assistance. Over three intervention cycles, data were collected from student-AI chat histories, feedback quality ratings by recipients, and pre/post-intervention questionnaires on task emotions and feedback literacy. Thematic analysis of chat histories revealed that EG students primarily employed AI for linguistic refinement of their comments, with limited use for enhancing content or structure, and most prompts lacked contextual information. ANCOVA results demonstrated that AI support led to significant, cumulative improvements in perceived feedback quality. By the third cycle, EG students significantly outperformed CG students across four dimensions—affect, description, justification, and constructiveness. Additionally, EG students reported significantly higher task enjoyment and lower anxiety than their CG counterparts. The intervention also enhanced all dimensions of feedback literacy, particularly willingness to participate and feedback-related knowledge. These findings indicate that generative AI can serve as a powerful scaffold in peer assessment, reducing emotional and cognitive burdens while progressively developing students' capacity to provide high-quality feedback. The study underscores the importance of integrating AI into peer feedback practices and highlights the need for systematic training in prompt engineering and ethical AI use to maximize pedagogical benefits.",
           "authors": [
             {
-              "name": "Grace Yunjia Zhang",
-              "affiliation": "Sichuan International Studies University",
-              "bio": "Yunjia Zhang holds a Master's degree and has two years of experience teaching English at Chongqing Institute of Foreign Studies. Her research interests center on language testing and writing assessment, with a particular focus on the application of AI technologies in automated essay scoring. She has published several papers in SSCI and Scopus-indexed journals. Her current work explores the reliability of large language models like ChatGPT in L2 writing evaluation and human-AI collaborative assessment approaches."
+              "name": "Kai Guo",
+              "affiliation": "The Chinese University of Hong Kong",
+              "bio": "Kai Guo is an RGC Junior Research Fellow and a Research Assistant Professor in the Department of Curriculum and Instruction at The Chinese University of Hong Kong. His research interests include technology-enhanced language learning and second language writing. He has authored over 40 articles in SSCI Q1 journals. His recent publications have appeared in prestigious international journals such as Computers & Education, The Internet and Higher Education, British Journal of Educational Technology, Computer Assisted Language Learning, Interactive Learning Environments, Language Learning & Technology, Language Teaching Research, System, TESOL Quarterly, and Assessing Writing."
             },
             {
-              "name": "Boyu Wang",
-              "affiliation": "Huazhong University of Science and Technology",
+              "name": "Hua Wang",
+              "affiliation": "Shanghai Jiao Tong University",
               "bio": ""
             }
           ],
@@ -1377,19 +1402,14 @@ window.AALA_PROGRAM = {
           "end": "17:00"
         },
         {
-          "id": "AALA2026017",
-          "title": "Generative AI as a Peer Feedback Partner in EFL Writing: Enhancing Quality, Reducing Anxiety, and Building Literacy",
-          "abstract": "Peer feedback is a vital pedagogical tool in English as a foreign language (EFL) writing classrooms, but student reviewers often face challenges such as anxiety, low confidence, and a lack of skills in providing constructive feedback. Generative AI presents new opportunities to support students in the peer feedback process. This study explores how EFL student reviewers engage with generative AI during peer feedback and examines its impact on perceived feedback quality, emotional responses (task enjoyment and anxiety), and feedback literacy. Using a quasi-experimental design, 60 Chinese undergraduate students were assigned to an experimental group (EG) that utilized generative AI (Doubao) for feedback support or a control group (CG) that completed peer review without AI assistance. Over three intervention cycles, data were collected from student-AI chat histories, feedback quality ratings by recipients, and pre/post-intervention questionnaires on task emotions and feedback literacy. Thematic analysis of chat histories revealed that EG students primarily employed AI for linguistic refinement of their comments, with limited use for enhancing content or structure, and most prompts lacked contextual information. ANCOVA results demonstrated that AI support led to significant, cumulative improvements in perceived feedback quality. By the third cycle, EG students significantly outperformed CG students across four dimensions—affect, description, justification, and constructiveness. Additionally, EG students reported significantly higher task enjoyment and lower anxiety than their CG counterparts. The intervention also enhanced all dimensions of feedback literacy, particularly willingness to participate and feedback-related knowledge. These findings indicate that generative AI can serve as a powerful scaffold in peer assessment, reducing emotional and cognitive burdens while progressively developing students' capacity to provide high-quality feedback. The study underscores the importance of integrating AI into peer feedback practices and highlights the need for systematic training in prompt engineering and ethical AI use to maximize pedagogical benefits.",
+          "id": "AALA2026032",
+          "title": "Interactional Features in AI-Mediated Speaking Tasks: Differential Manifestation and Predictive Validity",
+          "abstract": "The integration of artificial intelligence (AI) in online speaking assessments has opened new avenues for interactive task design, yet empirical research on how interactional features manifest across task types in technology-mediated environments remains limited. This study explores the relationship between interactional features and interactional competence in AI-assisted speaking tasks, focusing on two task types: an AI-assisted role-play task and a paired discussion task. We address three key questions: (1) How do interactional features manifest across the two task types? (2) How do these features predict interactional competence in each task? (3) Does task type influence the relationship between feature frequency and learners' language proficiency? Forty-three second language learners participated, completing both tasks. Using rater-mediated evaluations based on interactional feature and competence scales, we analyzed cross-task variation in feature manifestation and its predictive validity for competence scores, while considering the moderating role of proficiency. Results revealed task-specific structural differences: role-play tasks elicited more affective and contextual features (e.g., clarification, topic expansion, non-verbal cues), while paired discussion tasks emphasized cognitive features (e.g., response timeliness, topic connectivity, idea elaboration). Notably, proficiency moderated topic management features, while turn and task management features were influenced by task type. Additionally, non-verbal cues and interactional listening were constrained in the online setting. These findings highlight important implications for task design, suggesting that task-specific interactional features must be considered to enhance the validity of AI-mediated assessments of oral interaction.",
           "authors": [
-            {
-              "name": "Kai Guo",
-              "affiliation": "The Chinese University of Hong Kong",
-              "bio": "Kai Guo is an RGC Junior Research Fellow and a Research Assistant Professor in the Department of Curriculum and Instruction at The Chinese University of Hong Kong. His research interests include technology-enhanced language learning and second language writing. He has authored over 40 articles in SSCI Q1 journals. His recent publications have appeared in prestigious international journals such as Computers & Education, The Internet and Higher Education, British Journal of Educational Technology, Computer Assisted Language Learning, Interactive Learning Environments, Language Learning & Technology, Language Teaching Research, System, TESOL Quarterly, and Assessing Writing."
-            },
             {
               "name": "Hua Wang",
               "affiliation": "Shanghai Jiao Tong University",
-              "bio": ""
+              "bio": "Hua Wang is an Associate Professor in the School of Foreign languages at Shanghai Jiao Tong University. Her research primarily focuses on language testing and assessment, with a particular emphasis on technology-mediated assessment. She received her Ph.D. from Shanghai Jiao Tong University and has since published more than 30 peer-reviewed articles and two academic monographs. Email address: nnhwang@sjtu.edu.cn"
             }
           ],
           "category": "theme-3",
@@ -1489,20 +1509,24 @@ window.AALA_PROGRAM = {
           ],
           "category": "theme-2",
           "categoryLabel": "Theme 2",
-          "dayKey": "sep20",
           "room": "L206",
-          "start": "14:00",
-          "end": "14:30"
+          "start": "17:00",
+          "end": "17:30"
         },
         {
-          "id": "AALA2026032",
-          "title": "Interactional Features in AI-Mediated Speaking Tasks: Differential Manifestation and Predictive Validity",
-          "abstract": "The integration of artificial intelligence (AI) in online speaking assessments has opened new avenues for interactive task design, yet empirical research on how interactional features manifest across task types in technology-mediated environments remains limited. This study explores the relationship between interactional features and interactional competence in AI-assisted speaking tasks, focusing on two task types: an AI-assisted role-play task and a paired discussion task. We address three key questions: (1) How do interactional features manifest across the two task types? (2) How do these features predict interactional competence in each task? (3) Does task type influence the relationship between feature frequency and learners' language proficiency? Forty-three second language learners participated, completing both tasks. Using rater-mediated evaluations based on interactional feature and competence scales, we analyzed cross-task variation in feature manifestation and its predictive validity for competence scores, while considering the moderating role of proficiency. Results revealed task-specific structural differences: role-play tasks elicited more affective and contextual features (e.g., clarification, topic expansion, non-verbal cues), while paired discussion tasks emphasized cognitive features (e.g., response timeliness, topic connectivity, idea elaboration). Notably, proficiency moderated topic management features, while turn and task management features were influenced by task type. Additionally, non-verbal cues and interactional listening were constrained in the online setting. These findings highlight important implications for task design, suggesting that task-specific interactional features must be considered to enhance the validity of AI-mediated assessments of oral interaction.",
+          "id": "AALA20260170",
+          "title": "Assessing language and communication competencies through an AI-Powered Scenario-Based Assessment (SBA): The development of the LCCA",
+          "abstract": "Introduction: Traditional language assessments often measure skills in isolation, perhaps because it is easier to do that or because stakeholders require individual skill reporting, overlooking the integrated and goal-oriented nature of authentic communication (Cumming, 2024). This presentation reports on a test development project being conducted at a university in Hong Kong that aims at bridging this gap in language assessment, while at the same time exploring the impact that Generative AI could have in such a context. The presenters will introduce a novel, AI-powered assessment system designed to measure language competencies through scenario-based tasks that reflect the complex demands of professional, social, and disciplinary contexts (Purpura, 2021).\nAims: The primary goal of this project is to develop an online assessment platform that measures test-takers’ integrated language and communication skills. Specifically, the system is designed to: - implement a Scenario-Based Assessment (SBA) framework, in which tasks are linked to specific, meaningful goals to simulate real-life language use and motivate learners. - use artificial intelligence to support all stages of assessment, including test delivery, scoring and personalised learner feedback. - offer progress testing in both English and Chinese, supplemented by practice tasks, to help learners understand their competencies in relation to graduation benchmarks set by the university. - integrate assessment data with the language curriculum to provide actionable insights for learners, course designers, instructors and policy makers.\nSignificance: This presentation will update delegates on the progress and challenges faced in the development of the LCCA. By combining a scenario-based framework with AI-powered analytics, this project introduces a dynamic model for a language and communication competency assessment with the potential to act as a blueprint for developing GenAI powered assessments that are authentic, motivating for learners, and highly informative for language curriculum development. While by reporting challenges encountered, the project also aims to offer some practical advice on how to balance the different needs of stakeholders. (300 words)",
           "authors": [
             {
-              "name": "Hua Wang",
-              "affiliation": "Shanghai Jiao Tong University",
-              "bio": "Hua Wang is an Associate Professor in the School of Foreign languages at Shanghai Jiao Tong University. Her research primarily focuses on language testing and assessment, with a particular emphasis on technology-mediated assessment. She received her Ph.D. from Shanghai Jiao Tong University and has since published more than 30 peer-reviewed articles and two academic monographs. Email address: nnhwang@sjtu.edu.cn"
+              "name": "Alan Urmston",
+              "affiliation": "Hong Kong Polytechnic University",
+              "bio": "Alan Urmston is an experienced language assessment specialist who teaches courses in language testing at doctorate level in Hong Kong. He has led test development projects in government and tertiary sectors for over 20 years. He also serves the language testing community as co-editor of the Newsletter of the International Language Testing Association and as a member of the ILTA Communications Committee. His current research interests are in the use of scenario-based language assessment powered by artificial intelligence to measure the communicative competence of university undergraduates."
+            },
+            {
+              "name": "Felicia Fang",
+              "affiliation": "The Hong Kong Polytechnic University",
+              "bio": "Felicia Fang is an Instructor and Assessment Lead at the English Language Centre, The Hong Kong Polytechnic University. She teaches EAP and ESP courses to undergraduate and research postgraduate students. Her research focuses on EAP, writing assessment, and integrating GenAI into English-medium higher education, particularly in EAP instruction and assessment."
             }
           ],
           "category": "theme-3",
@@ -1592,7 +1616,12 @@ window.AALA_PROGRAM = {
           "room": "17th Floor, Altira Macau",
           "start": "18:30",
           "end": "20:30",
-          "note": "For paid and invited attendees."
+          "note": "For paid and invited attendees.",
+          "sponsorship": {
+            "name": "LanguageCert",
+            "logo": "assets/sponsors/people-cert.png",
+            "label": "Supported by"
+          }
         },
         {
           "id": "",
@@ -1861,7 +1890,12 @@ window.AALA_PROGRAM = {
           "categoryLabel": "Plenary",
           "room": "HG02",
           "start": "09:30",
-          "end": "10:30"
+          "end": "10:30",
+          "sponsorship": {
+            "name": "British Council",
+            "logo": "assets/sponsors/british-council.png",
+            "label": "Sponsored by"
+          }
         },
         {
           "id": "",
@@ -1872,7 +1906,12 @@ window.AALA_PROGRAM = {
           "categoryLabel": "Programme activity",
           "room": "Culture Centre Room 1 & 2",
           "start": "10:30",
-          "end": "11:00"
+          "end": "11:00",
+          "sponsorship": {
+            "name": "TOEIC",
+            "logo": "assets/sponsors/toeic.png",
+            "label": "Supported by"
+          }
         },
         {
           "id": "AALA2026057",
@@ -2161,19 +2200,14 @@ window.AALA_PROGRAM = {
           "end": "12:00"
         },
         {
-          "id": "AALA2026069",
-          "title": "Empowering Strategic Preparation via Text-based AI Agents: Enhancing the Mandarin Oral Performance of Ethnic Minority College Students",
-          "abstract": "To address the challenges of insufficient content and poor logical organization in the Topic-based Monologue task of the Putonghua Proficiency Test (PSC) among college students in ethnic minority regions, this study developed a Text-to-Text idea-scaffolding agent based on large language models. The agent systematically categorizes the 50 given PSC topics using a topic-merging strategy and incorporates a specialized ethnic cultural knowledge graph to support topic construction. A mixed-methods approach was adopted: interaction data from 60 students during the strategy preparation stage and their pretest-posttest scores were collected, and in-depth interviews were conducted with selected participants. Through interactive dialogue, the agent provides students with idea elicitation and topic organization strategies, guiding students to construct standardized speaking expression outlines using familiar ethnic cultural elements. Results show that after receiving pre-task idea construction supported by the agent, the logical coherence and linguistic standardization of the experimental group’s oral production exhibited an improving trend. Furthermore,the intervention effectively alleviated students’language anxiety before speaking. This research provides an innovative and practical approach to the digital transformation of Putonghua promotion and language education in ethnic regions, contributing to the development of technology-enhanced language testing and teaching.",
+          "id": "AALA20260191",
+          "title": "Students’ Feedback Literacy in the Age of Generative Artificial Intelligence",
+          "abstract": "Students’ feedback literacy refers to their ability to understand and interpret feedback, critically assess its value, and actively participate in the feedback process. According to Carless and Boud (2018), students’ feedback literacy comprises appreciating feedback, making judgements, managing affect and taking action. In the new era of AI, the importance of students’ agency and metacognition has become increasingly prominent. In this new context, the concept and components of feedback literacy also need to be re-examined.\nA total of 32 Singapore secondary school students completed oral practice tasks using a GenAI system. Their engagement with feedback was categorized into cognitive, metacognitive, affective, and behavioural dimensions. The results indicated that students employed a range of strategies when interacting with the GenAI-driven platform, reflecting varying levels of engagement. Furthermore, a relationship was identified between students’ engagement and their differing levels of AI literacy. Overall, the findings offer valuable implications for enhancing students’ feedback literacy within GenAI-supported learning environments. More importantly, the findings give implications for the development of the connotation of student feedback literacy in the age of AI.",
           "authors": [
             {
-              "name": "Wenqing Shi",
-              "affiliation": "Beijing University of Posts and Telecommunications",
-              "bio": "I am a first-year master’s student in Education at Beijing University of Posts a nd Telecommunications (BUPT). My research focus centers on the exploration of national language and character promotion, with a particular interest in the digital transformation of Putonghua popularization, especially in ethnic minority regions. I am committed to integrating educational technology with language promotion research, aiming to provide practical insights for optimizing national language popularization strategies. I am honored to participate in AALA 2026, eager to share my research progress and learn from outstanding scholars in the field of language testing and education worldwide."
-            },
-            {
-              "name": "Chengqun Liu",
-              "affiliation": "Beijing University of Posts and Telecommunications",
-              "bio": ""
+              "name": "Limei Zhang",
+              "affiliation": "Nanyang Technological University",
+              "bio": "Dr Limei Zhang is Senior Lecturer and Dean of Academic Affairs at the Singapore Centre for Chinese Language, Nanyang Technological University. Her research interests include language assessment in relation to classroom teaching and learning, language assessment literacy, metacognition in language learning etc."
             }
           ],
           "category": "theme-3",
@@ -2230,7 +2264,12 @@ window.AALA_PROGRAM = {
           "categoryLabel": "Programme activity",
           "room": "Culture Centre Room 1 & 2",
           "start": "12:00",
-          "end": "13:00"
+          "end": "13:00",
+          "sponsorship": {
+            "name": "TOEIC",
+            "logo": "assets/sponsors/toeic.png",
+            "label": "Supported by"
+          }
         },
         {
           "id": "AALA20260163",
@@ -2299,7 +2338,12 @@ window.AALA_PROGRAM = {
           "categoryLabel": "Editors’ Forum",
           "room": "HG02",
           "start": "13:00",
-          "end": "14:00"
+          "end": "14:00",
+          "sponsorship": {
+            "name": "Language Testing and Assessment",
+            "logo": "assets/sponsors/fltrp.png",
+            "label": "Supported by"
+          }
         },
         {
           "id": "AALA20260208",
@@ -2358,14 +2402,19 @@ window.AALA_PROGRAM = {
           "end": "13:30"
         },
         {
-          "id": "AALA20260191",
-          "title": "Students’ Feedback Literacy in the Age of Generative Artificial Intelligence",
-          "abstract": "Students’ feedback literacy refers to their ability to understand and interpret feedback, critically assess its value, and actively participate in the feedback process. According to Carless and Boud (2018), students’ feedback literacy comprises appreciating feedback, making judgements, managing affect and taking action. In the new era of AI, the importance of students’ agency and metacognition has become increasingly prominent. In this new context, the concept and components of feedback literacy also need to be re-examined.\nA total of 32 Singapore secondary school students completed oral practice tasks using a GenAI system. Their engagement with feedback was categorized into cognitive, metacognitive, affective, and behavioural dimensions. The results indicated that students employed a range of strategies when interacting with the GenAI-driven platform, reflecting varying levels of engagement. Furthermore, a relationship was identified between students’ engagement and their differing levels of AI literacy. Overall, the findings offer valuable implications for enhancing students’ feedback literacy within GenAI-supported learning environments. More importantly, the findings give implications for the development of the connotation of student feedback literacy in the age of AI.",
+          "id": "AALA2026069",
+          "title": "Empowering Strategic Preparation via Text-based AI Agents: Enhancing the Mandarin Oral Performance of Ethnic Minority College Students",
+          "abstract": "To address the challenges of insufficient content and poor logical organization in the Topic-based Monologue task of the Putonghua Proficiency Test (PSC) among college students in ethnic minority regions, this study developed a Text-to-Text idea-scaffolding agent based on large language models. The agent systematically categorizes the 50 given PSC topics using a topic-merging strategy and incorporates a specialized ethnic cultural knowledge graph to support topic construction. A mixed-methods approach was adopted: interaction data from 60 students during the strategy preparation stage and their pretest-posttest scores were collected, and in-depth interviews were conducted with selected participants. Through interactive dialogue, the agent provides students with idea elicitation and topic organization strategies, guiding students to construct standardized speaking expression outlines using familiar ethnic cultural elements. Results show that after receiving pre-task idea construction supported by the agent, the logical coherence and linguistic standardization of the experimental group’s oral production exhibited an improving trend. Furthermore,the intervention effectively alleviated students’language anxiety before speaking. This research provides an innovative and practical approach to the digital transformation of Putonghua promotion and language education in ethnic regions, contributing to the development of technology-enhanced language testing and teaching.",
           "authors": [
             {
-              "name": "Limei Zhang",
-              "affiliation": "Nanyang Technological University",
-              "bio": "Dr Limei Zhang is Senior Lecturer and Dean of Academic Affairs at the Singapore Centre for Chinese Language, Nanyang Technological University. Her research interests include language assessment in relation to classroom teaching and learning, language assessment literacy, metacognition in language learning etc."
+              "name": "Wenqing Shi",
+              "affiliation": "Beijing University of Posts and Telecommunications",
+              "bio": "I am a first-year master’s student in Education at Beijing University of Posts a nd Telecommunications (BUPT). My research focus centers on the exploration of national language and character promotion, with a particular interest in the digital transformation of Putonghua popularization, especially in ethnic minority regions. I am committed to integrating educational technology with language promotion research, aiming to provide practical insights for optimizing national language popularization strategies. I am honored to participate in AALA 2026, eager to share my research progress and learn from outstanding scholars in the field of language testing and education worldwide."
+            },
+            {
+              "name": "Chengqun Liu",
+              "affiliation": "Beijing University of Posts and Telecommunications",
+              "bio": ""
             }
           ],
           "category": "theme-3",
@@ -2640,10 +2689,9 @@ window.AALA_PROGRAM = {
           ],
           "category": "theme-2",
           "categoryLabel": "Theme 2",
-          "dayKey": "sep19",
           "room": "L206",
-          "start": "17:00",
-          "end": "17:30"
+          "start": "14:00",
+          "end": "14:30"
         },
         {
           "id": "AALA20260193",
@@ -3209,14 +3257,19 @@ window.AALA_PROGRAM = {
           "end": "16:30"
         },
         {
-          "id": "AALA2026091",
-          "title": "The Best of Both Worlds? A Mixed-Methods Evaluation of AI-Mediated Formative Feedback and Feedback Literacy in Malaysian Higher Education",
-          "abstract": "The rapid integration of artificial intelligence (AI) has shifted the landscape of formative assessment, offering immediate, automated feedback to student writers. While AI tools provide a potential solution to feedback bottlenecks in tertiary settings, little is known about how students critically negotiate these suggestions or the extent of their \"AI feedback literacy\". This study employed a sequential exploratory mixed-methods design to investigate the perceptions of 210 undergraduate ESL students at a Malaysian public university. Quantitative survey data were complemented by qualitative narratives gathered through focus group interviews to explore the lived experience of using AI for academic writing. The findings indicate that students perceive AI-mediated formative feedback as a highly effective tool for identifying language issues and expanding academic vocabulary. Beyond cognitive support, the use of AI feedback was found to foster learner autonomy and provide significant affective support by increasing writing confidence and reducing anxiety. Students particularly valued the immediacy of the feedback, which allowed for real-time revisions during the drafting process. However, a notable literacy gap emerged: despite finding the tools effective, students expressed lower confidence in their ability to critically evaluate the quality of AI-generated suggestions. Consequently, participants reported a strong preference for a hybrid model where AI-powered diagnostic support is combined with human instructor guidance rather than replacing it. The study concludes that while AI serves as an efficient diagnostic \"scaffold,\" it does not replace the human instructor’s role in navigating nuance and tone. For a truly \"best of both worlds\" approach, higher education assessment frameworks must prioritize the development of student feedback literacy to ensure ethical and critical engagement with automated tools.",
+          "id": "AALA2026011",
+          "title": "A Study on the Reliability of ChatGPT-Based English Writing Assessment: Internal and External Perspectives",
+          "abstract": "With the advancement of big data and artificial intelligence, natural language processing (NLP) has been increasingly integrated into educational assessment, facilitating a shift from human to automated scoring in English writing assessment. This study examines the performance of ChatGPT in assessing IELTS-style essays across four dimensions: Task Response, Coherence and Cohesion, Lexical Resource, and Grammatical Range and Accuracy, along with the total score. Internal reliability was measured through multiple scoring rounds, while external reliability was assessed by comparing ChatGPT’s rating with those assigned by human raters. The results reveal that ChatGPT demonstrates moderate internal consistency, yet exhibits significant deviation from human scores, although its self-agreement surpasses that among human raters. The use of more detailed prompts is shown to enhance internal reliability, and training with human-scored samples reduces discrepancies with human ratings, albeit at a slight cost to consistency. Further analysis of scoring processes suggests that human raters prioritize overall structural and argumentative quality, whereas ChatGPT focuses on linguistic details and specific feedback. The study concludes that optimizing automated models, refining prompt strategies, and integrating human-AI scoring are essential to enhance the reliability of AI-based writing assessment.",
           "authors": [
             {
-              "name": "Norhaslinda Hassan",
-              "affiliation": "Universiti Teknologi Mara",
-              "bio": "Dr. Norhaslinda Hassan is a Senior Lecturer at Universiti Teknologi MARA (UiTM) Penang Branch Campus with a specialized background in language assessment. Her research has centered on washback, learning oriented assessment and formative assessment practices within ESL instruction. Currently, she leads international research on AI-mediated feedback to enhance learner autonomy and feedback literacy. She advocates for a hybrid assessment model that balances the efficiency of automated tools with essential human pedagogical expertise."
+              "name": "Grace Yunjia Zhang",
+              "affiliation": "Sichuan International Studies University",
+              "bio": "Yunjia Zhang holds a Master's degree and has two years of experience teaching English at Chongqing Institute of Foreign Studies. Her research interests center on language testing and writing assessment, with a particular focus on the application of AI technologies in automated essay scoring. She has published several papers in SSCI and Scopus-indexed journals. Her current work explores the reliability of large language models like ChatGPT in L2 writing evaluation and human-AI collaborative assessment approaches."
+            },
+            {
+              "name": "Boyu Wang",
+              "affiliation": "Huazhong University of Science and Technology",
+              "bio": ""
             }
           ],
           "category": "theme-3",

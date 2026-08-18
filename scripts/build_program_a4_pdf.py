@@ -14,6 +14,7 @@ from reportlab.lib.units import mm
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfgen import canvas
+from reportlab.lib.utils import ImageReader
 from reportlab.platypus import Paragraph
 
 
@@ -30,7 +31,7 @@ TEAL_MID = colors.HexColor("#167F7A")
 TEAL_PALE = colors.HexColor("#E7F3F1")
 GOLD = colors.HexColor("#D5A83D")
 RULE = colors.HexColor("#CDD8D6")
-UPDATED = "17 August 2026"
+UPDATED = "18 August 2026"
 
 CATEGORY_COLOURS = {
     "featured": (colors.HexColor("#FFF0D7"), colors.HexColor("#C87A12")),
@@ -77,6 +78,46 @@ def clean(value):
 
 def xml(value):
     return escape(clean(value), quote=True)
+
+
+def sponsor_logo_path(event):
+    logo = (event.get("sponsorship") or {}).get("logo")
+    if not logo:
+        return None
+    path = ROOT / logo
+    return path if path.is_file() else None
+
+
+def fitted_logo_size(event, max_width, max_height):
+    path = sponsor_logo_path(event)
+    if not path:
+        return None, 0, 0
+    image = ImageReader(str(path))
+    width, height = image.getSize()
+    scale = min(max_width / width, max_height / height)
+    return image, width * scale, height * scale
+
+
+def sponsorship_block_height(event, max_width, max_logo_height=7 * mm, stacked=True):
+    _, _, logo_height = fitted_logo_size(event, max_width, max_logo_height)
+    return logo_height + (2.8 * mm if stacked else 0) if logo_height else 0
+
+
+def draw_sponsorship(c, event, x, bottom, max_width, max_logo_height=7 * mm, label_size=4.8, stacked=True):
+    label_width = 0 if stacked else min(16 * mm, max_width * 0.34)
+    image, logo_width, logo_height = fitted_logo_size(event, max_width - label_width, max_logo_height)
+    if not image:
+        return
+    label = clean((event.get("sponsorship") or {}).get("label") or "Supported by")
+    c.setFillColor(MUTED)
+    c.setFont("AALARegular", label_size)
+    if stacked:
+        c.drawString(x, bottom + logo_height + 1.1 * mm, label)
+        logo_x = x
+    else:
+        c.drawString(x, bottom + max(0, (logo_height - label_size) / 2), label)
+        logo_x = x + label_width
+    c.drawImage(image, logo_x, bottom, width=logo_width, height=logo_height, mask="auto", preserveAspectRatio=True)
 
 
 def register_fonts():
@@ -246,23 +287,37 @@ def draw_overview(c, day, page_number, total_pages):
     for font_size in (9.5, 9.0, 8.5, 8.0, 7.5):
         card_specs = []
         for event in timeline:
-            markup = event_markup(event, include_room=True)
-            item, used = paragraph(markup, col_width - 12 * mm, font_size)
-            card_specs.append((event, item, used + 3.2 * mm))
+            sponsor_width = 48 * mm if sponsor_logo_path(event) else 0
+            text_width = col_width - 12 * mm - sponsor_width
+            item, used = paragraph(event_markup(event, include_room=True), text_width, font_size)
+            sponsor_height = sponsorship_block_height(event, max(1 * mm, sponsor_width - 4 * mm), 7 * mm, stacked=False)
+            card_specs.append((event, item, max(used, sponsor_height) + 3.2 * mm, sponsor_width))
         note_item, note_h = paragraph(f"<b>{xml(note)}</b>", col_width - 12 * mm, font_size, color=TEAL)
-        required = sum(card_h + 1.2 * mm for _, _, card_h in card_specs) + note_h + 4 * mm
+        required = sum(card_h + 1.2 * mm for _, _, card_h, _ in card_specs) + note_h + 4 * mm
         if required <= y - bottom:
             break
     else:
         raise ValueError(f"Overview timeline does not fit: {day['date']}")
-    for event, item, card_h in card_specs:
+    for event, item, card_h, sponsor_width in card_specs:
         fill, accent = category_colours(event)
         c.setFillColor(fill)
         c.setStrokeColor(RULE)
         c.roundRect(x + 4 * mm, y - card_h, col_width - 8 * mm, card_h, 1.5 * mm, fill=1, stroke=1)
         c.setFillColor(accent)
         c.rect(x + 4 * mm, y - 1.2 * mm, col_width - 8 * mm, 1.2 * mm, fill=1, stroke=0)
-        item.drawOn(c, x + 6 * mm, y - card_h + 1.6 * mm)
+        _, used = item.wrap(col_width - 12 * mm - sponsor_width, 1000 * mm)
+        item.drawOn(c, x + 6 * mm, y - used - 1.6 * mm)
+        if sponsor_width:
+            draw_sponsorship(
+                c,
+                event,
+                x + col_width - 4 * mm - sponsor_width,
+                y - card_h + 1.5 * mm,
+                sponsor_width - 4 * mm,
+                7 * mm,
+                5.2,
+                stacked=False,
+            )
         y -= card_h + 1.2 * mm
     c.setFillColor(TEAL_PALE)
     c.setStrokeColor(TEAL_MID)
@@ -273,7 +328,8 @@ def draw_overview(c, day, page_number, total_pages):
 
 def card_height(event, width, size, include_room=False):
     _, used = paragraph(event_markup(event, include_room=include_room), width - 3 * mm, size)
-    return used + 3 * mm
+    sponsor_height = sponsorship_block_height(event, width - 3 * mm, 7 * mm)
+    return used + sponsor_height + 3 * mm
 
 
 def to_minutes(value):
@@ -375,14 +431,12 @@ def draw_room_page(c, day, rooms, events, part, parts, page_number, total_pages)
                 c.setFillColor(accent)
                 c.rect(x, top_y - 1.0 * mm, col_width, 1.0 * mm, fill=1, stroke=0)
                 item.drawOn(c, x + 1.5 * mm, top_y - used - 1.5 * mm)
+                draw_sponsorship(c, event, x + 1.5 * mm, top_y - span_h + 1.5 * mm, col_width - 3 * mm, 7 * mm)
             else:
                 row_h = row_heights[slot_index]
                 c.setFillColor(TEAL_PALE)
                 c.setStrokeColor(RULE)
                 c.roundRect(x, top_y - row_h, col_width, row_h, 1.2 * mm, fill=1, stroke=1)
-                c.setFillColor(MUTED)
-                c.setFont("AALARegular", 5.8)
-                c.drawCentredString(x + col_width / 2, top_y - 5 * mm, f"No {slot} session")
     c.showPage()
 
 
@@ -444,10 +498,7 @@ def workshop_panel(c, day, x, panel_width, top, bottom):
                 c.setFillColor(accent)
                 c.rect(col_x, y - 1.0 * mm, col_width, 1.0 * mm, fill=1, stroke=0)
                 item.drawOn(c, col_x + 1.5 * mm, y - used - 1.5 * mm)
-            else:
-                c.setFillColor(MUTED)
-                c.setFont("AALARegular", 5.8)
-                c.drawCentredString(col_x + col_width / 2, y - 5 * mm, f"No {start} activity")
+                draw_sponsorship(c, event, col_x + 1.5 * mm, y - row_h + 1.5 * mm, col_width - 3 * mm, 7 * mm)
         y -= row_h + 1.5 * mm
 
 
