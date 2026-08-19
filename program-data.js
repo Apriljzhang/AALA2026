@@ -73,6 +73,17 @@ window.AALA_PROGRAM = {
         },
         {
           "id": "",
+          "title": "AALA EB Meeting",
+          "abstract": "",
+          "authors": [],
+          "category": "poster",
+          "categoryLabel": "EB activity",
+          "room": "A207",
+          "start": "14:00",
+          "end": "16:00"
+        },
+        {
+          "id": "",
           "title": "Registration at Zam Zam",
           "abstract": "",
           "authors": [],
@@ -686,28 +697,6 @@ window.AALA_PROGRAM = {
           "end": "14:30"
         },
         {
-          "id": "AALA20260202",
-          "title": "Toward Localized Standards for Learner Development: Constructing a Comprehensive English Competence Growth System for Chinese Students",
-          "abstract": "As humanistic perspectives gain increasing prominence in language assessment, there is growing recognition that assessment should not merely classify learners by outcomes, but also support learning and development (McNamara, 2001; Black & Wiliam, 1998). In parallel, contemporary competence-oriented educational frameworks increasingly emphasize the integration of knowledge, skills, attitudes, and values, as well as learner agency and broader developmental goals (OECD, 2025; Ministry of Education of the PRC, 2020) (OECD, 2018; Ministry of Education of the PRC, 2020). In this context, the development of a growth-oriented framework has become increasingly necessary for educational providers seeking to connect curriculum, learning resources, teaching, and assessment in ways that better support students’ long-term English development. This presentation introduces Comprehensive English Competence Growth System for Chinese Students, a newly constructed framework developed by FLTRP (Foreign Language Teaching and Research Press) in response to the needs of English education in China. The system is organized around two foundational dispositions—sense of patriotism and global vision—and four interrelated dimensions: language competence, thinking competence, intercultural competence, and practical competence. It comprises 5 stages, with 25 levels in total, and is intended to provide a developmental framework for students’ English learning across different stages of schooling. The presentation focuses on the rationale, conceptual foundations, and structural design of the system. It discusses how the framework draws on research on language standards, key competencies, intercultural communicative competence, and developmental approaches to assessment, while adapting these ideas to the Chinese educational context. It is argued that this framework represents an initial effort to move beyond proficiency classification toward a developmental continuum that supports learner growth in English education.",
-          "authors": [
-            {
-              "name": "Liping Liu",
-              "affiliation": "Foreign Language Teaching and Research Press",
-              "bio": ""
-            },
-            {
-              "name": "Lingyun Qu",
-              "affiliation": "Foreign Language Teaching and Research Press",
-              "bio": ""
-            }
-          ],
-          "category": "featured",
-          "categoryLabel": "Featured",
-          "room": "HG01",
-          "start": "14:30",
-          "end": "15:00"
-        },
-        {
           "id": "AALA20260179",
           "title": "An examination of rater judgements of comprehensibility in extended speech",
           "abstract": "A recent focus in assessment research has been the concept of “comprehensibility”, or what it means to understand a speaker. This presentation reports on a study that examines acculturated and non-acculturated raters' perceptions of comprehensibility when rating samples of extended speech from Indian speakers of English and identifies the factors that may influence their rating judgements.\nResearch has highlighted that comprehensibility is co-constructed by the speaker and the listener (Pommée et al.2022), however in an assessment scenario it is only the speaker’s contributions that are measured (Tavakoli & Cooke, 2024). Because trained raters are usually the designated “listeners” in these situations and the arbiters of the performance measures, variability in ratings can present a challenge to the overall fairness, validity and reliability of test outcomes (McNamara, 1996; Weir, 2005). Therefore, it is useful to understand from their perspective which elements in L2 speech have a direct impact on the overall comprehensibility of the speaker (Trofimovich & Isaacs, 2012).\nThis presentation will first discuss the study design, which used Aptis Speaking Task 4 performances from Indian test-takers who obtained B1 or B2 level scores (i.e., the Independent User in CEFR) on the Aptis rating scale, as well as two rater panels (India and UK-based examiners), because raters’ background can be an important factor influencing their judgements (Xi & Mollaun, 2011). Next, the methodology will be described, including the use of a comprehensibility-specific scale (Isaacs et al., 2018) and verbal reports (Kim, 2015) from both panels. Findings from the analysis will then be presented as qualitative differences were observed in how the two rater panels interpreted the overall construct, weighed the criteria and applied the rating scale (Lumley, 2002). In the end, key limitations and implications will be highlighted as these may have relevance for fairness considerations in diverse assessment scenarios.",
@@ -720,7 +709,7 @@ window.AALA_PROGRAM = {
           ],
           "category": "featured",
           "categoryLabel": "Featured",
-          "room": "HG02",
+          "room": "HG01",
           "start": "14:30",
           "end": "15:00"
         },
@@ -930,8 +919,8 @@ window.AALA_PROGRAM = {
           "category": "featured",
           "categoryLabel": "Featured",
           "room": "HG02",
-          "start": "15:30",
-          "end": "16:00"
+          "start": "14:30",
+          "end": "15:00"
         },
         {
           "id": "AALA2026007",
@@ -1909,7 +1898,7 @@ window.AALA_PROGRAM = {
           ],
           "category": "featured",
           "categoryLabel": "Featured",
-          "room": "HG01",
+          "room": "HG02",
           "start": "11:00",
           "end": "11:30"
         },
@@ -1936,9 +1925,9 @@ window.AALA_PROGRAM = {
           ],
           "category": "featured",
           "categoryLabel": "Featured",
-          "room": "HG02",
-          "start": "11:00",
-          "end": "11:30"
+          "room": "HG03",
+          "start": "11:30",
+          "end": "12:00"
         },
         {
           "id": "AALA20260212",
@@ -1998,7 +1987,7 @@ window.AALA_PROGRAM = {
           ],
           "category": "theme-3",
           "categoryLabel": "Theme 3",
-          "room": "L207",
+          "room": "HG01",
           "start": "11:00",
           "end": "11:30"
         },
@@ -2042,7 +2031,7 @@ window.AALA_PROGRAM = {
           ],
           "category": "featured",
           "categoryLabel": "Featured",
-          "room": "HG01",
+          "room": "HG02",
           "start": "11:30",
           "end": "12:00"
         },
@@ -2069,7 +2058,7 @@ window.AALA_PROGRAM = {
           ],
           "category": "featured",
           "categoryLabel": "Featured",
-          "room": "HG02",
+          "room": "HG01",
           "start": "11:30",
           "end": "12:00"
         },
@@ -2147,9 +2136,10 @@ window.AALA_PROGRAM = {
           ],
           "category": "theme-3",
           "categoryLabel": "Theme 3",
-          "room": "L207",
-          "start": "11:30",
-          "end": "12:00"
+          "dayKey": "sep19",
+          "room": "HG02",
+          "start": "15:30",
+          "end": "16:00"
         },
         {
           "id": "AALA20260184",
@@ -3688,9 +3678,9 @@ window.AALA_PROGRAM = {
     }
   ],
   "audit": {
-    "registeredIds": 147,
-    "scheduledIds": 147,
-    "scheduledRegisteredIds": 147,
+    "registeredIds": 146,
+    "scheduledIds": 146,
+    "scheduledRegisteredIds": 146,
     "registeredNotScheduled": [],
     "scheduledNotRegistered": []
   }

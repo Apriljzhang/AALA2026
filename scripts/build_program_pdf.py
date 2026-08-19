@@ -44,7 +44,7 @@ CATEGORY_COLORS = {
 }
 
 ROOMS_BY_DAY = {
-    "sep18": ["Culture Centre Room 1", "Culture Centre Room 2", "HG01"],
+    "sep18": ["Culture Centre Room 1", "Culture Centre Room 2", "HG01", "A207"],
     "sep19": ["HG01", "HG02", "HG03", "L205", "L206", "L207", "L305", "L306", "L307", "Poster area"],
     "sep20": ["HG01", "HG02", "HG03", "L205", "L206", "L207", "L305", "L306", "Poster area"],
     "sep21": ["Culture Centre Room 1"],
