@@ -95,7 +95,7 @@ details[open] > summary .expand-mark::before { content: "−"; }
 .author-details > summary { min-height: var(--space-lg); align-items: flex-start; gap: var(--space-3xs); }
 .author-affiliation { color: var(--color-ink); }
 .poster-band { --session-color: var(--color-poster); min-width: 0; padding-block-start: var(--space-sm); border-block-start: var(--rule-accent) solid var(--session-color); }
-.poster-events > .poster-band { grid-column: 1 / -1; }
+.time-events > .poster-band { grid-column: 1 / -1; }
 .poster-band-title { display: block; color: var(--color-ink-strong); font-size: var(--text-base); }
 .poster-band-intro { max-width: none; margin: var(--space-xs) 0 var(--space-md); font-size: var(--text-sm); line-height: 1.4; }
 .poster-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-2xs); }

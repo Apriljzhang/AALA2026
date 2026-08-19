@@ -55,6 +55,12 @@
         return index < 0 ? roomOrder.length : index;
     }
 
+    function activityRank(event) {
+        if (["Lunch", "Morning tea break", "Afternoon tea break"].includes(event.title)) return 0;
+        if (event.posters) return 2;
+        return 1;
+    }
+
     function authorText(author) {
         return author.affiliation ? `${author.name} (${author.affiliation})` : author.name;
     }
@@ -115,7 +121,9 @@
         const type = element("span", "session-type");
         type.append(element("span", "legend-swatch"), document.createTextNode(event.categoryLabel));
         meta.append(type);
-        meta.append(element("span", "session-time", `${displayTime(event.start)}–${displayTime(event.end)}`));
+        const start = event.presentationStart || event.start;
+        const end = event.presentationEnd || event.end;
+        meta.append(element("span", "session-time", `${displayTime(start)}–${displayTime(end)}`));
         if (event.room) meta.append(element("span", "session-room", `Venue: ${event.room}`));
         return meta;
     }
@@ -144,11 +152,13 @@
         return card;
     }
 
-    function makePosterBand(event) {
+    function makePosterBand(event, includeHeading = true) {
         const band = element("section", `poster-band ${categoryClass("poster")}`);
-        band.append(makeMeta(event));
-        band.append(element("strong", "poster-band-title", event.title));
-        if (event.abstract) band.append(element("p", "poster-band-intro", event.abstract));
+        if (includeHeading) {
+            band.append(makeMeta(event));
+            band.append(element("strong", "poster-band-title", event.title));
+            if (event.abstract) band.append(element("p", "poster-band-intro", event.abstract));
+        }
         const list = element("div", "poster-list");
         event.posters.forEach((poster) => list.append(makeSession(poster, "poster-item")));
         band.append(list);
@@ -169,30 +179,23 @@
         panel.append(heading);
 
         const timeline = element("div", "timeline");
-        const posterEvents = day.events.filter((event) => event.posters);
         const groups = new Map();
-        day.events.filter((event) => !event.posters).forEach((event) => {
-            if (!groups.has(event.start)) groups.set(event.start, []);
-            groups.get(event.start).push(event);
+        day.events.forEach((event) => {
+            const start = event.presentationStart || event.start;
+            if (!groups.has(start)) groups.set(start, []);
+            groups.get(start).push(event);
         });
 
-        groups.forEach((events, start) => {
+        [...groups.entries()].sort(([startA], [startB]) => startA.localeCompare(startB)).forEach(([start, events]) => {
             const group = element("section", "time-group");
             group.append(element("h3", "time-marker", displayTime(start)));
             const eventList = element("div", `time-events${events.length > 1 ? " concurrent-grid" : " single-event"}`);
-            events.sort((a, b) => roomRank(a) - roomRank(b) || a.room.localeCompare(b.room));
+            events.sort((a, b) => activityRank(a) - activityRank(b) || roomRank(a) - roomRank(b) || a.room.localeCompare(b.room));
             events.forEach((event) => eventList.append(makeSession(event)));
+            events.filter((event) => event.posters).forEach((event) => eventList.append(makePosterBand(event, false)));
             group.append(eventList);
             timeline.append(group);
         });
-        if (posterEvents.length) {
-            const group = element("section", "time-group poster-time-group");
-            group.append(element("h3", "time-marker", "Posters"));
-            const eventList = element("div", "time-events poster-events");
-            posterEvents.forEach((event) => eventList.append(makePosterBand(event)));
-            group.append(eventList);
-            timeline.append(group);
-        }
         panel.append(timeline);
         return panel;
     }

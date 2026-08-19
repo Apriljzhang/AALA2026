@@ -264,6 +264,14 @@ def poster_required_height(event, width):
     )
 
 
+def poster_activity(event):
+    activity = dict(event)
+    activity.pop("posters", None)
+    activity["start"] = event.get("presentationStart", event["start"])
+    activity["end"] = event.get("presentationEnd", event["end"])
+    return activity
+
+
 def build_variable_grid(day, rooms, column_width, shared_width, available_height):
     boundaries = sorted({
         minutes(value)
@@ -294,6 +302,8 @@ def build_variable_grid(day, rooms, column_width, shared_width, available_height
     shared_groups = {}
     for event in day["events"]:
         if event.get("posters"):
+            activity = poster_activity(event)
+            shared_groups.setdefault(activity["start"], []).append(activity)
             continue
         if is_shared(event, rooms):
             shared_groups.setdefault(event["start"], []).append(event)
@@ -435,6 +445,8 @@ def draw_day(c, data, day, page_number, page_size):
     room_events = []
     for event in day["events"]:
         if event.get("posters"):
+            activity = poster_activity(event)
+            shared_groups.setdefault(activity["start"], []).append(activity)
             continue
         if is_shared(event, rooms):
             shared_groups.setdefault(event["start"], []).append(event)

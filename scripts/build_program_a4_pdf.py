@@ -31,7 +31,7 @@ TEAL_MID = colors.HexColor("#167F7A")
 TEAL_PALE = colors.HexColor("#E7F3F1")
 GOLD = colors.HexColor("#D5A83D")
 RULE = colors.HexColor("#CDD8D6")
-UPDATED = "18 August 2026"
+UPDATED = "19 August 2026"
 
 CATEGORY_COLOURS = {
     "featured": (colors.HexColor("#FFF0D7"), colors.HexColor("#C87A12")),
@@ -55,6 +55,18 @@ ROOM_ORDER = [
     "L205", "L206", "L207", "L305", "L306", "L307", "Poster area",
 ]
 SHARED = {"break", "plenary", "ceremony"}
+
+
+def is_shared(event):
+    return event.get("category") in SHARED or event.get("shared") is True
+
+
+def poster_activity(event):
+    activity = dict(event)
+    activity.pop("posters", None)
+    activity["start"] = event.get("presentationStart", event["start"])
+    activity["end"] = event.get("presentationEnd", event["end"])
+    return activity
 
 
 def category_colours(event):
@@ -278,47 +290,63 @@ def draw_overview(c, day, page_number, total_pages):
     c.drawString(x + 5 * mm, top - 6 * mm, clean(day["weekday"]))
     c.setFont("AALARegular", 10)
     c.drawString(x + 5 * mm, top - 11 * mm, clean(day["date"]))
-    shared = [event for event in day["events"] if not event.get("posters") and event.get("category") in SHARED]
+    shared = [event for event in day["events"] if not event.get("posters") and is_shared(event)]
+    shared.extend(poster_activity(event) for event in day["events"] if event.get("posters"))
     timeline = shared + concurrent_blocks(day)
     original_order = {id(event): index for index, event in enumerate(day["events"])}
     timeline.sort(key=lambda event: (to_minutes(event["start"]), original_order.get(id(event), len(day["events"]))))
+    timeline_rows = []
+    rows_by_window = {}
+    for event in timeline:
+        window = event["start"]
+        if window not in rows_by_window:
+            rows_by_window[window] = []
+            timeline_rows.append(rows_by_window[window])
+        rows_by_window[window].append(event)
     y = top - 20 * mm
     note = "Detailed room assignments are shown on the following pages."
-    for font_size in (9.5, 9.0, 8.5, 8.0, 7.5):
-        card_specs = []
-        for event in timeline:
-            sponsor_width = 48 * mm if sponsor_logo_path(event) else 0
-            text_width = col_width - 12 * mm - sponsor_width
-            item, used = paragraph(event_markup(event, include_room=True), text_width, font_size)
-            sponsor_height = sponsorship_block_height(event, max(1 * mm, sponsor_width - 4 * mm), 7 * mm, stacked=False)
-            card_specs.append((event, item, max(used, sponsor_height) + 3.2 * mm, sponsor_width))
+    for font_size in (9.5, 9.0, 8.5, 8.0, 7.5, 7.0, 6.5):
+        row_specs = []
+        for row in timeline_rows:
+            gap = 1.2 * mm
+            card_width = (col_width - 8 * mm - gap * (len(row) - 1)) / len(row)
+            cards = []
+            for event in row:
+                sponsor_width = min(48 * mm, card_width * 0.34) if sponsor_logo_path(event) else 0
+                text_width = card_width - 4 * mm - sponsor_width
+                item, used = paragraph(event_markup(event, include_room=True), text_width, font_size)
+                sponsor_height = sponsorship_block_height(event, max(1 * mm, sponsor_width - 2 * mm), 7 * mm, stacked=False)
+                cards.append((event, item, max(used, sponsor_height) + 3.2 * mm, sponsor_width))
+            row_specs.append((cards, max(card[2] for card in cards), card_width, gap))
         note_item, note_h = paragraph(f"<b>{xml(note)}</b>", col_width - 12 * mm, font_size, color=TEAL)
-        required = sum(card_h + 1.2 * mm for _, _, card_h, _ in card_specs) + note_h + 4 * mm
+        required = sum(row_height + 1.2 * mm for _, row_height, _, _ in row_specs) + note_h + 4 * mm
         if required <= y - bottom:
             break
     else:
         raise ValueError(f"Overview timeline does not fit: {day['date']}")
-    for event, item, card_h, sponsor_width in card_specs:
-        fill, accent = category_colours(event)
-        c.setFillColor(fill)
-        c.setStrokeColor(RULE)
-        c.roundRect(x + 4 * mm, y - card_h, col_width - 8 * mm, card_h, 1.5 * mm, fill=1, stroke=1)
-        c.setFillColor(accent)
-        c.rect(x + 4 * mm, y - 1.2 * mm, col_width - 8 * mm, 1.2 * mm, fill=1, stroke=0)
-        _, used = item.wrap(col_width - 12 * mm - sponsor_width, 1000 * mm)
-        item.drawOn(c, x + 6 * mm, y - used - 1.6 * mm)
-        if sponsor_width:
-            draw_sponsorship(
-                c,
-                event,
-                x + col_width - 4 * mm - sponsor_width,
-                y - card_h + 1.5 * mm,
-                sponsor_width - 4 * mm,
-                7 * mm,
-                5.2,
-                stacked=False,
-            )
-        y -= card_h + 1.2 * mm
+    for cards, row_height, card_width, gap in row_specs:
+        for index, (event, item, _, sponsor_width) in enumerate(cards):
+            card_x = x + 4 * mm + index * (card_width + gap)
+            fill, accent = category_colours(event)
+            c.setFillColor(fill)
+            c.setStrokeColor(RULE)
+            c.roundRect(card_x, y - row_height, card_width, row_height, 1.5 * mm, fill=1, stroke=1)
+            c.setFillColor(accent)
+            c.rect(card_x, y - 1.2 * mm, card_width, 1.2 * mm, fill=1, stroke=0)
+            _, used = item.wrap(card_width - 4 * mm - sponsor_width, 1000 * mm)
+            item.drawOn(c, card_x + 2 * mm, y - used - 1.6 * mm)
+            if sponsor_width:
+                draw_sponsorship(
+                    c,
+                    event,
+                    card_x + card_width - 2 * mm - sponsor_width,
+                    y - row_height + 1.5 * mm,
+                    sponsor_width - 2 * mm,
+                    7 * mm,
+                    5.2,
+                    stacked=False,
+                )
+        y -= row_height + 1.2 * mm
     c.setFillColor(TEAL_PALE)
     c.setStrokeColor(TEAL_MID)
     c.roundRect(x + 4 * mm, y - note_h - 3 * mm, col_width - 8 * mm, note_h + 3 * mm, 1.5 * mm, fill=1, stroke=1)
@@ -432,11 +460,6 @@ def draw_room_page(c, day, rooms, events, part, parts, page_number, total_pages)
                 c.rect(x, top_y - 1.0 * mm, col_width, 1.0 * mm, fill=1, stroke=0)
                 item.drawOn(c, x + 1.5 * mm, top_y - used - 1.5 * mm)
                 draw_sponsorship(c, event, x + 1.5 * mm, top_y - span_h + 1.5 * mm, col_width - 3 * mm, 7 * mm)
-            else:
-                row_h = row_heights[slot_index]
-                c.setFillColor(TEAL_PALE)
-                c.setStrokeColor(RULE)
-                c.roundRect(x, top_y - row_h, col_width, row_h, 1.2 * mm, fill=1, stroke=1)
     c.showPage()
 
 
@@ -466,7 +489,7 @@ def workshop_panel(c, day, x, panel_width, top, bottom):
         c.drawCentredString(col_x + col_width / 2, heading_y - 5.8 * mm, clean(column))
 
     def column_for(event):
-        return event["room"] if event.get("category") not in SHARED else "Shared activities"
+        return event["room"] if not is_shared(event) else "Shared activities"
 
     available = heading_y - 12 * mm - bottom
     starts = sorted({event["start"] for event in all_events})
@@ -474,7 +497,7 @@ def workshop_panel(c, day, x, panel_width, top, bottom):
         needed = 0
         for start in starts:
             row = [event for event in all_events if event["start"] == start]
-            needed += max(card_height(event, col_width, size, include_room=event.get("category") in SHARED) for event in row) + 1.5 * mm
+            needed += max(card_height(event, col_width, size, include_room=is_shared(event)) for event in row) + 1.5 * mm
         if needed <= available:
             break
     y = heading_y - 12 * mm
@@ -484,14 +507,14 @@ def workshop_panel(c, day, x, panel_width, top, bottom):
         for index, column in enumerate(columns):
             col_x = x + index * (col_width + gap)
             matching = [event for event in row if column_for(event) == column]
-            c.setStrokeColor(RULE)
-            fill, accent = category_colours(matching[0]) if matching else (TEAL_PALE, TEAL_MID)
-            c.setFillColor(fill)
-            c.roundRect(col_x, y - row_h, col_width, row_h, 1.2 * mm, fill=1, stroke=1)
             if matching:
                 event = matching[0]
+                fill, accent = category_colours(event)
+                c.setFillColor(fill)
+                c.setStrokeColor(RULE)
+                c.roundRect(col_x, y - row_h, col_width, row_h, 1.2 * mm, fill=1, stroke=1)
                 item, used = paragraph(
-                    event_markup(event, include_room=event.get("category") in SHARED),
+                    event_markup(event, include_room=is_shared(event)),
                     col_width - 3 * mm,
                     size,
                 )
@@ -521,7 +544,9 @@ def draw_workshop_page(c, friday, monday, page_number, total_pages):
 
 
 def draw_poster_page(c, day, poster_band, page_number, total_pages):
-    header(c, "AALA2026 at a glance", f"{day_label(day)} | Poster presentations | {poster_band['start']}-{poster_band['end']} | {clean(poster_band.get('room'))}", page_number, total_pages)
+    start = poster_band.get("presentationStart", poster_band["start"])
+    end = poster_band.get("presentationEnd", poster_band["end"])
+    header(c, "AALA2026 at a glance", f"{day_label(day)} | Poster presentations | {start}-{end} | {clean(poster_band.get('room'))}", page_number, total_pages)
     width, height = landscape(A4)
     left, right, gap = 12 * mm, 12 * mm, 6 * mm
     top, bottom = height - 32 * mm, 14 * mm
@@ -549,7 +574,7 @@ def draw_poster_page(c, day, poster_band, page_number, total_pages):
 def session_events(day):
     return [
         event for event in day["events"]
-        if not event.get("posters") and event.get("category") not in SHARED and event.get("room")
+        if not event.get("posters") and not is_shared(event) and event.get("room")
     ]
 
 
@@ -602,7 +627,11 @@ def build_specs(data):
         )
         groups = session_groups(day, rooms) if rooms else []
         for index, events_in_group in enumerate(groups, 1):
-            specs.append(("rooms", (day, rooms, events_in_group, index, len(groups))))
+            active_rooms = [
+                room for room in rooms
+                if any(event.get("room") == room for event in events_in_group)
+            ]
+            specs.append(("rooms", (day, active_rooms, events_in_group, index, len(groups))))
         for event in day["events"]:
             if event.get("posters"):
                 specs.append(("posters", (day, event)))
