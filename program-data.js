@@ -2866,13 +2866,13 @@ window.AALA_PROGRAM = {
         },
         {
           "id": "AALA20260148",
-          "title": "The AALA Outstanding Dissertation Award for 2025 - Shengkai Yin",
-          "abstract": "",
+          "title": "Assessing Critical Thinking in EAP Speaking: The Development and Validation of a Rating Scale",
+          "abstract": "Critical thinking (CT) is one of the crucial skills of the 21st century, hence a topic of considerable interest within the domain of assessing English for academic purposes (EAP). Despite its importance, the ability to think critically has not been clearly defined, nor explicitly taught or assessed in the extant EAP speaking instruction and assessments. Given that an effective rating scale represents the de facto construct of language assessments, this study aims to conceptualize and operationalize the construct of CT in College English Test – Spoken English Test Band 6 (CET-SET6), a computer-based online EAP speaking test.\n\nThis study was conducted in two phases. In the first phase, I described the domain of the CT construct in CET-SET6 and developed a CT rating scale for the speaking test. In the second phase, I collected validity evidence for the evaluation, generalization, and explanation inferences drawing from the argument-based validation framework (Knoch & Chapelle, 2018). The results indicated that raters achieved satisfactory inter-rater reliability at task-level and rater consistency between task types, and the categories can be reliably distinguished across different levels of difficulty, which was congruent with the statistical results. Quantitative results were triangulated with qualitative rater comments suggesting that the rubric can effectively capture variations of CT features in student performance. This study contributes to a nuanced understanding of the construct of CT in the EAP speaking context, and provides insights into how the construct of EAP speaking assessments could be expanded to incorporate CT.",
           "authors": [
             {
               "name": "Shengkai Yin",
               "affiliation": "",
-              "bio": ""
+              "bio": "Shengkai holds dual PhD degrees in Language Assessment from Shanghai Jiao Tong University and the University of Melbourne. He is currently a Lecturer at Federation University Australia and also a Teaching Associate at Monash University. His research focuses on academic English assessment, literacy education, and critical thinking ability. Shengkai is the recipient of the Asian Association for Language Assessment Outstanding Dissertation Award and has received prestigious research grants and awards from leading organisations including Duolingo, the British Council, and ETS. His work has been published in top-tier journals in education and applied linguistics."
             }
           ],
           "category": "other",
