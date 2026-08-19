@@ -202,23 +202,6 @@ window.AALA_PROGRAM = {
           "end": "11:30"
         },
         {
-          "id": "AALA20260109",
-          "title": "Does student assessment literacy matter between motivational constructs and engagement in L2 writing? A survey of Chinese EFL undergraduates",
-          "abstract": "While the literature has established the impacts of L2 motivation, growth mindsets, and academic buoyancy on engagement, their relationships in L2 writing contexts remain relatively under-explored. Additionally, the potential mediating role of student writing assessment literacy (SWAL) in the aforementioned relationships warrants further investigation. Therefore, the present study aims to examine both the direct and indirect relationships among L2 writing motivation, growth mindsets, academic buoyancy, SWAL, and engagement as perceived by university students through questionnaire survey. Questionnaire data were gathered from a sample of 425 university students, with structural equation modeling employed for data analysis. Regarding the direct relationships, results showed that L2 writing motivation, growth mindsets, academic buoyancy, and SWAL all positively predicted L2 writing engagement; only L2 writing motivation and academic buoyancy positively predicted SWAL. In terms of the indirect relationships, SWAL mediated the relationship between L2 writing motivation and engagement, and between academic buoyancy and L2 writing engagement. Gender did not result in variations in the mediation model. Pedagogical implications for improving students’ writing motivation, assessment literacy, and engagement are discussed.",
-          "authors": [
-            {
-              "name": "Jian Xu",
-              "affiliation": "Sichuan International Studies University",
-              "bio": "Dr. Jian Xu is a Professor at Sichuan International Studies University. He obtained his Ph.D. degree from The Chinese University of Hong Kong. His research interests include second language writing and listening comprehension. His work has appeared in several journals, such as System, Assessing Writing, Language Teaching Research, Studies in Second Language Learning and Teaching, RELC Journal, Applied Linguistics Review, Journal of Multilingual and Multicultural Development, Journal of Language, Identity, and Education, Higher Education Research & Development, Educational Studies, Asia-Pacific Journal of Education, and Asia-Pacific Education Researcher."
-            }
-          ],
-          "category": "featured",
-          "categoryLabel": "Featured",
-          "room": "HG03",
-          "start": "11:00",
-          "end": "11:30"
-        },
-        {
           "id": "AALA2026053",
           "title": "Development of the Sejong Korean Assessment and Its Prospects as a Proficiency Test",
           "abstract": "The Sejong Korean Assessment (SKA) is a proficiency test designed to measure the Korean language ability of learners studying Korean at Sejong Institutes as well as other learners of Korean as a foreign language. Development of the test began in 2019, and the first administration was conducted in 2022. Since then, the test has been administered three times a year through the global network of Sejong Institutes, reaching its tenth administration to date. The purpose of this study is to examine the development and implementation of SKA and to explore its significance and future prospects as a Korean language proficiency assessment. SKA was designed to complement and differentiate itself from the Test of Proficiency in Korean (TOPIK) by focusing on aspects of language ability that are not sufficiently addressed by existing proficiency tests. The development of SKA was motivated by both external and internal factors. Externally, limitations in the availability of TOPIK test sites and difficulties in test registration highlighted the need for a more accessible assessment. Internally, the structure of existing proficiency tests and their item formats have limitations in measuring the range of communicative abilities required by Korean learners worldwide. Based on the global infrastructure of Sejong Institutes, SKA was developed as an assessment that can be administered wherever a Sejong Institute operates. Considering that many Sejong Institute learners are beginner- and intermediate-level learners seeking to assess their overall communicative ability, particularly speaking skills, the test was designed from the outset to include the four language skills of listening, reading, writing, and speaking. In addition, SKA adopts a single-format model capable of measuring proficiency across beginner, intermediate, and advanced levels. By analyzing data from the ten administrations conducted so far, including test locations, learner performance, and patterns of proficiency development, this study examines what SKA reveals about the Korean language abilities of Sejong Institute learners. The study also discusses the potential and limitations of SKA as a proficiency assessment and proposes directions for its future development.",
@@ -1975,6 +1958,7 @@ window.AALA_PROGRAM = {
           ],
           "category": "featured",
           "categoryLabel": "Featured",
+          "dayKey": "sep19",
           "room": "HG03",
           "start": "11:00",
           "end": "11:30"
@@ -3704,9 +3688,9 @@ window.AALA_PROGRAM = {
     }
   ],
   "audit": {
-    "registeredIds": 148,
-    "scheduledIds": 148,
-    "scheduledRegisteredIds": 148,
+    "registeredIds": 147,
+    "scheduledIds": 147,
+    "scheduledRegisteredIds": 147,
     "registeredNotScheduled": [],
     "scheduledNotRegistered": []
   }

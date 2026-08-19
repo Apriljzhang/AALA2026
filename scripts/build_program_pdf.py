@@ -73,7 +73,21 @@ def load_program(path):
     match = re.fullmatch(r"\s*window\.AALA_PROGRAM\s*=\s*(\{.*\});\s*", source, re.S)
     if not match:
         raise ValueError(f"Could not read programme data from {path}")
-    return json.loads(match.group(1))
+    data = json.loads(match.group(1))
+    days_by_key = {day["key"]: day for day in data["days"]}
+    moves = []
+    for day in data["days"]:
+        retained = []
+        for event in day["events"]:
+            target = event.get("dayKey")
+            if target and target != day["key"]:
+                moves.append((event, target))
+            else:
+                retained.append(event)
+        day["events"] = retained
+    for event, target in moves:
+        days_by_key[target]["events"].append(event)
+    return data
 
 
 def clean(value):
