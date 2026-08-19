@@ -1,5 +1,5 @@
 window.AALA_PROGRAM = {
-  "generatedFrom": "20260815 AALA2026_All.xlsx (schedule revised 18 August 2026)",
+  "generatedFrom": "20260819 AALA2026_All.xlsx (schedule revised 19 August 2026)",
   "title": "AALA 2026 Detailed Programme",
   "venue": "University of Macau",
   "days": [
@@ -219,21 +219,21 @@ window.AALA_PROGRAM = {
           "end": "11:30"
         },
         {
-          "id": "AALA2026015",
-          "title": "Test anxiety revisited: a comparison of at-home vs in-centre high stakes English proficiency tests",
-          "abstract": "High-stakes tests often prompt anxiety (Cassady, 2010). When worry, task-irrelevant thoughts, and physiological and affective reactions compete for limited cognitive capacity, test-takers’ ability to perform optimally can be compromised.\nMost prior proficiency test anxiety studies rely on low-stakes mock tests—a flawed methodology that fails to capture the intensity of authentic high-stakes tests. Given the recent shift toward at-home testing, there is an urgent need to compare how anxiety manifests in authentically high-stakes at-home versus in-centre tests.\nDirectly comparing identical tests across modalities would be ideal, but such an approach often contradicts the choices available to test-takers—many tests, e.g. IELTS, do not currently offer an equivalent at-home version of their centre-based test. To prioritize ecological validity, we compared the at-home Duolingo English Test (DET) with the in-centre IELTS and TOEFL. Acknowledging these tests vary in their content and design, this comparison is essential for understanding how modality may reshape the nature and intensity of test anxiety.\nUsing a 24-item retrospective self-report questionnaire with parallel test specific items, we collected data from 551 of test-takers who completed the DET and an IELTS or TOEFL. Three theoretically distinct dimensions--worry, irrelevant thinking, and emotionality—were explored.\nTest-takers consistently reported lower anxiety for the at-home DET, with significantly reduced worry, emotionality, and test-irrelevant. Wilcoxon signed-rank tests revealed significant differences across all comparisons, with large effect sizes from .54 (DET-IELTS) to .85 (DET-TOEFL).\nWe fitted predictive models linking test anxiety to test scores. Controlling for test-taker characteristics, we found similar impact of anxiety on scores across modalities. Worry was the strongest predictor—a one-unit increase predicts decreases of 9 DET points (6% of the score range), 0.24 (3%) IELTS bands, and 9 (8%) TOEFL points.\nWe relate these results to construct-irrelevant variance and provide evidence-based implications for test-takers and score use.",
+          "id": "AALA2026053",
+          "title": "Development of the Sejong Korean Assessment and Its Prospects as a Proficiency Test",
+          "abstract": "The Sejong Korean Assessment (SKA) is a proficiency test designed to measure the Korean language ability of learners studying Korean at Sejong Institutes as well as other learners of Korean as a foreign language. Development of the test began in 2019, and the first administration was conducted in 2022. Since then, the test has been administered three times a year through the global network of Sejong Institutes, reaching its tenth administration to date. The purpose of this study is to examine the development and implementation of SKA and to explore its significance and future prospects as a Korean language proficiency assessment. SKA was designed to complement and differentiate itself from the Test of Proficiency in Korean (TOPIK) by focusing on aspects of language ability that are not sufficiently addressed by existing proficiency tests. The development of SKA was motivated by both external and internal factors. Externally, limitations in the availability of TOPIK test sites and difficulties in test registration highlighted the need for a more accessible assessment. Internally, the structure of existing proficiency tests and their item formats have limitations in measuring the range of communicative abilities required by Korean learners worldwide. Based on the global infrastructure of Sejong Institutes, SKA was developed as an assessment that can be administered wherever a Sejong Institute operates. Considering that many Sejong Institute learners are beginner- and intermediate-level learners seeking to assess their overall communicative ability, particularly speaking skills, the test was designed from the outset to include the four language skills of listening, reading, writing, and speaking. In addition, SKA adopts a single-format model capable of measuring proficiency across beginner, intermediate, and advanced levels. By analyzing data from the ten administrations conducted so far, including test locations, learner performance, and patterns of proficiency development, this study examines what SKA reveals about the Korean language abilities of Sejong Institute learners. The study also discusses the potential and limitations of SKA as a proficiency assessment and proposes directions for its future development.",
           "authors": [
             {
-              "name": "Ruolin Hu",
-              "affiliation": "University Colleage London",
-              "bio": "I am a lecturer and a researcher at UCL IoE, UCL's Faculty of Education and Society, University College London. Using quantitative methods and experimental designs, my research explores the psychological, pedagogical and social implications for varied stakeholders within the global assessment landscape."
+              "name": "Mijin Won",
+              "affiliation": "Yonsei University",
+              "bio": "Mijin Won is an Associate Professor at Yonsei University specializing in Korean language education and language assessment. Her research focuses on Korean language proficiency testing, large-scale language assessment, and the validation of language assessment frameworks. She serves as the principal investigator for the development of the Sejong Korean Assessment (SKA), a global proficiency test for learners of Korean, and previously led the development of the speaking component of the Test of Proficiency in Korean (TOPIK). At Yonsei University, she supervises numerous master’s and doctoral theses in Korean language education and language assessment, contributing to the training of future researchers in the field."
             }
           ],
           "category": "theme-1",
           "categoryLabel": "Theme 1",
           "room": "L205",
-          "start": "14:30",
-          "end": "15:00"
+          "start": "11:00",
+          "end": "11:30"
         },
         {
           "id": "AALA2026010",
@@ -764,32 +764,21 @@ window.AALA_PROGRAM = {
           "end": "15:00"
         },
         {
-          "id": "AALA2026034",
-          "title": "Effects of peer feedback in English writing classes on EFL students’ writing feedback literacy",
-          "abstract": "Despite the increasing scholarly attention towards students’ writing feedback literacy in recent years, empirical explorations of effective approaches to enhancing this capacity remain scarce. While peer feedback often plays an important role in English as a Foreign Language (EFL) writing development, few studies seem to have addressed the potential impacts of peer feedback activities on students’ overall writing feedback literacy. To fill this gap, a mixed-methods study was designed to investigate the effect of peer feedback activities on students’ writing feedback literacy development across such dimensions as appreciating feedback, making judgements, acknowledging different sources of feedback, managing affect, and taking actions with feedback. Two intact classes, one as the experimental group and the other control group, participated in the study. The experimental group engaged in peer feedback activities during the semester (12 weeks), whereas the control group received conventional teacher feedback only. The pre- and post-intervention results based on a writing feedback literacy scale were compared between the two groups, in addition to the analysis of interviews with the teacher and focal students from the experimental group, as well as students’ written assignments and revisions after receiving peer feedback. Results showed that peer feedback activities could significantly improve students’ appreciation of feedback and their ability to make judgements. Nevertheless, no significant changes in other dimensions were identified. These findings extend the current understanding of EFL students’ writing feedback literacy and hold valuable pedagogical implications.",
+          "id": "AALA2026015",
+          "title": "Test anxiety revisited: a comparison of at-home vs in-centre high stakes English proficiency tests",
+          "abstract": "High-stakes tests often prompt anxiety (Cassady, 2010). When worry, task-irrelevant thoughts, and physiological and affective reactions compete for limited cognitive capacity, test-takers’ ability to perform optimally can be compromised.\nMost prior proficiency test anxiety studies rely on low-stakes mock tests—a flawed methodology that fails to capture the intensity of authentic high-stakes tests. Given the recent shift toward at-home testing, there is an urgent need to compare how anxiety manifests in authentically high-stakes at-home versus in-centre tests.\nDirectly comparing identical tests across modalities would be ideal, but such an approach often contradicts the choices available to test-takers—many tests, e.g. IELTS, do not currently offer an equivalent at-home version of their centre-based test. To prioritize ecological validity, we compared the at-home Duolingo English Test (DET) with the in-centre IELTS and TOEFL. Acknowledging these tests vary in their content and design, this comparison is essential for understanding how modality may reshape the nature and intensity of test anxiety.\nUsing a 24-item retrospective self-report questionnaire with parallel test specific items, we collected data from 551 of test-takers who completed the DET and an IELTS or TOEFL. Three theoretically distinct dimensions--worry, irrelevant thinking, and emotionality—were explored.\nTest-takers consistently reported lower anxiety for the at-home DET, with significantly reduced worry, emotionality, and test-irrelevant. Wilcoxon signed-rank tests revealed significant differences across all comparisons, with large effect sizes from .54 (DET-IELTS) to .85 (DET-TOEFL).\nWe fitted predictive models linking test anxiety to test scores. Controlling for test-taker characteristics, we found similar impact of anxiety on scores across modalities. Worry was the strongest predictor—a one-unit increase predicts decreases of 9 DET points (6% of the score range), 0.24 (3%) IELTS bands, and 9 (8%) TOEFL points.\nWe relate these results to construct-irrelevant variance and provide evidence-based implications for test-takers and score use.",
           "authors": [
             {
-              "name": "Fanrong Weng",
-              "affiliation": "Fuzhou University",
-              "bio": "Dr. Fanrong Weng is a lecturer at the School of Foreign Studies, Fuzhou University. Her research interests include language assessment literacy and L2 writing assessment."
-            },
-            {
-              "name": "Cecilia Guanfang Zhao",
-              "affiliation": "University of Macau",
-              "bio": ""
-            },
-            {
-              "name": "Shangwen Chen",
-              "affiliation": "University of Macau",
-              "bio": ""
+              "name": "Ruolin Hu",
+              "affiliation": "University Colleage London",
+              "bio": "I am a lecturer and a researcher at UCL IoE, UCL's Faculty of Education and Society, University College London. Using quantitative methods and experimental designs, my research explores the psychological, pedagogical and social implications for varied stakeholders within the global assessment landscape."
             }
           ],
           "category": "theme-1",
           "categoryLabel": "Theme 1",
-          "room": "HG02",
-          "start": "16:00",
-          "end": "16:30",
-          "dayKey": "sep20"
+          "room": "L205",
+          "start": "14:30",
+          "end": "15:00"
         },
         {
           "id": "AALA2026036",
@@ -1099,14 +1088,14 @@ window.AALA_PROGRAM = {
           "end": "16:00"
         },
         {
-          "id": "AALA2026041",
-          "title": "L2 Learners' Perceived Effectiveness of AI-Mediated Speaking Practice: A CALL Effectiveness Framework Analysis",
-          "abstract": "With the rapid development of artificial intelligence technologies, AI-mediated speaking practice has become increasingly integrated into second language learning and education contexts. However, empirical research examining learners’ perceived effectiveness from a theoretically grounded perspective remains relatively limited. This study draws on Chapelle’s CALL effectiveness framework to investigate whether the L2 learning conditions created by AI-mediated speaking practice are actually perceived and realized by learners in SLA practice. Specifically, key dimensions of the framework, including learning potential, meaning focus, learner fit, authenticity, enhanced feedback, positive impact, and practicality, were operationalized into a structured questionnaire to capture L2 learners’ perceived effectiveness of AI-mediated speaking practice. Research data are collected from L2 Learners who have experience using AI-based tools for second language speaking practice. The findings provide empirical evidence to a better understanding of how L2 learners benefit from the learning conditions created by AI-mediated speaking practice and offer pedagogical implications for the design and implementation of AI-mediated speaking activities in second language speaking contexts.",
+          "id": "AALA20260198",
+          "title": "AI‑Supported Diagnostic Feedback for Tracing L2 Writing Strategy Use",
+          "abstract": "While AI has expanded opportunities for individualized feedback in L2 writing, its role in supporting the assessment of language learning strategies (LLS) remains underexplored. In particular, little is known about how human–AI interaction can generate diagnostic evidence of learners’ strategic behavior during writing processes. This mixed-methods study addresses this gap by conceptualizing formative feedback as a strategy-oriented diagnostic partnership within a distributed assessment framework. In this model, AI and teachers function as complementary agents: AI provides automated feedback that externalizes lower-level procedural knowledge (e.g., lexico-grammatical accuracy and cohesion), while teachers mediate the assessment of higher-order strategic competence, including rhetorical organization and metacognitive regulation.\nThe study was conducted in two tertiary English for Academic Purposes (EAP) programs in China over a ten-week period. A dual-track feedback model was implemented in which AI-generated feedback and teacher mediation jointly supported students’ revision processes. Within this design, AI functioned not only as a feedback provider but also as a diagnostic tool for capturing observable evidence of strategy use during writing development. The study addresses two research questions:\n1. How do teachers conceptualize and support learners’ planning, monitoring, and revision strategies when integrating AI-generated feedback?\n2. How can AI-mediated interaction serve as an assessment instrument for tracing the temporal dynamics of LLS deployment?\nMultiple data sources were collected, including think-aloud protocols during teacher feedback, screen-recording analytics and draft corpora, conversation analysis of learner–chatbot interactions, and stimulated-recall interviews. Analysis integrates natural language processing (NLP) for automated strategy tagging with thematic analysis to map patterns of strategic behavior and co-regulation across revision episodes.\nThe study contributes to language assessment research by demonstrating how AI-mediated interaction can generate process-based evidence of strategy use. Findings inform the design of hybrid diagnostic assessment systems that integrate automated analytics with teacher judgment to support formative assessment of L2 writing development and strategy use.",
           "authors": [
             {
-              "name": "Huidan Zheng",
-              "affiliation": "Konkuk University",
-              "bio": "Huidan Zheng is a PhD student at Konkuk University, South Korea. Her research interests include translation assessment, second language acquisition and AI-mediated language learning"
+              "name": "Zhenjing Wang",
+              "affiliation": "China University of Geosciences (Beijing)",
+              "bio": "Zhenjing Wang is an associate professor at the School of Foreign Languages, China University of Geosciences (Beijing). She received her PhD from University of Auckland, New Zealand. Her research interests include teacher feedback, second language writing, teacher cognition, and the use of artificial intelligence in education. She has published academic papers as well as books and teaching materials in these areas. Her work focuses on understanding how feedback practices and emerging technologies shape language learning and writing development in higher education contexts. She is also engaged in research on the integration of AI-mediated tools into language teaching and assessment."
             }
           ],
           "category": "theme-3",
@@ -1991,23 +1980,6 @@ window.AALA_PROGRAM = {
           "end": "11:30"
         },
         {
-          "id": "AALA20260101",
-          "title": "EFL Preservice Teachers’ Assessment Literacy Growth in Teacher Education",
-          "abstract": "It is essential for language teachers to assess the performance of their students. This study examined EFL preservice teachers’ perceptions and development of assessment literacy at a medium-sized university in South Korea. This study employed a questionnaire survey of self-perceived language assessment. The survey results reveal significant variability in the confidence levels of EFL preservice teachers across six domains of assessment literacy, with the highest confidence in preventing cheating and the lowest in constructing tests for advanced learners. Challenges in communicating assessment results, particularly with parents, indicate a need for professional development in communication strategies. While ethical practices and digital assessment literacy show strong commitment and proficiency, areas like avoiding \"teaching to the test\" and designing online tests require further training to ensure comprehensive assessment capabilities. The consequent and further discussions and implications for pedagogy will be outlined.",
-          "authors": [
-            {
-              "name": "Eunjeong Park",
-              "affiliation": "Sunchon National University",
-              "bio": "Eunjeong Park is an Associate Professor in the Department of English Language Education in the College of Education at Sunchon National University. Her research interests include teacher education, language learning in the EFL context, and the interdisciplinarity of teaching and learning in education."
-            }
-          ],
-          "category": "theme-1",
-          "categoryLabel": "Theme 1",
-          "room": "L205",
-          "start": "11:00",
-          "end": "11:30"
-        },
-        {
           "id": "AALA2026090",
           "title": "Examining the relevance of the functional adequacy rating scale for L2 writing instruction and assessment in Japanese upper secondary schools",
           "abstract": "This study aims to examine the relevance of the functional adequacy (FA) rubric for assessing second language (L2) English writing in Japanese upper secondary schools. In Japan, teachers are expected to assess students’ writing in relation to curricular goals through criterion-referenced assessment. However, the lack of shared rating scales makes these goals difficult to operationalize in classroom assessment. In L2 writing research, FA and a rubric designed to assess it have been proposed as a way to capture successful task completion in communicative contexts (Kuiken & Vedder, 2017), which appears conceptually similar to the abilities emphasized in the Japan’s curriculum. This study empirically examines whether the FA rubric aligns with the curricular goals within an argument-based validation framework (Chapelle, 2021). In the framework, examining such alignment constitutes evidence for the domain definition inference, the first stage in a series of inferences in the validity argument. The study employed two methods: document analysis and expert judgement. The document analysis analyzed key publications by Kuiken and Vedder using thematic coding and applied the resulting codes to Japanese policy documents and instructional materials. Expert judgement was obtained through semi-structured interviews with curriculum developers and upper secondary school English teachers to examine the perceived relevance between the FA construct and curricular goals. An initial pilot analysis identified key FA abilities, including adequacy of the message and appropriateness of genre, and indicated that these abilities were represented across the policy documents, suggesting their relevance to curricular goals. It further suggested that the FA rating scale was largely relevant to policy expectations, although certain criteria were perceived as relatively challenging for upper secondary school students. Overall, these findings suggest preliminary support for the domain definition inference and provide a basis for further validation of the FA rating scale in Japanese upper secondary school contexts.",
@@ -2060,23 +2032,6 @@ window.AALA_PROGRAM = {
           "category": "theme-3",
           "categoryLabel": "Theme 3",
           "room": "L305",
-          "start": "11:00",
-          "end": "11:30"
-        },
-        {
-          "id": "AALA20260198",
-          "title": "AI‑Supported Diagnostic Feedback for Tracing L2 Writing Strategy Use",
-          "abstract": "While AI has expanded opportunities for individualized feedback in L2 writing, its role in supporting the assessment of language learning strategies (LLS) remains underexplored. In particular, little is known about how human–AI interaction can generate diagnostic evidence of learners’ strategic behavior during writing processes. This mixed-methods study addresses this gap by conceptualizing formative feedback as a strategy-oriented diagnostic partnership within a distributed assessment framework. In this model, AI and teachers function as complementary agents: AI provides automated feedback that externalizes lower-level procedural knowledge (e.g., lexico-grammatical accuracy and cohesion), while teachers mediate the assessment of higher-order strategic competence, including rhetorical organization and metacognitive regulation.\nThe study was conducted in two tertiary English for Academic Purposes (EAP) programs in China over a ten-week period. A dual-track feedback model was implemented in which AI-generated feedback and teacher mediation jointly supported students’ revision processes. Within this design, AI functioned not only as a feedback provider but also as a diagnostic tool for capturing observable evidence of strategy use during writing development. The study addresses two research questions:\n1. How do teachers conceptualize and support learners’ planning, monitoring, and revision strategies when integrating AI-generated feedback?\n2. How can AI-mediated interaction serve as an assessment instrument for tracing the temporal dynamics of LLS deployment?\nMultiple data sources were collected, including think-aloud protocols during teacher feedback, screen-recording analytics and draft corpora, conversation analysis of learner–chatbot interactions, and stimulated-recall interviews. Analysis integrates natural language processing (NLP) for automated strategy tagging with thematic analysis to map patterns of strategic behavior and co-regulation across revision episodes.\nThe study contributes to language assessment research by demonstrating how AI-mediated interaction can generate process-based evidence of strategy use. Findings inform the design of hybrid diagnostic assessment systems that integrate automated analytics with teacher judgment to support formative assessment of L2 writing development and strategy use.",
-          "authors": [
-            {
-              "name": "Zhenjing Wang",
-              "affiliation": "China University of Geosciences (Beijing)",
-              "bio": "Zhenjing Wang is an associate professor at the School of Foreign Languages, China University of Geosciences (Beijing). She received her PhD from University of Auckland, New Zealand. Her research interests include teacher feedback, second language writing, teacher cognition, and the use of artificial intelligence in education. She has published academic papers as well as books and teaching materials in these areas. Her work focuses on understanding how feedback practices and emerging technologies shape language learning and writing development in higher education contexts. She is also engaged in research on the integration of AI-mediated tools into language teaching and assessment."
-            }
-          ],
-          "category": "theme-3",
-          "categoryLabel": "Theme 3",
-          "room": "L306",
           "start": "11:00",
           "end": "11:30"
         },
@@ -3114,22 +3069,31 @@ window.AALA_PROGRAM = {
           "end": "16:30"
         },
         {
-          "id": "AALA2026053",
-          "title": "Development of the Sejong Korean Assessment and Its Prospects as a Proficiency Test",
-          "abstract": "The Sejong Korean Assessment (SKA) is a proficiency test designed to measure the Korean language ability of learners studying Korean at Sejong Institutes as well as other learners of Korean as a foreign language. Development of the test began in 2019, and the first administration was conducted in 2022. Since then, the test has been administered three times a year through the global network of Sejong Institutes, reaching its tenth administration to date. The purpose of this study is to examine the development and implementation of SKA and to explore its significance and future prospects as a Korean language proficiency assessment. SKA was designed to complement and differentiate itself from the Test of Proficiency in Korean (TOPIK) by focusing on aspects of language ability that are not sufficiently addressed by existing proficiency tests. The development of SKA was motivated by both external and internal factors. Externally, limitations in the availability of TOPIK test sites and difficulties in test registration highlighted the need for a more accessible assessment. Internally, the structure of existing proficiency tests and their item formats have limitations in measuring the range of communicative abilities required by Korean learners worldwide. Based on the global infrastructure of Sejong Institutes, SKA was developed as an assessment that can be administered wherever a Sejong Institute operates. Considering that many Sejong Institute learners are beginner- and intermediate-level learners seeking to assess their overall communicative ability, particularly speaking skills, the test was designed from the outset to include the four language skills of listening, reading, writing, and speaking. In addition, SKA adopts a single-format model capable of measuring proficiency across beginner, intermediate, and advanced levels. By analyzing data from the ten administrations conducted so far, including test locations, learner performance, and patterns of proficiency development, this study examines what SKA reveals about the Korean language abilities of Sejong Institute learners. The study also discusses the potential and limitations of SKA as a proficiency assessment and proposes directions for its future development.",
+          "id": "AALA2026034",
+          "title": "Effects of peer feedback in English writing classes on EFL students’ writing feedback literacy",
+          "abstract": "Despite the increasing scholarly attention towards students’ writing feedback literacy in recent years, empirical explorations of effective approaches to enhancing this capacity remain scarce. While peer feedback often plays an important role in English as a Foreign Language (EFL) writing development, few studies seem to have addressed the potential impacts of peer feedback activities on students’ overall writing feedback literacy. To fill this gap, a mixed-methods study was designed to investigate the effect of peer feedback activities on students’ writing feedback literacy development across such dimensions as appreciating feedback, making judgements, acknowledging different sources of feedback, managing affect, and taking actions with feedback. Two intact classes, one as the experimental group and the other control group, participated in the study. The experimental group engaged in peer feedback activities during the semester (12 weeks), whereas the control group received conventional teacher feedback only. The pre- and post-intervention results based on a writing feedback literacy scale were compared between the two groups, in addition to the analysis of interviews with the teacher and focal students from the experimental group, as well as students’ written assignments and revisions after receiving peer feedback. Results showed that peer feedback activities could significantly improve students’ appreciation of feedback and their ability to make judgements. Nevertheless, no significant changes in other dimensions were identified. These findings extend the current understanding of EFL students’ writing feedback literacy and hold valuable pedagogical implications.",
           "authors": [
             {
-              "name": "Mijin Won",
-              "affiliation": "Yonsei University",
-              "bio": "Mijin Won is an Associate Professor at Yonsei University specializing in Korean language education and language assessment. Her research focuses on Korean language proficiency testing, large-scale language assessment, and the validation of language assessment frameworks. She serves as the principal investigator for the development of the Sejong Korean Assessment (SKA), a global proficiency test for learners of Korean, and previously led the development of the speaking component of the Test of Proficiency in Korean (TOPIK). At Yonsei University, she supervises numerous master’s and doctoral theses in Korean language education and language assessment, contributing to the training of future researchers in the field."
+              "name": "Fanrong Weng",
+              "affiliation": "Fuzhou University",
+              "bio": "Dr. Fanrong Weng is a lecturer at the School of Foreign Studies, Fuzhou University. Her research interests include language assessment literacy and L2 writing assessment."
+            },
+            {
+              "name": "Cecilia Guanfang Zhao",
+              "affiliation": "University of Macau",
+              "bio": ""
+            },
+            {
+              "name": "Shangwen Chen",
+              "affiliation": "University of Macau",
+              "bio": ""
             }
           ],
           "category": "theme-1",
           "categoryLabel": "Theme 1",
-          "room": "L205",
-          "start": "11:00",
-          "end": "11:30",
-          "dayKey": "sep19"
+          "room": "HG02",
+          "start": "16:00",
+          "end": "16:30"
         },
         {
           "id": "AALA20260119",
@@ -3149,6 +3113,23 @@ window.AALA_PROGRAM = {
           "end": "16:30"
         },
         {
+          "id": "AALA20260101",
+          "title": "EFL Preservice Teachers’ Assessment Literacy Growth in Teacher Education",
+          "abstract": "It is essential for language teachers to assess the performance of their students. This study examined EFL preservice teachers’ perceptions and development of assessment literacy at a medium-sized university in South Korea. This study employed a questionnaire survey of self-perceived language assessment. The survey results reveal significant variability in the confidence levels of EFL preservice teachers across six domains of assessment literacy, with the highest confidence in preventing cheating and the lowest in constructing tests for advanced learners. Challenges in communicating assessment results, particularly with parents, indicate a need for professional development in communication strategies. While ethical practices and digital assessment literacy show strong commitment and proficiency, areas like avoiding \"teaching to the test\" and designing online tests require further training to ensure comprehensive assessment capabilities. The consequent and further discussions and implications for pedagogy will be outlined.",
+          "authors": [
+            {
+              "name": "Eunjeong Park",
+              "affiliation": "Sunchon National University",
+              "bio": "Eunjeong Park is an Associate Professor in the Department of English Language Education in the College of Education at Sunchon National University. Her research interests include teacher education, language learning in the EFL context, and the interdisciplinarity of teaching and learning in education."
+            }
+          ],
+          "category": "theme-1",
+          "categoryLabel": "Theme 1",
+          "room": "L205",
+          "start": "16:00",
+          "end": "16:30"
+        },
+        {
           "id": "AALA20260131",
           "title": "Assessing voice across academic writing tasks: Task effects and rater interpretations",
           "abstract": "While research has examined the realization of voice in argumentative writing and its influence on writing assessment outcomes, little is known about how voice is constructed and evaluated across distinct academic genres. Addressing this gap, this mixed methods study investigates differences in voice construction and its relationship with writing quality across the two TOEFL iBT writing tasks: source-based integrated writing and academic discussion writing. Seventy Chinese EFL university students completed both tasks, producing 140 texts that were rated by four trained raters using Zhao’s (2013) analytic voice rubric and the official TOEFL iBT scoring rubrics. Quantitative analyses, using paired-sample t-tests, correlation and regression analyses, revealed systematic genre based differences in voice construction as well as task specific relationships between voice and overall writing quality. Qualitative analyses of think aloud protocols and semi structured interviews further showed that raters drew on different evaluative frameworks across genres: authorial synthesis and stance making were foregrounded in integrated writing, whereas reader awareness and engagement were prioritized in academic discussion writing. These findings provide empirical evidence that voice is a genre dependent construct shaped by task demands, raising concerns about the use of uniform assessment criteria across heterogeneous writing tasks. The study supports the validity of employing multiple task types to assess academic communication and underscores the need for genre sensitive assessment rubrics. Pedagogically, the findings highlight the importance of helping students develop flexible voice related strategies aligned with specific academic purposes and rater expectations.",
@@ -3162,23 +3143,6 @@ window.AALA_PROGRAM = {
               "name": "Cecilia Guanfang Zhao",
               "affiliation": "University of Macau",
               "bio": ""
-            }
-          ],
-          "category": "theme-1",
-          "categoryLabel": "Theme 1",
-          "room": "L205",
-          "start": "16:00",
-          "end": "16:30"
-        },
-        {
-          "id": "AALA20260211",
-          "title": "From AI Ethics to Classroom Practice: Operationalising Transparency and Explainability for English Language Teaching",
-          "abstract": "The rapid adoption of artificial intelligence (AI) in English language teaching has created new opportunities for teaching and learning while also raising important ethical concerns. Transparency and explainability have become increasingly important as teachers and students use AI to generate learning materials, provide feedback, and support classroom activities. UNESCO's Recommendation on the Ethics of Artificial Intelligence (2021) identifies transparency and explainability as fundamental ethical principles, while its Guidance for Generative AI in Education and Research (2023) highlights the need for their responsible application in educational settings. However, both documents provide broad guidance and offer limited direction on how these principles can be translated into everyday classroom practice in English language teaching. This paper addresses this gap by operationalising transparency and explainability through a qualitative desk study. Relevant literature on AI ethics, AI in education, and English language teaching is synthesised to identify key ethical concerns and translate them into classroom practice indicators. The proposed indicators focus on teachers' professional decisions, including disclosing AI use when appropriate, explaining the capabilities and limitations of AI, critically evaluating AI-generated content, and guiding students to use AI responsibly. By connecting international AI ethics principles with classroom-level practices, this paper proposes a conceptual framework that can support future research, teacher education, and the responsible integration of AI in English language teaching.",
-          "authors": [
-            {
-              "name": "Tra Thu Pham",
-              "affiliation": "University of Languages and International Studies",
-              "bio": "Tra Thu Pham is an English language teacher and PhD candidate with a research interest in artificial intelligence (AI) in English language teaching. Her work focuses on AI ethics, language assessment, and teacher professional development, with particular attention to translating international AI ethics principles into practical classroom practices. She is interested in supporting the responsible and human-centred integration of AI in language education through research that connects policy, educational theory, and classroom practice."
             }
           ],
           "category": "theme-1",
@@ -3631,6 +3595,23 @@ window.AALA_PROGRAM = {
                   "name": "Ip Weng Han",
                   "affiliation": "University of Macau",
                   "bio": "My research interests focus on L2 listening assessment and translation and interpreting assessment, with particular attention to how assessment practices can more accurately and meaningfully capture learners’ performance across different tasks."
+                }
+              ],
+              "category": "poster",
+              "categoryLabel": "Poster",
+              "room": "Space between Culture Centre Room 1 & 2",
+              "start": "10:30",
+              "end": "15:30"
+            },
+            {
+              "id": "AALA2026041",
+              "title": "L2 Learners' Perceived Effectiveness of AI-Mediated Speaking Practice: A CALL Effectiveness Framework Analysis",
+              "abstract": "With the rapid development of artificial intelligence technologies, AI-mediated speaking practice has become increasingly integrated into second language learning and education contexts. However, empirical research examining learners’ perceived effectiveness from a theoretically grounded perspective remains relatively limited. This study draws on Chapelle’s CALL effectiveness framework to investigate whether the L2 learning conditions created by AI-mediated speaking practice are actually perceived and realized by learners in SLA practice. Specifically, key dimensions of the framework, including learning potential, meaning focus, learner fit, authenticity, enhanced feedback, positive impact, and practicality, were operationalized into a structured questionnaire to capture L2 learners’ perceived effectiveness of AI-mediated speaking practice. Research data are collected from L2 Learners who have experience using AI-based tools for second language speaking practice. The findings provide empirical evidence to a better understanding of how L2 learners benefit from the learning conditions created by AI-mediated speaking practice and offer pedagogical implications for the design and implementation of AI-mediated speaking activities in second language speaking contexts.",
+              "authors": [
+                {
+                  "name": "Huidan Zheng",
+                  "affiliation": "Konkuk University",
+                  "bio": "Huidan Zheng is a PhD student at Konkuk University, South Korea. Her research interests include translation assessment, second language acquisition and AI-mediated language learning"
                 }
               ],
               "category": "poster",
