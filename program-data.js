@@ -2015,9 +2015,9 @@ window.AALA_PROGRAM = {
           ],
           "category": "theme-3",
           "categoryLabel": "Theme 3",
-          "room": "L305",
-          "start": "11:00",
-          "end": "11:30"
+          "room": "HG01",
+          "start": "15:30",
+          "end": "16:00"
         },
         {
           "id": "AALA2026025",
@@ -2092,8 +2092,8 @@ window.AALA_PROGRAM = {
           "category": "featured",
           "categoryLabel": "Featured",
           "room": "HG03",
-          "start": "11:30",
-          "end": "12:00"
+          "start": "11:00",
+          "end": "11:30"
         },
         {
           "id": "AALA20260151",
@@ -2164,9 +2164,9 @@ window.AALA_PROGRAM = {
           ],
           "category": "theme-3",
           "categoryLabel": "Theme 3",
-          "room": "L305",
-          "start": "11:30",
-          "end": "12:00"
+          "room": "HG02",
+          "start": "15:30",
+          "end": "16:00"
         },
         {
           "id": "AALA20260190",
@@ -2186,9 +2186,9 @@ window.AALA_PROGRAM = {
           ],
           "category": "theme-3",
           "categoryLabel": "Theme 3",
-          "room": "L306",
-          "start": "11:30",
-          "end": "12:00"
+          "room": "HG01",
+          "start": "16:00",
+          "end": "16:30"
         },
         {
           "id": "",
@@ -2542,8 +2542,8 @@ window.AALA_PROGRAM = {
           "category": "other",
           "categoryLabel": "Special session",
           "room": "HG01",
-          "start": "14:00",
-          "end": "15:00"
+          "start": "12:00",
+          "end": "13:00"
         },
         {
           "id": "AALA20260205",
@@ -2878,8 +2878,8 @@ window.AALA_PROGRAM = {
           "category": "other",
           "categoryLabel": "Best dissertation",
           "room": "HG01",
-          "start": "15:30",
-          "end": "16:00"
+          "start": "14:00",
+          "end": "14:30"
         },
         {
           "id": "AALA2026074",
@@ -2904,9 +2904,9 @@ window.AALA_PROGRAM = {
           ],
           "category": "theme-1",
           "categoryLabel": "Theme 1",
-          "room": "HG02",
-          "start": "15:30",
-          "end": "16:00"
+          "room": "L205",
+          "start": "11:00",
+          "end": "11:30"
         },
         {
           "id": "AALA20260118",
@@ -3004,9 +3004,9 @@ window.AALA_PROGRAM = {
           ],
           "category": "theme-3",
           "categoryLabel": "Theme 3",
-          "room": "L305",
-          "start": "15:30",
-          "end": "16:00"
+          "room": "HG01",
+          "start": "14:30",
+          "end": "15:00"
         },
         {
           "id": "AALA20260149",
@@ -3049,8 +3049,8 @@ window.AALA_PROGRAM = {
           "category": "theme-3",
           "categoryLabel": "Theme 3",
           "room": "HG01",
-          "start": "16:00",
-          "end": "16:30"
+          "start": "16:30",
+          "end": "17:00"
         },
         {
           "id": "AALA2026034",
@@ -3219,9 +3219,9 @@ window.AALA_PROGRAM = {
           ],
           "category": "theme-3",
           "categoryLabel": "Theme 3",
-          "room": "HG01",
-          "start": "16:30",
-          "end": "17:00"
+          "room": "L305",
+          "start": "15:30",
+          "end": "16:00"
         },
         {
           "id": "AALA2026060",
