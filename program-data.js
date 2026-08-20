@@ -291,7 +291,7 @@ window.AALA_PROGRAM = {
             {
               "name": "Jason Fan",
               "affiliation": "University of Melbourne",
-              "bio": ""
+              "bio": "Jason Fan is Deputy Director and Principal Research Fellow at the Language Testing Research Centre (LTRC), University of Melbourne. His research interests include test validity and validation, speaking and writing assessment, Rasch measurement theory, and the social and political dimensions of language assessment. He is the Co-President of Asian Association for Language Assessment (AALA) and serves on the editorial boards of Language Testing and Studies in Language Assessment."
             },
             {
               "name": "Mingwei Pan",
@@ -372,7 +372,7 @@ window.AALA_PROGRAM = {
           "abstract": "In recent years, AI-based scoring has become an increasingly important topic in speaking assessment research. However, limited attention has been paid to how AI scoring can be incorporated into score equating designs. This study investigates AI-assisted score equating in a school-based online speaking examination using the Many-Facet Rasch Model (MFRM). Rating data were collected from three administrations of an online speaking test at a university in eastern China. The MFRM was employed to simultaneously calibrate human raters, AI raters, prompt types, and rating scale dimensions onto a common logit scale.\nResults indicated significant differences in prompt difficulty and rater severity. Both human and AI raters demonstrated stable severity patterns across the three speaking tasks. By placing multiple facets-including raters and prompts-onto a unified measurement scale, the MFRM effectively adjusted for score variability attributable to rater severity and prompt difficulty, thereby enhancing score comparability across test forms. The findings support the feasibility of incorporating AI raters as equating anchors in school-based speaking assessments and provide an extensible standardization framework for equating subjective performance assessments such as speaking tests.",
           "authors": [
             {
-              "name": "Jie Wei",
+              "name": "Wei Jie",
               "affiliation": "Shanghai University of International Business and Economics",
               "bio": "Dr. Wei Jie is currently an associate professor at Shanghai University of International Business and Economics, where she supervises MA students in foreign language studies. Her main research interest is language testing and assessment. Dr. Jie is a committee member of the National College English Testing Committee of China and serves on the board of the Language Testing and Assessment Committee of the China Association for Comparative Studies of English and Chinese."
             }
@@ -435,7 +435,7 @@ window.AALA_PROGRAM = {
             {
               "name": "Ying Zheng",
               "affiliation": "University of Southampton",
-              "bio": ""
+              "bio": "Ying Zheng is a Professor in the Department of Languages, Cultures and Linguistics at the University of Southampton, UK. She holds a PhD in Cognitive Studies from Queen’s University, Canada, specialising in second language testing and assessment. Before joining Southampton in 2013, she worked as a psychometrician and later director of research in the language testing division at Pearson London. Her research focuses on psychometrics, large-scale test validation, scale alignment, Mandarin exams in the UK school system and AI-enabled language assessment."
             },
             {
               "name": "Emma Bruce",
@@ -573,7 +573,7 @@ window.AALA_PROGRAM = {
             {
               "name": "Ricky Lam",
               "affiliation": "Hong Kong Baptist University",
-              "bio": ""
+              "bio": "Ricky Lam is an Associate Professor in the Department of Education and Psychology at Hong Kong Baptist University. He is Associate Editor of Frontiers in Education and has served on several international editorial boards. His research interests include e-portfolios, language assessment literacy, and formative assessment. His publications have appeared in numerous SSCI- and SCOPUS-indexed journals. Ricky is also the sole author of Integrating E-portfolios into L2 Classrooms: Education for Future (Multilingual Matters, 2024)."
             }
           ],
           "category": "theme-1",
@@ -885,7 +885,7 @@ window.AALA_PROGRAM = {
             {
               "name": "Yuyang Cai",
               "affiliation": "Shanghai International Studies University",
-              "bio": ""
+              "bio": "Dr. Yuyang Cai is Professor of Language Assessment and Education at Shanghai International Studies University. His research centers on test validation and the intersection of language assessment with educational psychology."
             },
             {
               "name": "Qianwen Ge",
@@ -983,7 +983,7 @@ window.AALA_PROGRAM = {
             {
               "name": "Ying Zheng",
               "affiliation": "University of Southampton",
-              "bio": ""
+              "bio": "Ying Zheng is a Professor in the Department of Languages, Cultures and Linguistics at the University of Southampton, UK. She holds a PhD in Cognitive Studies from Queen’s University, Canada, specialising in second language testing and assessment. Before joining Southampton in 2013, she worked as a psychometrician and later director of research in the language testing division at Pearson London. Her research focuses on psychometrics, large-scale test validation, scale alignment, Mandarin exams in the UK school system and AI-enabled language assessment."
             },
             {
               "name": "Xiaotian Kuai",
@@ -1137,7 +1137,7 @@ window.AALA_PROGRAM = {
             {
               "name": "Hye-won Lee",
               "affiliation": "Cambridge University Press & Assessment",
-              "bio": ""
+              "bio": "Dr Hye-won Lee is a Senior Research Manager at Cambridge University Press & Assessment, where she leads research on academic English constructs and next generation language assessment. Her work focuses on aligning assessment design with real world academic language use, learner needs, and assessment consequences. She holds a PhD in Applied Linguistics and Technology from Iowa State University, specialising in computer-assisted language assessment and argument based validation. Prior to joining Cambridge, she worked on large scale research projects at Educational Testing Service and the Center for Applied Linguistics, and taught in TESOL master’s programmes in South Korea."
             },
             {
               "name": "Sarah Hughes",
@@ -1255,7 +1255,7 @@ window.AALA_PROGRAM = {
             {
               "name": "Hua Wang",
               "affiliation": "Shanghai Jiao Tong University",
-              "bio": ""
+              "bio": "Hua Wang is an Associate Professor in the School of Foreign languages at Shanghai Jiao Tong University. Her research primarily focuses on language testing and assessment, with a particular emphasis on technology-mediated assessment. She received her Ph.D. from Shanghai Jiao Tong University and has since published more than 30 peer-reviewed articles and two academic monographs. Email address: nnhwang@sjtu.edu.cn"
             }
           ],
           "category": "theme-3",
@@ -1929,7 +1929,7 @@ window.AALA_PROGRAM = {
             {
               "name": "Norhaslinda Hassan",
               "affiliation": "Universiti Teknologi MARA",
-              "bio": ""
+              "bio": "Dr. Norhaslinda Hassan is a Senior Lecturer at Universiti Teknologi MARA (UiTM) Penang Branch Campus with a specialized background in language assessment. Her research has centered on washback, learning oriented assessment and formative assessment practices within ESL instruction. Currently, she leads international research on AI-mediated feedback to enhance learner autonomy and feedback literacy. She advocates for a hybrid assessment model that balances the efficiency of automated tools with essential human pedagogical expertise."
             },
             {
               "name": "Atta Gebril",
@@ -2628,7 +2628,7 @@ window.AALA_PROGRAM = {
             {
               "name": "Nguyen Thi Ngoc Quynh",
               "affiliation": "University of Languages and International Studies, Vietnam National University, Hanoi",
-              "bio": ""
+              "bio": "Nguyen Thi Ngoc Quynh (or Quynh Nguyen) is the Director of Assessment and Quality Control at the VNU University of Languages and International Studies, Vietnam. She is also the Immediate Past President of the Asian Association for Language Assessment. She has led multiple national and international projects on language education and assessment."
             }
           ],
           "category": "theme-2",
@@ -2780,9 +2780,9 @@ window.AALA_PROGRAM = {
               "bio": "Zhang Lu is a graduate student specializing in language assessment. Her research interests include large-scale language testing, score equating, and psychometric modeling. She focuses on the application of item response theory (IRT), particularly graded response models, to writing assessment and score comparability across test forms."
             },
             {
-              "name": "Jie Wei",
+              "name": "Wei Jie",
               "affiliation": "Shanghai University of International Business and Economics",
-              "bio": ""
+              "bio": "Dr. Wei Jie is currently an associate professor at Shanghai University of International Business and Economics, where she supervises MA students in foreign language studies. Her main research interest is language testing and assessment. Dr. Jie is a committee member of the National College English Testing Committee of China and serves on the board of the Language Testing and Assessment Committee of the China Association for Comparative Studies of English and Chinese."
             }
           ],
           "category": "theme-2",
@@ -2930,7 +2930,7 @@ window.AALA_PROGRAM = {
             },
             {
               "name": "Jian Xu",
-              "affiliation": "",
+              "affiliation": "Sichuan International Studies University",
               "bio": ""
             }
           ],
@@ -3075,12 +3075,12 @@ window.AALA_PROGRAM = {
             {
               "name": "Cecilia Guanfang Zhao",
               "affiliation": "University of Macau",
-              "bio": ""
+              "bio": "Cecilia Guanfang Zhao (czhao@um.edu.mo) is Associate Professor of Applied Linguistics in the Department of English at University of Macau. Her research focuses on writing assessment and L2 academic literacy, with publications in top journals such as Applied Linguistics, Language Testing, and TESOL Quarterly. She has received multiple international research awards, including the Jacqueline Ross TOEFL Dissertation Award and Christopher Brumfit Ph.D./Ed.D. Thesis Award, and served in various roles across language assessment organizations."
             },
             {
               "name": "Shangwen Chen",
               "affiliation": "University of Macau",
-              "bio": ""
+              "bio": "Shangwen Chen is a current PhD candidate in the Department of English at the University of Macau. Her research interests are in the areas of individual differences in L2 acquisition, L2 listening assessment, and incidental vocabulary learning."
             }
           ],
           "category": "theme-1",
@@ -3138,7 +3138,7 @@ window.AALA_PROGRAM = {
             {
               "name": "Cecilia Guanfang Zhao",
               "affiliation": "University of Macau",
-              "bio": ""
+              "bio": "Cecilia Guanfang Zhao (czhao@um.edu.mo) is Associate Professor of Applied Linguistics in the Department of English at University of Macau. Her research focuses on writing assessment and L2 academic literacy, with publications in top journals such as Applied Linguistics, Language Testing, and TESOL Quarterly. She has received multiple international research awards, including the Jacqueline Ross TOEFL Dissertation Award and Christopher Brumfit Ph.D./Ed.D. Thesis Award, and served in various roles across language assessment organizations."
             }
           ],
           "category": "theme-1",
@@ -3180,9 +3180,9 @@ window.AALA_PROGRAM = {
               "bio": "My name is SONG Yuhang. I was born on July 1, 2002, in Bozhou, Anhui Province, China, and I am currently 23 years old. I received my bachelor’s degree in English (Teacher Education) from Chaohu University in 2024. I am currently pursuing a Master of Arts in Foreign Linguistics and Applied Linguistics at the School of International Business Foreign Languages, Shanghai University of International Business and Economics. My academic interests focus on language testing, particularly L2 interactive speaking, rater behavior in speaking assessment, and the application of generative artificial intelligence in language assessment."
             },
             {
-              "name": "Jie Wei",
+              "name": "Wei Jie",
               "affiliation": "Shanghai University of International Business and Economics",
-              "bio": ""
+              "bio": "Dr. Wei Jie is currently an associate professor at Shanghai University of International Business and Economics, where she supervises MA students in foreign language studies. Her main research interest is language testing and assessment. Dr. Jie is a committee member of the National College English Testing Committee of China and serves on the board of the Language Testing and Assessment Committee of the China Association for Comparative Studies of English and Chinese."
             }
           ],
           "category": "theme-3",
@@ -3397,7 +3397,7 @@ window.AALA_PROGRAM = {
             {
               "name": "Ying Chen",
               "affiliation": "Ocean University of China",
-              "bio": ""
+              "bio": "Ying Chen is Professor of Applied Linguistics at Ocean University of China. Her research interests include language assessment, diagnostic assessment, and research methodology. She has published in leading journals like Applied Linguistics, Language Testing, Language Teaching Research, and Modern Foreign Languages. She has led six funded projects and is the principal researcher of a national project supported by the National Planning Office for Philosophy and Social Sciences."
             }
           ],
           "category": "theme-3",
