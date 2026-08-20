@@ -28,7 +28,7 @@ window.AALA_PROGRAM = {
             {
               "name": "Dina Tsagari",
               "affiliation": "Oslo Metropolitan University, Norway",
-              "bio": ""
+              "bio": "Dina Tsagari, PhD, is Professor in the Department of Primary and Secondary Teacher Education at Oslo Metropolitan University, Norway. She has also worked for the University of Cyprus, the Greek Open University and the Polytechnic University of Hong Kong. Her research interests include language testing and assessment, materials design and evaluation, differentiated instruction, multilingualism, distance education, learning difficulties and inclusive education. She is the editor and author of numerous books, journal papers, book chapters and project reports. She coordinates research groups, including the CBLA SIG of EALTA and EnA OsloMet, and is involved in EU-funded and other research projects."
             }
           ],
           "category": "workshop",
@@ -45,7 +45,7 @@ window.AALA_PROGRAM = {
             {
               "name": "Gwan-Hyeok Im",
               "affiliation": "Konkuk University Glocal Campus, South Korea",
-              "bio": ""
+              "bio": "Dr. Gwan-Hyeok Im completed his master’s degree at the University of Melbourne in Australia and earned his PhD from Queen’s University in Canada. He is currently an assistant professor in the Department of English Language and Culture at Konkuk University Glocal Campus in South Korea. His research focuses on language assessment, particularly validity and validation in second language testing. He is also interested in English-medium instruction (EMI), digital literacy, and the integration of artificial intelligence and emerging technologies in language education. His work explores how innovative learning environments can enhance language learning and intercultural understanding in higher education."
             }
           ],
           "category": "workshop",
@@ -62,7 +62,7 @@ window.AALA_PROGRAM = {
             {
               "name": "Yuanyue Hao",
               "affiliation": "University of Oxford",
-              "bio": ""
+              "bio": "Yuanyue Hao is currently a final-year doctoral student in the Department of Education at the University of Oxford. His doctoral research was fully funded by the Swire Scholarship and recognised by Duolingo English Tests’ Doctoral Dissertation Awards. With an initial research focus on human-mediated pronunciation assessment, he has gradually developed his interests in automated pronunciation assessment, algorithmic fairness and auditing algorithms. He is also interested in rigorous applications of advanced quantitative methods in applied linguistic research, such as machine learning and causal inference, and in bringing philosophical discussions into language assessment and applied linguistic research."
             }
           ],
           "category": "workshop",
@@ -3648,7 +3648,7 @@ window.AALA_PROGRAM = {
             {
               "name": "Quan Zhang",
               "affiliation": "South China Business College of Guangdong University of Foreign Studies",
-              "bio": ""
+              "bio": "Professor Zhang Quan received his BA from the English Department of Hebei University, China, in 1978, his MA in Applied Linguistics from Northwest Polytechnic University in Xi’an, China, in 1986, and his PhD in Applied Linguistics from Guangdong University of Foreign Studies in 1993. He is currently a visiting professor at South China Business College of Guangdong University of Foreign Studies. Since 2012, he has served as Secretary-General of the Pacific Rim Objective Measurement Society (PROMS) for mainland China. He previously served on the Foreign Language Teaching Steering Committee for Higher Vocational Colleges under the Ministry of Education and as Deputy Chief Examiner of CET-4 and CET-6 in Guangdong Province. He has also been a veteran test-item producer for large-scale examinations at the Examination Center under the Ministry of Education, China. He was the first senior visiting scholar from mainland China invited by ETS (2002), a senior research scholar at the University of California, Los Angeles (UCLA) from 2006 to 2009, and a PhD supervisor at the City University of Macau from 2013 to 2019."
             }
           ],
           "category": "workshop",
