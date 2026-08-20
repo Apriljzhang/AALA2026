@@ -190,7 +190,7 @@ window.AALA_PROGRAM = {
             }
           ],
           "category": "featured",
-          "categoryLabel": "Featured",
+          "categoryLabel": "Featured/HK",
           "room": "HG01",
           "start": "11:00",
           "end": "11:30"
@@ -207,7 +207,7 @@ window.AALA_PROGRAM = {
             }
           ],
           "category": "featured",
-          "categoryLabel": "Featured",
+          "categoryLabel": "Featured/Macau",
           "room": "HG02",
           "start": "11:00",
           "end": "11:30"
@@ -317,7 +317,7 @@ window.AALA_PROGRAM = {
             }
           ],
           "category": "featured",
-          "categoryLabel": "Featured",
+          "categoryLabel": "Featured/HK",
           "room": "HG01",
           "start": "11:30",
           "end": "12:00"
@@ -339,7 +339,7 @@ window.AALA_PROGRAM = {
             }
           ],
           "category": "featured",
-          "categoryLabel": "Featured",
+          "categoryLabel": "Featured/Macau",
           "room": "HG02",
           "start": "11:30",
           "end": "12:00"
@@ -361,7 +361,7 @@ window.AALA_PROGRAM = {
             }
           ],
           "category": "featured",
-          "categoryLabel": "Featured",
+          "categoryLabel": "Featured/Mainland China",
           "room": "HG03",
           "start": "11:30",
           "end": "12:00"
@@ -1959,7 +1959,7 @@ window.AALA_PROGRAM = {
             }
           ],
           "category": "featured",
-          "categoryLabel": "Featured",
+          "categoryLabel": "Featured/Mainland China",
           "dayKey": "sep19",
           "room": "HG03",
           "start": "11:00",
@@ -2236,7 +2236,7 @@ window.AALA_PROGRAM = {
             }
           ],
           "category": "other",
-          "categoryLabel": "EB activity",
+          "categoryLabel": "EB symposium",
           "room": "HG01",
           "start": "13:00",
           "end": "14:00"
@@ -2273,7 +2273,7 @@ window.AALA_PROGRAM = {
             }
           ],
           "category": "symposium",
-          "categoryLabel": "Forum activity",
+          "categoryLabel": "Editors' Forum",
           "room": "HG02",
           "start": "13:00",
           "end": "14:00",
@@ -2564,7 +2564,7 @@ window.AALA_PROGRAM = {
             }
           ],
           "category": "symposium",
-          "categoryLabel": "Forum activity",
+          "categoryLabel": "Editors' Forum",
           "room": "HG02",
           "start": "14:00",
           "end": "14:30"
@@ -2884,7 +2884,7 @@ window.AALA_PROGRAM = {
             }
           ],
           "category": "other",
-          "categoryLabel": "Best dissertation 2025",
+          "categoryLabel": "Outstanding Dissertation for 2025",
           "room": "HG01",
           "start": "14:00",
           "end": "14:30"
