@@ -32,6 +32,7 @@ from build_program_a4_pdf import (
     register_fonts,
     session_events,
     session_groups,
+    to_minutes,
 )
 
 
@@ -62,6 +63,7 @@ def detail_specs(data):
     for day in data["days"]:
         if day["weekday"] not in {"Saturday", "Sunday"}:
             continue
+        day_specs = []
         events = session_events(day)
         rooms = sorted(
             {event["room"] for event in events},
@@ -73,32 +75,39 @@ def detail_specs(data):
                 room for room in rooms
                 if any(event.get("room") == room for event in group)
             ]
-            specs.append((day, active_rooms, group, part, len(groups)))
+            day_specs.append(("rooms", day, active_rooms, group, part, len(groups)))
+        poster_band = poster_band_for_day(day)
+        if poster_band:
+            day_specs.append(("posters", day, poster_band))
+        day_specs.sort(key=spec_start)
+        specs.extend(day_specs)
     return specs
 
 
-def poster_specs(data):
-    """Return one poster-card page for each main conference day."""
-    specs = []
-    for day in data["days"]:
-        if day["weekday"] not in {"Saturday", "Sunday"}:
-            continue
-        poster_band = next((event for event in day["events"] if event.get("posters")), None)
-        if poster_band and poster_band.get("posters"):
-            presentation_start = poster_band.get("presentationStart", poster_band["start"])
-            presentation_end = poster_band.get("presentationEnd", poster_band["end"])
-            poster_band = dict(poster_band)
-            poster_band["posters"] = [
-                {
-                    **poster,
-                    "start": presentation_start,
-                    "end": presentation_end,
-                    "room": poster_band.get("room", poster.get("room")),
-                }
-                for poster in poster_band["posters"]
-            ]
-            specs.append((day, poster_band))
-    return specs
+def poster_band_for_day(day):
+    """Return a poster group with cards timed at the day's presentation slot."""
+    source = next((event for event in day["events"] if event.get("posters")), None)
+    if not source or not source.get("posters"):
+        return None
+    presentation_start = source.get("presentationStart", source["start"])
+    presentation_end = source.get("presentationEnd", source["end"])
+    poster_band = dict(source)
+    poster_band["posters"] = [
+        {
+            **poster,
+            "start": presentation_start,
+            "end": presentation_end,
+            "room": poster.get("room") or source.get("room"),
+        }
+        for poster in source["posters"]
+    ]
+    return poster_band
+
+
+def spec_start(spec):
+    if spec[0] == "posters":
+        return to_minutes(spec[2]["presentationStart"])
+    return min(to_minutes(event["start"]) for event in spec[3])
 
 
 def section_dimensions(rooms, events, size=CARD_FONT_SIZE):
@@ -117,6 +126,36 @@ def section_dimensions(rooms, events, size=CARD_FONT_SIZE):
     return col_width, grid_h, section_h
 
 
+def poster_layout(poster_band):
+    width, _ = landscape(A4)
+    left = right = 8 * mm
+    panel_width = width - left - right
+    columns = 5
+    card_gap = POSTER_GRID_GAP
+    card_width = (panel_width - card_gap * (columns - 1)) / columns
+    card_inner_width = card_width - 3 * mm
+    rows = []
+    posters = poster_band["posters"]
+    for index in range(0, len(posters), columns):
+        cards = []
+        row_height = 0
+        for event in posters[index:index + columns]:
+            item, used = paragraph(event_markup(event), card_inner_width, POSTER_CARD_FONT_SIZE)
+            card_height = used + 4.5 * mm
+            cards.append((event, item, used, card_height))
+            row_height = max(row_height, card_height)
+        rows.append((cards, row_height))
+    required = sum(row_height for _, row_height in rows) + card_gap * max(0, len(rows) - 1)
+    section_height = SECTION_LABEL_HEIGHT + 1.4 * mm + required
+    return panel_width, card_width, card_gap, rows, section_height
+
+
+def section_height(spec):
+    if spec[0] == "posters":
+        return poster_layout(spec[2])[-1]
+    return section_dimensions(spec[2], spec[3])[2]
+
+
 def pack_specs(specs):
     """Pack adjacent groups within each day, preserving programme order."""
     _, height = landscape(A4)
@@ -128,8 +167,8 @@ def pack_specs(specs):
     current = []
     used = 0
     for spec in specs:
-        day, rooms, events, _, _ = spec
-        _, _, section_h = section_dimensions(rooms, events)
+        day = spec[1]
+        section_h = section_height(spec)
         if current and (day is not current_day or used + SECTION_GAP + section_h > available):
             pages.append((current_day, current))
             current = []
@@ -189,7 +228,10 @@ def draw_room_grid(c, rooms, events, top, size=CARD_FONT_SIZE):
 
 
 def draw_section(c, spec, y):
-    day, rooms, events, part, parts = spec
+    if spec[0] == "posters":
+        return draw_poster_cards(c, spec[1], spec[2], y)
+
+    _, day, rooms, events, part, parts = spec
     start = min(event["start"] for event in events)
     end = max(event["end"] for event in events)
     width, _ = landscape(A4)
@@ -216,18 +258,12 @@ def draw_section(c, spec, y):
     return y - section_h
 
 
-def draw_poster_cards(c, day, poster_band):
+def draw_poster_cards(c, day, poster_band, top):
     """Draw poster details as five cards per row within the detail section."""
-    width, height = landscape(A4)
+    _, card_width, card_gap, rows, section_height = poster_layout(poster_band)
+    width, _ = landscape(A4)
     left = right = 8 * mm
     panel_width = width - left - right
-    top = height - 32 * mm - 2 * mm
-    bottom = 14 * mm
-    posters = poster_band["posters"]
-    columns = 5
-    card_gap = POSTER_GRID_GAP
-    card_width = (panel_width - card_gap * (columns - 1)) / columns
-    card_inner_width = card_width - 3 * mm
 
     start = poster_band.get("presentationStart", poster_band["start"])
     end = poster_band.get("presentationEnd", poster_band["end"])
@@ -246,25 +282,8 @@ def draw_poster_cards(c, day, poster_band):
     c.rect(left, top - 0.8 * mm, panel_width, 0.8 * mm, fill=1, stroke=0)
 
     grid_top = top - label_height - 1.4 * mm
-    rows = [posters[index:index + columns] for index in range(0, len(posters), columns)]
-    row_specs = []
-    for row in rows:
-        cards = []
-        row_height = 0
-        for event in row:
-            item, used = paragraph(event_markup(event), card_inner_width, POSTER_CARD_FONT_SIZE)
-            card_height = used + 4.5 * mm
-            cards.append((event, item, used, card_height))
-            row_height = max(row_height, card_height)
-        row_specs.append((cards, row_height))
-
-    required = sum(row_height for _, row_height in row_specs) + card_gap * max(0, len(row_specs) - 1)
-    available = grid_top - bottom
-    if required > available:
-        raise ValueError(f"Poster cards do not fit: {day['date']} requires {required / mm:.1f} mm, available {available / mm:.1f} mm")
-
     y = grid_top
-    for cards, row_height in row_specs:
+    for cards, row_height in rows:
         for index, (event, item, used, _) in enumerate(cards):
             x = left + index * (card_width + card_gap)
             fill, accent = category_colours(event)
@@ -275,6 +294,7 @@ def draw_poster_cards(c, day, poster_band):
             c.rect(x, y - 1.0 * mm, card_width, 1.0 * mm, fill=1, stroke=0)
             item.drawOn(c, x + 1.5 * mm, y - used - 2.0 * mm)
         y -= row_height + card_gap
+    return top - section_height
 
 
 def main():
@@ -283,8 +303,7 @@ def main():
     abbreviate_theme_labels(data)
     specs = detail_specs(data)
     pages = pack_specs(specs)
-    poster_pages = poster_specs(data)
-    total_pages = len(pages) + len(poster_pages)
+    total_pages = len(pages)
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     pdf = canvas.Canvas(str(OUTPUT), pagesize=landscape(A4), pageCompression=1)
     pdf.setTitle("AALA2026 Concurrent Session Details")
@@ -305,21 +324,9 @@ def main():
                 y -= SECTION_GAP
             y = draw_section(pdf, spec, y)
         pdf.showPage()
-    for index, (day, poster_band) in enumerate(poster_pages, len(pages) + 1):
-        start = poster_band.get("presentationStart", poster_band["start"])
-        end = poster_band.get("presentationEnd", poster_band["end"])
-        header(
-            pdf,
-            "AALA2026 Concurrent Session Details",
-            f"{day_label(day)} | Poster presentation details {start}-{end}",
-            index,
-            total_pages,
-        )
-        draw_poster_cards(pdf, day, poster_band)
-        pdf.showPage()
     pdf.save()
     print(OUTPUT)
-    print(f"pages={len(pages)}")
+    print(f"pages={total_pages}")
 
 
 if __name__ == "__main__":
