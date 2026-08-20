@@ -470,8 +470,9 @@ window.AALA_PROGRAM = {
           "title": "Student Committee Networking",
           "abstract": "",
           "authors": [],
-          "category": "break",
-          "categoryLabel": "Programme activity",
+          "category": "other",
+          "categoryLabel": "EB activity",
+          "shared": true,
           "room": "HG02",
           "start": "12:00",
           "end": "12:30"
