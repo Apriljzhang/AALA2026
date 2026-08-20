@@ -57,7 +57,7 @@
 
     function activityRank(event) {
         if (["Lunch", "Morning tea break", "Afternoon tea break"].includes(event.title)) return 0;
-        if (event.posters) return 2;
+        if (event.category === "poster") return 2;
         return 1;
     }
 
@@ -152,19 +152,6 @@
         return card;
     }
 
-    function makePosterBand(event, includeHeading = true) {
-        const band = element("section", `poster-band ${categoryClass("poster")}`);
-        if (includeHeading) {
-            band.append(makeMeta(event));
-            band.append(element("strong", "poster-band-title", event.title));
-            if (event.abstract) band.append(element("p", "poster-band-intro", event.abstract));
-        }
-        const list = element("div", "poster-list");
-        event.posters.forEach((poster) => list.append(makeSession(poster, "poster-item")));
-        band.append(list);
-        return band;
-    }
-
     function makeDayPanel(day, index) {
         const panel = element("section", "day-panel");
         panel.id = `panel-${day.key}`;
@@ -180,7 +167,22 @@
 
         const timeline = element("div", "timeline");
         const groups = new Map();
+        const timelineEvents = [];
         day.events.forEach((event) => {
+            if (event.posters) {
+                const presentationStart = event.presentationStart || event.start;
+                const presentationEnd = event.presentationEnd || event.end;
+                event.posters.forEach((poster) => timelineEvents.push({
+                    ...poster,
+                    presentationStart: poster.presentationStart || presentationStart,
+                    presentationEnd: poster.presentationEnd || presentationEnd,
+                    room: poster.room || event.room,
+                }));
+                return;
+            }
+            timelineEvents.push(event);
+        });
+        timelineEvents.forEach((event) => {
             const start = event.presentationStart || event.start;
             if (!groups.has(start)) groups.set(start, []);
             groups.get(start).push(event);
@@ -191,8 +193,7 @@
             group.append(element("h3", "time-marker", displayTime(start)));
             const eventList = element("div", `time-events${events.length > 1 ? " concurrent-grid" : " single-event"}`);
             events.sort((a, b) => activityRank(a) - activityRank(b) || roomRank(a) - roomRank(b) || a.room.localeCompare(b.room));
-            events.forEach((event) => eventList.append(makeSession(event)));
-            events.filter((event) => event.posters).forEach((event) => eventList.append(makePosterBand(event, false)));
+            events.forEach((event) => eventList.append(makeSession(event, event.category === "poster" ? "poster-item" : "")));
             group.append(eventList);
             timeline.append(group);
         });

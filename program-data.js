@@ -1699,17 +1699,17 @@ window.AALA_PROGRAM = {
                 },
                 {
                   "name": "Ying Zheng",
-                  "affiliation": "",
+                  "affiliation": "University of Southampton",
                   "bio": ""
                 },
                 {
                   "name": "Jia Li",
-                  "affiliation": "",
+                  "affiliation": "University of Southampton",
                   "bio": ""
                 },
                 {
                   "name": "Yuchen Xing",
-                  "affiliation": "",
+                  "affiliation": "University of Southampton",
                   "bio": ""
                 }
               ],
@@ -2235,8 +2235,8 @@ window.AALA_PROGRAM = {
               "bio": ""
             }
           ],
-          "category": "symposium",
-          "categoryLabel": "Symposium",
+          "category": "other",
+          "categoryLabel": "EB activity",
           "room": "HG01",
           "start": "13:00",
           "end": "14:00"
@@ -2272,8 +2272,8 @@ window.AALA_PROGRAM = {
               "bio": ""
             }
           ],
-          "category": "editors-forum",
-          "categoryLabel": "Editors’ Forum",
+          "category": "symposium",
+          "categoryLabel": "Forum activity",
           "room": "HG02",
           "start": "13:00",
           "end": "14:00",
@@ -2564,7 +2564,7 @@ window.AALA_PROGRAM = {
             }
           ],
           "category": "symposium",
-          "categoryLabel": "Symposium",
+          "categoryLabel": "Forum activity",
           "room": "HG02",
           "start": "14:00",
           "end": "14:30"
