@@ -1576,7 +1576,7 @@ window.AALA_PROGRAM = {
         },
         {
           "id": "",
-          "title": "Conference Banquet",
+          "title": "Conference Banquet and Award Ceremony",
           "abstract": "",
           "authors": [],
           "category": "ceremony",
