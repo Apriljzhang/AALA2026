@@ -40,21 +40,22 @@ CATEGORY_COLOURS = {
     "theme-3": (colors.HexColor("#E3F5DE"), colors.HexColor("#4F8C3A")),
     "theme-4": (colors.HexColor("#EEE5FA"), colors.HexColor("#7652A8")),
     "symposium": (colors.HexColor("#FFD9D5"), colors.HexColor("#C33B32")),
-    "editors-forum": (colors.HexColor("#FFD9D5"), colors.HexColor("#C33B32")),
+    "editors-forum": (colors.HexColor("#FCE4D6"), colors.HexColor("#B85C38")),
     "sponsor": (colors.HexColor("#FFF3C8"), colors.HexColor("#9A7514")),
-    "poster": (colors.HexColor("#F1E8F7"), colors.HexColor("#85539C")),
+    "poster": (colors.HexColor("#F4E2F0"), colors.HexColor("#9B4D8C")),
     "plenary": (colors.HexColor("#DDF0E3"), colors.HexColor("#34784A")),
-    "ceremony": (colors.HexColor("#DDF0E3"), colors.HexColor("#34784A")),
+    "ceremony": (colors.HexColor("#D9ECEA"), colors.HexColor("#0E625F")),
     "break": (colors.HexColor("#FFF2C6"), colors.HexColor("#A27B16")),
-    "workshop": (colors.HexColor("#DDF3F6"), colors.HexColor("#267C87")),
-    "other": (colors.HexColor("#E3F3F5"), colors.HexColor("#377F87")),
+    "social": (colors.HexColor("#DCEFE5"), colors.HexColor("#2C7A5C")),
+    "workshop": (colors.HexColor("#DDEBF7"), colors.HexColor("#2E6F9E")),
+    "other": (colors.HexColor("#D9F0EF"), colors.HexColor("#167F7A")),
 }
 
 ROOM_ORDER = [
     "Culture Centre Room 1", "Culture Centre Room 2", "HG01", "HG02", "HG03",
     "L205", "L206", "L207", "L305", "L306", "L307", "Poster area",
 ]
-SHARED = {"break", "plenary", "ceremony"}
+SHARED = {"break", "plenary", "ceremony", "social"}
 
 
 def is_shared(event):
@@ -410,12 +411,12 @@ def fit_grid_font(events, rooms, width, available_height):
     raise ValueError("Time-grid content does not fit at the minimum 6.4-point size")
 
 
-def draw_room_page(c, day, rooms, events, part, parts, page_number, total_pages):
+def draw_room_page(c, day, rooms, events, part, parts, page_number, total_pages, section_title="AALA2026 at a glance"):
     window_start = min(event["start"] for event in events)
     window_end = max(event["end"] for event in events)
     header(
         c,
-        "AALA2026 at a glance",
+        section_title,
         f"{day_label(day)} | Concurrent sessions {window_start}-{window_end} | {len(rooms)} rooms | Part {part} of {parts}",
         page_number,
         total_pages,

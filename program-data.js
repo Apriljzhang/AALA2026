@@ -76,7 +76,7 @@ window.AALA_PROGRAM = {
           "title": "AALA EB Meeting",
           "abstract": "",
           "authors": [],
-          "category": "poster",
+          "category": "other",
           "categoryLabel": "EB activity",
           "room": "A207",
           "start": "14:00",
@@ -98,8 +98,8 @@ window.AALA_PROGRAM = {
           "title": "Welcome Reception",
           "abstract": "",
           "authors": [],
-          "category": "ceremony",
-          "categoryLabel": "Opening / closing / social",
+          "category": "social",
+          "categoryLabel": "Social",
           "room": "Zam Zam",
           "start": "18:30",
           "end": "20:30",
@@ -126,7 +126,7 @@ window.AALA_PROGRAM = {
           "category": "break",
           "categoryLabel": "Programme activity",
           "room": "Culture Centre Entrance",
-          "start": "08:30",
+          "start": "08:15",
           "end": "09:00"
         },
         {
@@ -134,8 +134,8 @@ window.AALA_PROGRAM = {
           "title": "Opening",
           "abstract": "",
           "authors": [],
-          "category": "ceremony",
-          "categoryLabel": "Opening / closing / social",
+          "category": "break",
+          "categoryLabel": "Programme activity",
           "room": "Culture Centre Theatre",
           "start": "09:00",
           "end": "09:30"
@@ -1579,8 +1579,8 @@ window.AALA_PROGRAM = {
           "title": "Conference Banquet and Award Ceremony",
           "abstract": "",
           "authors": [],
-          "category": "ceremony",
-          "categoryLabel": "Opening / closing / social",
+          "category": "social",
+          "categoryLabel": "Social",
           "room": "17th Floor, Altira Macau",
           "start": "18:30",
           "end": "20:30",
@@ -3410,8 +3410,8 @@ window.AALA_PROGRAM = {
           "title": "Closing",
           "abstract": "",
           "authors": [],
-          "category": "ceremony",
-          "categoryLabel": "Opening / closing / social",
+          "category": "break",
+          "categoryLabel": "Programme activity",
           "room": "HG02",
           "start": "17:00",
           "end": "17:30"
@@ -3698,8 +3698,16 @@ window.AALA_PROGRAM = {
       "label": "Workshop"
     },
     {
-      "key": "ceremony",
-      "label": "Opening / closing / social"
+      "key": "break",
+      "label": "Programme activity"
+    },
+    {
+      "key": "social",
+      "label": "Social"
+    },
+    {
+      "key": "other",
+      "label": "Special / EB activity"
     }
   ],
   "audit": {
