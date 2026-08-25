@@ -1885,6 +1885,45 @@ window.AALA_PROGRAM = {
           }
         },
         {
+          "id": "AALA2026108",
+          "title": "Meaning Recall as a Measure of EFL Reading Comprehension: Construct Validation and Automated Scoring",
+          "abstract": "The present study aims to investigate the fundamental nature of construct measured by a meaning recall procedure, as compared with what traditional multiple-choice (MC), reading comprehension items measures, and thereby explore the feasibility of using it as a measure of L2 reading comprehension. More specifically, the study systematically attempts to examine what specific scoring dimensions and features of meaning recall correspond to what types and features of reading comprehension items and also what levels of test-taker performance on these items in the contexts of EFL reading comprehension assessment. Two main research questions guide the study: (1) To what extent do EFL learners’ meaning recall scores correlate with the item (or testlet) scores from a MC-based reading comprehension test? (2) Do specific dimensions and features of meaning recall differentially predict performance on different types of reading comprehension items? Participants are asked to participate in an oral free recall task in their L1, Korean, with recall protocols transcribed and scored using an established propositional analysis framework. Both an AI-assisted scoring system and human raters are used to evaluate the recall protocols from the EFL learners. Correlation and regression analyses are conducted to evaluate the degree to which meaning recall reflects the construct measured by existing reading comprehension items. The findings are expected to shed important lights on the potential value of meaning recall as a construct-valid assessment tool and the possibility of implementing, AI-based automated scoring of recall protocols in L2 reading assessment.",
+          "authors": [
+            {
+              "name": "Dagyeom LEE",
+              "affiliation": "Seoul National University",
+              "bio": "With a background in English Language and Literature, my research interests lie in language assessment, EFL reading, and AI-assisted learning. I am particularly interested in meaning recall and its relationship with reading comprehension and test validity. My recent work is investigating how meaning recall relates to different reading question types. I am also interested in integrating AI technologies into language education. I aim to contribute to the development of more valid and reliable AI-based language assessments."
+            }
+          ],
+          "category": "theme-3",
+          "categoryLabel": "Theme 3",
+          "room": "L307",
+          "start": "13:00",
+          "end": "13:30"
+        },
+        {
+          "id": "AALA20260161",
+          "title": "Understanding CUTEP Test Takers from a Psychometric Perspective through Rasch Measurement Analysis",
+          "abstract": "The Chulalongkorn University Test of English Proficiency (CU-TEP) is an institutional English proficiency examination widely used to assess the academic English ability of university students and applicants in Thailand. The test consists of three sections—Listening, Reading, and Writing—designed to measure language skills necessary for academic study. As CU-TEP continues to serve an important role in placement and proficiency assessment, it is essential to examine how effectively the test functions as a measurement instrument and how well it captures the abilities of its test takers. This study aims to investigate CU-TEP test takers from a psychometric perspective through Rasch measurement analysis. The current study analyzes two versions of the CU-TEP administered in 2025, with a combined sample of 4,005 test takers. Rasch modeling has been applied to estimate both item difficulty and test-taker ability on a common measurement scale. In particular, the analysis explored the alignment between test-taker ability levels and the difficulty of items within each section to better understand how effectively the test functions across different proficiency levels. In addition to examining item difficulty and person ability estimates, the study also investigated the reliability and separation indices to determine the test’s capacity to distinguish between different levels of English proficiency among test takers. By mapping test-taker ability against item difficulty across the three sections, the study aims to provide empirical evidence regarding the measurement quality of CU-TEP and to offer insights into the characteristics of its test-taking population. The findings will contribute to improving the validity, fairness, and interpretability of CU-TEP, while informing future test development and refinement.",
+          "authors": [
+            {
+              "name": "Patharaorn Patharakorn",
+              "affiliation": "Chulalongkorn University Language Institute",
+              "bio": "Patharaorn Patharakorn obtained her Ph.D. from the University of Hawai’i at Mānoa and is currently a lecturer at Chulalongkorn University Language Institute. Her research interests include conversation analysis of classroom interactions, role-play interactions, task-based language assessment, and rubric construction and validation."
+            },
+            {
+              "name": "Sasitorn Limkomolwilas",
+              "affiliation": "",
+              "bio": ""
+            }
+          ],
+          "category": "theme-4",
+          "categoryLabel": "Theme 4",
+          "room": "L307",
+          "start": "13:30",
+          "end": "14:00"
+        },
+        {
           "id": "AALA2026057",
           "title": "Assessing Interactional Competence in a Computer-Mediated Test: Innovation and Responsiveness to Communicative Ability in an Interactive Listening Task",
           "abstract": "Recent discussions of a humanistic approach to language assessment highlight the need to balance technological innovation with responsiveness to the communicative abilities that assessments aim to represent. Within this perspective, interactional competence (IC) has become a central construct in language testing. However, assessing IC remains challenging in computer-mediated tests (CMTs), where tasks are typically unidirectional and provide limited opportunities for interactional engagement (Plough et al., 2018). A large online English proficiency test has sought to address this limitation through an Interactive Listening (IL) task that requires test-takers to manage extended exchanges with a simulated interlocutor (LaFlair et al., 2023). However, the extent to which such tasks capture interactional behaviour in communicative contexts remains insufficiently understood. This study, therefore, examines the validity of the IL task as an indicator of IC. Data were collected from 125 university students in Vietnam enrolled in two English courses. Participants completed the online proficiency test, a course-based speaking assessment, and a practice version of the CEFR-aligned national English proficiency test. Both speaking assessments included IC-related measures such as topic development, interactional management, and non-verbal behaviour. Scores from the speaking tests were analysed using multi-faceted Rasch measurement with FACETS (Linacre, 2014). Following Roever and Ikeda (2023), fair scores on IC measures were converted to percentile ranks to enable comparison with the IL-related subscore. Results show small to moderate, statistically significant correlations between the IL-related subscore and IC measures across both speaking assessments. Stronger relationships were observed among the higher-proficiency group (C1), whereas the IL-related subscore showed weaker associations with IC measures at the B2 level. These findings provide qualified support for interactive tasks as an innovative approach to assessing IC in CMTs, while underscoring the importance of maintaining assessment validity through alignment with performance-based evidence of communicative ability.",
