@@ -2377,6 +2377,11 @@ window.AALA_PROGRAM = {
               "name": "Tan Xue Lin",
               "affiliation": "Peking University",
               "bio": "From 2019 to 2023, I was an undergraduate student in the Department of Chinese Language and Literature at Peking University.From 2023 to 2026, I am a master's student at the School of Chinese as a Second Language, Peking University. My research interest focuses on receptive vocabulary proficiency tests for CSL learners."
+            },
+            {
+              "name": "ZHANG Haiwei",
+              "affiliation": "School of Chinese as a Second Language",
+              "bio": "ZHANG Haiwei is an Associate Professor at the School of Chinese as a Second Language, Peking University, where he conducts research and teaches courses on Chinese as a second language. He received his Bachelor and Master’s degrees in Teaching Chinese as a second language from Beijing Language and Culture University, and a PhD in Applied Linguistics from University of York, U.K. His publications cover a wide range of topics, including the acquisition and measurement of Chinese characters and vocabulary among CS/FL learners, Chinese language teacher education, Chinese language globalization and research methods. His publications have been featured in Chinese and English journals in the field of applied linguistics and CS/FL education."
             }
           ],
           "category": "theme-2",
