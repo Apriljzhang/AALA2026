@@ -1521,34 +1521,6 @@ window.AALA_PROGRAM = {
           "dayKey": "sep20"
         },
         {
-          "id": "AALA2026096",
-          "title": "Enhancing English Proficiency through Scenario-Based: A Randomized Controlled Study with Pre-Service Teachers",
-          "abstract": "Despite growing interest in contextualized and learning-oriented approaches to English language teaching, limited experimental research has examined how scenario-based language assessment supports the language development of pre-service teachers in Vietnam. This study addresses that gap by reporting on a randomized control trial investigating the effects of scenario-based learning and assessment on the English proficiency of pre-service teachers at a public pedagogical university in northern Vietnam. The study involved 80 non-English-major students who were assigned to an experimental group and a comparison group, with 40 students in each group. Over a 16-week intervention, students participated in four class sessions per week, amounting to 40 hours of classroom instruction. For the experimental group, the instructional materials were adapted from the Life textbook (A2–B1 level) and redesigned into contextually meaningful scenarios relevant to the students’ academic and future professional contexts. The intervention was informed by Purpura’s learning-oriented assessment framework (2024), particularly in its emphasis on instructional dimension, proficiency dimension, contextual dimension, and the use of assessment to support ongoing learning. Data were collected through ten integrated four-skill language tests administered both in class and via the learning management system (LMS), as well as four brief post-lesson surveys delivered through Google Forms. The findings show that while both groups improved over time, the experimental group demonstrated more substantial gains in vocabulary, grammar, and the four macro-skills of listening, speaking, reading, and writing. Survey responses further indicated positive student perceptions of the scenario-based learning and assessment and its relevance to their learning needs and future teaching profession. These findings suggest that scenario-based learning and assessment, when aligned with a learning-oriented assessment framework, can serve as an effective pedagogical approach for improving English proficiency among non-English-major pre-service teachers. The study has implications for the design of more contextualized, profession-relevant English language instruction in teacher education and similar EFL contexts.",
-          "authors": [
-            {
-              "name": "Do Thu Hoa",
-              "affiliation": "Hanoi Pedagogical University 2",
-              "bio": "Do Thu Hoa is a lecturer at Hanoi Pedagogical University 2 (HPU2). She holds a Master’s degree in TESOL from Victoria University, Australia. Currently, she is pursuing a PhD in Testing and Assessment at the University of Languages and International Studies, Vietnam National University, Hanoi (ULIS–VNU)."
-            },
-            {
-              "name": "Nguyen Thi Ngoc Quynh",
-              "affiliation": "University of Languages and International Studies, Vietnam National University, Hanoi",
-              "bio": "Nguyen Thi Ngoc Quynh (or Quynh Nguyen) is the Director of Office of Quality Assurance at the VNU University of Languages and International Studies, Vietnam. She is also the President of the Asian Association for Language Assessment. She has led multiple national and international projects on language education and assessment."
-            },
-            {
-              "name": "Antony John Kunnan",
-              "affiliation": "",
-              "bio": ""
-            }
-          ],
-          "category": "theme-1",
-          "categoryLabel": "Theme 1",
-          "room": "HG01",
-          "start": "15:30",
-          "end": "16:00",
-          "dayKey": "sep20"
-        },
-        {
           "id": "AALA2026049",
           "title": "Bridging Performance and Pedagogy: A Corpus-Based Analysis of Sectional Achievement and Learner Backgrounds",
           "abstract": "While standardized scores provide a macro-level view of proficiency, they often lack the diagnostic granularity required for localized pedagogical intervention. This study addresses this gap by presenting the development of the Writing Learner Corpus, a specialized digital repository designed to enhance assessment literacy through data-informed insights. Theoretically, this project is grounded in Learning-Oriented Assessment (LOA) (Carless, 2007), which advocates for the integration of assessment tasks with instructional goals to promote learner autonomy. Furthermore, it draws on Learner Corpus Research (LCR) (Granger, 2015), similar to other learner corpus studies (Dahlmeier et. al., 2013), treating learner errors not as failures but as \"windows\" into the developmental state of interlanguage. Our corpus facilitates a Humanistic Approach to assessment: the learner’s output as a unique trajectory of growth rather than a static data point. The study aims to address two core research questions: Sectional vs. Overall Proficiency: Moving beyond the \"unitary trait\" assumption, we analyze how sub-dimensions interact. We investigate whether high composite scores mask specific linguistic fossilizations that could impede success in writing tasks. Disciplinary Variable Impact: Drawing on Hyland’s (2004) theory of Disciplinary Discourse, we examine how a learner’s academic background (e.g., STEM vs. Social Sciences) influences rhetorical strategies and error patterns. Previous findings suggest that while STEM students may demonstrate high structural accuracy, they often struggle with the \"hedging\" and \"boosting\" strategies required for academic persuasion. This study demonstrates how data-driven systems can bridge the \"literacy gap\" for both teachers and students. For teachers, the corpus provides a \"discipline-based performance diagnosis,\" allowing for the transition from generic feedback to discipline-specific writing support. For learners, the system offers transparent benchmarks for self-regulation for specific section-based scores to overall performance. The session offers a scalable model for how institutions can leverage local assessment data to foster EMI instruction in the Asian context.",
@@ -1897,9 +1869,9 @@ window.AALA_PROGRAM = {
           ],
           "category": "theme-3",
           "categoryLabel": "Theme 3",
-          "room": "L307",
-          "start": "13:00",
-          "end": "13:30"
+          "room": "HG01",
+          "start": "15:30",
+          "end": "16:00"
         },
         {
           "id": "AALA20260161",
@@ -1919,9 +1891,9 @@ window.AALA_PROGRAM = {
           ],
           "category": "theme-4",
           "categoryLabel": "Theme 4",
-          "room": "L307",
-          "start": "13:30",
-          "end": "14:00"
+          "room": "L306",
+          "start": "11:30",
+          "end": "12:00"
         },
         {
           "id": "AALA2026057",
