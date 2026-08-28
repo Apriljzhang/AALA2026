@@ -2256,35 +2256,35 @@ window.AALA_PROGRAM = {
         {
           "id": "AALA20260206",
           "title": "Editors’ Forum: Bridging Academia and Publishing – A Dialogue with Editors-in-Chief of Language Assessment Journals",
-          "abstract": "This Editors’ Forum is exclusively titled and sponsored by the journal Language Testing and Assessment. Founded by Foreign Language Teaching and Research Press (FLTRP), and led by Professor He Lianzhen from Zhejiang University as its Editor-in-Chief and Professor Min Shangchao as its editorial director, the journal is a key academic platform in China dedicated to language testing and assessment.\nGuided by its core mission of ‘serving national strategic development, serving foreign language education reform, and serving foreign language talent cultivation’, the journal distinguishes itself through four key principles: integrating international perspectives with Chinese realities, combining theoretical research with practical application, uniting professional specialization with integrated development, and balancing professional leadership with social service.\nIts scope covers language testing theory and practice, language proficiency standards and assessment systems, test washback effects, and the interface between testing and instruction. Committed to advancing the academic rigor, standardization, and internationalization of language testing research in China, this key academic platform aims to foster high-level dialogue between researchers and practitioners in the country’s language testing field, while nurturing emerging scholars in the discipline.",
+          "abstract": "This forum brings together editors from five leading journals in language testing and assessment for an open dialogue with the research community. It offers a platform for researchers to gain insights into journal development, academic publishing, and emerging research frontiers in the field.\n\nThe session will be moderated by Professor Antony Kunnan, who brings extensive experience in journal editing and academic publishing. It features a 30-minute Journal Parade in which each editor introduces their journal’s scope, distinctive features, and future vision; a 20-minute open Q&A for attendees to raise questions on submission, review processes, and research topics; and a 5-minute closing remark.\n\nThis forum is exclusively titled and sponsored by the journal Language Testing and Assessment. Founded by Foreign Language Teaching and Research Press (FLTRP), and led by Professor He Lianzhen from Zhejiang University as its Editor-in-Chief and Professor Min Shangchao as its editorial director, the journal is a key academic platform in China dedicated to language testing and assessment.\n\nGuided by its core mission of “serving national strategic development, serving foreign language education reform, and serving foreign language talent cultivation”, the journal distinguishes itself through four key principles: integrating international perspectives with Chinese realities, combining theoretical research with practical application, uniting professional specialization with integrated development, and balancing professional leadership with social service.\n\nIts scope covers language testing theory and practice, language proficiency standards and assessment systems, test washback effects, and the interface between testing and instruction. Committed to advancing the academic rigor, standardization, and internationalization of language testing research in China, this key academic platform aims to foster high-level dialogue between researchers and practitioners in the country’s language testing field, while nurturing emerging scholars in the discipline.\n\nProgramme\n13:00-13:05 | Opening (5 min) | Introduction of the forum and the title sponsor | Prof Antony Kunnan\n13:05-13:35 | Journal Parade (30 min) | Each editor-in-chief briefly introduces their journal’s scope, distinctive features, and development vision (approx. 6 minutes each) | Five editors-in-chief\n13:35-13:55 | Q&A (20 min) | Open floor for conference participants to ask questions about submission, review processes, research topics, etc. | Participants, Prof Antony Kunnan, and five editors-in-chief\n13:55-14:00 | Closing Remarks (5 min) | Summary and appreciation by the title sponsor representative | Prof Shangchao MIN",
           "authors": [
             {
-              "name": "Prof Min Shangchao",
-              "affiliation": "Zhejiang University; Language Testing and Assessment",
+              "name": "Prof Shangchao MIN",
+              "affiliation": "Language Testing and Assessment; Zhejiang University",
               "bio": ""
             },
             {
-              "name": "Prof Peter Yongqi Gu",
-              "affiliation": "Victoria University of Wellington; Studies in Language Assessment (SiLA)",
+              "name": "Prof Peter Yongqi GU",
+              "affiliation": "Studies in Language Assessment (SiLA); Victoria University of Wellington",
               "bio": ""
             },
             {
-              "name": "Prof Chao Han (to be confirmed)",
-              "affiliation": "National University of Singapore; Language Testing in Asia",
+              "name": "Prof Xun YAN",
+              "affiliation": "Language Testing (LT); University of Illinois at Urbana-Champaign",
               "bio": ""
             },
             {
-              "name": "Prof Yan Xun",
-              "affiliation": "University of Illinois at Urbana Champaign; Language Testing (LT)",
+              "name": "Prof Chao HAN",
+              "affiliation": "Language Testing in Asia (LTA); National University of Singapore",
               "bio": ""
             },
             {
-              "name": "Prof Xie Qin",
-              "affiliation": "University of Macau; Language Education and Assessment (LEA)",
+              "name": "Prof Qin XIE",
+              "affiliation": "Language Education and Assessment (LEA); University of Macau",
               "bio": ""
             },
             {
-              "name": "Moderator: Antony Kunnan",
+              "name": "Moderator: Prof Antony Kunnan",
               "affiliation": "City University of Macau",
               "bio": ""
             }
