@@ -31,7 +31,7 @@ TEAL_MID = colors.HexColor("#167F7A")
 TEAL_PALE = colors.HexColor("#E7F3F1")
 GOLD = colors.HexColor("#D5A83D")
 RULE = colors.HexColor("#CDD8D6")
-UPDATED = "28 August 2026"
+UPDATED = "3 September 2026"
 
 CATEGORY_COLOURS = {
     "featured": (colors.HexColor("#FFF0D7"), colors.HexColor("#C87A12")),

@@ -441,6 +441,11 @@ window.AALA_PROGRAM = {
               "name": "Emma Bruce",
               "affiliation": "British Council",
               "bio": ""
+            },
+            {
+              "name": "Xinquan Liu",
+              "affiliation": "Shanghai Baoshan Huayao High School",
+              "bio": ""
             }
           ],
           "category": "theme-4",
