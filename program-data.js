@@ -1879,6 +1879,38 @@ window.AALA_PROGRAM = {
           "end": "16:00"
         },
         {
+          "id": "AALA20260112",
+          "title": "Towards Human-Aligned Automated Scoring for Chinese as a Second Language Writing: Evidence from a GenAI Agent",
+          "abstract": "As the global demand for Chinese as a second language (CSL) education continues to grow, writing assessment has become an increasingly important yet labor-intensive component of CSL instruction. Although automated writing evaluation (AWE) has improved the efficiency of language assessment, many existing systems remain limited by their reliance on predefined linguistic features or fixed rules, making it difficult to capture the implicit and contextualized scoring logic used by human raters. This challenge is particularly evident in CSL writing, where teachers often consider not only textual quality but also learners’ developmental characteristics and language-specific difficulties. To address this gap, the present study investigates whether a GenAI-based intelligent agent can be trained to align with human teachers’ scoring logic in CSL essay assessment. Using a quantitative two-stage design, the study draws on 800 essays from the HSK Dynamic Composition Corpus. In the training stage, 200 teacher-rated essays, together with the HSK Level 5 writing rubric, were used to train and calibrate the agent through knowledge-based construction, imitation learning, and iterative prompt refinement. In the testing stage, the trained agent independently scored 600 CSL essays. Agreement and alignment between agent scores and teacher scores were examined through weighted kappa, Spearman correlation, Pearson correlation, and crosstab analyses. This study aims to evaluate the feasibility of using a low-threshold agent platform to model teacher rating behavior in CSL writing assessment. It contributes to the emerging literature on AI-assisted writing evaluation by extending human-aligned automated scoring to the CSL context and by exploring a practical pathway for improving scoring consistency, scalability, and instructional efficiency in large-scale writing assessment.",
+          "authors": [
+            {
+              "name": "Yonggui Zhao",
+              "affiliation": "Faculty of Education, Southwest University",
+              "bio": ""
+            },
+            {
+              "name": "Yixin Liu",
+              "affiliation": "Hengxing University",
+              "bio": ""
+            },
+            {
+              "name": "Yifan Zhang",
+              "affiliation": "Qingdao No.50 Middle School",
+              "bio": ""
+            },
+            {
+              "name": "Jining Han",
+              "affiliation": "Faculty of Education, Southwest University",
+              "bio": "Dr. Jining Han is an associate professor in the Faculty of Education at Southwest University. He earned his Ph.D. in Second Language Acquisition and Educational Technology from the University of South Florida and holds a Master’s degree in Pedagogy from Arizona State University. He also received a postdoctoral fellowship position at the Georgia Institute of Technology. He conducts research in applying AI-supported learning, virtual reality in education, and smart learning environment."
+            }
+          ],
+          "category": "theme-3",
+          "categoryLabel": "Theme 3",
+          "room": "L306",
+          "start": "11:00",
+          "end": "11:30"
+        },
+        {
           "id": "AALA20260161",
           "title": "Understanding CUTEP Test Takers from a Psychometric Perspective through Rasch Measurement Analysis",
           "abstract": "The Chulalongkorn University Test of English Proficiency (CU-TEP) is an institutional English proficiency examination widely used to assess the academic English ability of university students and applicants in Thailand. The test consists of three sections—Listening, Reading, and Writing—designed to measure language skills necessary for academic study. As CU-TEP continues to serve an important role in placement and proficiency assessment, it is essential to examine how effectively the test functions as a measurement instrument and how well it captures the abilities of its test takers. This study aims to investigate CU-TEP test takers from a psychometric perspective through Rasch measurement analysis. The current study analyzes two versions of the CU-TEP administered in 2025, with a combined sample of 4,005 test takers. Rasch modeling has been applied to estimate both item difficulty and test-taker ability on a common measurement scale. In particular, the analysis explored the alignment between test-taker ability levels and the difficulty of items within each section to better understand how effectively the test functions across different proficiency levels. In addition to examining item difficulty and person ability estimates, the study also investigated the reliability and separation indices to determine the test’s capacity to distinguish between different levels of English proficiency among test takers. By mapping test-taker ability against item difficulty across the three sections, the study aims to provide empirical evidence regarding the measurement quality of CU-TEP and to offer insights into the characteristics of its test-taking population. The findings will contribute to improving the validity, fairness, and interpretability of CU-TEP, while informing future test development and refinement.",
