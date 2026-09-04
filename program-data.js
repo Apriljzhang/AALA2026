@@ -1999,12 +1999,12 @@ window.AALA_PROGRAM = {
             {
               "name": "Wei Ren",
               "affiliation": "Beihang University, China",
-              "bio": ""
+              "bio": "Wei Ren is Professor of Linguistics at the School of Foreign Languages, Beihang University, Beijing, China. He received his MPhil from the University of Cambridge and his PhD from the University of Bristol. His research interests include second language pragmatics, pragmatics on social media, and second language acquisition. His recent publications include articles in Applied Linguistics, Applied Linguistics Review, Discourse, Context & Media, International Journal of Multilingualism, IRAL, Journal of Pragmatics, Language Teaching Research, Modern Language Journal, and System. He is the author of Second Language Pragmatics (2022, Cambridge University Press), currently acting as the associate editor of Intercultural Pragmatics, book review editor of East Asian Pragmatics (Equinox), and a member of the editorial boards of several journals, such as Discourse, Context & Media, International Journal of Bilingual Education and Bilingualism, Journal of Multilingual and Multicultural Development, Journal of Pragmatics, Language Teaching Research, and System."
             },
             {
               "name": "Bin Shen",
               "affiliation": "Fuzhou University, China",
-              "bio": ""
+              "bio": "Bin Shen is an Associate Professor of Applied Linguistics and Director of the Centre for Foreign Language Education and Teaching at the School of Foreign Studies, Fuzhou University, China. She received her BA in English Language and Culture from Dalian University of Foreign Languages, China, her MA in Teaching English to Speakers of Other Languages (TESOL) from Teachers College, Columbia University, U.S.A., and her PhD in Education from the Chinese University of Hong Kong, Hong Kong, China. Her research interests include technology-enhanced language learning, second language writing, writing motivation, academic emotions, and self-regulation. Her recent articles have appeared in Computer Assisted Language Learning, Language Awareness, International Journal of Multilingualism, International Journal of Bilingual Education and Bilingualism, Language Teaching Research, System, Applied Linguistics Review, Journal of Multilingual and Multicultural Development, and Studies in Second Language Learning and Teaching."
             }
           ],
           "category": "featured",
