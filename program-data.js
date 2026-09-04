@@ -296,7 +296,7 @@ window.AALA_PROGRAM = {
             {
               "name": "Mingwei Pan",
               "affiliation": "Shanghai International Studies University",
-              "bio": ""
+              "bio": "Mingwei Pan is Professor of Applied Linguistics and Director of Research Office at Shanghai International Studies University. His research interests include large-scale test development and validation. He is the Second Vice-President of Asian Association for Language Assessment (AALA) and oversees the Test for English Majors (TEM) in China."
             }
           ],
           "category": "theme-4",
@@ -539,7 +539,7 @@ window.AALA_PROGRAM = {
             {
               "name": "Nick Saville",
               "affiliation": "Cambridge University Press & Assessment; ALTE",
-              "bio": ""
+              "bio": "Prof Nick Saville has 45 years’ experience in language education having started as an English teacher at the University of Cagliari (Italy) in 1980. He holds an MA TEFL (Univrsity of Reading), MA (Cantab) and a PhD in language assessment specialising in test impact supervised by Prof C. Weir at the University of Bedfordshire. Since 1989 he has held senior management roles in Cambridge (now CUPA), including Director of Research and Validation and Director of Thought Leadership and is the elected Secretary-General of the Association of Language Testers in Europe (ALTE). His current interests include plurilingualism and assessment, LOA and educational uses of AI. He is currently visiting professor at several universities."
             }
           ],
           "category": "featured",
@@ -2281,7 +2281,7 @@ window.AALA_PROGRAM = {
             {
               "name": "Mingwei Pan",
               "affiliation": "Shanghai International Studies University, China",
-              "bio": ""
+              "bio": "Mingwei Pan is Professor of Applied Linguistics and Director of Research Office at Shanghai International Studies University. His research interests include large-scale test development and validation. He is the Second Vice-President of Asian Association for Language Assessment (AALA) and oversees the Test for English Majors (TEM) in China."
             }
           ],
           "category": "other",
