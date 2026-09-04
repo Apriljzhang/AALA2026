@@ -103,7 +103,7 @@ window.AALA_PROGRAM = {
           "room": "Zam Zam",
           "start": "18:30",
           "end": "20:30",
-          "note": "Open to all registered attendees. Coupons are in the conference bag.",
+          "note": "Open to all registered attendees. Please wear the name badge provided in your conference bag to attend the reception.",
           "sponsorship": {
             "name": "Pearson",
             "logo": "assets/sponsors/pearson.png",
