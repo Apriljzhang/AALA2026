@@ -2275,7 +2275,7 @@ window.AALA_PROGRAM = {
             {
               "name": "Yong-Won Lee",
               "affiliation": "Seoul National University, South Korea",
-              "bio": ""
+              "bio": "Yong-Won Lee is Professor of English Linguistics in the Department of English Language and Literature at Seoul National University (SNU). His research interests include multi-faceted analyses of writing and speaking assessments, diagnostic/dynamic language assessment, validation of automated essay and speech evaluation, and automated item generation. He is one of the founding members of the Asian Association for Language Assessment (AALA) and currently serves as 1st Vice President of AALA. He also holds the office of President of the Korea Association of English Teachers (KATE) and serves on the editorial board of Language Testing."
             },
             {
               "name": "Mingwei Pan",
