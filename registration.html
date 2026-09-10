@@ -64,6 +64,17 @@
             border-color: #0b6fa4;
             background: #eaf6ff;
         }
+        .fee-tile.is-disabled {
+            border-color: #d9d9d9;
+            background: #f5f5f5;
+            color: #666666;
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+        .fee-tile.is-disabled:hover {
+            border-color: #d9d9d9;
+            background: #f5f5f5;
+        }
         .fee-tile input {
             margin-right: 5px;
         }
@@ -415,9 +426,9 @@ function toggleMenu() {
                                         <input type="checkbox" class="addon-option workshop-option" id="addonWorkshop3" data-addon-key="workshop" data-workshop-title="Unpacking deep learning and neural networks: Fundamentals and hands-on application in language assessment research">
                                         <span id="addonWorkshop3Label">Workshop 3</span>
                                     </label>
-                                    <label class="fee-tile">
-                                        <input type="checkbox" class="addon-option" id="addonWorkshop4" data-addon-key="post-workshop">
-                                        <span id="addonWorkshop4Label">Workshop 4 - Item Analysis and Test Equating in the Age of AI (Post-Conference, Sept 21): Free</span>
+                                    <label class="fee-tile is-disabled" title="Workshop 4 is fully booked.">
+                                        <input type="checkbox" class="addon-option" id="addonWorkshop4" data-addon-key="post-workshop" disabled aria-disabled="true">
+                                        <span id="addonWorkshop4Label">Workshop 4 - Item Analysis and Test Equating in the Age of AI (Post-Conference, Sept 21): Fully booked</span>
                                     </label>
                                     <label class="fee-tile">
                                         <input type="checkbox" class="addon-option" id="addonBanquet" data-addon-key="banquet">
@@ -628,7 +639,7 @@ function toggleMenu() {
             addonWorkshop1Label.textContent = "Workshop 1 - Assessing English language students with Specific Learning Difficulties: " + formatMopLabel(addOnFees.workshop.mop);
             addonWorkshop2Label.textContent = "Workshop 2 - Validity and validation in language assessment: Concepts, evidence, and argument-based approaches: " + formatMopLabel(addOnFees.workshop.mop);
             addonWorkshop3Label.textContent = "Workshop 3 - Unpacking deep learning and neural networks: Fundamentals and hands-on application in language assessment research: " + formatMopLabel(addOnFees.workshop.mop);
-            addonWorkshop4Label.textContent = "Workshop 4 - Item Analysis and Test Equating in the Age of AI (Post-Conference, Sept 21): Free";
+            addonWorkshop4Label.textContent = "Workshop 4 - Item Analysis and Test Equating in the Age of AI (Post-Conference, Sept 21): Fully booked";
             addonBanquetLabel.textContent = "Banquet: " + formatMopLabel(addOnFees.banquet.mop);
         }
 
