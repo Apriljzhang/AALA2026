@@ -1103,7 +1103,7 @@ window.AALA_PROGRAM = {
             },
             {
               "name": "Yan Chen",
-              "affiliation": "School of English Studies, Shanghai International Studies University",
+              "affiliation": "Shanghai International Studies University",
               "bio": ""
             },
             {
