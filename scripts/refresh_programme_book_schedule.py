@@ -17,10 +17,10 @@ SCHEDULE_MARKER = "AALA2026 at a glance"
 def portrait_schedule_page(source):
     page = PageObject.create_blank_page(width=595.276, height=807.874)
     scale = min((595.276 - 72) / source.mediabox.height, (807.874 - 68) / source.mediabox.width)
-    source.add_transformation(
-        Transformation().scale(scale).rotate(90).translate(36 + source.mediabox.height * scale, 34)
+    page.merge_transformed_page(
+        source,
+        Transformation().scale(scale).rotate(90).translate(36 + source.mediabox.height * scale, 34),
     )
-    page.merge_page(source)
     return page
 
 
