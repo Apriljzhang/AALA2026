@@ -2,6 +2,7 @@
 """Build the printable A4 AALA 2026 detailed daily programme."""
 
 import json
+import math
 import re
 from html import escape
 from pathlib import Path
@@ -31,7 +32,7 @@ TEAL_MID = colors.HexColor("#167F7A")
 TEAL_PALE = colors.HexColor("#E7F3F1")
 GOLD = colors.HexColor("#D5A83D")
 RULE = colors.HexColor("#CDD8D6")
-UPDATED = "4 September 2026"
+UPDATED = "14 September 2026"
 
 CATEGORY_COLOURS = {
     "featured": (colors.HexColor("#FFF0D7"), colors.HexColor("#C87A12")),
@@ -55,6 +56,7 @@ ROOM_ORDER = [
     "Culture Centre Room 1", "Culture Centre Room 2", "HG01", "HG02", "HG03",
     "L205", "L206", "L207", "L305", "L306", "L307", "Poster area",
 ]
+HORIZONTAL_ROOM_ORDER = ["HG01", "HG02", "HG03", "L205", "L206", "L207", "L305", "L306", "L307"]
 SHARED = {"break", "plenary", "ceremony", "social"}
 
 
@@ -204,7 +206,7 @@ def event_markup(event, include_room=False):
     return f'<font color="{MUTED.hexval()}">{meta}</font><br/>{identity}<b>{xml(event.get("title"))}</b>{author_markup}{note_markup}'
 
 
-def header(c, title, subtitle, page_number, total_pages):
+def header(c, title, subtitle, page_number, total_pages, section_page=None, section_total=None):
     width, height = landscape(A4)
     c.setFillColor(WHITE)
     c.rect(0, 0, width, height, fill=1, stroke=0)
@@ -220,7 +222,9 @@ def header(c, title, subtitle, page_number, total_pages):
     c.setFillColor(MUTED)
     c.setFont("AALARegular", 7.5)
     c.drawString(12 * mm, 7 * mm, f"City University of Macau | 18-21 September 2026 | Updated {UPDATED} | Programme details and time slots are subject to adjustment.")
-    c.drawRightString(width - 12 * mm, 7 * mm, f"Page {page_number} of {total_pages}")
+    shown_page = section_page if section_page is not None else page_number
+    shown_total = section_total if section_total is not None else total_pages
+    c.drawRightString(width - 12 * mm, 7 * mm, f"Page {shown_page} of {shown_total}")
 
 
 def concurrent_blocks(day):
@@ -270,13 +274,15 @@ def concurrent_blocks(day):
     return blocks
 
 
-def draw_overview(c, day, page_number, total_pages):
+def draw_overview(c, day, page_number, total_pages, section_page, section_total):
     header(
         c,
         "AALA2026 at a glance",
         f"{day_label(day)} | Shared sessions, including plenary sessions",
         page_number,
         total_pages,
+        section_page,
+        section_total,
     )
     width, height = landscape(A4)
     left, right = 30 * mm, 30 * mm
@@ -413,15 +419,17 @@ def fit_grid_font(events, rooms, width, available_height):
     raise ValueError("Time-grid content does not fit at the minimum 6.4-point size")
 
 
-def draw_room_page(c, day, rooms, events, part, parts, page_number, total_pages, section_title="AALA2026 at a glance"):
+def draw_room_page(c, day, rooms, events, part, parts, page_number, total_pages, section_page, section_total, section_title="AALA2026 at a glance"):
     window_start = min(event["start"] for event in events)
     window_end = max(event["end"] for event in events)
     header(
         c,
         section_title,
-        f"{day_label(day)} | Concurrent sessions {window_start}-{window_end} | {len(rooms)} rooms | Part {part} of {parts}",
+        f"{day_label(day)} | Concurrent sessions {window_start}-{window_end} | {len(rooms)} rooms | Section page {section_page} of {section_total}",
         page_number,
         total_pages,
+        section_page,
+        section_total,
     )
     width, height = landscape(A4)
     left, right, gap = 8 * mm, 8 * mm, 1.2 * mm
@@ -528,13 +536,15 @@ def workshop_panel(c, day, x, panel_width, top, bottom):
         y -= row_h + 1.5 * mm
 
 
-def draw_workshop_page(c, friday, monday, page_number, total_pages):
+def draw_workshop_page(c, friday, monday, page_number, total_pages, section_page, section_total):
     header(
         c,
         "AALA2026 at a glance",
         "18 & 21 September | Workshops, registration and shared activities",
         page_number,
         total_pages,
+        section_page,
+        section_total,
     )
     width, height = landscape(A4)
     left, right, gap = 8 * mm, 8 * mm, 5 * mm
@@ -546,10 +556,10 @@ def draw_workshop_page(c, friday, monday, page_number, total_pages):
     c.showPage()
 
 
-def draw_poster_page(c, day, poster_band, page_number, total_pages):
+def draw_poster_page(c, day, poster_band, page_number, total_pages, section_page, section_total):
     start = poster_band.get("presentationStart", poster_band["start"])
     end = poster_band.get("presentationEnd", poster_band["end"])
-    header(c, "AALA2026 at a glance", f"{day_label(day)} | Poster presentations | {start}-{end} | {clean(poster_band.get('room'))}", page_number, total_pages)
+    header(c, "AALA2026 at a glance", f"{day_label(day)} | Poster presentations | {start}-{end} | {clean(poster_band.get('room'))}", page_number, total_pages, section_page, section_total)
     width, height = landscape(A4)
     left, right, gap = 12 * mm, 12 * mm, 6 * mm
     top, bottom = height - 32 * mm, 14 * mm
@@ -571,6 +581,108 @@ def draw_poster_page(c, day, poster_band, page_number, total_pages):
             c.rect(x, y - 1.2 * mm, col_width, 1.2 * mm, fill=1, stroke=0)
             item.drawOn(c, x + 4 * mm, y - card_h + 3 * mm)
             y -= card_h + 2.5 * mm
+    c.showPage()
+
+
+def draw_grid_cell(c, x, top, width, height, text, *, fill=colors.HexColor("#F1F4F3"), accent=RULE, start_size=5.0):
+    c.setFillColor(fill)
+    c.setStrokeColor(WHITE)
+    c.rect(x, top - height, width, height, fill=1, stroke=1)
+    if accent != RULE:
+        c.setFillColor(accent)
+        c.rect(x, top - 0.55 * mm, width, 0.55 * mm, fill=1, stroke=0)
+    size = start_size
+    while size > 3.8 and c.stringWidth(text, "AALABold", size) > width - 1.4 * mm:
+        size -= 0.2
+    c.setFillColor(INK if fill != TEAL else WHITE)
+    c.setFont("AALABold", size)
+    c.drawCentredString(x + width / 2, top - height / 2 - size * 0.33, text)
+
+
+def draw_horizontal_poster_row(c, day, left_x, right_x, half_width, top, height):
+    band = next(event for event in day["events"] if event.get("posters"))
+    posters = band["posters"]
+    start = clean(band.get("presentationStart", band["start"]))
+    end = clean(band.get("presentationEnd", band["end"]))
+    fill, accent = category_colours({"category": "poster"})
+    title_height = 3.8 * mm
+    for x, title in ((left_x, f"Posters | {start}-{end}"), (right_x, "Space between Culture Centre Rooms 1 & 2")):
+        c.setFillColor(fill)
+        c.setStrokeColor(accent)
+        c.roundRect(x, top - height, half_width, height, 1.0 * mm, fill=1, stroke=1)
+        c.setFillColor(accent)
+        c.rect(x, top - 0.65 * mm, half_width, 0.65 * mm, fill=1, stroke=0)
+        c.setFillColor(INK)
+        c.setFont("AALABold", 5.4)
+        c.drawString(x + 1.5 * mm, top - 2.8 * mm, title)
+    halves = (posters[:5], posters[5:])
+    for x, items in zip((left_x, right_x), halves):
+        card_width = half_width / 5
+        for index, poster in enumerate(items):
+            draw_grid_cell(c, x + index * card_width, top - title_height, card_width, height - title_height, clean(poster.get("id")), fill=WHITE, start_size=4.7)
+
+
+def draw_horizontal_overview_page(c, day, page_number, total_pages, section_page, section_total):
+    header(c, "AALA2026 at a glance", f"{day_label(day)} | Horizontal Room Overview", page_number, total_pages, section_page, section_total)
+    width, height = landscape(A4)
+    left, right = 8 * mm, 8 * mm
+    top, bottom = height - 32 * mm, 14 * mm
+    c.setFillColor(WHITE)
+    c.setStrokeColor(RULE)
+    c.roundRect(left, bottom, width - left - right, top - bottom, 1.6 * mm, fill=1, stroke=1)
+    content_x = left + 3 * mm
+    content_width = width - left - right - 6 * mm
+    c.setFillColor(MUTED)
+    c.setFont("AALARegular", 6.0)
+    c.drawString(content_x, top - 5 * mm, "Submission IDs by room and start time | Shared activities and breaks are listed in the preceding section.")
+    c.drawRightString(left + content_width, top - 5 * mm, "Long sessions appear at their starting time")
+
+    table_top = top - 10 * mm
+    table_header = 6 * mm
+    poster_height = 11 * mm
+    footer_height = 4 * mm
+    groups = []
+    for start in sorted({event["start"] for event in session_events(day)}, key=to_minutes):
+        groups.append((start, [event for event in session_events(day) if event["start"] == start]))
+    time_width = 13 * mm
+    column_gap = 4 * mm
+    left_width = (content_width - column_gap) * 0.48
+    right_width = content_width - column_gap - left_width
+    left_x = content_x
+    right_x = left_x + left_width + column_gap
+    left_room_width = (left_width - time_width) / 4
+    right_room_width = right_width / 5
+    row_height = (table_top - table_header - poster_height - footer_height - bottom) / max(1, len(groups))
+
+    current_x = left_x
+    for label, cell_width in zip(["TIME", *HORIZONTAL_ROOM_ORDER[:4]], [time_width, *([left_room_width] * 4)]):
+        draw_grid_cell(c, current_x, table_top, cell_width, table_header, label, fill=TEAL, start_size=5.1)
+        current_x += cell_width
+    current_x = right_x
+    for label in HORIZONTAL_ROOM_ORDER[4:]:
+        draw_grid_cell(c, current_x, table_top, right_room_width, table_header, label, fill=TEAL, start_size=5.1)
+        current_x += right_room_width
+
+    rows_top = table_top - table_header
+    for row_index, (start, events) in enumerate(groups):
+        row_top = rows_top - row_index * row_height
+        by_room = {event["room"]: event for event in events}
+        draw_grid_cell(c, left_x, row_top, time_width, row_height, start, fill=colors.HexColor("#E9EFED"), start_size=5.1)
+        current_x = left_x + time_width
+        for room in HORIZONTAL_ROOM_ORDER[:4]:
+            event = by_room.get(room)
+            fill, accent, label = (*category_colours(event), clean(event["id"])) if event else (colors.HexColor("#F1F4F3"), RULE, "")
+            draw_grid_cell(c, current_x, row_top, left_room_width, row_height, label, fill=fill, accent=accent, start_size=4.8)
+            current_x += left_room_width
+        current_x = right_x
+        for room in HORIZONTAL_ROOM_ORDER[4:]:
+            event = by_room.get(room)
+            fill, accent, label = (*category_colours(event), clean(event["id"])) if event else (colors.HexColor("#F1F4F3"), RULE, "")
+            draw_grid_cell(c, current_x, row_top, right_room_width, row_height, label, fill=fill, accent=accent, start_size=4.8)
+            current_x += right_room_width
+
+    poster_top = rows_top - len(groups) * row_height - 1 * mm
+    draw_horizontal_poster_row(c, day, left_x, right_x, left_width, poster_top, poster_height)
     c.showPage()
 
 
@@ -618,26 +730,49 @@ def session_groups(day, rooms):
 def build_specs(data):
     friday = next(day for day in data["days"] if day["weekday"] == "Friday")
     monday = next(day for day in data["days"] if day["weekday"] == "Monday")
-    specs = [("workshops", (friday, monday))]
+    sections = [("18 & 21 September | Workshops, registration and shared activities", [("workshops", (friday, monday))])]
     for day in data["days"]:
         if day["weekday"] in {"Friday", "Monday"}:
             continue
-        specs.append(("overview", (day,)))
+        shared = [("overview", (day,))]
+        concurrent = [("horizontal_overview", (day,))]
         events = session_events(day)
         rooms = sorted(
             {event["room"] for event in events},
             key=lambda room: ROOM_ORDER.index(room) if room in ROOM_ORDER else 99,
         )
         groups = session_groups(day, rooms) if rooms else []
+        posters = [event for event in day["events"] if event.get("posters")]
+        poster_added = False
         for index, events_in_group in enumerate(groups, 1):
+            group_start = min(event["start"] for event in events_in_group)
+            for poster in posters:
+                presentation_start = poster.get("presentationStart", poster["start"])
+                if not poster_added and presentation_start < group_start:
+                    concurrent.append(("posters", (day, poster)))
+                    poster_added = True
             active_rooms = [
                 room for room in rooms
                 if any(event.get("room") == room for event in events_in_group)
             ]
-            specs.append(("rooms", (day, active_rooms, events_in_group, index, len(groups))))
-        for event in day["events"]:
-            if event.get("posters"):
-                specs.append(("posters", (day, event)))
+            concurrent.append(("rooms", (day, active_rooms, events_in_group, index, len(groups))))
+            group_end = max(event["end"] for event in events_in_group)
+            next_start = min((event["start"] for later in groups[index:] for event in later), default="99:99")
+            for poster in posters:
+                presentation_start = poster.get("presentationStart", poster["start"])
+                if not poster_added and group_end <= presentation_start <= next_start:
+                    concurrent.append(("posters", (day, poster)))
+                    poster_added = True
+        if not poster_added:
+            concurrent.extend(("posters", (day, poster)) for poster in posters)
+        sections.extend([
+            (f"{day_label(day)} | Shared sessions, including plenary sessions", shared),
+            (f"{day_label(day)} | Concurrent sessions", concurrent),
+        ])
+    specs = []
+    for _, pages in sections:
+        for section_page, (kind, payload) in enumerate(pages, 1):
+            specs.append((kind, payload, section_page, len(pages)))
     return specs
 
 
@@ -650,15 +785,17 @@ def main():
     pdf.setTitle("AALA2026 at a glance")
     pdf.setAuthor("Asian Association for Language Assessment")
     pdf.setSubject("Printable A4 conference programme")
-    for page_number, (kind, payload) in enumerate(specs, 1):
+    for page_number, (kind, payload, section_page, section_total) in enumerate(specs, 1):
         if kind == "workshops":
-            draw_workshop_page(pdf, *payload, page_number, len(specs))
+            draw_workshop_page(pdf, *payload, page_number, len(specs), section_page, section_total)
         elif kind == "overview":
-            draw_overview(pdf, *payload, page_number, len(specs))
+            draw_overview(pdf, *payload, page_number, len(specs), section_page, section_total)
         elif kind == "rooms":
-            draw_room_page(pdf, *payload, page_number, len(specs))
+            draw_room_page(pdf, *payload, page_number, len(specs), section_page, section_total)
+        elif kind == "horizontal_overview":
+            draw_horizontal_overview_page(pdf, *payload, page_number, len(specs), section_page, section_total)
         else:
-            draw_poster_page(pdf, *payload, page_number, len(specs))
+            draw_poster_page(pdf, *payload, page_number, len(specs), section_page, section_total)
     pdf.save()
     print(OUTPUT)
 

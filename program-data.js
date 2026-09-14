@@ -1905,9 +1905,9 @@ window.AALA_PROGRAM = {
           ],
           "category": "theme-3",
           "categoryLabel": "Theme 3",
-          "room": "L306",
-          "start": "11:00",
-          "end": "11:30"
+          "room": "HG03",
+          "start": "14:00",
+          "end": "14:30"
         },
         {
           "id": "AALA20260161",
@@ -3224,29 +3224,6 @@ window.AALA_PROGRAM = {
           "room": "L205",
           "start": "16:00",
           "end": "16:30"
-        },
-        {
-          "id": "AALA2026083",
-          "withdrawn": true,
-          "title": "A Study on Rating Consistency of Online Oral Interaction Based on NLP and MFRM",
-          "abstract": "With the shift of second language (L2) speaking assessment toward communicative and intelligent approaches, human–machine collaborative scoring has been increasingly adopted in language testing practices. Consequently, research on rating has gradually focused on the integration of intelligent technologies with traditional rating methods in order to improve scoring efficiency and fairness. However, the “black box” nature of artificial intelligence and the lack of transparency in human annotation pose challenges to the validity of scoring. Based on online speaking assessment data from 60 test takers at a university in East China, this study integrates rating scores from 13 raters with a corpus of 780 rating comments (79,585 Chinese characters in total). Natural language processing (NLP) techniques are employed to extract quantitative features of rater behavior, which are then triangulated with the results of Many-Facet Rasch Measurement (MFRM) analysis to infer the consistency between raters’ behaviors and the requirements of the rating scale. The findings provide a new pathway for quality monitoring in speaking assessment and offer empirical support for optimizing machine-scoring algorithms and improving the transparency of automated assessment systems.",
-          "authors": [
-            {
-              "name": "Song Yuhang",
-              "affiliation": "Shanghai University of International Business and Economics",
-              "bio": "My name is SONG Yuhang. I was born on July 1, 2002, in Bozhou, Anhui Province, China, and I am currently 23 years old. I received my bachelor’s degree in English (Teacher Education) from Chaohu University in 2024. I am currently pursuing a Master of Arts in Foreign Linguistics and Applied Linguistics at the School of International Business Foreign Languages, Shanghai University of International Business and Economics. My academic interests focus on language testing, particularly L2 interactive speaking, rater behavior in speaking assessment, and the application of generative artificial intelligence in language assessment."
-            },
-            {
-              "name": "Wei Jie",
-              "affiliation": "Shanghai University of International Business and Economics",
-              "bio": "Dr. Wei Jie is currently an associate professor at Shanghai University of International Business and Economics, where she supervises MA students in foreign language studies. Her main research interest is language testing and assessment. Dr. Jie is a committee member of the National College English Testing Committee of China and serves on the board of the Language Testing and Assessment Committee of the China Association for Comparative Studies of English and Chinese."
-            }
-          ],
-          "category": "theme-3",
-          "categoryLabel": "Theme 3",
-          "room": "HG03",
-          "start": "14:00",
-          "end": "14:30"
         },
         {
           "id": "AALA2026068",
