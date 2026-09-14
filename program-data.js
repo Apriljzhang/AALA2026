@@ -1532,17 +1532,17 @@ window.AALA_PROGRAM = {
             {
               "name": "Po-Ya Angela Wang",
               "affiliation": "National Taiwan University",
-              "bio": "Po-Ya Angela Wang (Amber ???) is a linguist and educator specializing in multimodal communication, computational linguistics, and language technology. She recently completed her PhD in Linguistics at National Taiwan University and has conducted visiting research at the Max Planck Institute for Psycholinguistics. Her work examines linguistic coordination, lexical conventionalization, multimodal reference, and large language model interaction, bridging theoretical linguistics with AI-driven applications. She has published on topic modeling, Chinese lexical studies, and multimodal language processing, and has led interdisciplinary LLM projects in research and education. Her research interests include multimodal discourse, corpus linguistics, pragmatics, and human-AI communication, language learning pedagogy, and evaluation."
+              "bio": "Po-Ya Angela Wang (Amber) is a linguist and educator specializing in multimodal communication, computational linguistics, and language technology. She recently completed her PhD in Linguistics at National Taiwan University and has conducted visiting research at the Max Planck Institute for Psycholinguistics. Her work examines linguistic coordination, lexical conventionalization, multimodal reference, and large language model interaction, bridging theoretical linguistics with AI-driven applications. She has published on topic modeling, Chinese lexical studies, and multimodal language processing, and has led interdisciplinary LLM projects in research and education. Her research interests include multimodal discourse, corpus linguistics, pragmatics, and human-AI communication, language learning pedagogy, and evaluation."
             },
             {
-              "name": "Chung-Che Huang",
-              "affiliation": "",
-              "bio": ""
+              "name": "Chungche Huang",
+              "affiliation": "National Taiwan University",
+              "bio": "Chungche Huang is a Ph.D. student in Computational Linguistics in the Graduate Institute of Linguistics at National Taiwan University. His research focuses on (1) LLM-based automated essay scoring and (2) language and thought in multilingual LLMs, drawing from computational methods including corpus analysis and model probing. As a seasoned language educator, he also serves as a Teaching Fellow in the Chinese Language Program in the Department of East Asian Languages and Civilizations at Harvard University."
             },
             {
               "name": "Shu-Kai Hsieh",
-              "affiliation": "",
-              "bio": ""
+              "affiliation": "National Taiwan University",
+              "bio": "Dr. Shu-Kai Hsieh serves as a joint-appointed professor at the Graduate Institute of Linguistics and the Institute of Brain and Mind Sciences at National Taiwan University, Taiwan. His work sits at the intersection of computational linguistics, language resources, and the quest to understand how language shapes — and is shaped by — cognition, culture, and consciousness."
             }
           ],
           "category": "theme-3",
