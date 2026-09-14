@@ -81,6 +81,12 @@ def day_label(day):
     return labels.get(day.get("weekday"), f"{clean(day.get('weekday'))}, {clean(day.get('date'))}")
 
 
+def day_header_title(day, section=None):
+    labels = {"Saturday": "Day 1", "Sunday": "Day 2"}
+    title = f"AALA2026 at a glance - {labels.get(day.get('weekday'), clean(day.get('weekday')))}"
+    return f"{title} - {section}" if section else title
+
+
 def clean(value):
     text = str(value or "")
     for old, new in {
@@ -277,7 +283,7 @@ def concurrent_blocks(day):
 def draw_overview(c, day, page_number, total_pages, section_page, section_total):
     header(
         c,
-        "AALA2026 at a glance",
+        day_header_title(day, "Schedule"),
         f"{day_label(day)} | Shared sessions, including plenary sessions",
         page_number,
         total_pages,
@@ -419,12 +425,12 @@ def fit_grid_font(events, rooms, width, available_height):
     raise ValueError("Time-grid content does not fit at the minimum 6.4-point size")
 
 
-def draw_room_page(c, day, rooms, events, part, parts, page_number, total_pages, section_page, section_total, section_title="AALA2026 at a glance"):
+def draw_room_page(c, day, rooms, events, part, parts, page_number, total_pages, section_page, section_total, section_title=None):
     window_start = min(event["start"] for event in events)
     window_end = max(event["end"] for event in events)
     header(
         c,
-        section_title,
+        section_title or day_header_title(day, "Concurrent Sessions"),
         f"{day_label(day)} | Concurrent sessions {window_start}-{window_end} | {len(rooms)} rooms | Section page {section_page} of {section_total}",
         page_number,
         total_pages,
@@ -539,7 +545,7 @@ def workshop_panel(c, day, x, panel_width, top, bottom):
 def draw_workshop_page(c, friday, monday, page_number, total_pages, section_page, section_total):
     header(
         c,
-        "AALA2026 at a glance",
+        "AALA2026 at a glance - Workshops - Schedule",
         "18 & 21 September | Workshops, registration and shared activities",
         page_number,
         total_pages,
@@ -559,7 +565,7 @@ def draw_workshop_page(c, friday, monday, page_number, total_pages, section_page
 def draw_poster_page(c, day, poster_band, page_number, total_pages, section_page, section_total):
     start = poster_band.get("presentationStart", poster_band["start"])
     end = poster_band.get("presentationEnd", poster_band["end"])
-    header(c, "AALA2026 at a glance", f"{day_label(day)} | Poster presentations | {start}-{end} | {clean(poster_band.get('room'))}", page_number, total_pages, section_page, section_total)
+    header(c, day_header_title(day, "Poster Presentations"), f"{day_label(day)} | Poster presentations | {start}-{end} | {clean(poster_band.get('room'))}", page_number, total_pages, section_page, section_total)
     width, height = landscape(A4)
     left, right, gap = 12 * mm, 12 * mm, 6 * mm
     top, bottom = height - 32 * mm, 14 * mm
@@ -599,90 +605,159 @@ def draw_grid_cell(c, x, top, width, height, text, *, fill=colors.HexColor("#F1F
     c.drawCentredString(x + width / 2, top - height / 2 - size * 0.33, text)
 
 
-def draw_horizontal_poster_row(c, day, left_x, right_x, half_width, top, height):
+def draw_horizontal_poster_row(c, day, x, width, top, height):
     band = next(event for event in day["events"] if event.get("posters"))
     posters = band["posters"]
     start = clean(band.get("presentationStart", band["start"]))
     end = clean(band.get("presentationEnd", band["end"]))
     fill, accent = category_colours({"category": "poster"})
     title_height = 3.8 * mm
-    for x, title in ((left_x, f"Posters | {start}-{end}"), (right_x, "Space between Culture Centre Rooms 1 & 2")):
+    title = f"Posters | {start}-{end} | Space between Culture Centre Rooms 1 & 2"
+    c.setFillColor(fill)
+    c.setStrokeColor(accent)
+    c.roundRect(x, top - height, width, height, 1.0 * mm, fill=1, stroke=1)
+    c.setFillColor(accent)
+    c.rect(x, top - 0.65 * mm, width, 0.65 * mm, fill=1, stroke=0)
+    c.setFillColor(INK)
+    c.setFont("AALABold", 5.4)
+    c.drawString(x + 1.5 * mm, top - 2.8 * mm, title)
+    card_width = width / len(posters)
+    for index, poster in enumerate(posters):
+        draw_grid_cell(
+            c,
+            x + index * card_width,
+            top - title_height,
+            card_width,
+            height - title_height,
+            clean(poster.get("id")),
+            fill=fill,
+            accent=accent,
+            start_size=4.7,
+        )
+
+
+def draw_horizontal_colour_key(c, x, top, width, height):
+    items = [
+        ("Featured", "featured"),
+        ("Theme 1", "theme-1"),
+        ("Theme 2", "theme-2"),
+        ("Theme 3", "theme-3"),
+        ("Theme 4", "theme-4"),
+        ("Symposium", "symposium"),
+        ("EB symposium / other", "other"),
+        ("Poster presentation", "poster"),
+    ]
+    columns = 8
+    item_width = width / columns
+    row_height = 5 * mm
+    c.setFillColor(WHITE)
+    c.setStrokeColor(RULE)
+    c.roundRect(x, top - height, width, height, 1.0 * mm, fill=1, stroke=1)
+    c.setFillColor(TEAL)
+    c.setFont("AALABold", 5.6)
+    c.drawString(x + 1.5 * mm, top - 3.2 * mm, "Colour key")
+    for index, (label, category) in enumerate(items):
+        row, column = divmod(index, columns)
+        item_x = x + column * item_width + 1.5 * mm
+        item_top = top - 5 * mm - row * row_height
+        fill, accent = category_colours({"category": category})
         c.setFillColor(fill)
         c.setStrokeColor(accent)
-        c.roundRect(x, top - height, half_width, height, 1.0 * mm, fill=1, stroke=1)
+        c.rect(item_x, item_top - 3 * mm, 6 * mm, 3 * mm, fill=1, stroke=1)
         c.setFillColor(accent)
-        c.rect(x, top - 0.65 * mm, half_width, 0.65 * mm, fill=1, stroke=0)
+        c.rect(item_x, item_top - 0.55 * mm, 6 * mm, 0.55 * mm, fill=1, stroke=0)
         c.setFillColor(INK)
-        c.setFont("AALABold", 5.4)
-        c.drawString(x + 1.5 * mm, top - 2.8 * mm, title)
-    halves = (posters[:5], posters[5:])
-    for x, items in zip((left_x, right_x), halves):
-        card_width = half_width / 5
-        for index, poster in enumerate(items):
-            draw_grid_cell(c, x + index * card_width, top - title_height, card_width, height - title_height, clean(poster.get("id")), fill=WHITE, start_size=4.7)
+        c.setFont("AALARegular", 5.2)
+        c.drawString(item_x + 7.5 * mm, item_top - 2.15 * mm, label)
 
 
 def draw_horizontal_overview_page(c, day, page_number, total_pages, section_page, section_total):
-    header(c, "AALA2026 at a glance", f"{day_label(day)} | Horizontal Room Overview", page_number, total_pages, section_page, section_total)
+    header(c, day_header_title(day, "Concurrent Overview"), f"{day_label(day)} | Horizontal Room Overview", page_number, total_pages, section_page, section_total)
     width, height = landscape(A4)
     left, right = 8 * mm, 8 * mm
     top, bottom = height - 32 * mm, 14 * mm
-    c.setFillColor(WHITE)
-    c.setStrokeColor(RULE)
-    c.roundRect(left, bottom, width - left - right, top - bottom, 1.6 * mm, fill=1, stroke=1)
     content_x = left + 3 * mm
     content_width = width - left - right - 6 * mm
-    c.setFillColor(MUTED)
-    c.setFont("AALARegular", 6.0)
-    c.drawString(content_x, top - 5 * mm, "Submission IDs by room and start time | Shared activities and breaks are listed in the preceding section.")
-    c.drawRightString(left + content_width, top - 5 * mm, "Long sessions appear at their starting time")
-
     table_top = top - 10 * mm
     table_header = 6 * mm
     poster_height = 11 * mm
     footer_height = 4 * mm
-    groups = []
-    for start in sorted({event["start"] for event in session_events(day)}, key=to_minutes):
-        groups.append((start, [event for event in session_events(day) if event["start"] == start]))
+    legend_gap = 4 * mm
+    legend_height = 10.5 * mm
+    events = session_events(day)
+    slots = sorted(
+        {
+            from_minutes(minute)
+            for event in events
+            for minute in range(to_minutes(event["start"]), to_minutes(event["end"]), 30)
+        },
+        key=to_minutes,
+    )
+    poster_band = next(event for event in day["events"] if event.get("posters"))
+    poster_start = clean(poster_band.get("presentationStart", poster_band["start"]))
+    timeline_slots = sorted({*slots, poster_start}, key=to_minutes)
     time_width = 13 * mm
-    column_gap = 4 * mm
-    left_width = (content_width - column_gap) * 0.48
-    right_width = content_width - column_gap - left_width
-    left_x = content_x
-    right_x = left_x + left_width + column_gap
-    left_room_width = (left_width - time_width) / 4
-    right_room_width = right_width / 5
-    row_height = (table_top - table_header - poster_height - footer_height - bottom) / max(1, len(groups))
+    room_width = (content_width - time_width) / len(HORIZONTAL_ROOM_ORDER)
+    available_height = table_top - table_header - footer_height - legend_gap - legend_height - bottom
+    slot_gap = 3 * mm
+    gap_count = sum(
+        1 for previous, current in zip(timeline_slots, timeline_slots[1:])
+        if to_minutes(current) - to_minutes(previous) > 30
+    )
+    row_height = min(
+        9.5 * mm,
+        (available_height - poster_height - gap_count * slot_gap) / max(1, len(slots)),
+    )
+    rows_top = table_top - table_header
+    row_tops = {}
+    cursor = rows_top
+    for index, slot in enumerate(timeline_slots):
+        if index and to_minutes(slot) - to_minutes(timeline_slots[index - 1]) > 30:
+            cursor -= slot_gap
+        row_tops[slot] = cursor
+        cursor -= poster_height if slot == poster_start else row_height
+    legend_top = cursor - legend_gap
+    panel_bottom = max(bottom, legend_top - legend_height - 3 * mm)
 
-    current_x = left_x
-    for label, cell_width in zip(["TIME", *HORIZONTAL_ROOM_ORDER[:4]], [time_width, *([left_room_width] * 4)]):
+    c.setFillColor(WHITE)
+    c.setStrokeColor(RULE)
+    c.roundRect(left, panel_bottom, width - left - right, top - panel_bottom, 1.6 * mm, fill=1, stroke=1)
+    c.setFillColor(MUTED)
+    c.setFont("AALARegular", 6.0)
+    c.drawString(content_x, top - 5 * mm, "Submission IDs by room and start time | Shared activities and breaks are listed in the preceding section.")
+    c.drawRightString(left + content_width, top - 5 * mm, "White gaps mark time breaks")
+
+    current_x = content_x
+    for label, cell_width in zip(["TIME", *HORIZONTAL_ROOM_ORDER], [time_width, *([room_width] * len(HORIZONTAL_ROOM_ORDER))]):
         draw_grid_cell(c, current_x, table_top, cell_width, table_header, label, fill=TEAL, start_size=5.1)
         current_x += cell_width
-    current_x = right_x
-    for label in HORIZONTAL_ROOM_ORDER[4:]:
-        draw_grid_cell(c, current_x, table_top, right_room_width, table_header, label, fill=TEAL, start_size=5.1)
-        current_x += right_room_width
 
-    rows_top = table_top - table_header
-    for row_index, (start, events) in enumerate(groups):
-        row_top = rows_top - row_index * row_height
-        by_room = {event["room"]: event for event in events}
-        draw_grid_cell(c, left_x, row_top, time_width, row_height, start, fill=colors.HexColor("#E9EFED"), start_size=5.1)
-        current_x = left_x + time_width
-        for room in HORIZONTAL_ROOM_ORDER[:4]:
-            event = by_room.get(room)
-            fill, accent, label = (*category_colours(event), clean(event["id"])) if event else (colors.HexColor("#F1F4F3"), RULE, "")
-            draw_grid_cell(c, current_x, row_top, left_room_width, row_height, label, fill=fill, accent=accent, start_size=4.8)
-            current_x += left_room_width
-        current_x = right_x
-        for room in HORIZONTAL_ROOM_ORDER[4:]:
-            event = by_room.get(room)
-            fill, accent, label = (*category_colours(event), clean(event["id"])) if event else (colors.HexColor("#F1F4F3"), RULE, "")
-            draw_grid_cell(c, current_x, row_top, right_room_width, row_height, label, fill=fill, accent=accent, start_size=4.8)
-            current_x += right_room_width
+    for row_index, start in enumerate(slots):
+        row_top = row_tops[start]
+        draw_grid_cell(c, content_x, row_top, time_width, row_height, start, fill=colors.HexColor("#E9EFED"), start_size=5.1)
+    for room_index, room in enumerate(HORIZONTAL_ROOM_ORDER):
+        x = content_x + time_width + room_index * room_width
+        room_events = [event for event in events if event.get("room") == room]
+        for row_index, slot in enumerate(slots):
+            active = [event for event in room_events if event["start"] <= slot < event["end"]]
+            if active and active[0]["start"] != slot:
+                continue
+            row_top = row_tops[slot]
+            if active:
+                event = active[0]
+                covered_slots = [
+                    candidate for candidate in slots
+                    if event["start"] <= candidate < event["end"]
+                ]
+                span_bottom = row_tops[covered_slots[-1]] - row_height
+                span_height = row_top - span_bottom
+                fill, accent = category_colours(event)
+                draw_grid_cell(c, x, row_top, room_width, span_height, clean(event["id"]), fill=fill, accent=accent, start_size=4.8)
+            else:
+                draw_grid_cell(c, x, row_top, room_width, row_height, "")
 
-    poster_top = rows_top - len(groups) * row_height - 1 * mm
-    draw_horizontal_poster_row(c, day, left_x, right_x, left_width, poster_top, poster_height)
+    draw_horizontal_poster_row(c, day, content_x, content_width, row_tops[poster_start], poster_height)
+    draw_horizontal_colour_key(c, content_x, legend_top, content_width, legend_height)
     c.showPage()
 
 
