@@ -143,7 +143,13 @@
 
     function makeSession(event, extraClass) {
         const card = element("article", `session-card ${categoryClass(event.category)}${extraClass ? ` ${extraClass}` : ""}`);
-        card.append(makeMeta(event), makeTitle(event));
+        card.append(makeMeta(event));
+        if (event.withdrawn) {
+            const notice = element("p", "session-note", "WITHDRAWN");
+            notice.style.color = "#b00020";
+            card.append(notice);
+        }
+        card.append(makeTitle(event));
         if (event.note) card.append(element("p", "session-note", event.note));
         const sponsorship = makeSponsorship(event);
         if (sponsorship) card.append(sponsorship);

@@ -3227,6 +3227,7 @@ window.AALA_PROGRAM = {
         },
         {
           "id": "AALA2026083",
+          "withdrawn": true,
           "title": "A Study on Rating Consistency of Online Oral Interaction Based on NLP and MFRM",
           "abstract": "With the shift of second language (L2) speaking assessment toward communicative and intelligent approaches, human–machine collaborative scoring has been increasingly adopted in language testing practices. Consequently, research on rating has gradually focused on the integration of intelligent technologies with traditional rating methods in order to improve scoring efficiency and fairness. However, the “black box” nature of artificial intelligence and the lack of transparency in human annotation pose challenges to the validity of scoring. Based on online speaking assessment data from 60 test takers at a university in East China, this study integrates rating scores from 13 raters with a corpus of 780 rating comments (79,585 Chinese characters in total). Natural language processing (NLP) techniques are employed to extract quantitative features of rater behavior, which are then triangulated with the results of Many-Facet Rasch Measurement (MFRM) analysis to infer the consistency between raters’ behaviors and the requirements of the rating scale. The findings provide a new pathway for quality monitoring in speaking assessment and offer empirical support for optimizing machine-scoring algorithms and improving the transparency of automated assessment systems.",
           "authors": [
