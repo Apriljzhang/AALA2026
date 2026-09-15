@@ -1921,7 +1921,7 @@ window.AALA_PROGRAM = {
             },
             {
               "name": "Sasitorn Limkomolwilas",
-              "affiliation": "",
+              "affiliation": "Chulalongkorn University Language Institute",
               "bio": ""
             }
           ],
@@ -1943,17 +1943,17 @@ window.AALA_PROGRAM = {
             },
             {
               "name": "Van-Trao Nguyen",
-              "affiliation": "",
+              "affiliation": "Hanoi National University of Education",
               "bio": ""
             },
             {
               "name": "Giang Hong Nguyen",
-              "affiliation": "",
+              "affiliation": "Hanoi University",
               "bio": ""
             },
             {
               "name": "Trung Doan Quang",
-              "affiliation": "",
+              "affiliation": "Hanoi University",
               "bio": ""
             }
           ],
@@ -2937,7 +2937,7 @@ window.AALA_PROGRAM = {
           "authors": [
             {
               "name": "Shengkai Yin",
-              "affiliation": "",
+              "affiliation": "Federation University Australia",
               "bio": "Shengkai holds dual PhD degrees in Language Assessment from Shanghai Jiao Tong University and the University of Melbourne. He is currently a Lecturer at Federation University Australia and also a Teaching Associate at Monash University. His research focuses on academic English assessment, literacy education, and critical thinking ability. Shengkai is the recipient of the Asian Association for Language Assessment Outstanding Dissertation Award and has received prestigious research grants and awards from leading organisations including Duolingo, the British Council, and ETS. His work has been published in top-tier journals in education and applied linguistics."
             }
           ],
