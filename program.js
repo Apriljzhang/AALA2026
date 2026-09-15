@@ -124,7 +124,18 @@
         const start = event.presentationStart || event.start;
         const end = event.presentationEnd || event.end;
         meta.append(element("span", "session-time", `${displayTime(start)}–${displayTime(end)}`));
-        if (event.room) meta.append(element("span", "session-room", `Venue: ${event.room}`));
+        if (event.room) {
+            const detail = event.venueDetail ? ` (${event.venueDetail})` : "";
+            meta.append(element("span", "session-room", `Venue: ${event.room}${detail}`));
+        }
+        if (event.venueMapUrl && event.venueMapLabel) {
+            const mapLink = element("a", "session-map-link", event.venueMapLabel);
+            mapLink.href = event.venueMapUrl;
+            mapLink.target = "_blank";
+            mapLink.rel = "noopener noreferrer";
+            mapLink.setAttribute("aria-label", `Open ${event.venueMapLabel} in maps`);
+            meta.append(mapLink);
+        }
         return meta;
     }
 

@@ -201,7 +201,10 @@ def paragraph(markup, width, font_size, color=INK, leading=None):
 def event_markup(event, include_room=False):
     meta = f"<b>{xml(event.get('start'))}-{xml(event.get('end'))}</b>"
     if include_room and event.get("room"):
-        meta += f" | {xml(event.get('room'))}"
+        room = event.get("room")
+        if event.get("venueDetail"):
+            room = f"{room} ({event.get('venueDetail')})"
+        meta += f" | {xml(room)}"
     if event.get("categoryLabel"):
         meta += f" | {xml(event.get('categoryLabel'))}"
     identity = f"<i>{xml(event.get('id'))}</i><br/>" if event.get("id") else ""
