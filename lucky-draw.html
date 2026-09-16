@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="AALA 2026 Conference Banquet and Award Ceremony lucky draw.">
+    <meta name="theme-color" content="#0e8d70">
+    <title>Lucky Draw - AALA 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tokens.css">
+    <link rel="stylesheet" href="lucky-draw.css">
+    <script src="lucky-draw.js" defer></script>
+</head>
+<body class="lottery-page">
+    <a class="skip-link" href="#draw-stage">Skip to lucky draw</a>
+    <header class="lottery-nav">
+        <a class="lottery-logo" href="index.html" aria-label="AALA 2026 home"><img src="aala2026-logo.png" alt="AALA 2026"></a>
+        <a class="back-link" href="program.html#sep19">← Back to programme</a>
+    </header>
+
+    <main>
+        <section class="lottery-hero" aria-labelledby="lottery-title">
+            <div class="hero-ornament ornament-left" aria-hidden="true"></div>
+            <div class="hero-ornament ornament-right" aria-hidden="true"></div>
+            <p class="eyebrow">AALA 2026 · Conference Banquet &amp; Award Ceremony</p>
+            <h1 id="lottery-title">Lucky Draw</h1>
+            <p class="hero-copy">Five moments. Five winners. One celebratory evening together.</p>
+            <p class="event-detail">Saturday, 19 September 2026 <span aria-hidden="true">·</span> 18:30–20:30 <span aria-hidden="true">·</span> 17th Floor, Altira Macau</p>
+        </section>
+
+        <section class="draw-shell" id="draw-stage" aria-labelledby="draw-title">
+            <div class="draw-stage">
+                <div class="draw-head">
+                    <p class="eyebrow">Live selection</p>
+                    <h2 id="draw-title">Who will be next?</h2>
+                    <p id="draw-status" class="draw-status" aria-live="polite">Ready to draw from the eligible attendee list.</p>
+                </div>
+
+                <div class="lottery-machine" id="lottery-machine" aria-live="polite" aria-atomic="true">
+                    <div class="machine-ring ring-one" aria-hidden="true"></div>
+                    <div class="machine-ring ring-two" aria-hidden="true"></div>
+                    <div class="machine-spark spark-one" aria-hidden="true"></div>
+                    <div class="machine-spark spark-two" aria-hidden="true"></div>
+                    <p class="machine-label">AALA 2026</p>
+                    <p class="candidate-name" id="candidate-name">Ready?</p>
+                    <p class="candidate-group" id="candidate-group">Five prizes to be drawn</p>
+                </div>
+
+                <div class="draw-controls">
+                    <button id="draw-button" class="draw-button" type="button">Draw prize 1 of 5</button>
+                    <p class="eligible-count"><strong id="eligible-count">0</strong> eligible attendees in this draw</p>
+                    <button id="reset-button" class="reset-button" type="button">Reset draw</button>
+                </div>
+            </div>
+
+            <aside class="winners-panel" aria-labelledby="winners-title">
+                <div class="winners-heading">
+                    <div>
+                        <p class="eyebrow">Tonight's celebration</p>
+                        <h2 id="winners-title">Prize winners</h2>
+                    </div>
+                    <span class="winner-count" id="winner-count">0 / 5</span>
+                </div>
+                <ol id="winner-list" class="winner-list" aria-live="polite"></ol>
+                <p class="winners-empty" id="winners-empty">The first winner will appear here.</p>
+            </aside>
+        </section>
+
+        <section class="fairness-note" aria-label="Lucky draw information">
+            <span class="fairness-icon" aria-hidden="true">✦</span>
+            <p>Each winner is selected once only from the submitted eligible list. Results stay on this device until the draw is reset.</p>
+        </section>
+
+        <details class="eligible-roster">
+            <summary>View eligible attendee groups and names</summary>
+            <div id="roster-content" class="roster-content"></div>
+        </details>
+    </main>
+
+    <footer class="lottery-footer">© AALA 2026 Conference. All Rights Reserved.</footer>
+</body>
+</html>
