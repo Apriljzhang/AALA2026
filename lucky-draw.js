@@ -23,6 +23,7 @@
     const winnersEmpty = document.getElementById("winners-empty");
     const eligibleCount = document.getElementById("eligible-count");
     const rosterContent = document.getElementById("roster-content");
+    const nameStreamTracks = document.querySelectorAll(".name-stream-track");
     let isDrawing = false;
     let winners = loadWinners();
 
@@ -183,8 +184,22 @@
         });
     }
 
+    function renderNameStreams() {
+        nameStreamTracks.forEach((track, trackIndex) => {
+            const offset = Math.floor((PARTICIPANTS.length / nameStreamTracks.length) * trackIndex);
+            const rotatedParticipants = [...PARTICIPANTS.slice(offset), ...PARTICIPANTS.slice(0, offset)];
+            [...rotatedParticipants, ...rotatedParticipants].forEach((participant) => {
+                const name = document.createElement("span");
+                name.className = "name-stream-item";
+                name.textContent = participant.name;
+                track.append(name);
+            });
+        });
+    }
+
     drawButton.addEventListener("click", drawWinner);
     resetButton.addEventListener("click", resetDraw);
     renderRoster();
+    renderNameStreams();
     updateInterface();
 }());
