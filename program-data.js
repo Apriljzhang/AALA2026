@@ -3302,7 +3302,8 @@ window.AALA_PROGRAM = {
           "categoryLabel": "Theme 1",
           "room": "L207",
           "start": "13:00",
-          "end": "13:30"
+          "end": "13:30",
+          "withdrawn": true
         },
         {
           "id": "AALA20260136",
