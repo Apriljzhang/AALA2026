@@ -1290,7 +1290,8 @@ window.AALA_PROGRAM = {
           "room": "L306",
           "start": "14:00",
           "end": "14:30",
-          "dayKey": "sep20"
+          "dayKey": "sep20",
+          "withdrawn": true
         },
         {
           "id": "AALA2026081",

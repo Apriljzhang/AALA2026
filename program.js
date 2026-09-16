@@ -158,6 +158,7 @@
         if (event.withdrawn) {
             const notice = element("p", "session-note", "WITHDRAWN");
             notice.style.color = "#b00020";
+            notice.style.fontWeight = "700";
             card.append(notice);
         }
         card.append(makeTitle(event));
