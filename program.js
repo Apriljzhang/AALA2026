@@ -169,7 +169,7 @@
         if (authors) card.append(authors);
         if (event.title === "Conference Banquet and Award Ceremony") {
             const luckyDrawLink = element("a", "lucky-draw-link", "Open the live lucky draw");
-            luckyDrawLink.href = "lucky-draw.html";
+            luckyDrawLink.href = "lucky-draw.html?name-stream=20260916";
             luckyDrawLink.setAttribute("aria-label", "Open the AALA 2026 banquet lucky draw");
             card.classList.add("lucky-draw-session");
             card.addEventListener("click", (clickEvent) => {
