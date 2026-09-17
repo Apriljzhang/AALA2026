@@ -72,6 +72,16 @@ main { width: min(1120px, calc(100% - 2rem)); margin: 0 auto 4rem; }
 .lottery-machine.has-winner { animation: winner-pop 680ms cubic-bezier(.2, .9, .2, 1.25) both; }
 
 .draw-controls { display: grid; justify-items: center; gap: 0.65rem; margin-top: 1.4rem; }
+.draw-setup { width: min(100%, 20rem); display: grid; gap: 0.4rem; padding: 0.85rem; border: 1px solid rgba(7, 94, 87, 0.16); border-radius: 1rem; background: rgba(229, 245, 239, 0.72); text-align: left; }
+.draw-setup > label { color: var(--lottery-deep); font-size: 0.76rem; font-weight: 800; letter-spacing: 0.02em; }
+.winner-limit-control { display: flex; gap: 0.45rem; }
+.winner-limit-control input { width: 5.7rem; min-height: 2.7rem; padding: 0.5rem 0.65rem; border: 1px solid rgba(7, 94, 87, 0.32); border-radius: 0.7rem; background: #fff; color: var(--lottery-deep); font: 800 1rem/1 "Montserrat", Arial, sans-serif; }
+.winner-limit-control input:focus-visible { outline: 3px solid rgba(17, 169, 189, 0.35); outline-offset: 1px; border-color: var(--lottery-aqua); }
+.winner-limit-control input:disabled { cursor: not-allowed; background: rgba(255, 255, 255, 0.55); color: #607873; }
+.winner-limit-control button { flex: 1; min-height: 2.7rem; border: 0; border-radius: 0.7rem; background: var(--lottery-deep); color: #fff; font: 800 0.78rem/1 "Montserrat", Arial, sans-serif; cursor: pointer; transition: background 170ms ease, transform 170ms ease; }
+.winner-limit-control button:hover, .winner-limit-control button:focus-visible { background: var(--lottery-green); transform: translateY(-1px); }
+.winner-limit-control button:disabled { cursor: not-allowed; opacity: 0.58; transform: none; }
+.draw-setup p { margin: 0; color: #58716c; font-size: 0.67rem; font-weight: 600; line-height: 1.35; }
 .draw-button { min-width: 16rem; min-height: 3.35rem; padding: 0.85rem 1.25rem; border: 0; border-radius: 999px; background: linear-gradient(105deg, var(--lottery-orange), #f4a416 42%, var(--lottery-lime)); box-shadow: 0 0.65rem 1.3rem rgba(238, 138, 19, 0.22); color: #243a26; font: 800 0.95rem/1 "Montserrat", Arial, sans-serif; cursor: pointer; transition: transform 170ms ease, box-shadow 170ms ease, filter 170ms ease; }
 .draw-button:hover, .draw-button:focus-visible { transform: translateY(-2px) scale(1.015); box-shadow: 0 0.9rem 1.8rem rgba(238, 138, 19, 0.3); filter: saturate(1.08); }
 .draw-button:disabled { cursor: not-allowed; filter: grayscale(0.1); opacity: 0.65; transform: none; }
@@ -79,6 +89,7 @@ main { width: min(1120px, calc(100% - 2rem)); margin: 0 auto 4rem; }
 .eligible-count strong { color: var(--lottery-deep); font-size: 1rem; }
 .reset-button { min-height: 2.5rem; border: 0; background: transparent; color: #57716b; font: 700 0.72rem/1 "Montserrat", Arial, sans-serif; text-decoration: underline; text-underline-offset: 0.2rem; cursor: pointer; }
 .reset-button:hover, .reset-button:focus-visible { color: var(--lottery-deep); }
+.reset-button:disabled { cursor: not-allowed; opacity: 0.52; }
 
 .winners-panel { padding: clamp(1.35rem, 3vw, 2rem); }
 .winners-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(7, 94, 87, 0.13); }
@@ -113,5 +124,5 @@ main { width: min(1120px, calc(100% - 2rem)); margin: 0 auto 4rem; }
 @keyframes name-stream-right { from { transform: translateX(-50%); } to { transform: translateX(0); } }
 
 @media (max-width: 52rem) { .draw-shell { grid-template-columns: minmax(0, 1fr); } .draw-stage { min-height: auto; } .roster-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 32rem) { .lottery-nav { min-height: 4.5rem; } .lottery-logo img { max-width: 7.4rem; } .back-link { padding-inline: 0.65rem; font-size: 0.7rem; } main { width: min(100% - 1rem, 1120px); } .lottery-hero { border-radius: 1rem; } .event-detail { border-radius: 0.8rem; } .draw-stage, .winners-panel { border-radius: 1rem; } .lottery-machine { width: min(17rem, 82vw); } .draw-button { min-width: min(16rem, 100%); } .roster-list { grid-template-columns: minmax(0, 1fr); } .name-stream-track { gap: 0.9rem; } .name-stream-item { gap: 0.35rem; font-size: 0.64rem; } .name-stream-affiliation { max-width: 14rem; } }
+@media (max-width: 32rem) { .lottery-nav { min-height: 4.5rem; } .lottery-logo img { max-width: 7.4rem; } .back-link { padding-inline: 0.65rem; font-size: 0.7rem; } main { width: min(100% - 1rem, 1120px); } .lottery-hero { border-radius: 1rem; } .event-detail { border-radius: 0.8rem; } .draw-stage, .winners-panel { border-radius: 1rem; } .lottery-machine { width: min(17rem, 82vw); } .draw-button { min-width: min(16rem, 100%); } .draw-setup { width: min(100%, 18rem); } .roster-list { grid-template-columns: minmax(0, 1fr); } .name-stream-track { gap: 0.9rem; } .name-stream-item { gap: 0.35rem; font-size: 0.64rem; } .name-stream-affiliation { max-width: 14rem; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: 0.01ms !important; } .name-stream-track { animation: none !important; transform: translateX(-12%) !important; } }

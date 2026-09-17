@@ -11,8 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="tokens.css">
-    <link rel="stylesheet" href="lucky-draw.css?v=20260916-names-2">
-    <script src="lucky-draw.js?v=20260916-names-2" defer></script>
+    <link rel="stylesheet" href="lucky-draw.css?v=20260917-winner-count-2">
+    <script src="lucky-draw.js?v=20260917-winner-count-2" defer></script>
 </head>
 <body class="lottery-page">
     <a class="skip-link" href="#draw-stage">Skip to lucky draw</a>
@@ -32,7 +32,7 @@
             <div class="hero-ornament ornament-right" aria-hidden="true"></div>
             <p class="eyebrow">AALA 2026 · Conference Banquet &amp; Award Ceremony</p>
             <h1 id="lottery-title">Lucky Draw</h1>
-            <p class="hero-copy">Five moments. Five winners. One celebratory evening together.</p>
+            <p class="hero-copy">Choose the number of winners, then make each celebratory selection together.</p>
             <p class="event-detail">Saturday, 19 September 2026 <span aria-hidden="true">·</span> 18:30–20:30 <span aria-hidden="true">·</span> 17th Floor, Altira Macau</p>
         </section>
 
@@ -41,7 +41,7 @@
                 <div class="draw-head">
                     <p class="eyebrow">Live selection</p>
                     <h2 id="draw-title">Who will be next?</h2>
-                    <p id="draw-status" class="draw-status" aria-live="polite">Ready to draw from the eligible attendee list.</p>
+                    <p id="draw-status" class="draw-status" aria-live="polite">Set the number of winners to begin the draw.</p>
                 </div>
 
                 <div class="lottery-machine" id="lottery-machine" aria-live="polite" aria-atomic="true">
@@ -51,13 +51,21 @@
                     <div class="machine-spark spark-two" aria-hidden="true"></div>
                     <p class="machine-label">AALA 2026</p>
                     <p class="candidate-name" id="candidate-name">Ready?</p>
-                    <p class="candidate-affiliation" id="candidate-affiliation">Five prizes to be drawn</p>
+                    <p class="candidate-affiliation" id="candidate-affiliation">Set the number of winners first</p>
                 </div>
 
                 <div class="draw-controls">
-                    <button id="draw-button" class="draw-button" type="button">Draw prize 1 of 5</button>
+                    <form class="draw-setup" id="draw-setup">
+                        <label for="winner-limit">Number of winners</label>
+                        <div class="winner-limit-control">
+                            <input id="winner-limit" name="winner-limit" type="number" min="1" step="1" inputmode="numeric" autocomplete="off" required aria-describedby="winner-limit-hint">
+                            <button id="set-winner-limit" type="submit">Set draw</button>
+                        </div>
+                        <p id="winner-limit-hint">Enter a whole number before the first draw.</p>
+                    </form>
+                    <button id="draw-button" class="draw-button" type="button" disabled>Set the number of winners</button>
                     <p class="eligible-count"><strong id="eligible-count">0</strong> eligible attendees in this draw</p>
-                    <button id="reset-button" class="reset-button" type="button">Reset draw</button>
+                    <button id="reset-button" class="reset-button" type="button" disabled>Reset draw</button>
                 </div>
             </div>
 
@@ -67,7 +75,7 @@
                         <p class="eyebrow">Tonight's celebration</p>
                         <h2 id="winners-title">Prize winners</h2>
                     </div>
-                    <span class="winner-count" id="winner-count">0 / 5</span>
+                    <span class="winner-count" id="winner-count">Not set</span>
                 </div>
                 <ol id="winner-list" class="winner-list" aria-live="polite"></ol>
                 <p class="winners-empty" id="winners-empty">The first winner will appear here.</p>
@@ -76,7 +84,7 @@
 
         <section class="fairness-note" aria-label="Lucky draw information">
             <span class="fairness-icon" aria-hidden="true">✦</span>
-            <p>Each winner is selected once only from the submitted eligible list. Results stay on this device until the draw is reset.</p>
+            <p>Set the number of winners before drawing. Each winner is selected once only from the submitted eligible list. Results stay on this device until the draw is reset.</p>
         </section>
 
         <details class="eligible-roster">

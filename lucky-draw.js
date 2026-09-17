@@ -1,8 +1,7 @@
 (function () {
     "use strict";
 
-    const DRAW_LIMIT = 5;
-    const STORAGE_KEY = "aala2026-banquet-lucky-draw-v1";
+    const STORAGE_KEY = "aala2026-banquet-lucky-draw-v2";
     const COLOURS = ["#ee8a13", "#a7c519", "#11a9bd", "#762181", "#0d886c"];
     const AFFILIATIONS = [
         "Duolingo", "Duolingo", "Pearson", "Pearson", "The Language Training & Testing Center (LTTC)", "The Language Training & Testing Center (LTTC)", "The Language Training & Testing Center (LTTC)", "The Language Training & Testing Center (LTTC)", "The Language Training & Testing Center (LTTC)", "The Language Training & Testing Center (LTTC)", "The Language Training & Testing Center (LTTC)", "Beijing Technology and Business University", "Cambridge University Press & Assessment", "Cambridge University Press & Assessment", "Chongqing University", "Chongqing University", "Chongqing University", "Chulalongkorn University", "Chulalongkorn University Language Institute", "City University of Macau", "City University of Macau", "City University of Macau", "City University of Macau", "East China Normal University", "Fudan University", "Fudan University", "Fuzhou University", "Hansung University", "Hong Kong Polytechnic University", "Hunan University", "Independent project \"Oh, my Chinese\"", "Indiana University", "Jinan University", "Konkuk University", "Macao Polytechnic University", "Nanyang Technological University", "NIT Warangal", "Ochanomizu University", "Oxford University Press", "Oxford University Press", "Seoul National University", "Shanghai Baoshan Huayao High School", "Shanghai International Studies University", "Shanghai Jiao Tong University", "Shanghai Jiao Tong University", "Shanghai University of International Business and Economics", "The Hong Kong Polytechnic University", "The University of Hong Kong", "Tokyo University of Foreign Studies.", "Tsinghua University", "Universiti Sains Malaysia", "Universiti Sains Malaysia", "Universiti Teknologi MARA", "University of Hong Kong", "University of Hong Kong", "University of Hong Kong", "University of Illinois Urbana-Champaign", "University of Illinois Urbana-Champaign", "University of Macau", "University of Macau", "University of Ottawa", "University of Southampton", "University of Southampton", "University of Southampton", "Waseda University", "Western Washington University", "",
@@ -21,6 +20,10 @@
 
     const drawButton = document.getElementById("draw-button");
     const resetButton = document.getElementById("reset-button");
+    const drawSetup = document.getElementById("draw-setup");
+    const winnerLimitInput = document.getElementById("winner-limit");
+    const setWinnerLimitButton = document.getElementById("set-winner-limit");
+    const winnerLimitHint = document.getElementById("winner-limit-hint");
     const candidateName = document.getElementById("candidate-name");
     const candidateAffiliation = document.getElementById("candidate-affiliation");
     const drawStatus = document.getElementById("draw-status");
@@ -32,7 +35,7 @@
     const rosterContent = document.getElementById("roster-content");
     const nameStreamTracks = document.querySelectorAll(".name-stream-track");
     let isDrawing = false;
-    let winners = loadWinners();
+    let { drawLimit, winners } = loadDrawState();
 
     function secureIndex(max) {
         if (max <= 1) return 0;
@@ -45,20 +48,33 @@
         return values[0] % max;
     }
 
-    function loadWinners() {
+    function loadDrawState() {
         try {
-            const stored = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-            if (!Array.isArray(stored) || stored.length > DRAW_LIMIT) return [];
-            const unique = new Set(stored);
-            if (unique.size !== stored.length || stored.some((id) => !PARTICIPANTS[id])) return [];
-            return stored;
+            const stored = JSON.parse(localStorage.getItem(STORAGE_KEY) || "null");
+            if (!stored || typeof stored !== "object" || Array.isArray(stored)) {
+                return { drawLimit: null, winners: [] };
+            }
+            const storedLimit = stored.drawLimit;
+            const storedWinners = stored.winners;
+            if (!Number.isInteger(storedLimit) || storedLimit < 1 || storedLimit > PARTICIPANTS.length || !Array.isArray(storedWinners) || storedWinners.length > storedLimit) {
+                return { drawLimit: null, winners: [] };
+            }
+            const unique = new Set(storedWinners);
+            if (unique.size !== storedWinners.length || storedWinners.some((id) => !Number.isInteger(id) || !PARTICIPANTS[id])) {
+                return { drawLimit: null, winners: [] };
+            }
+            return { drawLimit: storedLimit, winners: storedWinners };
         } catch {
-            return [];
+            return { drawLimit: null, winners: [] };
         }
     }
 
-    function saveWinners() {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(winners));
+    function saveDrawState() {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify({ drawLimit, winners }));
+    }
+
+    function hasDrawLimit() {
+        return Number.isInteger(drawLimit) && drawLimit >= 1 && drawLimit <= PARTICIPANTS.length;
     }
 
     function remainingParticipants() {
@@ -68,14 +84,26 @@
 
     function updateInterface() {
         const remaining = remainingParticipants();
+        const configured = hasDrawLimit();
         eligibleCount.textContent = String(remaining.length);
-        winnerCount.textContent = `${winners.length} / ${DRAW_LIMIT}`;
+        winnerCount.textContent = configured ? `${winners.length} / ${drawLimit}` : "Not set";
+        winnerLimitInput.max = String(PARTICIPANTS.length);
+        winnerLimitInput.disabled = configured || isDrawing;
+        setWinnerLimitButton.disabled = configured || isDrawing;
+        resetButton.disabled = isDrawing || !configured;
+        if (configured) {
+            winnerLimitInput.value = String(drawLimit);
+            winnerLimitHint.textContent = "Winner count is locked until the draw is reset.";
+        } else {
+            winnerLimitHint.textContent = `Enter a whole number from 1 to ${PARTICIPANTS.length} before the first draw.`;
+        }
+
         winnerList.replaceChildren();
         winners.forEach((winnerId, index) => {
             const participant = PARTICIPANTS[winnerId];
             const item = document.createElement("li");
             item.className = "winner-card";
-            item.style.setProperty("--winner-color", COLOURS[index]);
+            item.style.setProperty("--winner-color", COLOURS[index % COLOURS.length]);
             const number = document.createElement("span");
             number.className = "winner-number";
             number.textContent = String(index + 1);
@@ -95,22 +123,38 @@
         });
         winnersEmpty.hidden = winners.length > 0;
 
-        if (winners.length === DRAW_LIMIT) {
+        if (!configured) {
             drawButton.disabled = true;
-            drawButton.textContent = "All five prizes have been drawn";
-            drawStatus.textContent = "Congratulations to all five lucky-draw winners.";
+            drawButton.textContent = "Set the number of winners";
+            if (!isDrawing) {
+                candidateName.textContent = "Ready?";
+                candidateAffiliation.textContent = "Set the number of winners first";
+                drawStatus.textContent = "Set the number of winners to begin the draw.";
+            }
+            return;
+        }
+
+        if (winners.length === drawLimit) {
+            drawButton.disabled = true;
+            drawButton.textContent = `All ${drawLimit} winners have been drawn`;
+            drawStatus.textContent = `Congratulations to all ${drawLimit} lucky-draw winners.`;
             if (!isDrawing) {
                 candidateName.textContent = "Congratulations!";
-                candidateAffiliation.textContent = "Five prizes have been awarded";
+                candidateAffiliation.textContent = `${drawLimit} winner${drawLimit === 1 ? "" : "s"} selected`;
             }
             return;
         }
 
         drawButton.disabled = isDrawing;
-        drawButton.textContent = isDrawing ? "Drawing…" : `Draw prize ${winners.length + 1} of ${DRAW_LIMIT}`;
+        drawButton.textContent = isDrawing ? "Drawing…" : `Draw winner ${winners.length + 1} of ${drawLimit}`;
         if (!isDrawing && winners.length === 0) {
             candidateName.textContent = "Ready?";
-            candidateAffiliation.textContent = "Five prizes to be drawn";
+            candidateAffiliation.textContent = `${drawLimit} winner${drawLimit === 1 ? "" : "s"} to be drawn`;
+        } else if (!isDrawing) {
+            const latestWinner = PARTICIPANTS[winners[winners.length - 1]];
+            candidateName.textContent = latestWinner.name;
+            candidateAffiliation.textContent = latestWinner.affiliation;
+            drawStatus.textContent = `${winners.length} of ${drawLimit} winner${drawLimit === 1 ? "" : "s"} selected. Draw winner ${winners.length + 1} when ready.`;
         }
     }
 
@@ -131,7 +175,7 @@
     }
 
     function drawWinner() {
-        if (isDrawing || winners.length >= DRAW_LIMIT) return;
+        if (isDrawing || !hasDrawLimit() || winners.length >= drawLimit) return;
         const remaining = remainingParticipants();
         if (!remaining.length) return;
 
@@ -151,28 +195,52 @@
             window.clearInterval(nameTimer);
             const winner = remaining[secureIndex(remaining.length)];
             winners.push(winner.id);
-            saveWinners();
+            saveDrawState();
             candidateName.textContent = winner.name;
             candidateAffiliation.textContent = winner.affiliation;
             lotteryMachine.classList.remove("is-drawing");
             lotteryMachine.classList.add("has-winner");
-            drawStatus.textContent = `Prize ${winners.length} goes to ${winner.name}. Congratulations!`;
+            drawStatus.textContent = `Winner ${winners.length} goes to ${winner.name}. Congratulations!`;
             isDrawing = false;
             updateInterface();
             makeConfetti();
         }, 3400);
     }
 
-    function resetDraw() {
-        if (isDrawing || !winners.length) return;
-        if (!window.confirm("Reset all selected winners on this device? This cannot be undone.")) return;
+    function configureDraw(event) {
+        event.preventDefault();
+        if (isDrawing || hasDrawLimit()) return;
+        const requestedLimit = Number(winnerLimitInput.value);
+        if (!Number.isInteger(requestedLimit) || requestedLimit < 1 || requestedLimit > PARTICIPANTS.length) {
+            winnerLimitInput.setCustomValidity(`Enter a whole number from 1 to ${PARTICIPANTS.length}.`);
+            winnerLimitInput.reportValidity();
+            return;
+        }
+        winnerLimitInput.setCustomValidity("");
+        drawLimit = requestedLimit;
         winners = [];
-        localStorage.removeItem(STORAGE_KEY);
+        saveDrawState();
         candidateName.textContent = "Ready?";
-        candidateAffiliation.textContent = "Five prizes to be drawn";
-        drawStatus.textContent = "Ready to draw from the eligible attendee list.";
+        candidateAffiliation.textContent = `${drawLimit} winner${drawLimit === 1 ? "" : "s"} to be drawn`;
+        drawStatus.textContent = `Draw ready: ${drawLimit} winner${drawLimit === 1 ? "" : "s"} will be selected.`;
         lotteryMachine.classList.remove("has-winner", "is-drawing");
         updateInterface();
+        drawButton.focus();
+    }
+
+    function resetDraw() {
+        if (isDrawing || !hasDrawLimit()) return;
+        if (!window.confirm("Reset this draw and choose a new number of winners? All selected winners on this device will be cleared.")) return;
+        winners = [];
+        drawLimit = null;
+        localStorage.removeItem(STORAGE_KEY);
+        winnerLimitInput.value = "";
+        candidateName.textContent = "Ready?";
+        candidateAffiliation.textContent = "Set the number of winners first";
+        drawStatus.textContent = "Set the number of winners to begin the draw.";
+        lotteryMachine.classList.remove("has-winner", "is-drawing");
+        updateInterface();
+        winnerLimitInput.focus();
     }
 
     function renderRoster() {
@@ -218,6 +286,8 @@
         });
     }
 
+    drawSetup.addEventListener("submit", configureDraw);
+    winnerLimitInput.addEventListener("input", () => winnerLimitInput.setCustomValidity(""));
     drawButton.addEventListener("click", drawWinner);
     resetButton.addEventListener("click", resetDraw);
     renderRoster();
