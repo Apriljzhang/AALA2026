@@ -1308,7 +1308,8 @@ window.AALA_PROGRAM = {
           "categoryLabel": "Theme 1",
           "room": "L307",
           "start": "14:00",
-          "end": "14:30"
+          "end": "14:30",
+          "withdrawn": true
         },
         {
           "id": "AALA2026045",
@@ -1506,7 +1507,8 @@ window.AALA_PROGRAM = {
           "room": "L306",
           "start": "14:30",
           "end": "15:00",
-          "dayKey": "sep20"
+          "dayKey": "sep20",
+          "withdrawn": true
         },
         {
           "id": "AALA2026049",
@@ -2301,6 +2303,11 @@ window.AALA_PROGRAM = {
             {
               "name": "Prof Qin XIE",
               "affiliation": "Language Education and Assessment (LEA); University of Macau",
+              "bio": ""
+            },
+            {
+              "name": "Noriko Iwashita",
+              "affiliation": "Language Assessment Quarterly; The University of Queensland",
               "bio": ""
             },
             {

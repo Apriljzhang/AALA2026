@@ -32,7 +32,7 @@ TEAL_MID = colors.HexColor("#167F7A")
 TEAL_PALE = colors.HexColor("#E7F3F1")
 GOLD = colors.HexColor("#D5A83D")
 RULE = colors.HexColor("#CDD8D6")
-UPDATED = "15 September 2026"
+UPDATED = "17 September 2026"
 
 CATEGORY_COLOURS = {
     "featured": (colors.HexColor("#FFF0D7"), colors.HexColor("#C87A12")),
@@ -208,11 +208,12 @@ def event_markup(event, include_room=False):
     if event.get("categoryLabel"):
         meta += f" | {xml(event.get('categoryLabel'))}"
     identity = f"<i>{xml(event.get('id'))}</i><br/>" if event.get("id") else ""
+    withdrawn_markup = '<font color="#B00020"><b>WITHDRAWN</b></font><br/>' if event.get("withdrawn") else ""
     author_line = authors(event)
     author_markup = f"<br/>{xml(author_line)}" if author_line else ""
     note = clean(event.get("note"))
     note_markup = f'<br/><font color="{TEAL.hexval()}"><b>{xml(note)}</b></font>' if note else ""
-    return f'<font color="{MUTED.hexval()}">{meta}</font><br/>{identity}<b>{xml(event.get("title"))}</b>{author_markup}{note_markup}'
+    return f'<font color="{MUTED.hexval()}">{meta}</font><br/>{identity}{withdrawn_markup}<b>{xml(event.get("title"))}</b>{author_markup}{note_markup}'
 
 
 def header(c, title, subtitle, page_number, total_pages, section_page=None, section_total=None):
