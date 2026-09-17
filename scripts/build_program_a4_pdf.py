@@ -32,6 +32,7 @@ TEAL_MID = colors.HexColor("#167F7A")
 TEAL_PALE = colors.HexColor("#E7F3F1")
 GOLD = colors.HexColor("#D5A83D")
 RULE = colors.HexColor("#CDD8D6")
+WITHDRAWN_RED = colors.HexColor("#B00020")
 UPDATED = "17 September 2026"
 
 CATEGORY_COLOURS = {
@@ -594,7 +595,7 @@ def draw_poster_page(c, day, poster_band, page_number, total_pages, section_page
     c.showPage()
 
 
-def draw_grid_cell(c, x, top, width, height, text, *, fill=colors.HexColor("#F1F4F3"), accent=RULE, start_size=5.0):
+def draw_grid_cell(c, x, top, width, height, text, *, fill=colors.HexColor("#F1F4F3"), accent=RULE, start_size=5.0, withdrawn=False):
     c.setFillColor(fill)
     c.setStrokeColor(WHITE)
     c.rect(x, top - height, width, height, fill=1, stroke=1)
@@ -606,7 +607,14 @@ def draw_grid_cell(c, x, top, width, height, text, *, fill=colors.HexColor("#F1F
         size -= 0.2
     c.setFillColor(INK if fill != TEAL else WHITE)
     c.setFont("AALABold", size)
-    c.drawCentredString(x + width / 2, top - height / 2 - size * 0.33, text)
+    if withdrawn:
+        c.drawCentredString(x + width / 2, top - height / 2 + size * 0.72, text)
+        label_size = min(4.1, max(3.6, size))
+        c.setFillColor(WITHDRAWN_RED)
+        c.setFont("AALABold", label_size)
+        c.drawCentredString(x + width / 2, top - height / 2 - label_size * 0.92, "WITHDRAWN")
+    else:
+        c.drawCentredString(x + width / 2, top - height / 2 - size * 0.33, text)
 
 
 def draw_horizontal_poster_row(c, day, x, width, top, height):
@@ -756,7 +764,18 @@ def draw_horizontal_overview_page(c, day, page_number, total_pages, section_page
                 span_bottom = row_tops[covered_slots[-1]] - row_height
                 span_height = row_top - span_bottom
                 fill, accent = category_colours(event)
-                draw_grid_cell(c, x, row_top, room_width, span_height, clean(event["id"]), fill=fill, accent=accent, start_size=4.8)
+                draw_grid_cell(
+                    c,
+                    x,
+                    row_top,
+                    room_width,
+                    span_height,
+                    clean(event["id"]),
+                    fill=fill,
+                    accent=accent,
+                    start_size=4.8,
+                    withdrawn=event.get("withdrawn", False),
+                )
             else:
                 draw_grid_cell(c, x, row_top, room_width, row_height, "")
 
