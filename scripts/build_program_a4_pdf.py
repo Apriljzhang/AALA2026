@@ -33,7 +33,7 @@ TEAL_PALE = colors.HexColor("#E7F3F1")
 GOLD = colors.HexColor("#D5A83D")
 RULE = colors.HexColor("#CDD8D6")
 WITHDRAWN_RED = colors.HexColor("#B00020")
-UPDATED = "17 September 2026"
+UPDATED = "19 September 2026"
 
 CATEGORY_COLOURS = {
     "featured": (colors.HexColor("#FFF0D7"), colors.HexColor("#C87A12")),

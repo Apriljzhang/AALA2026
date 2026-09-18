@@ -1471,7 +1471,8 @@ window.AALA_PROGRAM = {
           "room": "HG01",
           "start": "16:00",
           "end": "16:30",
-          "dayKey": "sep20"
+          "dayKey": "sep20",
+          "withdrawn": true
         },
         {
           "id": "AALA2026067",
@@ -3364,7 +3365,8 @@ window.AALA_PROGRAM = {
           "categoryLabel": "Theme 1",
           "room": "HG02",
           "start": "16:00",
-          "end": "16:30"
+          "end": "16:30",
+          "withdrawn": true
         },
         {
           "id": "AALA20260150",
