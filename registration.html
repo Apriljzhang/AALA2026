@@ -221,6 +221,28 @@
             color: #c62828;
             font-weight: 700;
         }
+        .registration-closed-notice {
+            margin: 0 0 20px;
+            padding: 16px 18px;
+            border-left: 4px solid #c62828;
+            background: #fff3f2;
+            color: #7f1d1d;
+            font-weight: 700;
+            line-height: 1.5;
+        }
+        .registration-closed-fieldset {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            min-width: 0;
+        }
+        .registration-closed-fieldset:disabled {
+            opacity: 0.58;
+        }
+        .registration-closed-fieldset:disabled input,
+        .registration-closed-fieldset:disabled button {
+            cursor: not-allowed;
+        }
     </style>
 </head>
 <script>
@@ -248,6 +270,7 @@ function toggleMenu() {
             <section id="reg-intro" class="content-block">
                 <h2>Registration Information</h2>
                 <div class="text-body">
+                <p class="registration-closed-notice" role="status">Registration is now closed. The conference began on 19 September 2026, and no new registrations or add-on purchases are being accepted.</p>
                 <ul class="registration-deadline-notice">
                     <li class="registration-deadline-notice-emphasis">Please note that registration fees are non-refundable after 30 August 2026.</li>
                     <li><strong>Presenter registration and fee submission will remain open until 31 July 2026.</strong></li>
@@ -341,9 +364,11 @@ function toggleMenu() {
                 </div>
             </section>
             <section id="registration-form" class="content-block">
-                <h2>Registration Form</h2>
+                <h2>Registration Form — Closed</h2>
                 <div class="text-body">
-                    <form id="conferenceRegistrationForm" class="registration-standard-width" action="#" method="post" enctype="multipart/form-data">
+                    <form id="conferenceRegistrationForm" class="registration-standard-width" action="#" method="post" enctype="multipart/form-data" aria-describedby="registrationClosedMessage">
+                        <p id="registrationClosedMessage" class="registration-closed-notice" role="status">Registration closed on 19 September 2026. This form is no longer accepting submissions.</p>
+                        <fieldset class="registration-closed-fieldset" disabled aria-disabled="true">
                         <h3 style="margin-top: 0;">1 Payment Method</h3>
                         <div id="paymentMethodSelection">
                             <label>
@@ -470,6 +495,7 @@ function toggleMenu() {
                             <button type="submit" class="registration-submit-button" id="sendRegistrationButton">Send Registration Proof via Email</button>
                             <span class="registration-submit-note">Click the button to open your email app with an auto-generated registration message. Please attach your payment proof manually before sending. If you selected Student Presenter or Macau local, also attach valid ID documentation.</span>
                         </p>
+                        </fieldset>
                     </form>
                 </div>
             </section>
@@ -479,6 +505,14 @@ function toggleMenu() {
     (function () {
         var form = document.getElementById("conferenceRegistrationForm");
         if (!form) {
+            return;
+        }
+
+        var REGISTRATION_CLOSED = true;
+        if (REGISTRATION_CLOSED) {
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+            });
             return;
         }
 
