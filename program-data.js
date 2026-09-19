@@ -3081,6 +3081,11 @@ window.AALA_PROGRAM = {
               "name": "Cecilia Guanfang Zhao",
               "affiliation": "University of Macau",
               "bio": "Cecilia Guanfang Zhao is an Associate Professor of Applied Linguistics in the Department of English at the University of Macau."
+            },
+            {
+              "name": "Yating Huang",
+              "affiliation": "University of Macau",
+              "bio": ""
             }
           ],
           "category": "theme-3",
