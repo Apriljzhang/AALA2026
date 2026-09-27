@@ -374,14 +374,7 @@ function toggleMenu() {
                             <label>
                                 <input type="radio" name="paymentMethod" value="qr-code" checked>
                                 Online Payment (QR Code)
-                            </label><br>
-                            <label>
-                                <input type="radio" name="paymentMethod" value="credit-card">
-                                Credit Card
                             </label>
-                            <p class="form-reminder">
-                                Credit card users will be redirected to our collaborating company's website to complete registration and payment securely.
-                            </p>
                         </div>
 
                         <div id="feeChooserLayout">
@@ -952,8 +945,6 @@ function toggleMenu() {
             return isEarlyBirdAllowedForRole(role);
         }
 
-        var CREDIT_CARD_PAYMENT_URL = "https://apriljzhang.github.io/HMC/products-services.html";
-
         function updatePaymentUi() {
             var selected = form.querySelector('input[name="paymentMethod"]:checked');
             var isQrPayment = selected && selected.value === "qr-code";
@@ -962,10 +953,6 @@ function toggleMenu() {
 
         paymentMethodRadios.forEach(function (radio) {
             radio.addEventListener("change", function () {
-                if (radio.value === "credit-card" && radio.checked) {
-                    window.location.href = CREDIT_CARD_PAYMENT_URL;
-                    return;
-                }
                 updatePaymentUi();
             });
         });
